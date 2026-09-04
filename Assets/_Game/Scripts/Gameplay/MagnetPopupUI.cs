@@ -265,6 +265,24 @@ public sealed class MagnetPopupUI : MonoBehaviour
 
     public void HideSettings() => settingsScreen.SetActive(false);
 
+    public void ShowTimeUp()
+    {
+        ResolveSceneReferences();
+        EnsurePopupCanvas();
+        if (timeUpScreen == null)
+        {
+            Debug.LogError("TimeUpScreen bulunamadi. MagnetPopupUI hiyerarsisini kontrol et.", this);
+            return;
+        }
+
+        gameObject.SetActive(true);
+        transform.SetAsLastSibling();
+        timeUpScreen.SetActive(true);
+        timeUpScreen.transform.SetAsLastSibling();
+        Canvas.ForceUpdateCanvases();
+        Debug.Log("TimeUp popup acildi.", this);
+    }
+
     private void ToggleSound()
     {
         PlayerSaveData data = SaveSystem.Current;

@@ -756,6 +756,11 @@ public class TableController : MonoBehaviour
         else
         {
             UpdateGoldContinueButton();
+            if (magnetPopupUi != null)
+            {
+                magnetPopupUi.ShowTimeUp();
+                loseScreen = magnetPopupUi.TimeUpScreen;
+            }
             ShowResultScreen(loseScreen);
         }
     }
