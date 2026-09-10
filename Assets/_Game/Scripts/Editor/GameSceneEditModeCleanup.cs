@@ -37,12 +37,18 @@ public static class GameSceneEditModeCleanup
             if (controller == null || controller.wordContainer == null) continue;
 
             Transform board = controller.wordContainer;
-            board.gameObject.SetActive(true);
+            Canvas canvas = board.GetComponentInParent<Canvas>(true);
+            bool categoryMode = canvas != null &&
+                canvas.GetComponentInChildren<CategoryMagnetBoardController>(true) != null;
+            if (board.gameObject.activeSelf == categoryMode)
+            {
+                board.gameObject.SetActive(!categoryMode);
+                EditorSceneManager.MarkSceneDirty(board.gameObject.scene);
+            }
             // Rows are authored prefab instances in Game.unity now. Do not
             // delete them in edit mode; Play Mode only changes their data and
             // active state.
 
-            Canvas canvas = board.GetComponentInParent<Canvas>(true);
             if (canvas != null)
             {
                 RectTransform gameHud = canvas.transform.Find("GameHUD") as RectTransform;

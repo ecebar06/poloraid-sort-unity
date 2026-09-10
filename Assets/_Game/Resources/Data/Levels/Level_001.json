@@ -11,7 +11,7 @@
         {
           "text": "Red",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "colors__red",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -19,7 +19,7 @@
         {
           "text": "Blue",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "colors__blue",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -27,7 +27,7 @@
         {
           "text": "Green",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "colors__green",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -35,7 +35,7 @@
         {
           "text": "Yellow",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "colors__yellow",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -58,24 +58,24 @@
       "words": [
         {
           "text": "Circle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "shapes__circle",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Square",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "shapes__square",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Triangle",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "shapes__triangle",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -83,7 +83,7 @@
         {
           "text": "Rectangle",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "shapes__rectangle",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -107,7 +107,7 @@
       "word": {
         "text": "Red",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "colors__red",
         "syllablePartA": "",
         "syllablePartB": ""
@@ -117,9 +117,9 @@
       "categoryId": "shapes",
       "word": {
         "text": "Circle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "shapes__circle",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -129,7 +129,7 @@
       "word": {
         "text": "Blue",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "colors__blue",
         "syllablePartA": "",
         "syllablePartB": ""
@@ -139,9 +139,9 @@
       "categoryId": "shapes",
       "word": {
         "text": "Square",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "shapes__square",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -151,7 +151,7 @@
       "word": {
         "text": "Green",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "colors__green",
         "syllablePartA": "",
         "syllablePartB": ""
@@ -162,7 +162,7 @@
       "word": {
         "text": "Triangle",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "shapes__triangle",
         "syllablePartA": "",
         "syllablePartB": ""
@@ -173,7 +173,7 @@
       "word": {
         "text": "Yellow",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "colors__yellow",
         "syllablePartA": "",
         "syllablePartB": ""
@@ -184,7 +184,7 @@
       "word": {
         "text": "Rectangle",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "shapes__rectangle",
         "syllablePartA": "",
         "syllablePartB": ""

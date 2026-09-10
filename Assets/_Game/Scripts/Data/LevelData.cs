@@ -8,10 +8,10 @@ public class LevelData : ScriptableObject
     [Min(1)] public int levelNumber = 1;
     [Min(1)] public int moveCount = 12;
     [Min(0)] public int expectedCategoryCount;
-    [Tooltip("Rows visible at once. Zero keeps the legacy one-row-per-category behaviour.")]
+    [Tooltip("Legacy row setting retained for JSON compatibility. Category mode always uses four holders.")]
     [Min(0)] public int visibleRowCount;
     public List<Category> categories = new List<Category>();
-    [Tooltip("Exact initial board and queue order. First rowCount * 4 entries are visible.")]
+    [Tooltip("Editor layout preview. Category mode shows all initial magnets and reshuffles on each load.")]
     public List<LevelWordEntry> orderedWords = new List<LevelWordEntry>();
 
     public static LevelData FromJson(string json)
@@ -112,24 +112,9 @@ public class LevelData : ScriptableObject
             .Select(c => c.transformResult.text).ToHashSet(System.StringComparer.OrdinalIgnoreCase);
         int playableWords = categories.SelectMany(c => c.words).Count(word => !generatedWords.Contains(word.text));
         int transformationCount = categories.Count(c => c.transformsOnComplete);
-        int effectiveRowCount = visibleRowCount > 0 ? visibleRowCount : categories.Count;
-        int requiredTransformationCount = categories.Count - effectiveRowCount;
-        if (requiredTransformationCount < 0)
+        if (categories.Count - transformationCount > 4)
         {
-            error = $"Visible row count ({effectiveRowCount}) cannot exceed category count ({categories.Count}).";
-            return false;
-        }
-        if (transformationCount != requiredTransformationCount)
-        {
-            error = $"{categories.Count} categories with {effectiveRowCount} visible rows require exactly {requiredTransformationCount} transformations; {transformationCount} are currently set.";
-            return false;
-        }
-        int queueWords = playableWords - effectiveRowCount * 4;
-        if (queueWords != transformationCount * 3)
-        {
-            error = transformationCount == 0 && queueWords > 0
-                ? $"{queueWords} words would remain queued, but this level has no transformations to bring them onto the board."
-                : $"Row/category counts create {queueWords} queued words; {transformationCount * 3} are required for {transformationCount} transformations.";
+            error = "At most four final categories can remain in the four holders. Add transformations or remove categories.";
             return false;
         }
 

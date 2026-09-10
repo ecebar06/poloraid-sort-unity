@@ -264,7 +264,8 @@ public class WordGameLevelEditor : EditorWindow
         int number = EditorGUILayout.IntField("Level Number", level.levelNumber);
         int moves = EditorGUILayout.IntField("Move Count", level.moveCount);
         int categoryCount = EditorGUILayout.IntField("Category Count", level.expectedCategoryCount);
-        int visibleRows = EditorGUILayout.IntField("Visible Row Count", level.visibleRowCount);
+        int visibleRows = 4;
+        EditorGUILayout.LabelField("Category Holders", "4 (all initial magnets visible)");
         if (EditorGUI.EndChangeCheck())
         {
             Undo.RecordObject(level, "Edit Level Settings");
@@ -298,7 +299,7 @@ public class WordGameLevelEditor : EditorWindow
         {
             if (GUILayout.Button("Auto Build Level", GUILayout.Height(28))) AutoBuildLevel();
             if (GUILayout.Button("Auto Set Transformations", GUILayout.Height(28))) AutoSetTransformations();
-            if (GUILayout.Button("Generate Solveable Order", GUILayout.Height(28))) GenerateSolveableOrder();
+            if (GUILayout.Button("Shuffle Magnets", GUILayout.Height(28))) GenerateSolveableOrder();
             GUI.enabled = level.orderedWords != null && level.orderedWords.Count > 0;
             if (GUILayout.Button("Clear Generated Order", GUILayout.Height(28)))
             {
@@ -326,7 +327,7 @@ public class WordGameLevelEditor : EditorWindow
         }
 
         int effectiveRows = level.visibleRowCount > 0 ? level.visibleRowCount : level.categories.Count;
-        int required = level.categories.Count - effectiveRows;
+        int required = Mathf.Max(0, level.categories.Count - 4);
         if (required < 0)
         {
             status = "Visible row count cannot exceed category count.";
@@ -353,8 +354,7 @@ public class WordGameLevelEditor : EditorWindow
 
     private int ApplyAutomaticTransformations()
     {
-        int effectiveRows = level.visibleRowCount > 0 ? level.visibleRowCount : level.categories.Count;
-        int required = level.categories.Count - effectiveRows;
+        int required = Mathf.Max(0, level.categories.Count - 4);
         foreach (Category category in level.categories)
         {
             category.transformsOnComplete = false;
@@ -389,7 +389,7 @@ public class WordGameLevelEditor : EditorWindow
             status = "Set Category Count before building the level.";
             return;
         }
-        if (visibleRows < 1 || visibleRows > desiredCount)
+        if (visibleRows < 1)
         {
             status = "Visible Row Count must be between 1 and Category Count.";
             return;
@@ -430,107 +430,21 @@ public class WordGameLevelEditor : EditorWindow
 
     private void GenerateSolveableOrder()
     {
-        if (level.categories == null || level.categories.Count == 0 || level.visibleRowCount <= 0)
+        if (level.categories == null || level.categories.Count == 0) return;
+        var generated = new HashSet<string>(level.categories.Where(c => c.transformsOnComplete && c.transformResult != null)
+            .Select(c => c.transformResult.text), System.StringComparer.OrdinalIgnoreCase);
+        Undo.RecordObject(level, "Shuffle loose magnets");
+        level.orderedWords = level.categories.SelectMany(c => c.words.Where(w => !generated.Contains(w.text))
+            .Select(w => new LevelWordEntry { categoryId = c.id, word = CloneWord(w) })).ToList();
+        for (int i = level.orderedWords.Count - 1; i > 0; i--)
         {
-            status = "Add categories and set a row count before generating.";
-            return;
+            int j = UnityEngine.Random.Range(0, i + 1);
+            var temp = level.orderedWords[i];
+            level.orderedWords[i] = level.orderedWords[j];
+            level.orderedWords[j] = temp;
         }
-
-        List<Category> transforms = level.categories.Where(c => c.transformsOnComplete).ToList();
-        HashSet<string> generatedWords = transforms.Where(c => c.transformResult != null)
-            .Select(c => c.transformResult.text).ToHashSet(StringComparer.OrdinalIgnoreCase);
-        List<Category> fixedCategories = level.categories.Where(c => !c.transformsOnComplete).ToList();
-        int visibleWordCount = level.visibleRowCount * 4;
-        int playableWordCount = level.categories.Sum(category =>
-            category.words.Count(word => !generatedWords.Contains(word.text)));
-        int queueWordCount = playableWordCount - visibleWordCount;
-
-        if (queueWordCount != transforms.Count * 3)
-        {
-            status = $"Cannot generate without gaps: queue has {queueWordCount} words, but {transforms.Count * 3} are required.";
-            return;
-        }
-        if (playableWordCount < visibleWordCount)
-        {
-            status = $"Not enough words for {level.visibleRowCount} rows.";
-            return;
-        }
-
-        if (transforms.Count == 0)
-        {
-            Undo.RecordObject(level, "Generate Solveable Level Order");
-            level.orderedWords = Enumerable.Range(0, 4)
-                .SelectMany(wordIndex => fixedCategories.Select(c => Entry(c.id, c.words[wordIndex])))
-                .ToList();
-            EditorUtility.SetDirty(level);
-            status = $"Generated deterministic order for {level.orderedWords.Count} words.";
-            return;
-        }
-
-        List<(Category category, List<WordItem> words)> transformGroups = transforms
-            .Select(category => (category, category.words
-                .Where(word => !generatedWords.Contains(word.text)).ToList()))
-            .ToList();
-        int rootTransformIndex = transformGroups.FindIndex(group => group.words.Count == 4);
-        if (rootTransformIndex < 0 || transformGroups.Any(group => group.words.Count < 3 || group.words.Count > 4))
-        {
-            status = "Cannot generate: transformations need one root category with four playable words and three or four playable words thereafter.";
-            return;
-        }
-
-        (Category category, List<WordItem> words) rootTransform = transformGroups[rootTransformIndex];
-        transformGroups.RemoveAt(rootTransformIndex);
-        transformGroups.Insert(0, rootTransform);
-
-        List<LevelWordEntry> visible = transformGroups[0].words
-            .Select(w => Entry(transformGroups[0].category.id, w)).ToList();
-        List<LevelWordEntry> queue = new List<LevelWordEntry>();
-        for (int i = 1; i < transformGroups.Count; i++)
-        {
-            (Category category, List<WordItem> words) group = transformGroups[i];
-            if (group.words.Count == 4)
-                visible.Add(Entry(group.category.id, group.words[0]));
-            queue.AddRange(group.words.Skip(group.words.Count == 4 ? 1 : 0)
-                .Select(word => Entry(group.category.id, word)));
-        }
-
-        List<(Category category, List<WordItem> words)> fixedGroups = fixedCategories
-            .Select(category => (category, category.words.Where(word => !generatedWords.Contains(word.text)).ToList()))
-            .Where(group => group.Item2.Count > 0)
-            .ToList();
-
-        // Every transformation reveals three queued words. Later source categories use
-        // the first groups; the final group must also be a completeable set of three.
-        int finalGroupIndex = fixedGroups.FindIndex(group => group.words.Count == 3);
-        if (finalGroupIndex < 0)
-            finalGroupIndex = fixedGroups.FindLastIndex(group => group.words.Count == 4);
-        if (finalGroupIndex < 0)
-        {
-            status = "Cannot generate: no category can receive the final three queued words.";
-            return;
-        }
-
-        (Category category, List<WordItem> words) finalGroup = fixedGroups[finalGroupIndex];
-        fixedGroups.RemoveAt(finalGroupIndex);
-        if (finalGroup.words.Count == 4)
-            visible.Add(Entry(finalGroup.category.id, finalGroup.words[0]));
-        queue.AddRange(finalGroup.words.Skip(Mathf.Max(0, finalGroup.words.Count - 3))
-            .Select(word => Entry(finalGroup.category.id, word)));
-
-        visible.AddRange(fixedGroups.SelectMany(group =>
-            group.words.Select(word => Entry(group.category.id, word))));
-
-        if (visible.Count != visibleWordCount || queue.Count != queueWordCount)
-        {
-            status = $"Cannot generate a complete order: created {visible.Count}/{visibleWordCount} visible and {queue.Count}/{queueWordCount} queued words.";
-            return;
-        }
-
-        visible = InterleaveVisibleWords(visible);
-        Undo.RecordObject(level, "Generate Solveable Level Order");
-        level.orderedWords = visible.Concat(queue).ToList();
         EditorUtility.SetDirty(level);
-        status = $"Generated {visible.Count} visible words and {queue.Count} queued words.";
+        status = "Shuffled loose magnets. All are visible; transformation results appear later. Runtime reshuffles each restart.";
     }
 
     private static LevelWordEntry Entry(string categoryId, WordItem source)
@@ -570,11 +484,11 @@ public class WordGameLevelEditor : EditorWindow
     {
         if (level.orderedWords == null || level.orderedWords.Count == 0) return;
         EditorGUILayout.Space(6);
-        EditorGUILayout.LabelField("GENERATED WORD ORDER (drag to swap)", EditorStyles.boldLabel);
+        EditorGUILayout.LabelField("LOOSE MAGNET PREVIEW (runtime reshuffles)", EditorStyles.boldLabel);
         int visibleCount = Mathf.Min(level.orderedWords.Count, level.visibleRowCount * 4);
         for (int start = 0; start < level.orderedWords.Count; start += 4)
         {
-            if (start == visibleCount) EditorGUILayout.LabelField("QUEUE", EditorStyles.boldLabel);
+
             using (new EditorGUILayout.HorizontalScope())
             {
                 for (int i = start; i < Mathf.Min(start + 4, level.orderedWords.Count); i++) DrawDraggableWord(i);
@@ -1102,7 +1016,7 @@ public class WordGameLevelEditor : EditorWindow
         categoryCount = Mathf.Max(1, categoryCount);
         visibleRows = Mathf.Max(1, visibleRows);
         int transformations = Mathf.Max(0, categoryCount - visibleRows);
-        return categoryCount * 3 + transformations;
+        return categoryCount * 4;
     }
 }
 #endif

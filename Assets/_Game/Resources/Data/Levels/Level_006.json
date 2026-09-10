@@ -45,7 +45,7 @@
       "transformResult": {
         "text": "Car",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "vehicles__car",
         "syllablePartA": "",
         "syllablePartB": ""
@@ -59,7 +59,7 @@
         {
           "text": "Car",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "vehicles__car",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -83,7 +83,7 @@
         {
           "text": "Ship",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "vehicles__ship",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -648,7 +648,7 @@
       "word": {
         "text": "Ship",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "vehicles__ship",
         "syllablePartA": "",
         "syllablePartB": ""

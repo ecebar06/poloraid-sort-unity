@@ -49,7 +49,7 @@
           <label>Level Number<input id="levelNumber" type="number" min="1" value="1"></label>
           <label>Move Count<input id="moveCount" type="number" min="1" value="35"></label>
           <label>Category Count<input id="categoryCount" type="number" min="1" value="8"></label>
-          <label>Visible Rows<input id="rowCount" type="number" min="1" value="4"></label>
+          <label>Category Holders<input id="rowCount" type="number" value="4" disabled></label>
         </div>
         <div class="recommended-moves"><span id="recommendedMoves">Recommended Moves: —</span><button id="useRecommendedMoves" class="mini-button">Use Recommended</button></div>
         <div id="validationMessage" class="validation-message">Add categories to validate this level.</div>
@@ -71,14 +71,13 @@
     <aside class="panel order-panel">
       <div class="panel-title"><div><span>04</span><h2>Playable Order</h2></div><b id="orderCount">0 words</b></div>
       <div class="order-actions">
-        <button id="generateOrder" class="button primary">Generate Solvable Order</button>
+        <button id="generateOrder" class="button primary">Shuffle Magnets</button>
         <button id="clearOrder" class="button secondary">Clear</button>
       </div>
-      <p class="hint">Drag any word onto another to swap them. The first rows are visible; the rest form the queue.</p>
-      <h3>Visible Board</h3>
+      <p class="hint">All initial magnets are visible. Transformation results appear after completion. This is a layout preview; the game reshuffles every restart.</p>
+      <h3>Loose Magnets</h3>
       <div id="visibleOrder" class="word-grid"></div>
-      <h3>Queue</h3>
-      <div id="queueOrder" class="word-grid queue-grid"></div>
+      <div id="queueOrder" class="word-grid queue-grid" hidden></div>
     </aside>
   </main>
 

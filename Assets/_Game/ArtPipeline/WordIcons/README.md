@@ -1,5 +1,18 @@
 # Word icon production pipeline
 
+## Current Magnet Sort generation prompt
+
+```text
+cute glossy 3D toy icon for a casual mobile puzzle game, soft clay/plastic render,
+rounded puffy forms, chunky simplified proportions, smooth beveled edges,
+saturated cheerful colors, high readability at small size, soft studio lighting
+from upper left, subtle ambient occlusion in creases, gentle soft shadow under the
+object, clean polished game asset look, centered composition, isolated on a pure
+white background, no hard outline, no text, no logo, no letters, no numbers, no
+extra props, no scene background, not realistic, not flat vector, not pixel art,
+not sketch, no sharp thin edges, no dark dramatic
+```
+
 ## Approved visual direction
 
 - Friendly, polished casual-game icon.

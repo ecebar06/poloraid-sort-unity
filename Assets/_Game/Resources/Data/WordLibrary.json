@@ -55,17 +55,17 @@
             "words": [
                 {
                     "text": "Circle",
-                    "hasSprite": false,
+                    "hasSprite": true,
                     "useIcon": false,
-                    "spriteKey": "",
+                    "spriteKey": "shapes__circle",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Square",
-                    "hasSprite": false,
+                    "hasSprite": true,
                     "useIcon": false,
-                    "spriteKey": "",
+                    "spriteKey": "shapes__square",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },

@@ -954,6 +954,15 @@ public class TableController : MonoBehaviour
     {
         if (Application.isPlaying || wordContainer == null) return;
 
+        Canvas previewCanvas = wordContainer.GetComponentInParent<Canvas>(true);
+        if (previewCanvas != null &&
+            previewCanvas.GetComponentInChildren<CategoryMagnetBoardController>(true) != null)
+        {
+            // The legacy preview must not reactivate its rows in category mode.
+            wordContainer.gameObject.SetActive(false);
+            return;
+        }
+
         playerSaveData = SaveSystem.Current;
         wordContainer.gameObject.SetActive(true);
         if (gameHud == null)

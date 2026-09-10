@@ -34,23 +34,23 @@ MonoBehaviour:
   - key: garden__flower
     sprite: {fileID: 21300000, guid: 2f8c6115f6d8c70498e442440902e07c, type: 3}
   - key: space__moon
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b7eea81719c2fee5f23a0c218f81cbd5, type: 3}
   - key: smart_machines__robot
     sprite: {fileID: 0}
   - key: camping__tent
     sprite: {fileID: 0}
   - key: foods__pizza
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 1f214b980e632f2283e1e905a7d9f78e, type: 3}
   - key: desserts__cake
     sprite: {fileID: 0}
   - key: sweet_treats__ice_cream
     sprite: {fileID: 0}
   - key: reptiles__lizard
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 45a140b852e58237d654c48924bcc720, type: 3}
   - key: habitats__desert
     sprite: {fileID: 0}
   - key: flowers__rose
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 29d84fb7f804e6ae99ccbc48817f08ee, type: 3}
   - key: electronics__phone
     sprite: {fileID: 0}
   - key: breakfast_foods__cereal
@@ -64,7 +64,7 @@ MonoBehaviour:
   - key: movie_making__sound
     sprite: {fileID: 0}
   - key: planets__earth
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 95a08d29c07756d40c69502a68d0e82c, type: 3}
   - key: band_members__guitarist
     sprite: {fileID: 0}
   - key: farming__crop
@@ -92,7 +92,7 @@ MonoBehaviour:
   - key: desert_nature__camel
     sprite: {fileID: 0}
   - key: americas__south_america
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e38f7f551fc291d4287d052ec9731887, type: 3}
   - key: volcano_parts__crater
     sprite: {fileID: 0}
   - key: industrial_age__textile
@@ -108,16 +108,20 @@ MonoBehaviour:
   - key: fruits__apple
     sprite: {fileID: 21300000, guid: e27cabf2175d4b4d87b3e528e8557581, type: 3}
   - key: fruits__banana
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 77c20aff4a154cedeb60bed42ef3174b, type: 3}
   - key: colors__red
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 288e2bf0c9589e8dc12c205ab9badfed, type: 3}
   - key: colors__blue
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 3baa4b39bf61d2c36d7a37ad28b04163, type: 3}
   - key: colors__green
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 6aa09a789221604464c77617a84d0c28, type: 3}
   - key: colors__yellow
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: ce29c4220f4a685d35d4922fe5d7ab11, type: 3}
   - key: shapes__triangle
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 969da19a586000ea276e9055541792e6, type: 3}
   - key: shapes__rectangle
+    sprite: {fileID: 21300000, guid: 6768b25df16ec6a98734ea44469af7be, type: 3}
+  - key: shapes__circle
+    sprite: {fileID: 0}
+  - key: shapes__square
     sprite: {fileID: 0}

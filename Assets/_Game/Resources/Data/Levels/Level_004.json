@@ -19,7 +19,7 @@
         {
           "text": "Banana",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "fruits__banana",
           "syllablePartA": "Ba",
           "syllablePartB": "nana"
@@ -365,7 +365,7 @@
       "word": {
         "text": "Banana",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "fruits__banana",
         "syllablePartA": "Ba",
         "syllablePartB": "nana"

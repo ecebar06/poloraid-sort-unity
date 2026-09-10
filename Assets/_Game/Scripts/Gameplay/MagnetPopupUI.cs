@@ -49,7 +49,7 @@ public sealed class MagnetPopupUI : MonoBehaviour
         Canvas popupCanvas = GetComponent<Canvas>();
         if (popupCanvas == null) popupCanvas = gameObject.AddComponent<Canvas>();
         popupCanvas.overrideSorting = true;
-        popupCanvas.sortingOrder = 500;
+        popupCanvas.sortingOrder = 2000;
 
         if (GetComponent<GraphicRaycaster>() == null)
             gameObject.AddComponent<GraphicRaycaster>();
@@ -85,6 +85,16 @@ public sealed class MagnetPopupUI : MonoBehaviour
         Wire(sound, ToggleSound);
         Wire(music, ToggleMusic);
         Wire(haptic, ToggleHaptic);
+        if (FindFirstObjectByType<CategoryMagnetBoardController>() != null)
+            Wire(restartButton, RestartCategoryLevel);
+    }
+
+    private void RestartCategoryLevel()
+    {
+        var board = FindFirstObjectByType<CategoryMagnetBoardController>();
+        if (board == null) return;
+        HideSettings();
+        board.RestartCurrentLevel();
     }
 
     private static void Wire(Button button, UnityEngine.Events.UnityAction action)

@@ -46,14 +46,14 @@ function syncInputs() {
   $("levelNumber").value = state.level.levelNumber;
   $("moveCount").value = state.level.moveCount;
   $("categoryCount").value = state.level.expectedCategoryCount;
-  $("rowCount").value = state.level.visibleRowCount;
+  $("rowCount").value = 4;
 }
 
 function readInputs() {
   state.level.levelNumber = Math.max(1, +$("levelNumber").value || 1);
   state.level.moveCount = Math.max(1, +$("moveCount").value || 1);
   state.level.expectedCategoryCount = Math.max(1, +$("categoryCount").value || 1);
-  state.level.visibleRowCount = Math.max(1, +$("rowCount").value || 1);
+  state.level.visibleRowCount = 4;
   markDirty();
   render();
 }
@@ -82,7 +82,7 @@ function recommendedMoveCount() {
   const categories = Math.max(1, +$("categoryCount").value || state.level.expectedCategoryCount || 1);
   const visibleRows = Math.max(1, +$("rowCount").value || state.level.visibleRowCount || 1);
   const transformations = Math.max(0, categories - visibleRows);
-  return categories * 3 + transformations;
+  return categories * 4;
 }
 
 function renderRecommendedMoves() {
@@ -180,7 +180,7 @@ function renderSelected() {
 }
 
 function renderOrder() {
-  const visibleCount = Math.min(state.level.orderedWords.length, state.level.visibleRowCount * 4);
+  const visibleCount = state.level.orderedWords.length;
   $("orderCount").textContent = `${state.level.orderedWords.length} words`;
   drawWords("visibleOrder", state.level.orderedWords.slice(0, visibleCount), 0);
   drawWords("queueOrder", state.level.orderedWords.slice(visibleCount), visibleCount);
@@ -239,43 +239,30 @@ function validate() {
   const generated = new Set(state.level.categories.filter(c => c.transformsOnComplete).map(c => c.transformResult.text.toLowerCase()));
   const playable = state.level.categories.flatMap(c => c.words).filter(w => !generated.has(w.text.toLowerCase())).length;
   const transforms = state.level.categories.filter(c => c.transformsOnComplete).length;
-  const requiredTransforms = state.level.categories.length - state.level.visibleRowCount;
-  if (requiredTransforms < 0)
-    errors.push(`Visible Rows (${state.level.visibleRowCount}) cannot exceed the number of categories (${state.level.categories.length}).`);
-  else if (transforms !== requiredTransforms)
-    errors.push(`${state.level.categories.length} categories with ${state.level.visibleRowCount} visible rows require exactly ${requiredTransforms} transformations. Currently ${transforms} are set.`);
-  const queue = playable - state.level.visibleRowCount * 4;
-  if (queue !== transforms * 3) {
-    if (transforms === 0 && queue > 0)
-      errors.push(`${queue} words would remain in the queue, but this level has no transformations to bring them onto the board. Increase Visible Rows to ${playable / 4} or add transformations.`);
-    else
-      errors.push(`Counts create ${queue} queued words; ${transforms} transformations require exactly ${transforms * 3}.`);
-  }
+  if (state.level.categories.length - transforms > 4)
+    errors.push("At most four final categories can remain in the four holders. Add transformations or remove categories.");
   if (state.level.orderedWords.length && state.level.orderedWords.length !== playable) errors.push(`Generated order contains ${state.level.orderedWords.length}/${playable} playable words.`);
   $("validationBadge").className = `status ${errors.length ? "bad" : "good"}`;
   $("validationBadge").textContent = errors.length ? `${errors.length} issue${errors.length > 1 ? "s" : ""}` : "Ready";
   $("validationMessage").className = `validation-message ${errors.length ? "error" : "success"}`;
   $("validationMessage").textContent = errors.length
     ? errors.map((message, index) => `${index + 1}. ${message}`).join("\n")
-    : `✓ Valid setup: ${state.level.categories.length} categories − ${state.level.visibleRowCount} visible rows = ${transforms} transformations.`;
+    : `Valid holder setup: ${state.level.categories.length} categories, ${transforms} transformations, ${playable} loose magnets.`;
   return errors;
 }
 
 function generateOrder() {
-  if (validate().length) return toast("Fix the level warnings before generating an order.");
-  // A one-transform tutorial can legitimately need all three companion words
-  // in its only refill (Dog Breeds -> Dog + Cat/Bird/Fish, for example).
-  // Try the mixed generator first, then use that safe special case.
-  const order = buildBalancedSolvableOrder() || buildSingleTransformTutorialOrder();
-  if (!order) return toast("Could not build a mixed, solvable order. Check the transformation links and try again.");
-  const { visible, queue } = order;
-  const expectedVisible = state.level.visibleRowCount * 4;
-  const expectedQueue = state.level.categories.filter(category => category.transformsOnComplete).length * 3;
-  if (visible.length !== expectedVisible || queue.length !== expectedQueue)
-    return toast(`Could not create a complete order (${visible.length}/${expectedVisible} visible, ${queue.length}/${expectedQueue} queued).`);
-  state.level.orderedWords = [...visible, ...queue];
-  markDirty();
-  render(); toast(`Generated ${state.level.orderedWords.length} mixed, solvable words.`);
+  if (validate().length) return toast("Fix level warnings first.");
+  const generated = new Set(state.level.categories.filter(c => c.transformsOnComplete && c.transformResult)
+    .map(c => c.transformResult.text.toLowerCase()));
+  const words = state.level.categories.flatMap(c => c.words.filter(w => !generated.has(w.text.toLowerCase()))
+    .map(w => ({categoryId:c.id, word: structuredClone(w)})));
+  for (let i=words.length-1;i>0;i--) {
+    const j=Math.floor(Math.random()*(i+1));
+    [words[i],words[j]]=[words[j],words[i]];
+  }
+  state.level.orderedWords=words;
+  markDirty(); render(); toast("Shuffled loose magnets; runtime reshuffles on each restart.");
 }
 
 function buildSingleTransformTutorialOrder() {
@@ -490,7 +477,7 @@ function addCategory(id) {
 }
 
 function autoSetTransformations() {
-  const required = state.level.categories.length - state.level.visibleRowCount;
+  const required = Math.max(0, state.level.categories.length - 4);
   if (required < 0) return toast("Visible Rows cannot exceed the category count.");
   if (state.level.categories.some(category => category.words.length !== 4))
     return toast("Every category must contain exactly 4 words first.");
@@ -506,7 +493,7 @@ function autoSetTransformations() {
 }
 
 function applyAutomaticTransformations() {
-  const required = state.level.categories.length - state.level.visibleRowCount;
+  const required = Math.max(0, state.level.categories.length - 4);
   for (const category of state.level.categories) {
     category.transformsOnComplete = false;
     category.transformResult = normalizeWord();
@@ -528,7 +515,6 @@ function autoBuildLevel() {
   const desiredCount = Math.max(1, +$("categoryCount").value || 1);
   const visibleRows = Math.max(1, +$("rowCount").value || 1);
   if (!state.library.categories.length) return toast("Import WordLibrary.json first.");
-  if (visibleRows > desiredCount) return toast("Visible Rows cannot exceed Category Count.");
   if (state.level.categories.length && !confirm("Replace the current categories, transformations and generated order?")) return;
 
   state.level.levelNumber = Math.max(1, +$("levelNumber").value || 1);

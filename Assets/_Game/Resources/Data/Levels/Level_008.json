@@ -299,7 +299,7 @@
         {
           "text": "Chair",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "furniture__chair",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -509,7 +509,7 @@
       "word": {
         "text": "Chair",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "furniture__chair",
         "syllablePartA": "",
         "syllablePartB": ""
