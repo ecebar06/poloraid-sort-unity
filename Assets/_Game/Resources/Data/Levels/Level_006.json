@@ -1,6 +1,6 @@
 {
   "levelNumber": 6,
-  "moveCount": 27,
+  "moveCount": 32,
   "expectedCategoryCount": 8,
   "visibleRowCount": 5,
   "categories": [
@@ -393,18 +393,7 @@
     {
       "categoryId": "car_types",
       "word": {
-        "text": "Sedan",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "vehicles",
-      "word": {
-        "text": "Bus",
+        "text": "Truck",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -424,9 +413,9 @@
       }
     },
     {
-      "categoryId": "things_that_fly",
+      "categoryId": "directions",
       "word": {
-        "text": "Plane",
+        "text": "Left",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -437,7 +426,7 @@
     {
       "categoryId": "directions",
       "word": {
-        "text": "Up",
+        "text": "Right",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -446,9 +435,9 @@
       }
     },
     {
-      "categoryId": "tastes",
+      "categoryId": "birds",
       "word": {
-        "text": "Sweet",
+        "text": "Swan",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -457,20 +446,9 @@
       }
     },
     {
-      "categoryId": "ocean",
+      "categoryId": "birds",
       "word": {
-        "text": "Wave",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "water_bodies",
-      "word": {
-        "text": "River",
+        "text": "Crow",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -490,31 +468,20 @@
       }
     },
     {
+      "categoryId": "car_types",
+      "word": {
+        "text": "Sedan",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
       "categoryId": "vehicles",
       "word": {
-        "text": "Train",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "birds",
-      "word": {
-        "text": "Robin",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "things_that_fly",
-      "word": {
-        "text": "Kite",
+        "text": "Bus",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -536,7 +503,183 @@
     {
       "categoryId": "tastes",
       "word": {
+        "text": "Salty",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "things_that_fly",
+      "word": {
+        "text": "Butterfly",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "car_types",
+      "word": {
+        "text": "Van",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "directions",
+      "word": {
+        "text": "Up",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "birds",
+      "word": {
+        "text": "Robin",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "things_that_fly",
+      "word": {
+        "text": "Plane",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "tastes",
+      "word": {
+        "text": "Bitter",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "tastes",
+      "word": {
+        "text": "Sweet",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "vehicles",
+      "word": {
+        "text": "Train",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "tastes",
+      "word": {
         "text": "Sour",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "vehicles",
+      "word": {
+        "text": "Ship",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "vehicles__ship",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "ocean",
+      "word": {
+        "text": "Wave",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "things_that_fly",
+      "word": {
+        "text": "Kite",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "ocean",
+      "word": {
+        "text": "Coral",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "water_bodies",
+      "word": {
+        "text": "Pond",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "ocean",
+      "word": {
+        "text": "Reef",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "water_bodies",
+      "word": {
+        "text": "River",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -559,149 +702,6 @@
       "categoryId": "water_bodies",
       "word": {
         "text": "Lake",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "car_types",
-      "word": {
-        "text": "Van",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "birds",
-      "word": {
-        "text": "Crow",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "ocean",
-      "word": {
-        "text": "Coral",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "car_types",
-      "word": {
-        "text": "Truck",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "directions",
-      "word": {
-        "text": "Left",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "tastes",
-      "word": {
-        "text": "Salty",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "birds",
-      "word": {
-        "text": "Swan",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "vehicles",
-      "word": {
-        "text": "Ship",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "vehicles__ship",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "ocean",
-      "word": {
-        "text": "Reef",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "water_bodies",
-      "word": {
-        "text": "Pond",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "things_that_fly",
-      "word": {
-        "text": "Butterfly",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "directions",
-      "word": {
-        "text": "Right",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "tastes",
-      "word": {
-        "text": "Bitter",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",

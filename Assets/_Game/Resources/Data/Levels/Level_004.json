@@ -1,6 +1,6 @@
 {
   "levelNumber": 4,
-  "moveCount": 17,
+  "moveCount": 24,
   "expectedCategoryCount": 6,
   "visibleRowCount": 4,
   "categories": [
@@ -295,130 +295,9 @@
   ],
   "orderedWords": [
     {
-      "categoryId": "fruits",
-      "word": {
-        "text": "Apple",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "fruits__apple",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
       "categoryId": "healthy_eating",
       "word": {
-        "text": "Supplement",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "ball_sports",
-      "word": {
-        "text": "Soccer",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "toys",
-      "word": {
-        "text": "Doll",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "farm_animals",
-      "word": {
-        "text": "Cow",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "days",
-      "word": {
-        "text": "Monday",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "fruits",
-      "word": {
-        "text": "Banana",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "fruits__banana",
-        "syllablePartA": "Ba",
-        "syllablePartB": "nana"
-      }
-    },
-    {
-      "categoryId": "healthy_eating",
-      "word": {
-        "text": "Water",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "ball_sports",
-      "word": {
-        "text": "Tennis",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "toys",
-      "word": {
-        "text": "Blocks",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "farm_animals",
-      "word": {
-        "text": "Pig",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "days",
-      "word": {
-        "text": "Tuesday",
+        "text": "Nuts",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -438,9 +317,31 @@
       }
     },
     {
+      "categoryId": "toys",
+      "word": {
+        "text": "Doll",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
       "categoryId": "ball_sports",
       "word": {
-        "text": "Volleyball",
+        "text": "Tennis",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "healthy_eating",
+      "word": {
+        "text": "Water",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -451,7 +352,7 @@
     {
       "categoryId": "farm_animals",
       "word": {
-        "text": "Horse",
+        "text": "Sheep",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -460,31 +361,9 @@
       }
     },
     {
-      "categoryId": "fruits",
+      "categoryId": "farm_animals",
       "word": {
-        "text": "Grape",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "days",
-      "word": {
-        "text": "Friday",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "ball_sports",
-      "word": {
-        "text": "Basketball",
+        "text": "Cow",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -506,7 +385,62 @@
     {
       "categoryId": "healthy_eating",
       "word": {
-        "text": "Nuts",
+        "text": "Supplement",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "toys",
+      "word": {
+        "text": "Blocks",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "fruits",
+      "word": {
+        "text": "Banana",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "fruits__banana",
+        "syllablePartA": "Ba",
+        "syllablePartB": "nana"
+      }
+    },
+    {
+      "categoryId": "ball_sports",
+      "word": {
+        "text": "Soccer",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "ball_sports",
+      "word": {
+        "text": "Volleyball",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "ball_sports",
+      "word": {
+        "text": "Basketball",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -517,7 +451,73 @@
     {
       "categoryId": "farm_animals",
       "word": {
-        "text": "Sheep",
+        "text": "Horse",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "farm_animals",
+      "word": {
+        "text": "Pig",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "days",
+      "word": {
+        "text": "Monday",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "fruits",
+      "word": {
+        "text": "Grape",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "days",
+      "word": {
+        "text": "Tuesday",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "fruits",
+      "word": {
+        "text": "Apple",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "fruits__apple",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "days",
+      "word": {
+        "text": "Friday",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",

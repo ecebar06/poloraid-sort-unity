@@ -23,6 +23,8 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     private int activeLevelIndex;
     private int totalCategories;
     private int remainingMoves;
+    private readonly HashSet<string> retainedFinalCategories = new HashSet<string>();
+    private GameObject outOfMovesScreen;
     private bool gameEnded;
     private bool rewardDoubled;
     private Canvas canvas;
@@ -30,6 +32,17 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     private TMP_FontAsset font;
     private LevelData currentLevel;
     private int pendingTransformations;
+    private int creditedCategories;
+    private Tween progressTween;
+    private readonly List<RectTransform> completionEffects = new List<RectTransform>();
+    private List<LevelWordEntry> mixedStock;
+    private int stockCursor;
+    private readonly Dictionary<LooseMagnet, int> looseSlots = new Dictionary<LooseMagnet, int>();
+    private readonly Dictionary<LooseMagnet, Vector2> reservedLandings = new Dictionary<LooseMagnet, Vector2>();
+    public bool CanPlayCategory(string id) => !completedCategories.Contains(id);
+    private int SlotCount => currentLevel.categories.Count <= 4 &&
+        currentLevel.categories.All(c => !c.transformsOnComplete)
+        ? currentLevel.categories.Count * 4 : MagnetDealPlan.Capacity;
     private Image categoryProgress;
     private RectTransform categoryKnob;
     private TextMeshProUGUI categoryProgressText;
@@ -40,7 +53,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
 
     public Canvas Canvas => canvas;
     public RectTransform BottomArea => bottomArea;
-    public bool IsInputLocked => gameEnded || pendingTransformations > 0 ||
+    public bool IsInputLocked => gameEnded || remainingMoves <= 0 || pendingTransformations > 0 ||
         (MagnetPopupUI.Instance != null && MagnetPopupUI.Instance.SettingsScreen != null &&
          MagnetPopupUI.Instance.SettingsScreen.activeInHierarchy);
 
@@ -101,12 +114,25 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         activeLevelIndex = Mathf.Clamp(index, 0, database.levels.Count - 1);
         LevelData level = database.GetLevel(activeLevelIndex);
         StopAllCoroutines();
+        if (outOfMovesScreen != null) outOfMovesScreen.SetActive(false);
+        ClearCompletionEffects();
+        progressTween?.Kill();
+        creditedCategories = 0;
+        if (categoryKnob != null)
+        {
+            categoryKnob.DOKill();
+            categoryKnob.localScale = Vector3.one;
+        }
         bottomArea.gameObject.SetActive(true);
         foreach (var holder in holders) holder.gameObject.SetActive(true);
         pendingTransformations = 0;
         currentLevel = level;
+        stockCursor = 0;
+        looseSlots.Clear();
+        reservedLandings.Clear();
         ClearLooseMagnets();
         completedCategories.Clear();
+        retainedFinalCategories.Clear();
         totalCategories = level.categories.Count;
         remainingMoves = level.moveCount;
         gameEnded = false;
@@ -120,22 +146,32 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         RefreshTestNavigator();
 #endif
 
-        // Generated results belong to their destination category but only enter
-        // the board after their source category has been collected.
-        List<LevelWordEntry> entries = level.categories
-            .SelectMany(category => category.words.Select(word => new LevelWordEntry
-                { categoryId = category.id, word = word }))
-            .Where(entry => !level.categories.Any(source => source.transformsOnComplete &&
-                source.transformResult != null && source.transformResultCategoryId == entry.categoryId &&
-                string.Equals(source.transformResult.text, entry.word.text, System.StringComparison.OrdinalIgnoreCase)))
-            .ToList();
-
-        // Shuffle every load/restart rather than displaying category groups.
-        for (int i = entries.Count - 1; i > 0; i--)
+        try
         {
-            int j = Random.Range(0, i + 1);
-            (entries[i], entries[j]) = (entries[j], entries[i]);
+            mixedStock = MixedMagnetStock.IsSafe(level, level.orderedWords)
+                ? level.orderedWords.ToList() : MixedMagnetStock.Generate(level);
         }
+        catch (System.InvalidOperationException error)
+        {
+            gameEnded = true;
+            Debug.LogError(error.Message);
+            return;
+        }
+        RefillStock();
+    }
+
+    private void RefillStock()
+    {
+        if (gameEnded) return;
+        if (pendingTransformations > 0) return;
+        LevelData level = currentLevel;
+        // Consume a fixed mixed queue: 4 replacement words for a final, 3 plus
+        // the generated output for a transformation. Holder-contained words
+        // still count toward this logical budget, avoiding hidden over-deals.
+        int outputs = level.categories.Count(c => c.transformsOnComplete && completedCategories.Contains(c.id));
+        int targetCursor = Mathf.Min(mixedStock.Count, 16 + completedCategories.Count * 4 - outputs);
+        List<LevelWordEntry> entries = mixedStock.Skip(stockCursor).Take(targetCursor - stockCursor).ToList();
+        stockCursor = targetCursor;
         for (int i = 0; i < entries.Count; i++)
         {
             LevelWordEntry entry = entries[i];
@@ -145,10 +181,56 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
                 iconLibrary.TryGetIcon(entry.word.spriteKey, out sprite);
             LooseMagnet magnet = CreateMagnet(entry.word.text, entry.categoryId,
                 category == null ? entry.categoryId : category.name, sprite);
-            magnet.RectTransform().anchoredPosition = GetScatteredPosition(i, entries.Count);
-            if (level.levelNumber == 1)
-                magnet.RectTransform().localRotation = Quaternion.identity;
+            PlaceInFreeSlot(magnet);
+            magnet.RectTransform().localScale = Vector3.one * 1.18f;
+            magnet.RectTransform().DOScale(1f, 0.28f).SetEase(Ease.OutCubic);
         }
+    }
+
+    private Vector2 SlotPosition(int slot)
+    {
+        Rect area = bottomArea.rect;
+        float cellWidth = area.width / 4f;
+        float cellHeight = Mathf.Min(280f, area.height / 4f);
+        return new Vector2(area.xMin + cellWidth * (slot % 4 + 0.5f),
+            area.yMax - cellHeight * (slot / 4 + 0.5f));
+    }
+
+    private void PlaceInFreeSlot(LooseMagnet magnet)
+    {
+        var free = Enumerable.Range(0, SlotCount).Where(i => !looseSlots.ContainsValue(i)).ToList();
+        int slot = free[Random.Range(0, free.Count)];
+        looseSlots.Add(magnet, slot);
+        var size = magnet.RectTransform().rect.size;
+        var candidates = new List<Vector2>();
+        for (int i = 0; i < 400; i++)
+            candidates.Add(ClampToBottomArea(new Vector2(Random.Range(bottomArea.rect.xMin, bottomArea.rect.xMax),
+                Random.Range(bottomArea.rect.yMin, bottomArea.rect.yMax)), size));
+        // Grid locations are only a last resort, never the preferred layout.
+        candidates.AddRange(Enumerable.Range(0, SlotCount).Select(SlotPosition).OrderBy(_ => Random.value));
+        // Placement consults actual positions, not old grid slots: free drags may overlap.
+        float Clearance(Vector2 p) => looseSlots.Keys.Where(m => m != magnet && m != null)
+            .Select(m => {
+                Vector2 delta = p - (reservedLandings.TryGetValue(m, out Vector2 landing) ? landing : m.RectTransform().anchoredPosition);
+                Vector2 half = (size + m.RectTransform().rect.size) * 0.5f + Vector2.one * 8f;
+                return Mathf.Max(Mathf.Abs(delta.x) - half.x, Mathf.Abs(delta.y) - half.y);
+            }).DefaultIfEmpty(float.MaxValue).Min();
+        Vector2 best = candidates.OrderByDescending(Clearance).First();
+        foreach (Vector2 candidate in candidates)
+            if (Clearance(candidate) >= 0f) { best = candidate; break; }
+        magnet.RectTransform().anchoredPosition = best;
+    }
+
+    public Vector2 GetLooseLanding(LooseMagnet magnet)
+    {
+        // No grid snap: preserve the drop point, including deliberate overlaps.
+        var corners = new Vector3[4];
+        ((RectTransform)canvas.rootCanvas.transform).GetWorldCorners(corners);
+        var localCorners = corners.Select(p => (Vector2)bottomArea.InverseTransformPoint(p)).ToArray();
+        Vector2 half = magnet.RectTransform().rect.size * 0.5f;
+        Vector2 position = magnet.RectTransform().anchoredPosition;
+        return new Vector2(Mathf.Clamp(position.x, localCorners.Min(p => p.x) + half.x, localCorners.Max(p => p.x) - half.x),
+            Mathf.Clamp(position.y, localCorners.Min(p => p.y) + half.y, localCorners.Max(p => p.y) - half.y));
     }
 
     public void UpdateHoveredHolder(Vector2 screenPosition, LooseMagnet magnet)
@@ -170,25 +252,100 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         hoveredHolder = null;
         if (target == null)
         {
-            magnet.ReturnInsideBottomArea();
+            // Pointer can be outside while the dragged card still covers a holder.
+            // Reject that overlap as well, rather than leaving a fake collected card.
+            if (OverlapsHolder(magnet)) magnet.Reject();
+            else magnet.ReturnInsideBottomArea();
             return;
         }
         if (!target.TryAccept(magnet))
         {
             magnet.Reject();
-            magnet.ReturnInsideBottomArea();
             return;
         }
 
         remainingMoves = Mathf.Max(0, remainingMoves - 1);
+        looseSlots.Remove(magnet);
         RefreshMoves();
+    }
+
+    private void LateUpdate()
+    {
+        if (currentLevel == null || gameEnded || remainingMoves > 0 || pendingTransformations > 0) return;
+        // The last legal move may complete a category. Let its celebration and
+        // transformations finish before choosing win versus out-of-moves.
+        if (holders.Any(h => h.IsFull && !completedCategories.Contains(h.CategoryId))) return;
+        if (completedCategories.Count >= totalCategories) return;
+        gameEnded = true;
+        if (outOfMovesScreen == null)
+        {
+            Image overlay = CreateImage("CategoryOutOfMoves", canvas.transform);
+            outOfMovesScreen = overlay.gameObject;
+            Stretch(overlay.rectTransform, 0f);
+            overlay.color = new Color(0f, 0f, 0f, 0.78f);
+            Canvas popupCanvas = outOfMovesScreen.AddComponent<Canvas>();
+            popupCanvas.overrideSorting = true;
+            popupCanvas.sortingOrder = 2100;
+            outOfMovesScreen.AddComponent<GraphicRaycaster>();
+            TextMeshProUGUI title = CreateText("Title", overlay.transform);
+            title.rectTransform.sizeDelta = new Vector2(800f, 180f);
+            title.rectTransform.anchoredPosition = new Vector2(0f, 110f);
+            title.font = font;
+            title.text = "OUT OF MOVES";
+            title.color = Color.white;
+            title.fontSize = 64f;
+            title.alignment = TextAlignmentOptions.Center;
+            title.raycastTarget = false;
+            Image retry = CreateImage("Retry", overlay.transform);
+            retry.rectTransform.sizeDelta = new Vector2(440f, 140f);
+            retry.rectTransform.anchoredPosition = new Vector2(0f, -100f);
+            retry.color = new Color(0.15f, 0.72f, 0.48f);
+            retry.gameObject.AddComponent<Button>().onClick.AddListener(RestartCurrentLevel);
+            TextMeshProUGUI label = CreateText("Label", retry.transform);
+            Stretch(label.rectTransform, 0f);
+            label.font = font;
+            label.text = "RESTART";
+            label.fontSize = 48f;
+            label.color = Color.white;
+            label.alignment = TextAlignmentOptions.Center;
+            label.raycastTarget = false;
+        }
+        outOfMovesScreen.SetActive(true);
+    }
+
+    private bool OverlapsHolder(LooseMagnet magnet)
+    {
+        Rect LocalBounds(RectTransform rect)
+        {
+            var corners = new Vector3[4];
+            rect.GetWorldCorners(corners);
+            var points = corners.Select(p => (Vector2)bottomArea.InverseTransformPoint(p)).ToArray();
+            return Rect.MinMaxRect(points.Min(p => p.x), points.Min(p => p.y),
+                points.Max(p => p.x), points.Max(p => p.y));
+        }
+        Rect magnetBounds = LocalBounds(magnet.RectTransform());
+        return holders.Any(h => h != null && h.gameObject.activeInHierarchy &&
+            magnetBounds.Overlaps(LocalBounds((RectTransform)h.transform)));
     }
 
     public void OnHolderCompleted(CategoryHolder holder, string categoryId, LooseMagnet[] magnets)
     {
         if (!completedCategories.Add(categoryId)) return;
-        RefreshCategoryProgress();
         Category source = currentLevel.categories.FirstOrDefault(category => category.id == categoryId);
+        // Conservatively reserve a holder for every unfinished category,
+        // including transformation stages. Never retain while stock remains.
+        bool keepFinalHolder = mixedStock != null && stockCursor >= mixedStock.Count &&
+            totalCategories - completedCategories.Count <= holders.Length - retainedFinalCategories.Count - 1;
+        bool transforms = source != null && source.transformsOnComplete && source.transformResult != null;
+        if (!transforms && keepFinalHolder) retainedFinalCategories.Add(categoryId);
+        if (!transforms && !keepFinalHolder)
+        {
+            pendingTransformations++;
+            StartCoroutine(FlyFinalToProgress(holder, magnets, source));
+            return;
+        }
+        creditedCategories++;
+        RefreshCategoryProgress();
         if (source != null && source.transformsOnComplete && source.transformResult != null)
         {
             pendingTransformations++;
@@ -200,7 +357,11 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             StartCoroutine(CompleteLevel());
             return;
         }
-        // Non-transforming categories remain locked in their completed holder.
+        // This completion was one of the last four categories (including itself).
+        // Keep terminal holders filled and badge-colored through the finish.
+        // Transformations above still recycle, since their output is required.
+        if (!keepFinalHolder) holder.ClearForReuse();
+        RefillStock();
     }
 
     public void RestartCurrentLevel()
@@ -209,9 +370,18 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         LoadLevel(activeLevelIndex);
     }
 
-    private void RefreshCategoryProgress()
+    private void RefreshCategoryProgress(bool animate = false)
     {
-        float ratio = totalCategories > 0 ? completedCategories.Count / (float)totalCategories : 0f;
+        float ratio = totalCategories > 0 ? creditedCategories / (float)totalCategories : 0f;
+        progressTween?.Kill();
+        if (categoryProgressText != null) categoryProgressText.text = creditedCategories.ToString();
+        if (animate && categoryProgress != null)
+            progressTween = DOTween.To(() => categoryProgress.fillAmount, ApplyProgressRatio, ratio, 0.3f).SetEase(Ease.OutCubic);
+        else ApplyProgressRatio(ratio);
+    }
+
+    private void ApplyProgressRatio(float ratio)
+    {
         if (categoryProgress != null)
         {
             categoryProgress.type = Image.Type.Filled;
@@ -224,7 +394,88 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             categoryKnob.anchorMin = categoryKnob.anchorMax = new Vector2(ratio, 0.5f);
             categoryKnob.anchoredPosition = Vector2.zero;
         }
-        if (categoryProgressText != null) categoryProgressText.text = completedCategories.Count.ToString();
+    }
+
+    private IEnumerator FlyFinalToProgress(CategoryHolder holder, LooseMagnet[] magnets, Category category)
+    {
+        Vector3 center = holder.transform.position;
+        foreach (var magnet in magnets)
+        {
+            magnet.transform.DOKill();
+            magnet.transform.DOMove(center, 0.3f).SetEase(Ease.InOutCubic);
+            magnet.transform.DOScale(0f, 0.3f).SetEase(Ease.InBack);
+        }
+        yield return new WaitForSeconds(0.32f);
+
+        Image badge = CreateImage("CompletedCategoryFlight", transform);
+        RectTransform rect = badge.rectTransform;
+        completionEffects.Add(rect);
+        rect.sizeDelta = new Vector2(280f, 95f);
+        rect.position = center;
+        Image sourceBadge = holder.transform.Find("CategoryBadge")?.GetComponent<Image>();
+        badge.sprite = sourceBadge != null ? sourceBadge.sprite : magnetSprite;
+        badge.color = sourceBadge != null ? sourceBadge.color : Color.white;
+        badge.type = Image.Type.Sliced;
+        badge.raycastTarget = false;
+        Canvas effectCanvas = badge.gameObject.AddComponent<Canvas>();
+        effectCanvas.overrideSorting = true;
+        effectCanvas.sortingOrder = 900;
+        TextMeshProUGUI title = CreateText("CategoryName", rect);
+        Stretch(title.rectTransform, 8f);
+        TextMeshProUGUI sourceTitle = holder.transform.Find("CategoryLabel")?.GetComponent<TextMeshProUGUI>();
+        title.font = sourceTitle != null ? sourceTitle.font : font;
+        if (sourceTitle != null) title.fontSharedMaterial = sourceTitle.fontSharedMaterial;
+        title.color = sourceTitle != null ? sourceTitle.color : Color.black;
+        title.fontStyle = sourceTitle != null ? sourceTitle.fontStyle : FontStyles.Bold;
+        title.text = category != null ? category.name : holder.CategoryId;
+        title.alignment = TextAlignmentOptions.Center;
+        title.enableAutoSizing = true;
+        title.fontSizeMin = 18f;
+        title.fontSizeMax = 40f;
+        title.raycastTarget = false;
+        rect.localScale = Vector3.zero;
+        yield return rect.DOScale(1f, 0.22f).SetEase(Ease.OutBack).WaitForCompletion();
+        yield return new WaitForSeconds(0.35f);
+        Vector3 start = rect.position;
+        rect.DOScale(0.18f, 0.55f).SetEase(Ease.InCubic);
+        yield return DOVirtual.Float(0f, 1f, 0.55f, t => {
+            Vector3 target = categoryKnob != null ? categoryKnob.position : start;
+            rect.position = Vector3.Lerp(start, target, t);
+        }).SetEase(Ease.InOutCubic).SetTarget(rect).WaitForCompletion();
+        completionEffects.Remove(rect);
+        rect.DOKill();
+        Destroy(badge.gameObject);
+        creditedCategories++;
+        RefreshCategoryProgress(true);
+        if (categoryKnob != null)
+        {
+            categoryKnob.DOKill();
+            categoryKnob.localScale = Vector3.one;
+            categoryKnob.DOPunchScale(Vector3.one * 0.2f, 0.3f, 4, 0.5f);
+        }
+        HapticFeedback.Play(HapticFeedback.Strength.Success);
+        holder.ClearForReuse();
+        pendingTransformations--;
+        RefillStock();
+        if (pendingTransformations == 0 && completedCategories.Count >= totalCategories)
+            StartCoroutine(CompleteLevel());
+    }
+
+    private void ClearCompletionEffects()
+    {
+        foreach (RectTransform effect in completionEffects)
+        {
+            if (effect == null) continue;
+            effect.DOKill();
+            Destroy(effect.gameObject);
+        }
+        completionEffects.Clear();
+    }
+
+    private void OnDestroy()
+    {
+        progressTween?.Kill();
+        ClearCompletionEffects();
     }
 
     private IEnumerator TransformHolder(CategoryHolder holder, LooseMagnet[] magnets, Category source)
@@ -244,19 +495,22 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         LooseMagnet result = CreateMagnet(source.transformResult.text, source.transformResultCategoryId,
             target == null ? source.transformResultCategoryId : target.name, sprite);
         RectTransform rect = result.RectTransform();
+        PlaceInFreeSlot(result);
+        Vector2 landing = rect.anchoredPosition;
+        reservedLandings[result] = landing;
         rect.position = mergePoint;
         rect.localScale = Vector3.zero;
         result.BringToFront();
         holder.ClearForReuse();
         yield return rect.DOScale(1f, 0.24f).SetEase(Ease.OutBack).WaitForCompletion();
-        Vector2 landing = ClampToBottomArea(new Vector2(rect.anchoredPosition.x,
-            bottomArea.rect.yMax - rect.rect.height), rect.rect.size);
         yield return rect.DOAnchorPos(landing, 0.55f).SetEase(Ease.OutBounce).WaitForCompletion();
+        reservedLandings.Remove(result);
         // Keep the newest result above older magnets, including other results
         // that may have finished falling while this animation was running.
         result.BringToFront();
         HapticFeedback.Play(HapticFeedback.Strength.Success);
         pendingTransformations--;
+        RefillStock();
         if (pendingTransformations == 0 && completedCategories.Count >= totalCategories)
             StartCoroutine(CompleteLevel());
     }
@@ -336,6 +590,9 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         RectTransform rect = root.GetComponent<RectTransform>();
         rect.SetParent(bottomArea, false);
         rect.sizeDelta = sprite == null ? new Vector2(213f, 150f) : new Vector2(250.5f, 250.5f);
+        float fit = Mathf.Min(1f, bottomArea.rect.width / 4f / 280f,
+            Mathf.Min(280f, bottomArea.rect.height / 4f) / 280f);
+        rect.sizeDelta *= fit;
         Image background = root.GetComponent<Image>();
         background.sprite = magnetSprite;
         background.type = Image.Type.Sliced;

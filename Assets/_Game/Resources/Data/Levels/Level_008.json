@@ -1,6 +1,6 @@
 {
   "levelNumber": 8,
-  "moveCount": 30,
+  "moveCount": 36,
   "expectedCategoryCount": 9,
   "visibleRowCount": 6,
   "categories": [
@@ -439,14 +439,80 @@
   ],
   "orderedWords": [
     {
-      "categoryId": "planets",
+      "categoryId": "doctors",
       "word": {
-        "text": "Mercury",
+        "text": "Clinic",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
-        "syllablePartA": "mer",
-        "syllablePartB": "cury"
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "planets",
+      "word": {
+        "text": "Venus",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "snacks",
+      "word": {
+        "text": "Pretzel",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "planets",
+      "word": {
+        "text": "Earth",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "planets__earth",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "snacks",
+      "word": {
+        "text": "Crackers",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "snacks",
+      "word": {
+        "text": "Popcorn",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "meals",
+      "word": {
+        "text": "Dinner",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
       }
     },
     {
@@ -461,12 +527,34 @@
       }
     },
     {
-      "categoryId": "snacks",
+      "categoryId": "meals",
       "word": {
-        "text": "Chips",
+        "text": "Lunch",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "planets",
+      "word": {
+        "text": "Mercury",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "mer",
+        "syllablePartB": "cury"
+      }
+    },
+    {
+      "categoryId": "space",
+      "word": {
+        "text": "Moon",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "space__moon",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -486,6 +574,61 @@
       "categoryId": "doctors",
       "word": {
         "text": "Surgeon",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "snacks",
+      "word": {
+        "text": "Chips",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "doctors",
+      "word": {
+        "text": "Nurse",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "doctors",
+      "word": {
+        "text": "Pediatrician",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "space",
+      "word": {
+        "text": "Comets",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "planets",
+      "word": {
+        "text": "Mars",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -516,75 +659,9 @@
       }
     },
     {
-      "categoryId": "kitchen_tools",
+      "categoryId": "jobs",
       "word": {
-        "text": "Whisk",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "reptiles",
-      "word": {
-        "text": "Snake",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "planets",
-      "word": {
-        "text": "Venus",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "space",
-      "word": {
-        "text": "Moon",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "space__moon",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "snacks",
-      "word": {
-        "text": "Popcorn",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "meals",
-      "word": {
-        "text": "Lunch",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "doctors",
-      "word": {
-        "text": "Pediatrician",
+        "text": "Pilot",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -617,150 +694,7 @@
     {
       "categoryId": "kitchen_tools",
       "word": {
-        "text": "Spatula",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "reptiles",
-      "word": {
-        "text": "Lizard",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "reptiles__lizard",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "planets",
-      "word": {
-        "text": "Earth",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "planets__earth",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "snacks",
-      "word": {
-        "text": "Pretzel",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "doctors",
-      "word": {
-        "text": "Nurse",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "furniture",
-      "word": {
-        "text": "Sofa",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "kitchen_tools",
-      "word": {
         "text": "Ladle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "planets",
-      "word": {
-        "text": "Mars",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "reptiles",
-      "word": {
-        "text": "Turtle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "snacks",
-      "word": {
-        "text": "Crackers",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "meals",
-      "word": {
-        "text": "Dinner",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "space",
-      "word": {
-        "text": "Comets",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "doctors",
-      "word": {
-        "text": "Clinic",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "jobs",
-      "word": {
-        "text": "Pilot",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -782,7 +716,18 @@
     {
       "categoryId": "kitchen_tools",
       "word": {
-        "text": "Tongs",
+        "text": "Whisk",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "furniture",
+      "word": {
+        "text": "Sofa",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -797,6 +742,61 @@
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "kitchen_tools",
+      "word": {
+        "text": "Tongs",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "reptiles",
+      "word": {
+        "text": "Snake",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "kitchen_tools",
+      "word": {
+        "text": "Spatula",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "reptiles",
+      "word": {
+        "text": "Turtle",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "reptiles",
+      "word": {
+        "text": "Lizard",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "reptiles__lizard",
         "syllablePartA": "",
         "syllablePartB": ""
       }

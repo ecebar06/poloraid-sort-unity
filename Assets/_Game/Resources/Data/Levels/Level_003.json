@@ -1,6 +1,6 @@
 {
   "levelNumber": 3,
-  "moveCount": 16,
+  "moveCount": 20,
   "expectedCategoryCount": 5,
   "visibleRowCount": 4,
   "categories": [
@@ -247,17 +247,6 @@
   ],
   "orderedWords": [
     {
-      "categoryId": "dog_breeds",
-      "word": {
-        "text": "Beagle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
       "categoryId": "rooms",
       "word": {
         "text": "Kitchen",
@@ -269,9 +258,75 @@
       }
     },
     {
+      "categoryId": "pets",
+      "word": {
+        "text": "Bird",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
       "categoryId": "school_subjects",
       "word": {
         "text": "Math",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "dog_breeds",
+      "word": {
+        "text": "Husky",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "school_subjects",
+      "word": {
+        "text": "History",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "dog_breeds",
+      "word": {
+        "text": "Bulldog",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "condiments",
+      "word": {
+        "text": "Mayo",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "condiments",
+      "word": {
+        "text": "Mustard",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -293,51 +348,7 @@
     {
       "categoryId": "dog_breeds",
       "word": {
-        "text": "Poodle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "rooms",
-      "word": {
-        "text": "Bedroom",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "school_subjects",
-      "word": {
-        "text": "Science",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "condiments",
-      "word": {
-        "text": "Mustard",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "dog_breeds",
-      "word": {
-        "text": "Husky",
+        "text": "Beagle",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -357,20 +368,9 @@
       }
     },
     {
-      "categoryId": "school_subjects",
+      "categoryId": "rooms",
       "word": {
-        "text": "History",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "condiments",
-      "word": {
-        "text": "Mayo",
+        "text": "Bedroom",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -381,7 +381,7 @@
     {
       "categoryId": "dog_breeds",
       "word": {
-        "text": "Bulldog",
+        "text": "Poodle",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -390,20 +390,31 @@
       }
     },
     {
-      "categoryId": "rooms",
+      "categoryId": "pets",
       "word": {
-        "text": "Garage",
+        "text": "Fish",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
-        "syllablePartA": "ga",
-        "syllablePartB": "rage"
+        "syllablePartA": "",
+        "syllablePartB": ""
       }
     },
     {
       "categoryId": "school_subjects",
       "word": {
         "text": "Art",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "school_subjects",
+      "word": {
+        "text": "Science",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -434,25 +445,14 @@
       }
     },
     {
-      "categoryId": "pets",
+      "categoryId": "rooms",
       "word": {
-        "text": "Bird",
+        "text": "Garage",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "pets",
-      "word": {
-        "text": "Fish",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartA": "ga",
+        "syllablePartB": "rage"
       }
     }
   ]

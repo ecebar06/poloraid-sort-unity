@@ -40,6 +40,7 @@ public sealed class CategoryHolder : MonoBehaviour
     public bool CanAccept(LooseMagnet magnet)
     {
         if (magnet == null || IsFull) return false;
+        if (owner != null && !owner.CanPlayCategory(magnet.CategoryId)) return false;
         if (!IsEmpty) return CategoryId == magnet.CategoryId;
 
         // Once a category has claimed a holder, its remaining magnets must all

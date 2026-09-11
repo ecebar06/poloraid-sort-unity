@@ -18,6 +18,7 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
     private RectTransform rect;
     private CanvasGroup canvasGroup;
     private Vector2 pointerOffset;
+    private Vector2 dragStartPosition;
     private bool locked;
     private bool dragging;
     private Tween scaleTween;
@@ -104,6 +105,7 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
     {
         if (locked || owner.IsInputLocked) return;
         dragging = true;
+        dragStartPosition = rect.anchoredPosition;
         BringToFront();
         canvasGroup.blocksRaycasts = false;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(owner.BottomArea, eventData.position,
@@ -159,6 +161,8 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
     public void Reject()
     {
         rect.DOKill();
+        AnimateScale(1f, 0.24f, Ease.OutBack);
+        rect.DOAnchorPos(dragStartPosition, 0.24f).SetEase(Ease.OutCubic);
         rect.DOShakeRotation(0.22f, new Vector3(0f, 0f, 12f), 10, 60f);
         HapticFeedback.Play(HapticFeedback.Strength.Medium);
     }
@@ -166,7 +170,7 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
     public void ReturnInsideBottomArea()
     {
         AnimateScale(1f, 0.24f, Ease.OutBack);
-        rect.DOAnchorPos(owner.ClampToBottomArea(rect.anchoredPosition, rect.rect.size), 0.24f)
+        rect.DOAnchorPos(owner.GetLooseLanding(this), 0.24f)
             .SetEase(Ease.OutCubic);
     }
 

@@ -55,7 +55,7 @@
         <div id="validationMessage" class="validation-message">Add categories to validate this level.</div>
         <div class="setup-actions">
           <button id="autoBuildLevel" class="button primary">Auto Build Level</button>
-          <button id="autoTransformations" class="button secondary">Auto Set Transformations</button>
+          <button id="autoTransformations" class="button secondary">Optional Transformation Chain</button>
         </div>
       </section>
 
@@ -71,17 +71,23 @@
     <aside class="panel order-panel">
       <div class="panel-title"><div><span>04</span><h2>Playable Order</h2></div><b id="orderCount">0 words</b></div>
       <div class="order-actions">
-        <button id="generateOrder" class="button primary">Shuffle Magnets</button>
+        <button id="generateOrder" class="button primary">Generate Safe Mixed Stock</button>
         <button id="clearOrder" class="button secondary">Clear</button>
       </div>
-      <p class="hint">All initial magnets are visible. Transformation results appear after completion. This is a layout preview; the game reshuffles every restart.</p>
-      <h3>Loose Magnets</h3>
+      <p class="hint">16 starting magnets, then a verified mixed queue. A final refills four words; a transformation refills three plus its result. Finals stay only after stock runs out and enough holders remain for all unfinished categories. Otherwise they fly to the orange and free their holder. Completing every category wins; four filled holders are not required.</p>
+      <h3>Starting Magnets</h3>
       <div id="visibleOrder" class="word-grid"></div>
-      <div id="queueOrder" class="word-grid queue-grid" hidden></div>
+      <h3>Later Stock</h3>
+      <div id="queueOrder" class="word-grid queue-grid"></div>
+      <h3>Queue Preview</h3>
+      <p class="hint">Read in order. These four-card windows are not fixed batches: transformations consume three queue cards, finals four. Generation maximizes mixing while checking all completion orders and preventing partial-holder deadlocks. Reordering requires revalidation.</p>
+      <div id="dealPlan"></div>
     </aside>
   </main>
 
   <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="magnet-deal-plan.js"></script>
+  <script src="mixed-stock.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

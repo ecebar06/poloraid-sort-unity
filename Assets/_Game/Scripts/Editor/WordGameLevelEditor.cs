@@ -23,6 +23,7 @@ public class WordGameLevelEditor : EditorWindow
     private string search = "";
     private string status = "";
     private int selectedLevelIndex;
+    private int optionalChainLength;
     private readonly HashSet<string> expandedCategories = new HashSet<string>();
 
     private bool showNewCategory;
@@ -265,7 +266,7 @@ public class WordGameLevelEditor : EditorWindow
         int moves = EditorGUILayout.IntField("Move Count", level.moveCount);
         int categoryCount = EditorGUILayout.IntField("Category Count", level.expectedCategoryCount);
         int visibleRows = 4;
-        EditorGUILayout.LabelField("Category Holders", "4 (all initial magnets visible)");
+        EditorGUILayout.LabelField("Category Holders", "4 reusable holders / max 16 loose magnets");
         if (EditorGUI.EndChangeCheck())
         {
             Undo.RecordObject(level, "Edit Level Settings");
@@ -295,11 +296,14 @@ public class WordGameLevelEditor : EditorWindow
         EditorGUILayout.LabelField($"LEVEL CATEGORIES ({level.categories.Count} rows)", EditorStyles.boldLabel);
         DrawValidation();
 
+        optionalChainLength = Mathf.Clamp(EditorGUILayout.IntField("Optional chain length", optionalChainLength),
+            0, Mathf.Max(0, level.categories.Count - 1));
+        EditorGUILayout.HelpBox("Max 16 loose magnets. Finals stay in their label color only when stock is empty and enough holders remain for unfinished categories. Otherwise they fly to progress. All categories completed wins; four filled holders are not required. Auto Build starts without a chain.", MessageType.Info);
         using (new EditorGUILayout.HorizontalScope())
         {
             if (GUILayout.Button("Auto Build Level", GUILayout.Height(28))) AutoBuildLevel();
             if (GUILayout.Button("Auto Set Transformations", GUILayout.Height(28))) AutoSetTransformations();
-            if (GUILayout.Button("Shuffle Magnets", GUILayout.Height(28))) GenerateSolveableOrder();
+            if (GUILayout.Button("Generate Safe Mixed Stock", GUILayout.Height(28))) GenerateSolveableOrder();
             GUI.enabled = level.orderedWords != null && level.orderedWords.Count > 0;
             if (GUILayout.Button("Clear Generated Order", GUILayout.Height(28)))
             {
@@ -326,13 +330,6 @@ public class WordGameLevelEditor : EditorWindow
             return;
         }
 
-        int effectiveRows = level.visibleRowCount > 0 ? level.visibleRowCount : level.categories.Count;
-        int required = Mathf.Max(0, level.categories.Count - 4);
-        if (required < 0)
-        {
-            status = "Visible row count cannot exceed category count.";
-            return;
-        }
         if (level.categories.Any(category => category.words == null || category.words.Count != 4))
         {
             status = "Every category must contain exactly four words first.";
@@ -345,16 +342,15 @@ public class WordGameLevelEditor : EditorWindow
             return;
 
         Undo.RecordObject(level, "Auto Set Level Transformations");
-        int applied = ApplyAutomaticTransformations();
+        int applied = ApplyAutomaticTransformations(optionalChainLength);
         EditorUtility.SetDirty(level);
         status = applied > 0
             ? $"Added {applied} cycle-free transformations. Review them, then generate the order."
             : "This level does not need transformations.";
     }
 
-    private int ApplyAutomaticTransformations()
+    private int ApplyAutomaticTransformations(int required = 0)
     {
-        int required = Mathf.Max(0, level.categories.Count - 4);
         foreach (Category category in level.categories)
         {
             category.transformsOnComplete = false;
@@ -383,15 +379,9 @@ public class WordGameLevelEditor : EditorWindow
         }
 
         int desiredCount = level.expectedCategoryCount;
-        int visibleRows = level.visibleRowCount;
         if (desiredCount < 1)
         {
             status = "Set Category Count before building the level.";
-            return;
-        }
-        if (visibleRows < 1)
-        {
-            status = "Visible Row Count must be between 1 and Category Count.";
             return;
         }
         if (level.categories.Count > 0 && !EditorUtility.DisplayDialog("Replace Level Content",
@@ -431,20 +421,15 @@ public class WordGameLevelEditor : EditorWindow
     private void GenerateSolveableOrder()
     {
         if (level.categories == null || level.categories.Count == 0) return;
-        var generated = new HashSet<string>(level.categories.Where(c => c.transformsOnComplete && c.transformResult != null)
-            .Select(c => c.transformResult.text), System.StringComparer.OrdinalIgnoreCase);
-        Undo.RecordObject(level, "Shuffle loose magnets");
-        level.orderedWords = level.categories.SelectMany(c => c.words.Where(w => !generated.Contains(w.text))
-            .Select(w => new LevelWordEntry { categoryId = c.id, word = CloneWord(w) })).ToList();
-        for (int i = level.orderedWords.Count - 1; i > 0; i--)
+        try
         {
-            int j = UnityEngine.Random.Range(0, i + 1);
-            var temp = level.orderedWords[i];
-            level.orderedWords[i] = level.orderedWords[j];
-            level.orderedWords[j] = temp;
+            var stock = MixedMagnetStock.Generate(level);
+            Undo.RecordObject(level, "Generate safe mixed stock");
+            level.orderedWords = stock;
+            EditorUtility.SetDirty(level);
+            status = "Mixed queue verified across completion orders. Finals draw four, transformations draw three.";
         }
-        EditorUtility.SetDirty(level);
-        status = "Shuffled loose magnets. All are visible; transformation results appear later. Runtime reshuffles each restart.";
+        catch (InvalidOperationException error) { status = error.Message; }
     }
 
     private static LevelWordEntry Entry(string categoryId, WordItem source)
@@ -484,15 +469,15 @@ public class WordGameLevelEditor : EditorWindow
     {
         if (level.orderedWords == null || level.orderedWords.Count == 0) return;
         EditorGUILayout.Space(6);
-        EditorGUILayout.LabelField("LOOSE MAGNET PREVIEW (runtime reshuffles)", EditorStyles.boldLabel);
-        int visibleCount = Mathf.Min(level.orderedWords.Count, level.visibleRowCount * 4);
+        EditorGUILayout.LabelField("MIXED STOCK: FIRST 16 + ORDERED QUEUE", EditorStyles.boldLabel);
+        if (!MixedMagnetStock.IsSafe(level, level.orderedWords))
+            EditorGUILayout.HelpBox("Unverified stock. Generate safe mixed stock before exporting.", MessageType.Warning);
         for (int start = 0; start < level.orderedWords.Count; start += 4)
         {
-
+            if (start == 0) EditorGUILayout.LabelField("Starting magnets (positions randomized)");
+            if (start == 16) EditorGUILayout.LabelField("Queue: finals draw 4, transformations draw 3");
             using (new EditorGUILayout.HorizontalScope())
-            {
                 for (int i = start; i < Mathf.Min(start + 4, level.orderedWords.Count); i++) DrawDraggableWord(i);
-            }
         }
     }
 

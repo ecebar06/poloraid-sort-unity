@@ -11,7 +11,7 @@ public class LevelData : ScriptableObject
     [Tooltip("Legacy row setting retained for JSON compatibility. Category mode always uses four holders.")]
     [Min(0)] public int visibleRowCount;
     public List<Category> categories = new List<Category>();
-    [Tooltip("Editor layout preview. Category mode shows all initial magnets and reshuffles on each load.")]
+    [Tooltip("Verified mixed queue: first 16 at start, four after a final or three plus a transformation result. Positions are randomized.")]
     public List<LevelWordEntry> orderedWords = new List<LevelWordEntry>();
 
     public static LevelData FromJson(string json)
@@ -112,9 +112,10 @@ public class LevelData : ScriptableObject
             .Select(c => c.transformResult.text).ToHashSet(System.StringComparer.OrdinalIgnoreCase);
         int playableWords = categories.SelectMany(c => c.words).Count(word => !generatedWords.Contains(word.text));
         int transformationCount = categories.Count(c => c.transformsOnComplete);
-        if (categories.Count - transformationCount > 4)
+        if (categories.Where(c => c.transformsOnComplete).GroupBy(c =>
+            c.transformResultCategoryId + ":" + c.transformResult.text.ToLowerInvariant()).Any(g => g.Count() > 1))
         {
-            error = "At most four final categories can remain in the four holders. Add transformations or remove categories.";
+            error = "Each transformation result must have exactly one source category.";
             return false;
         }
 
@@ -131,6 +132,16 @@ public class LevelData : ScriptableObject
         }
 
         error = string.Empty;
+        if (orderedWords != null && orderedWords.Count > 0 && !MixedMagnetStock.IsSafe(this, orderedWords))
+        {
+            error = "Stock order is not verified safe. Generate Safe Mixed Stock in the level editor.";
+            return false;
+        }
+        if (!MagnetDealPlan.TryBuild(this, out _))
+        {
+            error = "Transformation graph cannot fit the 16-magnet stock and four holders.";
+            return false;
+        }
         return true;
     }
 }

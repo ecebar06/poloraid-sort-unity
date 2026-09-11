@@ -1,6 +1,6 @@
 {
   "levelNumber": 2,
-  "moveCount": 12,
+  "moveCount": 16,
   "expectedCategoryCount": 4,
   "visibleRowCount": 4,
   "categories": [
@@ -210,64 +210,9 @@
       }
     },
     {
-      "categoryId": "weather",
-      "word": {
-        "text": "Rain",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "seasons",
-      "word": {
-        "text": "Spring",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
       "categoryId": "emotions",
       "word": {
-        "text": "Joy",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "body_parts",
-      "word": {
-        "text": "Foot",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "weather",
-      "word": {
-        "text": "Snow",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "seasons",
-      "word": {
-        "text": "Summer",
+        "text": "Shame",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -287,53 +232,9 @@
       }
     },
     {
-      "categoryId": "body_parts",
-      "word": {
-        "text": "Eye",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "weather",
-      "word": {
-        "text": "Wind",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
       "categoryId": "seasons",
       "word": {
-        "text": "Autumn",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "emotions",
-      "word": {
-        "text": "Pride",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "body_parts",
-      "word": {
-        "text": "Nose",
+        "text": "Summer",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -353,6 +254,61 @@
       }
     },
     {
+      "categoryId": "weather",
+      "word": {
+        "text": "Snow",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "body_parts",
+      "word": {
+        "text": "Nose",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "emotions",
+      "word": {
+        "text": "Pride",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "emotions",
+      "word": {
+        "text": "Joy",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "seasons",
+      "word": {
+        "text": "Spring",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
       "categoryId": "seasons",
       "word": {
         "text": "Winter",
@@ -364,9 +320,53 @@
       }
     },
     {
-      "categoryId": "emotions",
+      "categoryId": "seasons",
       "word": {
-        "text": "Shame",
+        "text": "Autumn",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "weather",
+      "word": {
+        "text": "Rain",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "weather",
+      "word": {
+        "text": "Wind",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "body_parts",
+      "word": {
+        "text": "Foot",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "body_parts",
+      "word": {
+        "text": "Eye",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",

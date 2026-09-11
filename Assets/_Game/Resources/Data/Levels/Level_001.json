@@ -1,6 +1,6 @@
 {
   "levelNumber": 1,
-  "moveCount": 6,
+  "moveCount": 8,
   "expectedCategoryCount": 2,
   "visibleRowCount": 2,
   "categories": [
@@ -103,56 +103,12 @@
   ],
   "orderedWords": [
     {
-      "categoryId": "colors",
-      "word": {
-        "text": "Red",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "colors__red",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "shapes",
-      "word": {
-        "text": "Circle",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "shapes__circle",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "colors",
-      "word": {
-        "text": "Blue",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "colors__blue",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
       "categoryId": "shapes",
       "word": {
         "text": "Square",
         "hasSprite": true,
         "useIcon": true,
         "spriteKey": "shapes__square",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "colors",
-      "word": {
-        "text": "Green",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "colors__green",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -186,6 +142,50 @@
         "hasSprite": true,
         "useIcon": true,
         "spriteKey": "shapes__rectangle",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "colors",
+      "word": {
+        "text": "Green",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "colors__green",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "colors",
+      "word": {
+        "text": "Red",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "colors__red",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "colors",
+      "word": {
+        "text": "Blue",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "colors__blue",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "shapes",
+      "word": {
+        "text": "Circle",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "shapes__circle",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -80,8 +80,6 @@ function updateFolderControls() {
 
 function recommendedMoveCount() {
   const categories = Math.max(1, +$("categoryCount").value || state.level.expectedCategoryCount || 1);
-  const visibleRows = Math.max(1, +$("rowCount").value || state.level.visibleRowCount || 1);
-  const transformations = Math.max(0, categories - visibleRows);
   return categories * 4;
 }
 
@@ -180,17 +178,22 @@ function renderSelected() {
 }
 
 function renderOrder() {
-  const visibleCount = state.level.orderedWords.length;
-  $("orderCount").textContent = `${state.level.orderedWords.length} words`;
-  drawWords("visibleOrder", state.level.orderedWords.slice(0, visibleCount), 0);
-  drawWords("queueOrder", state.level.orderedWords.slice(visibleCount), visibleCount);
+  const words = state.level.orderedWords;
+  $("orderCount").textContent = words.length + " words";
+  drawWords("visibleOrder", words.slice(0,16), 0);
+  drawWords("queueOrder", words.slice(16), 16);
+  let html = "";
+  for (let i=16; i<words.length; i+=4)
+    html += "<p><strong>Stock " + (i-15) + "–" + Math.min(i-12,words.length-16) + "</strong>: "
+      + words.slice(i,i+4).map(e=>escapeHtml(e.word.text)).join(", ") + "</p>";
+  $("dealPlan").innerHTML = html;
 }
 
 function drawWords(containerId, words, offset) {
-  $(containerId).innerHTML = words.length ? words.map((entry, i) => `<div class="word-card" draggable="true" data-word-index="${offset + i}" title="${escapeAttr(entry.categoryId)}">${entry.word.useIcon ? "◆ " : ""}${escapeHtml(entry.word.text)}</div>`).join("") : `<div class="empty-state" style="grid-column:1/-1"><p>Nothing generated yet.</p></div>`;
+  $(containerId).innerHTML = words.length ? words.map((entry, i) => `<div class="word-card" draggable="true" data-word-index="${state.level.orderedWords.indexOf(entry)}" title="${escapeAttr(entry.categoryId)}">${entry.word.useIcon ? "◆ " : ""}${escapeHtml(entry.word.text)}</div>`).join("") : `<div class="empty-state" style="grid-column:1/-1"><p>No magnets in this group.</p></div>`;
 }
 
-function validate() {
+function validate(ignoreStock = false) {
   const errors = [];
   if (state.level.categories.length !== state.level.expectedCategoryCount) errors.push(`Expected ${state.level.expectedCategoryCount} categories, currently ${state.level.categories.length}.`);
   if (state.level.categories.some(c => c.words.length !== 4)) errors.push("Every category must contain exactly 4 words.");
@@ -239,30 +242,30 @@ function validate() {
   const generated = new Set(state.level.categories.filter(c => c.transformsOnComplete).map(c => c.transformResult.text.toLowerCase()));
   const playable = state.level.categories.flatMap(c => c.words).filter(w => !generated.has(w.text.toLowerCase())).length;
   const transforms = state.level.categories.filter(c => c.transformsOnComplete).length;
-  if (state.level.categories.length - transforms > 4)
-    errors.push("At most four final categories can remain in the four holders. Add transformations or remove categories.");
-  if (state.level.orderedWords.length && state.level.orderedWords.length !== playable) errors.push(`Generated order contains ${state.level.orderedWords.length}/${playable} playable words.`);
+  if (!ignoreStock && state.level.orderedWords.length && state.level.orderedWords.length !== playable) errors.push(`Generated order contains ${state.level.orderedWords.length}/${playable} playable words.`);
+  if (state.level.categories.length > 20) errors.push('Verified mixed stock supports up to 20 categories per level.');
+  if (!errors.length) {
+    try { buildMagnetDealPlan(state.level); } catch (error) { errors.push(error.message); }
+    const outputs = state.level.categories.filter(c => c.transformsOnComplete).map(c => `${c.transformResultCategoryId}:${c.transformResult.text.toLowerCase()}`);
+    if (new Set(outputs).size !== outputs.length) errors.push('Two transformations produce the same target word. Each result must have one source.');
+  }
+  if (!errors.length && !ignoreStock && state.level.orderedWords.length && !isMixedStockSafe(state.level, state.level.orderedWords))
+    errors.push("This stock order is not verified safe. Use Generate Safe Mixed Stock.");
   $("validationBadge").className = `status ${errors.length ? "bad" : "good"}`;
   $("validationBadge").textContent = errors.length ? `${errors.length} issue${errors.length > 1 ? "s" : ""}` : "Ready";
   $("validationMessage").className = `validation-message ${errors.length ? "error" : "success"}`;
   $("validationMessage").textContent = errors.length
     ? errors.map((message, index) => `${index + 1}. ${message}`).join("\n")
-    : `Valid holder setup: ${state.level.categories.length} categories, ${transforms} transformations, ${playable} loose magnets.`;
+    : `Safe 16-magnet deal: ${state.level.categories.length} categories, ${transforms} transformations, ${playable} stock words. Mixed stock is checked across completion orders; last-four finals stay.`;
   return errors;
 }
 
 function generateOrder() {
-  if (validate().length) return toast("Fix level warnings first.");
-  const generated = new Set(state.level.categories.filter(c => c.transformsOnComplete && c.transformResult)
-    .map(c => c.transformResult.text.toLowerCase()));
-  const words = state.level.categories.flatMap(c => c.words.filter(w => !generated.has(w.text.toLowerCase()))
-    .map(w => ({categoryId:c.id, word: structuredClone(w)})));
-  for (let i=words.length-1;i>0;i--) {
-    const j=Math.floor(Math.random()*(i+1));
-    [words[i],words[j]]=[words[j],words[i]];
-  }
-  state.level.orderedWords=words;
-  markDirty(); render(); toast("Shuffled loose magnets; runtime reshuffles on each restart.");
+  if (validate(true).length) return toast("Fix category warnings first.");
+  try {
+    state.level.orderedWords = generateMixedStock(state.level).map(e=>structuredClone(e));
+    markDirty(); render(); toast("Mixed queue generated and checked across all completion orders.");
+  } catch(error) { toast(error.message); }
 }
 
 function buildSingleTransformTutorialOrder() {
@@ -477,23 +480,25 @@ function addCategory(id) {
 }
 
 function autoSetTransformations() {
-  const required = Math.max(0, state.level.categories.length - 4);
-  if (required < 0) return toast("Visible Rows cannot exceed the category count.");
+  const maximum = Math.max(0, state.level.categories.length - 1);
+  const answer = prompt(`Optional chain length (0–${maximum}). Reusable holders do not require transformations. Review the generated word/category meanings.`, String(state.level.categories.filter(c => c.transformsOnComplete).length));
+  if (answer === null) return;
+  const required = Number(answer);
+  if (!Number.isInteger(required) || required < 0 || required > maximum) return toast('Enter a valid transformation count.');
   if (state.level.categories.some(category => category.words.length !== 4))
     return toast("Every category must contain exactly 4 words first.");
   if (state.level.categories.some(category => category.transformsOnComplete) &&
       !confirm("Replace the current transformation setup with an automatic cycle-free chain?")) return;
 
-  const requiredCount = applyAutomaticTransformations();
+  const requiredCount = applyAutomaticTransformations(required);
   markDirty();
   render();
   toast(requiredCount
     ? `Added ${requiredCount} cycle-free transformations. Review them, then generate the order.`
-    : "This level does not need transformations.");
+    : "Transformations cleared. Final holders are reused until the last four categories.");
 }
 
-function applyAutomaticTransformations() {
-  const required = Math.max(0, state.level.categories.length - 4);
+function applyAutomaticTransformations(required = 0) {
   for (const category of state.level.categories) {
     category.transformsOnComplete = false;
     category.transformResult = normalizeWord();

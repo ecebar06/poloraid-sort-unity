@@ -1,6 +1,6 @@
 {
   "levelNumber": 5,
-  "moveCount": 24,
+  "moveCount": 28,
   "expectedCategoryCount": 7,
   "visibleRowCount": 4,
   "categories": [
@@ -343,75 +343,9 @@
   ],
   "orderedWords": [
     {
-      "categoryId": "flowers",
-      "word": {
-        "text": "Rose",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "flowers__rose",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
       "categoryId": "garden",
       "word": {
-        "text": "Grass",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "music",
-      "word": {
-        "text": "Song",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "festivals",
-      "word": {
-        "text": "Parade",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "headwear",
-      "word": {
-        "text": "Cap",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "clothes",
-      "word": {
-        "text": "Shirt",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "numbers",
-      "word": {
-        "text": "One",
+        "text": "Seed",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -431,53 +365,9 @@
       }
     },
     {
-      "categoryId": "garden",
-      "word": {
-        "text": "Leaf",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "music",
-      "word": {
-        "text": "Drum",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "festivals",
-      "word": {
-        "text": "Food",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
       "categoryId": "headwear",
       "word": {
-        "text": "Beanie",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "flowers",
-      "word": {
-        "text": "Daisy",
+        "text": "Cap",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -497,9 +387,86 @@
       }
     },
     {
+      "categoryId": "garden",
+      "word": {
+        "text": "Leaf",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
       "categoryId": "headwear",
       "word": {
         "text": "Helmet",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "festivals",
+      "word": {
+        "text": "Parade",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "flowers",
+      "word": {
+        "text": "Rose",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "flowers__rose",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "music",
+      "word": {
+        "text": "Song",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "headwear",
+      "word": {
+        "text": "Crown",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "headwear",
+      "word": {
+        "text": "Beanie",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "festivals",
+      "word": {
+        "text": "Lantern",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -519,9 +486,31 @@
       }
     },
     {
-      "categoryId": "numbers",
+      "categoryId": "garden",
       "word": {
-        "text": "Two",
+        "text": "Grass",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "music",
+      "word": {
+        "text": "Drum",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "flowers",
+      "word": {
+        "text": "Daisy",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -532,7 +521,18 @@
     {
       "categoryId": "clothes",
       "word": {
-        "text": "Pants",
+        "text": "Shoes",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "festivals",
+      "word": {
+        "text": "Food",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -554,51 +554,7 @@
     {
       "categoryId": "numbers",
       "word": {
-        "text": "Three",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "headwear",
-      "word": {
-        "text": "Crown",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "clothes",
-      "word": {
-        "text": "Shoes",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "garden",
-      "word": {
-        "text": "Seed",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "festivals",
-      "word": {
-        "text": "Lantern",
+        "text": "One",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -610,6 +566,50 @@
       "categoryId": "numbers",
       "word": {
         "text": "Four",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "clothes",
+      "word": {
+        "text": "Pants",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "numbers",
+      "word": {
+        "text": "Two",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "clothes",
+      "word": {
+        "text": "Shirt",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "numbers",
+      "word": {
+        "text": "Three",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
