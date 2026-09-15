@@ -9,6 +9,7 @@ using UnityEngine.UI;
 [InitializeOnLoad]
 public static class CategoryMagnetBoardSceneSetup
 {
+    // The plain holder artwork used by the four category slots.
     private const string HolderSpritePath = "Assets/_Game/Resources/Art/Fridge/Rows/magnet_holder_empty.png";
     private const string MagnetSpritePath = "Assets/_Game/Resources/Art/Fridge/Magnets/magnet_word.png";
 
@@ -245,7 +246,9 @@ public static class CategoryMagnetBoardSceneSetup
         GameObject holderObject = Rect($"CategoryHolder {index + 1}", parent);
         RectTransform rect = holderObject.GetComponent<RectTransform>();
         float left = index * 0.25f + 0.01f;
-        SetAnchors(rect, new Vector2(left, 0.03f), new Vector2(left + 0.23f, 0.86f));
+        // Slightly taller holders create room for the four-card stack while
+        // keeping a small safe gap above the lower magnet area.
+        SetAnchors(rect, new Vector2(left, 0.02f), new Vector2(left + 0.23f, 0.91f));
         Image holderImage = holderObject.AddComponent<Image>();
         holderImage.sprite = AssetDatabase.LoadAssetAtPath<Sprite>(HolderSpritePath);
         holderImage.type = holderImage.sprite != null && holderImage.sprite.border.sqrMagnitude > 0f
@@ -257,6 +260,12 @@ public static class CategoryMagnetBoardSceneSetup
         Image highlight = Rect("DropHighlight", rect).AddComponent<Image>();
         Stretch(highlight.rectTransform);
         highlight.raycastTarget = false;
+        // Runtime tints the holder itself, so this legacy child remains inert.
+        // Keeping it inside the holder prevents old scene instances from
+        // showing any overflow if manually enabled in the editor.
+        highlight.rectTransform.offsetMin = Vector2.one * 6f;
+        highlight.rectTransform.offsetMax = Vector2.one * -6f;
+        highlight.color = Color.clear;
         highlight.gameObject.SetActive(false);
 
         TextMeshProUGUI category = Text("CategoryLabel", rect, "CATEGORY", 25f);

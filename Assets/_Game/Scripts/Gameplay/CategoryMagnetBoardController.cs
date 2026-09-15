@@ -345,7 +345,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             return;
         }
         creditedCategories++;
-        RefreshCategoryProgress();
+        RefreshCategoryProgress(true);
         if (source != null && source.transformsOnComplete && source.transformResult != null)
         {
             pendingTransformations++;
@@ -382,18 +382,34 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
 
     private void ApplyProgressRatio(float ratio)
     {
+        ratio = Mathf.Clamp01(ratio);
+        // The counter badge has a visible width. Pinning its centre directly
+        // to 0/1 makes the first and last progress slices look shorter because
+        // half of the badge hangs outside the track. Keep its centre inset by
+        // half its width so every category step occupies the same visual space.
+        float visualRatio = GetProgressVisualRatio(ratio);
         if (categoryProgress != null)
         {
             categoryProgress.type = Image.Type.Filled;
             categoryProgress.fillMethod = Image.FillMethod.Horizontal;
             categoryProgress.fillOrigin = 0;
-            categoryProgress.fillAmount = ratio;
+            categoryProgress.fillAmount = visualRatio;
         }
         if (categoryKnob != null)
         {
-            categoryKnob.anchorMin = categoryKnob.anchorMax = new Vector2(ratio, 0.5f);
+            categoryKnob.anchorMin = categoryKnob.anchorMax = new Vector2(visualRatio, 0.5f);
             categoryKnob.anchoredPosition = Vector2.zero;
         }
+    }
+
+    private float GetProgressVisualRatio(float ratio)
+    {
+        if (categoryKnob == null || categoryKnob.parent is not RectTransform track || track.rect.width <= 0f)
+            return ratio;
+
+        float halfBadgeWidth = categoryKnob.rect.width * 0.5f;
+        float inset = Mathf.Clamp(halfBadgeWidth / track.rect.width, 0f, 0.45f);
+        return Mathf.Lerp(inset, 1f - inset, ratio);
     }
 
     private IEnumerator FlyFinalToProgress(CategoryHolder holder, LooseMagnet[] magnets, Category category)
@@ -502,8 +518,10 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         rect.localScale = Vector3.zero;
         result.BringToFront();
         holder.ClearForReuse();
-        yield return rect.DOScale(1f, 0.24f).SetEase(Ease.OutBack).WaitForCompletion();
-        yield return rect.DOAnchorPos(landing, 0.55f).SetEase(Ease.OutBounce).WaitForCompletion();
+        // A transformation result should settle cleanly; a bounce makes it
+        // look as if it is being rejected by the board.
+        yield return rect.DOScale(1f, 0.24f).SetEase(Ease.OutCubic).WaitForCompletion();
+        yield return rect.DOAnchorPos(landing, 0.55f).SetEase(Ease.OutCubic).WaitForCompletion();
         reservedLandings.Remove(result);
         // Keep the newest result above older magnets, including other results
         // that may have finished falling while this animation was running.
@@ -532,6 +550,15 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         SaveSystem.CompleteLevel(activeLevelIndex, next);
         if (winScreen != null)
         {
+            TextMeshProUGUI[] resultLabels = winScreen.GetComponentsInChildren<TextMeshProUGUI>(true);
+            foreach (TextMeshProUGUI label in resultLabels)
+            {
+                if (label != null && label.name == "Title")
+                {
+                    label.text = $"LEVEL {currentLevel.levelNumber}";
+                    break;
+                }
+            }
             Canvas resultCanvas = winScreen.GetComponent<Canvas>();
             if (resultCanvas == null) resultCanvas = winScreen.AddComponent<Canvas>();
             resultCanvas.overrideSorting = true;
@@ -549,8 +576,9 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     private void WireWinScreenButtons()
     {
         if (winScreen == null) return;
-        Button continueButton = winScreen.transform.Find("Panel/ContinueButton")?.GetComponent<Button>();
-        Button doubleRewardButton = winScreen.transform.Find("Panel/DoubleRewardButton")?.GetComponent<Button>();
+        Transform content = winScreen.transform.Find("Content") ?? winScreen.transform.Find("Panel");
+        Button continueButton = content?.Find("ContinueButton")?.GetComponent<Button>();
+        Button doubleRewardButton = content?.Find("DoubleRewardButton")?.GetComponent<Button>();
         if (continueButton != null)
         {
             continueButton.onClick.RemoveListener(ContinueAfterWin);
@@ -575,8 +603,9 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         {
             rewardDoubled = true;
             SaveSystem.AddGold(40);
-            TextMeshProUGUI reward = winScreen.transform.Find("Panel/Reward/Value")?.GetComponent<TextMeshProUGUI>();
-            TextMeshProUGUI balance = winScreen.transform.Find("Panel/Gold/Value")?.GetComponent<TextMeshProUGUI>();
+            Transform content = winScreen.transform.Find("Content") ?? winScreen.transform.Find("Panel");
+            TextMeshProUGUI reward = content?.Find("Reward/Value")?.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI balance = content?.Find("Gold/Value")?.GetComponent<TextMeshProUGUI>();
             if (reward != null) reward.text = "+80 GOLD";
             if (balance != null) balance.text = SaveSystem.Current.gold.ToString();
         }
@@ -589,7 +618,11 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             typeof(Image), typeof(CanvasGroup), typeof(LooseMagnet));
         RectTransform rect = root.GetComponent<RectTransform>();
         rect.SetParent(bottomArea, false);
-        rect.sizeDelta = sprite == null ? new Vector2(213f, 150f) : new Vector2(250.5f, 250.5f);
+        // Icons belong inside the same readable magnet footprint as text.
+        // A shared size also prevents square icon assets from crowding nearby magnets.
+        // Slightly wider magnets improve label readability without making the
+        // 16-magnet board feel crowded.
+        rect.sizeDelta = new Vector2(223f, 150f);
         float fit = Mathf.Min(1f, bottomArea.rect.width / 4f / 280f,
             Mathf.Min(280f, bottomArea.rect.height / 4f) / 280f);
         rect.sizeDelta *= fit;
@@ -598,7 +631,10 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         background.type = Image.Type.Sliced;
 
         Image icon = CreateImage("Icon", rect);
-        Stretch(icon.rectTransform, sprite == null ? 13f : 19.5f);
+        // Generated icons contain some transparent breathing room themselves;
+        // use a small UI inset so the actual artwork stays legible while still
+        // remaining completely inside the magnet.
+        Stretch(icon.rectTransform, 4f);
         icon.preserveAspect = true;
         TextMeshProUGUI label = CreateText("Label", rect);
         Stretch(label.rectTransform, 6f);

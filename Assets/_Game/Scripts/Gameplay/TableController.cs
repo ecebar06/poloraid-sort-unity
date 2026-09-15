@@ -318,7 +318,9 @@ public class TableController : MonoBehaviour
         RectTransform panelRect = panel.GetComponent<RectTransform>();
         panelRect.anchorMin = panelRect.anchorMax = new Vector2(1f, 1f);
         panelRect.pivot = new Vector2(1f, 1f);
-        panelRect.anchoredPosition = new Vector2(-18f, -182f);
+        // Keep the development level navigator below the authored progress
+        // card so its buttons cannot cover the track or the knob.
+        panelRect.anchoredPosition = new Vector2(-18f, -270f);
         panelRect.sizeDelta = new Vector2(310f, 66f);
         AddShadow(panel, new Color(0f, 0f, 0f, 0.28f), new Vector2(0f, -4f));
 
@@ -749,8 +751,9 @@ public class TableController : MonoBehaviour
             SaveSystem.CompleteLevel(activeLevelIndex, nextLevelIndex);
             if (goldText != null) goldText.text = SaveSystem.Current.gold.ToString();
             if (winGoldText != null) winGoldText.text = SaveSystem.Current.gold.ToString();
-            if (rewardText != null) rewardText.text = "+40 GOLD";
+            if (rewardText != null) rewardText.text = "40";
             if (doubleRewardButton != null) doubleRewardButton.interactable = true;
+            UpdateWinTitle();
             ShowResultScreen(winScreen);
         }
         else
@@ -855,7 +858,7 @@ public class TableController : MonoBehaviour
         if (rewardDoubled) return;
         rewardDoubled = true;
         SaveSystem.AddGold(40);
-        if (rewardText != null) rewardText.text = "+80 GOLD";
+        if (rewardText != null) rewardText.text = "80";
         if (winGoldText != null) winGoldText.text = SaveSystem.Current.gold.ToString();
         if (goldText != null) goldText.text = SaveSystem.Current.gold.ToString();
         if (doubleRewardButton != null) doubleRewardButton.interactable = false;
@@ -1267,21 +1270,27 @@ public class TableController : MonoBehaviour
         RectTransform visibleProgressKnob = gameHud.Find("FridgeTopHud/ProgressCard/ProgressTrack/Knob") as RectTransform;
         TextMeshProUGUI visibleProgressKnobText = gameHud.Find("FridgeTopHud/ProgressCard/ProgressTrack/Knob/Value")?.GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI visibleMoveCount = gameHud.Find("FridgeTopHud/MovesMagnet/MoveCount")?.GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI visibleMovesTitle = gameHud.Find("FridgeTopHud/MovesTitle")?.GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI visibleLevelLabel = gameHud.Find("FridgeTopHud/LevelLabel")?.GetComponent<TextMeshProUGUI>();
         if (visibleProgressFill != null) progressFill = visibleProgressFill;
         if (visibleProgressKnob != null) progressKnob = visibleProgressKnob;
         if (visibleProgressKnobText != null) progressKnobText = visibleProgressKnobText;
         if (visibleMoveCount != null) moveCountText = visibleMoveCount;
         if (visibleLevelLabel != null) levelLabel = visibleLevelLabel;
+        StyleFridgeTitle(visibleMovesTitle, 48f);
+        StyleFridgeHeaderText(levelLabel, 64f);
+        StyleFridgeMoveCount(moveCountText);
         CacheProgressKnobSceneLayout();
         if (goldText == null) goldText = gameHud.Find("TopBar/ProgressCard/GoldDisplay/GoldText")?.GetComponent<TextMeshProUGUI>();
         if (hintCountText == null) hintCountText = gameHud.Find("BoosterArea/HintButton/CountBadge/Count")?.GetComponent<TextMeshProUGUI>();
-        if (winScreen == null) winScreen = gameHud.Find("WinScreen")?.gameObject;
+        Transform winScreenTransform = gameHud.Find("WinScreen") ?? gameHud.Find("MagnetPopupUI/WinScreen");
+        if (winScreenTransform != null) winScreen = winScreenTransform.gameObject;
         if (loseScreen == null) loseScreen = gameHud.Find("LoseScreen")?.gameObject;
-        if (winGoldText == null) winGoldText = gameHud.Find("WinScreen/Panel/Gold/Value")?.GetComponent<TextMeshProUGUI>();
-        if (rewardText == null) rewardText = gameHud.Find("WinScreen/Panel/Reward/Value")?.GetComponent<TextMeshProUGUI>();
-        if (doubleRewardButton == null) doubleRewardButton = gameHud.Find("WinScreen/Panel/DoubleRewardButton")?.GetComponent<Button>();
-        if (continueButton == null) continueButton = gameHud.Find("WinScreen/Panel/ContinueButton")?.GetComponent<Button>();
+        Transform winContent = winScreenTransform?.Find("Content") ?? winScreenTransform?.Find("Panel");
+        winGoldText = winContent?.Find("Gold/Value")?.GetComponent<TextMeshProUGUI>();
+        rewardText = winContent?.Find("Reward/Value")?.GetComponent<TextMeshProUGUI>();
+        doubleRewardButton = winContent?.Find("DoubleRewardButton")?.GetComponent<Button>();
+        continueButton = winContent?.Find("ContinueButton")?.GetComponent<Button>();
         if (retryButton == null) retryButton = gameHud.Find("LoseScreen/Panel/RetryButton")?.GetComponent<Button>();
         if (watchAdContinueButton == null) watchAdContinueButton = gameHud.Find("LoseScreen/Panel/WatchAdContinueButton")?.GetComponent<Button>();
         if (spendGoldContinueButton == null) spendGoldContinueButton = gameHud.Find("LoseScreen/Panel/SpendGoldContinueButton")?.GetComponent<Button>();
@@ -1363,7 +1372,7 @@ public class TableController : MonoBehaviour
         TextMeshProUGUI movesTitle = CreateLabel("MovesTitle", hudRect, "moves", TextAlignmentOptions.Center);
         SetAbsoluteTopRect(movesTitle.rectTransform, new Vector2(38f, -8f), new Vector2(190f, 58f), new Vector2(0f, 1f));
         StyleFridgeTitle(movesTitle, 48f);
-        movesTitle.color = new Color(0.52f, 0.31f, 0.66f, 1f);
+        movesTitle.color = Color.white;
 
         GameObject movesCardObject = CreatePanel("MovesMagnet", hudRect, Color.white);
         Image movesCard = movesCardObject.GetComponent<Image>();
@@ -1373,7 +1382,7 @@ public class TableController : MonoBehaviour
         SetAbsoluteTopRect(movesCard.rectTransform, new Vector2(55f, -73f), new Vector2(145f, 92f), new Vector2(0f, 1f));
         moveCountText = CreateLabel("MoveCount", movesCard.transform, "0", TextAlignmentOptions.Center);
         moveCountText.fontSize = 48f;
-        moveCountText.color = new Color(0.42f, 0.30f, 0.14f, 1f);
+        StyleFridgeMoveCount(moveCountText);
         Stretch(moveCountText.rectTransform);
 
         levelLabel = CreateLabel("LevelLabel", hudRect, "Level <color=#D69535>1</color>", TextAlignmentOptions.Center);
@@ -1470,13 +1479,57 @@ public class TableController : MonoBehaviour
 
     private void StyleFridgeTitle(TextMeshProUGUI label, float fontSize)
     {
-        label.color = new Color(0.72f, 0.25f, 0.62f, 1f);
+        if (label == null) return;
+        label.color = Color.white;
+        label.outlineColor = new Color(0.17f, 0.07f, 0.24f, 1f);
+        label.outlineWidth = 0.18f;
         // Font asset and material are authored in the scene. In particular,
         // preserve its size, weight/style and variable-font shadow material.
         Shadow shadow = label.GetComponent<Shadow>();
         if (shadow == null) shadow = label.gameObject.AddComponent<Shadow>();
-        shadow.effectColor = new Color(0.20f, 0.18f, 0.30f, 0.48f);
-        shadow.effectDistance = new Vector2(2f, -4f);
+        shadow.effectColor = new Color(0.10f, 0.04f, 0.16f, 0.80f);
+        shadow.effectDistance = new Vector2(2f, -3f);
+        shadow.useGraphicAlpha = true;
+    }
+
+    private void UpdateWinTitle()
+    {
+        if (winScreen == null) return;
+        TextMeshProUGUI[] labels = winScreen.GetComponentsInChildren<TextMeshProUGUI>(true);
+        foreach (TextMeshProUGUI label in labels)
+        {
+            if (label == null || label.name != "Title") continue;
+            label.text = $"LEVEL {currentLevelNumber}";
+            return;
+        }
+    }
+
+    private static void StyleFridgeHeaderText(TextMeshProUGUI label, float fontSize)
+    {
+        if (label == null) return;
+        label.fontSize = fontSize;
+        label.fontStyle = FontStyles.Bold;
+        label.color = Color.white;
+        label.outlineColor = new Color(0.17f, 0.07f, 0.24f, 1f);
+        label.outlineWidth = 0.18f;
+        Shadow shadow = label.GetComponent<Shadow>();
+        if (shadow == null) shadow = label.gameObject.AddComponent<Shadow>();
+        shadow.effectColor = new Color(0.10f, 0.04f, 0.16f, 0.80f);
+        shadow.effectDistance = new Vector2(2f, -3f);
+        shadow.useGraphicAlpha = true;
+    }
+
+    private static void StyleFridgeMoveCount(TextMeshProUGUI label)
+    {
+        if (label == null) return;
+        label.fontStyle = FontStyles.Bold;
+        label.color = new Color(0.24f, 0.08f, 0.30f, 1f);
+        label.outlineColor = new Color(1f, 0.91f, 0.55f, 0.95f);
+        label.outlineWidth = 0.12f;
+        Shadow shadow = label.GetComponent<Shadow>();
+        if (shadow == null) shadow = label.gameObject.AddComponent<Shadow>();
+        shadow.effectColor = new Color(0.16f, 0.06f, 0.20f, 0.65f);
+        shadow.effectDistance = new Vector2(1f, -2f);
         shadow.useGraphicAlpha = true;
     }
 
@@ -1492,7 +1545,10 @@ public class TableController : MonoBehaviour
     {
         Sprite trackSprite = GetFridgeProgressTrackSprite();
         Sprite fillSprite = GetFridgeProgressFillSprite();
-        Transform trackTransform = gameHud == null ? null : gameHud.Find("TopBar/ProgressCard/ProgressTrack");
+        Transform trackTransform = gameHud == null
+            ? null
+            : gameHud.Find("FridgeTopHud/ProgressCard/ProgressTrack") ??
+              gameHud.Find("TopBar/ProgressCard/ProgressTrack");
         Image trackImage = trackTransform == null ? null : trackTransform.GetComponent<Image>();
 
         if (trackImage != null && trackSprite != null)
@@ -1536,10 +1592,14 @@ public class TableController : MonoBehaviour
         if (progressKnob != null && progressKnob.parent is RectTransform progressTrack)
         {
             CacheProgressKnobSceneLayout();
-            float travel = (progressRatio - progressKnobSceneAnchorX) * progressTrack.rect.width;
-            progressKnob.anchoredPosition = new Vector2(
-                progressKnobScenePosition.x + travel,
-                progressKnobScenePosition.y);
+            float halfKnob = progressKnob.rect.width * 0.5f;
+            float trackWidth = progressTrack.rect.width;
+            float rawX = progressKnobScenePosition.x +
+                         (progressRatio - progressKnobSceneAnchorX) * trackWidth;
+            float minX = progressKnobScenePosition.x + halfKnob;
+            float maxX = progressKnobScenePosition.x + Mathf.Max(halfKnob, trackWidth - halfKnob);
+            float knobX = Mathf.Clamp(rawX + halfKnob, minX, maxX);
+            progressKnob.anchoredPosition = new Vector2(knobX, progressKnobScenePosition.y);
         }
         if (progressKnobText != null) progressKnobText.text = categoriesCompleted.ToString();
         if (moveCountText != null) moveCountText.text = fridgeHudActive ? moveCount.ToString() : $"MOVES\n{moveCount}";

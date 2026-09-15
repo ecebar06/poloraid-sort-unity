@@ -15,6 +15,7 @@ public sealed class CategoryHolder : MonoBehaviour
     private readonly List<LooseMagnet> collected = new List<LooseMagnet>(4);
     private CategoryMagnetBoardController owner;
     private Image holderBackground;
+    private Image completionTint;
     private Color normalBackgroundColor = Color.white;
     private bool backgroundColorCached;
     public string CategoryId { get; private set; }
@@ -34,6 +35,7 @@ public sealed class CategoryHolder : MonoBehaviour
             normalBackgroundColor = holderBackground.color;
             backgroundColorCached = true;
         }
+        EnsureCompletionTint();
         ResetHolder();
     }
 
@@ -88,7 +90,7 @@ public sealed class CategoryHolder : MonoBehaviour
         }
 
         collected.Add(magnet);
-        magnet.LockIntoHolder(GetSlotPosition(collected.Count - 1), content);
+        LayoutCollectedMagnets();
         UpdateCount();
         HapticFeedback.Play(HapticFeedback.Strength.Light);
         if (IsFull) StartCoroutine(CompleteAfterSnap());
@@ -97,11 +99,16 @@ public sealed class CategoryHolder : MonoBehaviour
 
     public void SetHighlighted(bool value, bool valid)
     {
-        if (highlight == null) return;
-        highlight.gameObject.SetActive(value);
-        highlight.color = valid
-            ? new Color(0.25f, 1f, 0.42f, 0.55f)
-            : new Color(1f, 0.22f, 0.20f, 0.45f);
+        // Highlight the holder image itself. The former overlay could extend
+        // beyond the art's rounded outline and looked like a detached glow.
+        if (highlight != null) highlight.gameObject.SetActive(false);
+        if (holderBackground == null) return;
+        holderBackground.DOKill();
+        // Use a strong, unambiguous target color while dragging. Keeping a
+        // small amount of the original gray preserves the holder artwork.
+        Color target = !value ? normalBackgroundColor : Color.Lerp(normalBackgroundColor,
+            valid ? new Color(0.10f, 1f, 0.24f, 1f) : new Color(1f, 0.08f, 0.12f, 1f), 0.72f);
+        holderBackground.DOColor(target, 0.10f).SetEase(Ease.OutCubic);
     }
 
     private IEnumerator CompleteAfterSnap()
@@ -120,6 +127,9 @@ public sealed class CategoryHolder : MonoBehaviour
             Color completedColor = categoryBadge != null ? categoryBadge.color : normalBackgroundColor;
             completedColor.a = 1f;
             holderBackground.DOColor(completedColor, 0.22f);
+            ShowCompletionTint(completedColor);
+            foreach (LooseMagnet magnet in collected)
+                if (magnet != null) magnet.SetCompletedAppearance(completedColor);
         }
         transform.DOKill();
         transform.DOPunchScale(Vector3.one * 0.08f, 0.35f, 6, 0.5f);
@@ -146,6 +156,11 @@ public sealed class CategoryHolder : MonoBehaviour
             holderBackground.DOKill();
             holderBackground.color = normalBackgroundColor;
         }
+        if (completionTint != null)
+        {
+            completionTint.DOKill();
+            completionTint.gameObject.SetActive(false);
+        }
         if (categoryLabel != null) categoryLabel.gameObject.SetActive(false);
         Transform badge = transform.Find("CategoryBadge");
         if (badge != null) badge.gameObject.SetActive(false);
@@ -158,11 +173,60 @@ public sealed class CategoryHolder : MonoBehaviour
         if (countLabel != null) countLabel.text = $"{collected.Count}/4";
     }
 
+    private void EnsureCompletionTint()
+    {
+        if (completionTint != null || holderBackground == null) return;
+        Transform existing = transform.Find("CompletedHolderTint");
+        if (existing != null) completionTint = existing.GetComponent<Image>();
+        else
+        {
+            GameObject tint = new GameObject("CompletedHolderTint", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+            tint.transform.SetParent(transform, false);
+            completionTint = tint.GetComponent<Image>();
+            RectTransform rect = completionTint.rectTransform;
+            rect.anchorMin = Vector2.zero;
+            rect.anchorMax = Vector2.one;
+            rect.offsetMin = rect.offsetMax = Vector2.zero;
+            completionTint.sprite = holderBackground.sprite;
+            completionTint.type = holderBackground.type;
+            completionTint.raycastTarget = false;
+            // Render after the gray holder image but before Content/magnets.
+            completionTint.transform.SetAsFirstSibling();
+        }
+        completionTint.gameObject.SetActive(false);
+    }
+
+    private void ShowCompletionTint(Color color)
+    {
+        EnsureCompletionTint();
+        if (completionTint == null) return;
+        color.a = 0f;
+        completionTint.color = color;
+        completionTint.gameObject.SetActive(true);
+        completionTint.DOFade(1f, 0.22f).SetEase(Ease.OutCubic);
+    }
+
     private Vector2 GetSlotPosition(int index)
     {
         Rect rect = content.rect;
-        // One overlapping vertical stack, with each new magnet in front.
-        float step = Mathf.Min(rect.height * 0.16f, 75f);
+        // First card stays at the top. Later cards stack beneath it without
+        // moving cards that are already in the holder.
+        float step = Mathf.Min(rect.height * 0.14f, 60f);
         return new Vector2(rect.center.x, rect.yMax - rect.height * 0.24f - index * step);
+    }
+
+    private void LayoutCollectedMagnets()
+    {
+        LooseMagnet newest = collected[collected.Count - 1];
+        // Only cards covered by a newer card move their labels upward. The
+        // newest/front card always keeps its word centred.
+        for (int index = 0; index < collected.Count - 1; index++)
+        {
+            LooseMagnet existing = collected[index];
+            if (existing != null) existing.SetHolderStackMode(true);
+        }
+        if (newest != null) newest.SetHolderStackMode(false);
+        if (newest != null)
+            newest.LockIntoHolder(GetSlotPosition(collected.Count - 1), content);
     }
 }

@@ -73,9 +73,10 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
         bool useIcon = sprite != null;
         if (background != null)
         {
-            // Keep the transparent graphic as a generous touch target.
+            // Icon words use the same physical magnet as text words. Keeping
+            // the backing visible makes the icon read as content inside it.
             Color backgroundColor = background.color;
-            backgroundColor.a = useIcon ? 0f : 1f;
+            backgroundColor.a = 1f;
             background.color = backgroundColor;
             background.raycastTarget = true;
         }
@@ -155,7 +156,46 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
         rect.DOKill();
         rect.localRotation = Quaternion.identity;
         rect.DOAnchorPos(localPosition, 0.24f).SetEase(Ease.OutCubic);
-        AnimateScale(0.72f, 0.24f, Ease.OutBack);
+        // Fill the holder's usable width while preserving a small inner gutter.
+        // This is calculated per holder, so it remains correct at every Canvas scale.
+        float usableWidth = Mathf.Max(0f, holderContent.rect.width - 20f);
+        float targetScale = rect.rect.width > 0f ? usableWidth / rect.rect.width : 0.72f;
+        AnimateScale(Mathf.Clamp(targetScale, 0.68f, 1f), 0.24f, Ease.OutBack);
+    }
+
+    public void SetHolderStackMode(bool stacked)
+    {
+        if (label == null || !label.gameObject.activeSelf) return;
+        RectTransform labelRect = label.rectTransform;
+        if (stacked)
+        {
+            // In an accordion stack, expose each word in the upper strip.
+            labelRect.anchorMin = new Vector2(0.06f, 0.56f);
+            labelRect.anchorMax = new Vector2(0.94f, 0.94f);
+            labelRect.offsetMin = Vector2.zero;
+            labelRect.offsetMax = Vector2.zero;
+        }
+        else
+        {
+            // A single magnet remains centred until another one arrives.
+            labelRect.anchorMin = Vector2.zero;
+            labelRect.anchorMax = Vector2.one;
+            labelRect.offsetMin = Vector2.one * 6f;
+            labelRect.offsetMax = Vector2.one * -6f;
+        }
+        label.alignment = TextAlignmentOptions.Center;
+    }
+
+    public void SetCompletedAppearance(Color color)
+    {
+        if (background != null)
+        {
+            color.a = 1f;
+            background.DOKill();
+            background.DOColor(color, 0.18f).SetEase(Ease.OutCubic);
+        }
+        // Text magnets need high contrast over the category completion color.
+        if (label != null && label.gameObject.activeSelf) label.color = Color.white;
     }
 
     public void Reject()

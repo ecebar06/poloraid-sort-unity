@@ -136,6 +136,9 @@ public sealed class MagnetPopupUI : MonoBehaviour
 
     public static MagnetPopupUI CreateAuthored(RectTransform parent)
     {
+        if (Application.isPlaying)
+            throw new System.InvalidOperationException("Popup authoring is only available outside Play Mode. Use the existing scene popups.");
+
         GameObject root = Rect("MagnetPopupUI", parent);
         Stretch(root.GetComponent<RectTransform>());
         MagnetPopupUI popup = root.AddComponent<MagnetPopupUI>();
@@ -253,6 +256,7 @@ public sealed class MagnetPopupUI : MonoBehaviour
             new Vector2(0.18f, 0.09f), new Vector2(0.94f, 0.40f));
     }
 
+
     public void ShowSettings()
     {
         ResolveSceneReferences();
@@ -265,6 +269,7 @@ public sealed class MagnetPopupUI : MonoBehaviour
         gameObject.SetActive(true);
         transform.SetAsLastSibling();
         settingsScreen.SetActive(true);
+        SetPopupScreenVisible(settingsScreen, true);
         settingsScreen.transform.SetAsLastSibling();
         if (settingsGoldText != null)
             settingsGoldText.text = SaveSystem.Current.gold.ToString();
@@ -273,7 +278,11 @@ public sealed class MagnetPopupUI : MonoBehaviour
         Debug.Log("Settings popup acildi.", this);
     }
 
-    public void HideSettings() => settingsScreen.SetActive(false);
+    public void HideSettings()
+    {
+        SetPopupScreenVisible(settingsScreen, false);
+        settingsScreen.SetActive(false);
+    }
 
     public void ShowTimeUp()
     {
@@ -288,9 +297,19 @@ public sealed class MagnetPopupUI : MonoBehaviour
         gameObject.SetActive(true);
         transform.SetAsLastSibling();
         timeUpScreen.SetActive(true);
+        SetPopupScreenVisible(timeUpScreen, true);
         timeUpScreen.transform.SetAsLastSibling();
         Canvas.ForceUpdateCanvases();
         Debug.Log("TimeUp popup acildi.", this);
+    }
+
+    private static void SetPopupScreenVisible(GameObject screen, bool visible)
+    {
+        if (screen == null) return;
+        CanvasGroup group = screen.GetComponent<CanvasGroup>();
+        if (group == null) return;
+        group.alpha = visible ? 1f : 0f;
+        group.blocksRaycasts = visible;
     }
 
     private void ToggleSound()

@@ -9,7 +9,7 @@ using UnityEngine.UI;
 [InitializeOnLoad]
 internal static class SettingsGoldDisplayInstaller
 {
-    private const string CoinPath = "Assets/Layer Lab/GUI Pro-SuperCasual/ResourcesData/Sprites/Demo/Demo_ItemIcon/ItemIcon_Coins_s.png";
+    private const string CoinPath = "Assets/_Game/Resources/Art/UI/Popups/golds_1.png";
 
     static SettingsGoldDisplayInstaller() => EditorApplication.delayCall += Install;
 
