@@ -1,8 +1,8 @@
 {
   "levelNumber": 7,
-  "moveCount": 36,
-  "expectedCategoryCount": 9,
-  "visibleRowCount": 5,
+  "moveCount": 28,
+  "expectedCategoryCount": 5,
+  "visibleRowCount": 4,
   "categories": [
     {
       "id": "foods",
@@ -41,16 +41,16 @@
           "syllablePartB": ""
         }
       ],
-      "transformsOnComplete": true,
+      "transformsOnComplete": false,
       "transformResult": {
-        "text": "Pasta",
+        "text": "",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
         "syllablePartB": ""
       },
-      "transformResultCategoryId": "italian_foods"
+      "transformResultCategoryId": ""
     },
     {
       "id": "italian_foods",
@@ -197,198 +197,6 @@
       "transformResultCategoryId": ""
     },
     {
-      "id": "reading_materials",
-      "name": "Reading Materials",
-      "words": [
-        {
-          "text": "Magazine",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Comic",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Newspaper",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Novel",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Book",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "school__book",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "school_supplies"
-    },
-    {
-      "id": "school_supplies",
-      "name": "School Supplies",
-      "words": [
-        {
-          "text": "Pencil",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Book",
-          "hasSprite": true,
-          "useIcon": true,
-          "spriteKey": "school__book",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Ruler",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Eraser",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
-      "id": "watercraft",
-      "name": "Watercraft",
-      "words": [
-        {
-          "text": "Boat",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Raft",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Barge",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "Bar",
-          "syllablePartB": "ge"
-        },
-        {
-          "text": "Canoe",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Ship",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "sea_travel"
-    },
-    {
-      "id": "sea_travel",
-      "name": "Sea Travel",
-      "words": [
-        {
-          "text": "Ship",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Ferry",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Harbor",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Cabin",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
       "id": "insects",
       "name": "Insects",
       "words": [
@@ -439,9 +247,9 @@
   ],
   "orderedWords": [
     {
-      "categoryId": "reading_materials",
+      "categoryId": "insects",
       "word": {
-        "text": "Magazine",
+        "text": "Ant",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -450,20 +258,9 @@
       }
     },
     {
-      "categoryId": "vegetables",
+      "categoryId": "food_groups",
       "word": {
-        "text": "Tomato",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "school_supplies",
-      "word": {
-        "text": "Pencil",
+        "text": "Fruit",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -483,108 +280,9 @@
       }
     },
     {
-      "categoryId": "reading_materials",
-      "word": {
-        "text": "Newspaper",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "vegetables",
-      "word": {
-        "text": "Onion",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "foods",
-      "word": {
-        "text": "Bread",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
       "categoryId": "italian_foods",
       "word": {
-        "text": "Risotto",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "foods",
-      "word": {
-        "text": "Rice",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "foods",
-      "word": {
-        "text": "Pizza",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "foods__pizza",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "food_groups",
-      "word": {
-        "text": "Meat",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "reading_materials",
-      "word": {
-        "text": "Novel",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "vegetables",
-      "word": {
-        "text": "Potato",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "reading_materials",
-      "word": {
-        "text": "Comic",
+        "text": "Lasagna",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -615,9 +313,9 @@
       }
     },
     {
-      "categoryId": "food_groups",
+      "categoryId": "vegetables",
       "word": {
-        "text": "Fruit",
+        "text": "Potato",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -626,108 +324,9 @@
       }
     },
     {
-      "categoryId": "school_supplies",
+      "categoryId": "vegetables",
       "word": {
-        "text": "Ruler",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "italian_foods",
-      "word": {
-        "text": "Ravioli",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "watercraft",
-      "word": {
-        "text": "Boat",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "school_supplies",
-      "word": {
-        "text": "Eraser",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "italian_foods",
-      "word": {
-        "text": "Lasagna",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "watercraft",
-      "word": {
-        "text": "Raft",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "watercraft",
-      "word": {
-        "text": "Barge",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "Bar",
-        "syllablePartB": "ge"
-      }
-    },
-    {
-      "categoryId": "watercraft",
-      "word": {
-        "text": "Canoe",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "insects",
-      "word": {
-        "text": "Moth",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "sea_travel",
-      "word": {
-        "text": "Ferry",
+        "text": "Tomato",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -747,9 +346,9 @@
       }
     },
     {
-      "categoryId": "insects",
+      "categoryId": "italian_foods",
       "word": {
-        "text": "Ant",
+        "text": "Risotto",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -758,9 +357,75 @@
       }
     },
     {
-      "categoryId": "sea_travel",
+      "categoryId": "food_groups",
       "word": {
-        "text": "Cabin",
+        "text": "Meat",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "foods",
+      "word": {
+        "text": "Bread",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "insects",
+      "word": {
+        "text": "Moth",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "italian_foods",
+      "word": {
+        "text": "Ravioli",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "italian_foods",
+      "word": {
+        "text": "Pasta",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "vegetables",
+      "word": {
+        "text": "Onion",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "foods",
+      "word": {
+        "text": "Rice",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -780,12 +445,12 @@
       }
     },
     {
-      "categoryId": "sea_travel",
+      "categoryId": "foods",
       "word": {
-        "text": "Harbor",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "text": "Pizza",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "foods__pizza",
         "syllablePartA": "",
         "syllablePartB": ""
       }

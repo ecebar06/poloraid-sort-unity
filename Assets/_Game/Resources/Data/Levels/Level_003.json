@@ -1,57 +1,9 @@
 {
   "levelNumber": 3,
-  "moveCount": 20,
-  "expectedCategoryCount": 5,
+  "moveCount": 22,
+  "expectedCategoryCount": 4,
   "visibleRowCount": 4,
   "categories": [
-    {
-      "id": "dog_breeds",
-      "name": "Dog Breeds",
-      "words": [
-        {
-          "text": "Beagle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Poodle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Husky",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Bulldog",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Dog",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "pets__dog",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "pets"
-    },
     {
       "id": "pets",
       "name": "Pets",
@@ -59,34 +11,34 @@
         {
           "text": "Cat",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Dog",
           "hasSprite": true,
-          "useIcon": true,
           "spriteKey": "pets__dog",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         },
         {
           "text": "Bird",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Fish",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         }
       ],
       "transformsOnComplete": false,
@@ -101,40 +53,40 @@
       "transformResultCategoryId": ""
     },
     {
-      "id": "rooms",
-      "name": "Rooms",
+      "id": "school_supplies",
+      "name": "School Supplies",
       "words": [
         {
-          "text": "Kitchen",
+          "text": "Pencil",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
-          "text": "Bedroom",
+          "text": "Book",
+          "hasSprite": true,
+          "spriteKey": "school__book",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": true
+        },
+        {
+          "text": "Ruler",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
-          "text": "Bathroom",
+          "text": "Eraser",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Garage",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "ga",
-          "syllablePartB": "rage"
+          "syllablePartB": "",
+          "useIcon": false
         }
       ],
       "transformsOnComplete": false,
@@ -149,40 +101,40 @@
       "transformResultCategoryId": ""
     },
     {
-      "id": "school_subjects",
-      "name": "School Subjects",
+      "id": "toys",
+      "name": "Toys",
       "words": [
         {
-          "text": "Math",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "text": "Ball",
+          "hasSprite": true,
+          "spriteKey": "toys__ball",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         },
         {
-          "text": "Science",
+          "text": "Doll",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
-          "text": "History",
+          "text": "Blocks",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
-          "text": "Art",
+          "text": "Kite",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         }
       ],
       "transformsOnComplete": false,
@@ -203,34 +155,34 @@
         {
           "text": "Ketchup",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Mustard",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Mayo",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Relish",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         }
       ],
       "transformsOnComplete": false,
@@ -247,91 +199,36 @@
   ],
   "orderedWords": [
     {
-      "categoryId": "rooms",
-      "word": {
-        "text": "Kitchen",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
       "categoryId": "pets",
       "word": {
-        "text": "Bird",
+        "text": "Cat",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "school_subjects",
+      "categoryId": "school_supplies",
       "word": {
-        "text": "Math",
+        "text": "Pencil",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "dog_breeds",
+      "categoryId": "toys",
       "word": {
-        "text": "Husky",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "text": "Ball",
+        "hasSprite": true,
+        "spriteKey": "toys__ball",
         "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "school_subjects",
-      "word": {
-        "text": "History",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "dog_breeds",
-      "word": {
-        "text": "Bulldog",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "condiments",
-      "word": {
-        "text": "Mayo",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "condiments",
-      "word": {
-        "text": "Mustard",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": true
       }
     },
     {
@@ -339,54 +236,98 @@
       "word": {
         "text": "Ketchup",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "dog_breeds",
+      "categoryId": "pets",
       "word": {
-        "text": "Beagle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "text": "Dog",
+        "hasSprite": true,
+        "spriteKey": "pets__dog",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": true
       }
     },
     {
-      "categoryId": "rooms",
+      "categoryId": "school_supplies",
       "word": {
-        "text": "Bathroom",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "text": "Book",
+        "hasSprite": true,
+        "spriteKey": "school__book",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": true
       }
     },
     {
-      "categoryId": "rooms",
+      "categoryId": "toys",
       "word": {
-        "text": "Bedroom",
+        "text": "Doll",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "dog_breeds",
+      "categoryId": "condiments",
       "word": {
-        "text": "Poodle",
+        "text": "Mustard",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "pets",
+      "word": {
+        "text": "Bird",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "school_supplies",
+      "word": {
+        "text": "Ruler",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "toys",
+      "word": {
+        "text": "Blocks",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "condiments",
+      "word": {
+        "text": "Mayo",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
@@ -394,32 +335,32 @@
       "word": {
         "text": "Fish",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "school_subjects",
+      "categoryId": "school_supplies",
       "word": {
-        "text": "Art",
+        "text": "Eraser",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "school_subjects",
+      "categoryId": "toys",
       "word": {
-        "text": "Science",
+        "text": "Kite",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
@@ -427,32 +368,10 @@
       "word": {
         "text": "Relish",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "pets",
-      "word": {
-        "text": "Cat",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "rooms",
-      "word": {
-        "text": "Garage",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "ga",
-        "syllablePartB": "rage"
+        "syllablePartB": "",
+        "useIcon": false
       }
     }
   ]

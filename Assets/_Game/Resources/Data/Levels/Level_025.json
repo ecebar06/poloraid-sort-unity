@@ -1,0 +1,794 @@
+{
+  "levelNumber": 25,
+  "moveCount": 43,
+  "expectedCategoryCount": 9,
+  "visibleRowCount": 4,
+  "categories": [
+    {
+      "id": "water_bodies",
+      "name": "Bodies of Water",
+      "words": [
+        {
+          "text": "River",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Lake",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Ocean",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Pond",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": true,
+      "transformResult": {
+        "text": "Water",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": "cold_drinks"
+    },
+    {
+      "id": "beach_day",
+      "name": "Beach Day",
+      "words": [
+        {
+          "text": "Sand",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Umbrella",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Sunscreen",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Surfboard",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": true,
+      "transformResult": {
+        "text": "Ocean",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": "water_bodies"
+    },
+    {
+      "id": "zoo_animals",
+      "name": "Zoo Animals",
+      "words": [
+        {
+          "text": "Giraffe",
+          "hasSprite": true,
+          "useIcon": false,
+          "spriteKey": "zoo_animals__giraffe",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Elephant",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Rhino",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Hippo",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": true,
+      "transformResult": {
+        "text": "Zoo",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": "theme_parks"
+    },
+    {
+      "id": "cold_drinks",
+      "name": "Cold Drinks",
+      "words": [
+        {
+          "text": "Water",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Juice",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Lemonade",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Soda",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "theme_parks",
+      "name": "Theme Parks",
+      "words": [
+        {
+          "text": "Amusement Park",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Sea World",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Zoo",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Aquarium",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "fish",
+      "name": "Fish",
+      "words": [
+        {
+          "text": "Salmon",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Tuna",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Trout",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Carp",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": true,
+      "transformResult": {
+        "text": "Aquarium",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": "theme_parks"
+    },
+    {
+      "id": "mail",
+      "name": "Mail",
+      "words": [
+        {
+          "text": "Stamp",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Envelope",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Package",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Postcard",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "post",
+          "syllablePartB": "card"
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "digital_drives",
+      "name": "Digital Drives",
+      "words": [
+        {
+          "text": "Flash",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Thumb",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Hard",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Cloud",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "spanish_artists",
+      "name": "Spanish Artists",
+      "words": [
+        {
+          "text": "Picasso",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Dali",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Goya",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Velazquez",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    }
+  ],
+  "orderedWords": [
+    {
+      "categoryId": "zoo_animals",
+      "word": {
+        "text": "Rhino",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "cold_drinks",
+      "word": {
+        "text": "Juice",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "cold_drinks",
+      "word": {
+        "text": "Soda",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "water_bodies",
+      "word": {
+        "text": "River",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "beach_day",
+      "word": {
+        "text": "Sand",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "zoo_animals",
+      "word": {
+        "text": "Giraffe",
+        "hasSprite": true,
+        "useIcon": false,
+        "spriteKey": "zoo_animals__giraffe",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "zoo_animals",
+      "word": {
+        "text": "Hippo",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "fish",
+      "word": {
+        "text": "Tuna",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "fish",
+      "word": {
+        "text": "Carp",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "cold_drinks",
+      "word": {
+        "text": "Lemonade",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "water_bodies",
+      "word": {
+        "text": "Lake",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "beach_day",
+      "word": {
+        "text": "Umbrella",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "beach_day",
+      "word": {
+        "text": "Surfboard",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "beach_day",
+      "word": {
+        "text": "Sunscreen",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "fish",
+      "word": {
+        "text": "Salmon",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "fish",
+      "word": {
+        "text": "Trout",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "water_bodies",
+      "word": {
+        "text": "Pond",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "zoo_animals",
+      "word": {
+        "text": "Elephant",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "theme_parks",
+      "word": {
+        "text": "Amusement Park",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "mail",
+      "word": {
+        "text": "Envelope",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "mail",
+      "word": {
+        "text": "Stamp",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "theme_parks",
+      "word": {
+        "text": "Sea World",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "mail",
+      "word": {
+        "text": "Package",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "digital_drives",
+      "word": {
+        "text": "Thumb",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "digital_drives",
+      "word": {
+        "text": "Flash",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "mail",
+      "word": {
+        "text": "Postcard",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "post",
+        "syllablePartB": "card"
+      }
+    },
+    {
+      "categoryId": "digital_drives",
+      "word": {
+        "text": "Hard",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "spanish_artists",
+      "word": {
+        "text": "Dali",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "spanish_artists",
+      "word": {
+        "text": "Picasso",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "digital_drives",
+      "word": {
+        "text": "Cloud",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "spanish_artists",
+      "word": {
+        "text": "Goya",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    },
+    {
+      "categoryId": "spanish_artists",
+      "word": {
+        "text": "Velazquez",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "levelNumber": 39,
+  "moveCount": 43,
+  "expectedCategoryCount": 9,
+  "visibleRowCount": 4,
+  "categories": [
+    {
+      "id": "dolphins",
+      "name": "Dolphins",
+      "words": [
+        {
+          "text": "Bottlenose",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Spinner",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Common Dolphin",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Orca",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": true,
+      "transformResult": {
+        "text": "orca",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": "black_white"
+    },
+    {
+      "id": "black_white",
+      "name": "Black & White",
+      "words": [
+        {
+          "text": "Domino",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Panda",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Orca",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Chess",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "life_science",
+      "name": "Life Science",
+      "words": [
+        {
+          "text": "Human Body",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Plant Growth",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Animal Behavior",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Ecosystem",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "historical_eras",
+      "name": "Historical Eras",
+      "words": [
+        {
+          "text": "Ancient",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Medieval",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Renaissance",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Modern",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "history_sources",
+      "name": "History Sources",
+      "words": [
+        {
+          "text": "Diary",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Letter",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Artifact",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Photograph",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "school_projects",
+      "name": "School Projects",
+      "words": [
+        {
+          "text": "Poster",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Report",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Model",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Presentation",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "daily_weather",
+      "name": "Daily Weather",
+      "words": [
+        {
+          "text": "Rainy",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Windy",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Humid",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Dry",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "climate_patterns",
+      "name": "Climate Patterns",
+      "words": [
+        {
+          "text": "Climate Zone",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Seasonal Change",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Ocean Current",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Rainfall",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "nature_cycles",
+      "name": "Nature Cycles",
+      "words": [
+        {
+          "text": "Day",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Night",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Season",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Tide",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    }
+  ],
+  "orderedWords": []
+}

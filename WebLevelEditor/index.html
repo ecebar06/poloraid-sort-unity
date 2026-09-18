@@ -13,14 +13,11 @@
     </div>
     <div class="header-actions">
       <button id="openLevelsFolder" class="button primary">Open Unity Data Folder</button>
-      <select id="levelSelector" class="level-selector" aria-label="Level in selected folder" disabled>
+      <select id="levelSelector" class="level-selector hidden-level-selector" aria-label="Level in selected folder" disabled>
         <option value="">No folder selected</option>
       </select>
       <button id="saveLevel" class="button save" disabled>Save Level</button>
-      <select id="swapLevelSelector" class="level-selector" aria-label="Level to swap with" disabled>
-        <option value="">Swap with…</option>
-      </select>
-      <button id="swapLevels" class="button secondary" disabled>Swap Levels</button>
+      <button id="openLevelOrder" class="button secondary">Level Order</button>
       <label class="button secondary">Import Library<input id="libraryFile" type="file" accept=".json"></label>
       <button id="exportLibrary" class="button secondary">Export Library JSON</button>
       <button id="newLevel" class="button secondary">New Level</button>
@@ -30,6 +27,18 @@
   <div id="folderStatus" class="folder-status">
     Select <code>Assets/_Game/Resources/Data</code> to edit levels and WordLibrary directly.
   </div>
+
+  <section id="levelOrderDialog" class="level-order-dialog" hidden aria-modal="true" role="dialog" aria-labelledby="levelOrderTitle">
+    <div class="level-order-backdrop" data-close-level-order></div>
+    <div class="level-order-window">
+      <header class="level-order-header">
+        <div><span>↕</span><h2 id="levelOrderTitle">Level Order</h2></div>
+        <button id="closeLevelOrder" class="button secondary" type="button">Close</button>
+      </header>
+      <p class="hint">Drag a level row to move it. The complete level design will be exchanged with the adjacent slot.</p>
+      <div id="levelOrderList" class="level-order-list level-order-large" aria-label="Level order"></div>
+    </div>
+  </section>
 
   <main class="workspace">
     <aside class="panel library-panel">

@@ -1,23 +1,15 @@
 {
   "levelNumber": 8,
-  "moveCount": 36,
-  "expectedCategoryCount": 9,
-  "visibleRowCount": 6,
+  "moveCount": 28,
+  "expectedCategoryCount": 5,
+  "visibleRowCount": 4,
   "categories": [
     {
-      "id": "planets",
-      "name": "Planets",
+      "id": "outdoor_games",
+      "name": "Outdoor Games",
       "words": [
         {
-          "text": "Mercury",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "mer",
-          "syllablePartB": "cury"
-        },
-        {
-          "text": "Venus",
+          "text": "Tag",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -25,15 +17,215 @@
           "syllablePartB": ""
         },
         {
-          "text": "Earth",
+          "text": "Hide Seek",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Hopscotch",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Catch",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "fruits",
+      "name": "Fruits",
+      "words": [
+        {
+          "text": "Apple",
           "hasSprite": true,
           "useIcon": true,
-          "spriteKey": "planets__earth",
+          "spriteKey": "fruits__apple",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
-          "text": "Mars",
+          "text": "Banana",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "fruits__banana",
+          "syllablePartA": "Ba",
+          "syllablePartB": "nana"
+        },
+        {
+          "text": "Orange",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "Or",
+          "syllablePartB": "ange"
+        },
+        {
+          "text": "Grape",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "formal_clothes",
+      "name": "Formal Clothes",
+      "words": [
+        {
+          "text": "Suit",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Dress",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Tie",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Blazer",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "lawn_care",
+      "name": "Lawn Care",
+      "words": [
+        {
+          "text": "Grass",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Seed",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Soil",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Sprinkler",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "sports",
+      "name": "Sports",
+      "words": [
+        {
+          "text": "Soccer",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Tennis",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Golf",
+          "hasSprite": false,
+          "useIcon": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": ""
+        },
+        {
+          "text": "Hockey",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -43,449 +235,32 @@
       ],
       "transformsOnComplete": true,
       "transformResult": {
-        "text": "Planet",
+        "text": "Catch",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
         "syllablePartB": ""
       },
-      "transformResultCategoryId": "space"
-    },
-    {
-      "id": "space",
-      "name": "Space",
-      "words": [
-        {
-          "text": "Stars",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Moon",
-          "hasSprite": true,
-          "useIcon": true,
-          "spriteKey": "space__moon",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Comets",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Planet",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
-      "id": "snacks",
-      "name": "Snacks",
-      "words": [
-        {
-          "text": "Chips",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Popcorn",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Pretzel",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Crackers",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Snack",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "meals"
-    },
-    {
-      "id": "meals",
-      "name": "Meals",
-      "words": [
-        {
-          "text": "Breakfast",
-          "hasSprite": true,
-          "useIcon": true,
-          "spriteKey": "meals__breakfast",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Lunch",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Dinner",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Snack",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
-      "id": "doctors",
-      "name": "Doctors",
-      "words": [
-        {
-          "text": "Surgeon",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Pediatrician",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Nurse",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Clinic",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Doctor",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "jobs"
-    },
-    {
-      "id": "jobs",
-      "name": "Jobs",
-      "words": [
-        {
-          "text": "Doctor",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Teacher",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Farmer",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Pilot",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
-      "id": "furniture",
-      "name": "Furniture",
-      "words": [
-        {
-          "text": "Chair",
-          "hasSprite": true,
-          "useIcon": true,
-          "spriteKey": "furniture__chair",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Table",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Sofa",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Bed",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
-      "id": "kitchen_tools",
-      "name": "Kitchen Tools",
-      "words": [
-        {
-          "text": "Whisk",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Spatula",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Ladle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Tongs",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
-      "id": "reptiles",
-      "name": "Reptiles",
-      "words": [
-        {
-          "text": "Snake",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Lizard",
-          "hasSprite": true,
-          "useIcon": true,
-          "spriteKey": "reptiles__lizard",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Turtle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Gecko",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
+      "transformResultCategoryId": "outdoor_games"
     }
   ],
   "orderedWords": [
     {
-      "categoryId": "doctors",
+      "categoryId": "fruits",
       "word": {
-        "text": "Clinic",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "planets",
-      "word": {
-        "text": "Venus",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "snacks",
-      "word": {
-        "text": "Pretzel",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "planets",
-      "word": {
-        "text": "Earth",
+        "text": "Apple",
         "hasSprite": true,
         "useIcon": true,
-        "spriteKey": "planets__earth",
+        "spriteKey": "fruits__apple",
         "syllablePartA": "",
         "syllablePartB": ""
       }
     },
     {
-      "categoryId": "snacks",
+      "categoryId": "outdoor_games",
       "word": {
-        "text": "Crackers",
+        "text": "Hopscotch",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -494,9 +269,9 @@
       }
     },
     {
-      "categoryId": "snacks",
+      "categoryId": "formal_clothes",
       "word": {
-        "text": "Popcorn",
+        "text": "Blazer",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -505,9 +280,9 @@
       }
     },
     {
-      "categoryId": "meals",
+      "categoryId": "fruits",
       "word": {
-        "text": "Dinner",
+        "text": "Grape",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -516,9 +291,9 @@
       }
     },
     {
-      "categoryId": "space",
+      "categoryId": "formal_clothes",
       "word": {
-        "text": "Stars",
+        "text": "Dress",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -527,9 +302,9 @@
       }
     },
     {
-      "categoryId": "meals",
+      "categoryId": "lawn_care",
       "word": {
-        "text": "Lunch",
+        "text": "Soil",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -538,42 +313,20 @@
       }
     },
     {
-      "categoryId": "planets",
+      "categoryId": "fruits",
       "word": {
-        "text": "Mercury",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "mer",
-        "syllablePartB": "cury"
-      }
-    },
-    {
-      "categoryId": "space",
-      "word": {
-        "text": "Moon",
+        "text": "Banana",
         "hasSprite": true,
         "useIcon": true,
-        "spriteKey": "space__moon",
-        "syllablePartA": "",
-        "syllablePartB": ""
+        "spriteKey": "fruits__banana",
+        "syllablePartA": "Ba",
+        "syllablePartB": "nana"
       }
     },
     {
-      "categoryId": "meals",
+      "categoryId": "lawn_care",
       "word": {
-        "text": "Breakfast",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "meals__breakfast",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "doctors",
-      "word": {
-        "text": "Surgeon",
+        "text": "Seed",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -582,9 +335,9 @@
       }
     },
     {
-      "categoryId": "snacks",
+      "categoryId": "sports",
       "word": {
-        "text": "Chips",
+        "text": "Golf",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -593,9 +346,9 @@
       }
     },
     {
-      "categoryId": "doctors",
+      "categoryId": "formal_clothes",
       "word": {
-        "text": "Nurse",
+        "text": "Tie",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -604,9 +357,9 @@
       }
     },
     {
-      "categoryId": "doctors",
+      "categoryId": "lawn_care",
       "word": {
-        "text": "Pediatrician",
+        "text": "Sprinkler",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -615,9 +368,9 @@
       }
     },
     {
-      "categoryId": "space",
+      "categoryId": "sports",
       "word": {
-        "text": "Comets",
+        "text": "Hockey",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -626,9 +379,9 @@
       }
     },
     {
-      "categoryId": "planets",
+      "categoryId": "sports",
       "word": {
-        "text": "Mars",
+        "text": "Tennis",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -637,9 +390,9 @@
       }
     },
     {
-      "categoryId": "jobs",
+      "categoryId": "lawn_care",
       "word": {
-        "text": "Teacher",
+        "text": "Grass",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -648,20 +401,9 @@
       }
     },
     {
-      "categoryId": "furniture",
+      "categoryId": "formal_clothes",
       "word": {
-        "text": "Chair",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "furniture__chair",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "jobs",
-      "word": {
-        "text": "Pilot",
+        "text": "Suit",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -670,9 +412,9 @@
       }
     },
     {
-      "categoryId": "jobs",
+      "categoryId": "outdoor_games",
       "word": {
-        "text": "Farmer",
+        "text": "Tag",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -681,9 +423,9 @@
       }
     },
     {
-      "categoryId": "furniture",
+      "categoryId": "sports",
       "word": {
-        "text": "Table",
+        "text": "Soccer",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -692,111 +434,23 @@
       }
     },
     {
-      "categoryId": "kitchen_tools",
+      "categoryId": "fruits",
       "word": {
-        "text": "Ladle",
+        "text": "Orange",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartA": "Or",
+        "syllablePartB": "ange"
       }
     },
     {
-      "categoryId": "furniture",
+      "categoryId": "outdoor_games",
       "word": {
-        "text": "Bed",
+        "text": "Hide Seek",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "kitchen_tools",
-      "word": {
-        "text": "Whisk",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "furniture",
-      "word": {
-        "text": "Sofa",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "reptiles",
-      "word": {
-        "text": "Gecko",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "kitchen_tools",
-      "word": {
-        "text": "Tongs",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "reptiles",
-      "word": {
-        "text": "Snake",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "kitchen_tools",
-      "word": {
-        "text": "Spatula",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "reptiles",
-      "word": {
-        "text": "Turtle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "reptiles",
-      "word": {
-        "text": "Lizard",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "reptiles__lizard",
         "syllablePartA": "",
         "syllablePartB": ""
       }

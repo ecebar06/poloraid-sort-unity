@@ -1,44 +1,44 @@
 {
   "levelNumber": 2,
-  "moveCount": 16,
+  "moveCount": 22,
   "expectedCategoryCount": 4,
   "visibleRowCount": 4,
   "categories": [
     {
-      "id": "body_parts",
-      "name": "Body Parts",
+      "id": "farming",
+      "name": "Farming",
       "words": [
         {
-          "text": "Hand",
+          "text": "Field",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
-          "text": "Foot",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "text": "Crop",
+          "hasSprite": true,
+          "spriteKey": "farming__crop",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         },
         {
-          "text": "Eye",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "text": "Tractor",
+          "hasSprite": true,
+          "spriteKey": "farming__tractor",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         },
         {
-          "text": "Nose",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "text": "Farmer",
+          "hasSprite": true,
+          "spriteKey": "farming__farmer",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         }
       ],
       "transformsOnComplete": false,
@@ -59,34 +59,34 @@
         {
           "text": "Rain",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Snow",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Wind",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Fog",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         }
       ],
       "transformsOnComplete": false,
@@ -107,34 +107,34 @@
         {
           "text": "Spring",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Summer",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Autumn",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Winter",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         }
       ],
       "transformsOnComplete": false,
@@ -155,34 +155,34 @@
         {
           "text": "Joy",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Fear",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Pride",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Shame",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         }
       ],
       "transformsOnComplete": false,
@@ -199,135 +199,14 @@
   ],
   "orderedWords": [
     {
-      "categoryId": "body_parts",
+      "categoryId": "farming",
       "word": {
-        "text": "Hand",
+        "text": "Field",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "emotions",
-      "word": {
-        "text": "Shame",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "emotions",
-      "word": {
-        "text": "Fear",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "seasons",
-      "word": {
-        "text": "Summer",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "weather",
-      "word": {
-        "text": "Fog",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "weather",
-      "word": {
-        "text": "Snow",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "body_parts",
-      "word": {
-        "text": "Nose",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "emotions",
-      "word": {
-        "text": "Pride",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "emotions",
-      "word": {
-        "text": "Joy",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "seasons",
-      "word": {
-        "text": "Spring",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "seasons",
-      "word": {
-        "text": "Winter",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "seasons",
-      "word": {
-        "text": "Autumn",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
@@ -335,10 +214,87 @@
       "word": {
         "text": "Rain",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "seasons",
+      "word": {
+        "text": "Spring",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "emotions",
+      "word": {
+        "text": "Joy",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "farming",
+      "word": {
+        "text": "Crop",
+        "hasSprite": true,
+        "spriteKey": "farming__crop",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": true
+      }
+    },
+    {
+      "categoryId": "weather",
+      "word": {
+        "text": "Snow",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "seasons",
+      "word": {
+        "text": "Summer",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "emotions",
+      "word": {
+        "text": "Fear",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "farming",
+      "word": {
+        "text": "Tractor",
+        "hasSprite": true,
+        "spriteKey": "farming__tractor",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": true
       }
     },
     {
@@ -346,32 +302,76 @@
       "word": {
         "text": "Wind",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "body_parts",
+      "categoryId": "seasons",
       "word": {
-        "text": "Foot",
+        "text": "Autumn",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "body_parts",
+      "categoryId": "emotions",
       "word": {
-        "text": "Eye",
+        "text": "Pride",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "farming",
+      "word": {
+        "text": "Farmer",
+        "hasSprite": true,
+        "spriteKey": "farming__farmer",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": true
+      }
+    },
+    {
+      "categoryId": "weather",
+      "word": {
+        "text": "Fog",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "seasons",
+      "word": {
+        "text": "Winter",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "emotions",
+      "word": {
+        "text": "Shame",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
       }
     }
   ]

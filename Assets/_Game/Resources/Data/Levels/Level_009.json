@@ -1,15 +1,15 @@
 {
   "levelNumber": 9,
-  "moveCount": 40,
-  "expectedCategoryCount": 10,
-  "visibleRowCount": 6,
+  "moveCount": 27,
+  "expectedCategoryCount": 5,
+  "visibleRowCount": 4,
   "categories": [
     {
-      "id": "paintings",
-      "name": "Paintings",
+      "id": "body_parts",
+      "name": "Body Parts",
       "words": [
         {
-          "text": "Portrait",
+          "text": "Hand",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -17,7 +17,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Landscape",
+          "text": "Foot",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -25,7 +25,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Still Life",
+          "text": "Eye",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -33,7 +33,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Mural",
+          "text": "Nose",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -43,21 +43,21 @@
       ],
       "transformsOnComplete": true,
       "transformResult": {
-        "text": "Painting",
+        "text": "Mouth",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
         "syllablePartB": ""
       },
-      "transformResultCategoryId": "art_forms"
+      "transformResultCategoryId": "face_parts"
     },
     {
-      "id": "art_forms",
-      "name": "Art Forms",
+      "id": "headwear",
+      "name": "Headwear",
       "words": [
         {
-          "text": "Painting",
+          "text": "Cap",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -65,7 +65,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Sculpture",
+          "text": "Beanie",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -73,7 +73,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Photography",
+          "text": "Helmet",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -81,7 +81,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Dance",
+          "text": "Crown",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -101,11 +101,11 @@
       "transformResultCategoryId": ""
     },
     {
-      "id": "coins",
-      "name": "Coins",
+      "id": "ball_sports",
+      "name": "Ball Sports",
       "words": [
         {
-          "text": "Penny",
+          "text": "Soccer",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -113,7 +113,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Nickel",
+          "text": "Tennis",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -121,7 +121,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Dime",
+          "text": "Volleyball",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -129,55 +129,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Quarter",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Coins",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "money"
-    },
-    {
-      "id": "money",
-      "name": "Money",
-      "words": [
-        {
-          "text": "Currency",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Cash",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Cent",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Coins",
+          "text": "Basketball",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -197,11 +149,11 @@
       "transformResultCategoryId": ""
     },
     {
-      "id": "fridge",
-      "name": "Fridge",
+      "id": "bedroom_furniture_set",
+      "name": "Bedroom Furniture",
       "words": [
         {
-          "text": "Freezer",
+          "text": "Bed",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -209,7 +161,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Door",
+          "text": "Dresser",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -217,7 +169,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Shelves",
+          "text": "Wardrobe",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -225,55 +177,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Deepfrost",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Fridge",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "appliances"
-    },
-    {
-      "id": "appliances",
-      "name": "Appliances",
-      "words": [
-        {
-          "text": "Oven",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Fridge",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Mixer",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Toaster",
+          "text": "Nightstand",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -293,11 +197,11 @@
       "transformResultCategoryId": ""
     },
     {
-      "id": "airport",
-      "name": "Airport",
+      "id": "face_parts",
+      "name": "Face Parts",
       "words": [
         {
-          "text": "Gate",
+          "text": "Mouth",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -305,7 +209,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Runway",
+          "text": "Ear",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -313,7 +217,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Terminal",
+          "text": "Hair",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -321,151 +225,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Baggage Claim",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Airport",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "travel_stops"
-    },
-    {
-      "id": "travel_stops",
-      "name": "Travel Stops",
-      "words": [
-        {
-          "text": "Airport",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Train Station",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Harbor",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Hotel",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
-      "id": "trees",
-      "name": "Trees",
-      "words": [
-        {
-          "text": "Oak",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Pine",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Maple",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Willow",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
-      "id": "materials",
-      "name": "Materials",
-      "words": [
-        {
-          "text": "Wood",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Metal",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Glass",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Paper",
+          "text": "Chin",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -487,9 +247,9 @@
   ],
   "orderedWords": [
     {
-      "categoryId": "fridge",
+      "categoryId": "headwear",
       "word": {
-        "text": "Shelves",
+        "text": "Cap",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -498,9 +258,9 @@
       }
     },
     {
-      "categoryId": "fridge",
+      "categoryId": "ball_sports",
       "word": {
-        "text": "Freezer",
+        "text": "Basketball",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -509,9 +269,9 @@
       }
     },
     {
-      "categoryId": "coins",
+      "categoryId": "headwear",
       "word": {
-        "text": "Dime",
+        "text": "Beanie",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -520,9 +280,9 @@
       }
     },
     {
-      "categoryId": "art_forms",
+      "categoryId": "body_parts",
       "word": {
-        "text": "Photography",
+        "text": "Nose",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -531,9 +291,9 @@
       }
     },
     {
-      "categoryId": "coins",
+      "categoryId": "bedroom_furniture_set",
       "word": {
-        "text": "Penny",
+        "text": "Wardrobe",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -542,9 +302,9 @@
       }
     },
     {
-      "categoryId": "paintings",
+      "categoryId": "face_parts",
       "word": {
-        "text": "Still Life",
+        "text": "Ear",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -553,9 +313,9 @@
       }
     },
     {
-      "categoryId": "paintings",
+      "categoryId": "face_parts",
       "word": {
-        "text": "Landscape",
+        "text": "Hair",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -564,9 +324,9 @@
       }
     },
     {
-      "categoryId": "money",
+      "categoryId": "headwear",
       "word": {
-        "text": "Cash",
+        "text": "Crown",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -575,9 +335,9 @@
       }
     },
     {
-      "categoryId": "paintings",
+      "categoryId": "headwear",
       "word": {
-        "text": "Mural",
+        "text": "Helmet",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -586,9 +346,9 @@
       }
     },
     {
-      "categoryId": "art_forms",
+      "categoryId": "bedroom_furniture_set",
       "word": {
-        "text": "Sculpture",
+        "text": "Dresser",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -597,9 +357,9 @@
       }
     },
     {
-      "categoryId": "coins",
+      "categoryId": "ball_sports",
       "word": {
-        "text": "Quarter",
+        "text": "Tennis",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -608,9 +368,9 @@
       }
     },
     {
-      "categoryId": "money",
+      "categoryId": "body_parts",
       "word": {
-        "text": "Cent",
+        "text": "Hand",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -619,9 +379,9 @@
       }
     },
     {
-      "categoryId": "coins",
+      "categoryId": "body_parts",
       "word": {
-        "text": "Nickel",
+        "text": "Foot",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -630,9 +390,9 @@
       }
     },
     {
-      "categoryId": "money",
+      "categoryId": "bedroom_furniture_set",
       "word": {
-        "text": "Currency",
+        "text": "Bed",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -641,9 +401,9 @@
       }
     },
     {
-      "categoryId": "paintings",
+      "categoryId": "bedroom_furniture_set",
       "word": {
-        "text": "Portrait",
+        "text": "Nightstand",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -652,9 +412,9 @@
       }
     },
     {
-      "categoryId": "fridge",
+      "categoryId": "face_parts",
       "word": {
-        "text": "Door",
+        "text": "Chin",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -663,9 +423,9 @@
       }
     },
     {
-      "categoryId": "art_forms",
+      "categoryId": "ball_sports",
       "word": {
-        "text": "Dance",
+        "text": "Volleyball",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -674,9 +434,9 @@
       }
     },
     {
-      "categoryId": "airport",
+      "categoryId": "body_parts",
       "word": {
-        "text": "Gate",
+        "text": "Eye",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -685,196 +445,9 @@
       }
     },
     {
-      "categoryId": "airport",
+      "categoryId": "ball_sports",
       "word": {
-        "text": "Baggage Claim",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "appliances",
-      "word": {
-        "text": "Mixer",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "appliances",
-      "word": {
-        "text": "Toaster",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "airport",
-      "word": {
-        "text": "Runway",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "fridge",
-      "word": {
-        "text": "Deepfrost",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "airport",
-      "word": {
-        "text": "Terminal",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "appliances",
-      "word": {
-        "text": "Oven",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "travel_stops",
-      "word": {
-        "text": "Train Station",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "trees",
-      "word": {
-        "text": "Pine",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "travel_stops",
-      "word": {
-        "text": "Harbor",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "trees",
-      "word": {
-        "text": "Oak",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "travel_stops",
-      "word": {
-        "text": "Hotel",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "trees",
-      "word": {
-        "text": "Maple",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "trees",
-      "word": {
-        "text": "Willow",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "materials",
-      "word": {
-        "text": "Wood",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "materials",
-      "word": {
-        "text": "Metal",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "materials",
-      "word": {
-        "text": "Glass",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "materials",
-      "word": {
-        "text": "Paper",
+        "text": "Soccer",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",

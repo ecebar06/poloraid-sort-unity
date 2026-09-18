@@ -22,6 +22,7 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
     private bool locked;
     private bool dragging;
     private Tween scaleTween;
+    private float nextHoverCheck;
 
     private void AnimateScale(float scale, float duration, Ease ease)
     {
@@ -106,8 +107,14 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
     {
         if (locked || owner.IsInputLocked) return;
         dragging = true;
+        nextHoverCheck = 0f;
         dragStartPosition = rect.anchoredPosition;
         BringToFront();
+        // Each generated magnet has its own sorting canvas. Its raycaster is
+        // useful while selecting, but 16 raycasters polling every touch move
+        // makes Android drag input noticeably laggy. The active drag is already
+        // captured, so suspend them until the pointer is released.
+        SetSiblingRaycasters(false);
         canvasGroup.blocksRaycasts = false;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(owner.BottomArea, eventData.position,
             canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera, out Vector2 point);
@@ -123,13 +130,21 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(owner.BottomArea, eventData.position,
             canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera, out Vector2 point))
             rect.anchoredPosition = point + pointerOffset;
-        owner.UpdateHoveredHolder(eventData.position, this);
+        // Holder hit testing is geometry-only; 25 Hz is sufficient for the
+        // highlight and avoids doing four UI rectangle tests on every touch
+        // event on slower devices.
+        if (Time.unscaledTime >= nextHoverCheck)
+        {
+            nextHoverCheck = Time.unscaledTime + 0.04f;
+            owner.UpdateHoveredHolder(eventData.position, this);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         if (!dragging) return;
         dragging = false;
+        SetSiblingRaycasters(true);
         canvasGroup.blocksRaycasts = true;
         // Keep the last manipulated magnet on top until another is picked up.
         magnetCanvas.sortingOrder = 800;
@@ -140,6 +155,16 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
             return;
         }
         owner.EndMagnetDrag(eventData.position, this);
+    }
+
+    private void SetSiblingRaycasters(bool enabled)
+    {
+        if (owner == null || owner.BottomArea == null) return;
+        foreach (Transform child in owner.BottomArea)
+        {
+            GraphicRaycaster raycaster = child.GetComponent<GraphicRaycaster>();
+            if (raycaster != null) raycaster.enabled = enabled;
+        }
     }
 
     public void LockIntoHolder(Vector2 localPosition, RectTransform holderContent)

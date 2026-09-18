@@ -73,9 +73,7 @@ function updateFolderControls() {
   $("levelSelector").disabled = !connected || !state.levelFiles.length;
   $("saveLevel").disabled = !connected;
   $("saveLevel").textContent = state.dirty ? "Save Level *" : "Save Level";
-  const swapTargets = state.levelFiles.filter(record => record.name !== state.currentLevelFileName);
-  $("swapLevelSelector").disabled = !connected || !state.currentLevelFileName || !swapTargets.length;
-  $("swapLevels").disabled = $("swapLevelSelector").disabled;
+  renderLevelOrderList();
 }
 
 function recommendedMoveCount() {
@@ -649,11 +647,22 @@ function renderLevelFileOptions() {
     : `<option value="">No JSON levels in folder</option>`;
   if (state.currentLevelFileName && state.levelFiles.some(record => record.name === state.currentLevelFileName))
     selector.value = state.currentLevelFileName;
-  const swapSelector = $("swapLevelSelector");
-  const swapTargets = state.levelFiles.filter(record => record.name !== state.currentLevelFileName);
-  swapSelector.innerHTML = `<option value="">Swap with…</option>` + swapTargets
-    .map(record => `<option value="${escapeAttr(record.name)}">Level ${record.levelNumber}</option>`).join("");
   updateFolderControls();
+}
+
+function renderLevelOrderList() {
+  const list = $("levelOrderList");
+  if (!list) return;
+  if (!state.levelFiles.length) {
+    list.innerHTML = `<div class="level-order-empty">Open the Unity Data folder to see levels.</div>`;
+    return;
+  }
+  const connected = !!state.levelDirectoryHandle;
+  list.innerHTML = state.levelFiles.map(record => `
+    <div class="level-order-item${record.name === state.currentLevelFileName ? " active" : ""}" draggable="${connected}" data-level-drag="${escapeAttr(record.name)}">
+      <span class="level-order-grip" aria-hidden="true">⠿</span>
+      <button class="level-order-select" data-level-file="${escapeAttr(record.name)}" title="Open ${escapeAttr(record.name)}">Level ${record.levelNumber} · ${escapeHtml(record.name)}</button>
+    </div>`).join("");
 }
 
 function loadLevelRecord(record) {
@@ -716,12 +725,12 @@ async function writeJsonFile(handle, data) {
   await writable.close();
 }
 
-async function swapLevelsDirectly() {
-  if (state.dirty) return toast("Save the current level before swapping levels.");
-  const current = state.levelFiles.find(record => record.name === state.currentLevelFileName);
-  const target = state.levelFiles.find(record => record.name === $("swapLevelSelector").value);
-  if (!current || !target) return toast("Select another level to swap with.");
-  if (!confirm(`Swap the complete contents of Level ${current.levelNumber} and Level ${target.levelNumber}?`)) return;
+async function moveLevelDirectly(index, direction) {
+  if (state.dirty) return toast("Save the current level before reordering levels.");
+  const targetIndex = index + direction;
+  if (index < 0 || targetIndex < 0 || index >= state.levelFiles.length || targetIndex >= state.levelFiles.length) return;
+  const current = state.levelFiles[index];
+  const target = state.levelFiles[targetIndex];
 
   const currentOriginal = clone(current.data);
   const targetOriginal = clone(target.data);
@@ -734,14 +743,14 @@ async function swapLevelsDirectly() {
     await writeJsonFile(current.handle, currentReplacement);
     await writeJsonFile(target.handle, targetReplacement);
     await refreshLevelFiles(false, current.name);
-    toast(`Level ${current.levelNumber} and Level ${target.levelNumber} swapped.`);
+    toast(`Level ${current.levelNumber} and Level ${target.levelNumber} reordered.`);
   } catch (error) {
     try {
       await writeJsonFile(current.handle, currentOriginal);
       await writeJsonFile(target.handle, targetOriginal);
     } catch { /* Best-effort rollback; the original error is shown below. */ }
-    setFolderStatus(`Could not swap levels: ${error.message || error}`, "error");
-    toast("Levels could not be swapped.");
+    setFolderStatus(`Could not reorder levels: ${error.message || error}`, "error");
+    toast("Levels could not be reordered.");
   }
 }
 
@@ -767,7 +776,9 @@ function escapeAttr(value) { return escapeHtml(value); }
 $("libraryFile").addEventListener("change", event => readJsonFile(event.target.files[0], data => { state.library = { id: data.id || "word_library", categories: (data.categories || []).map(normalizeCategory) }; render(); toast("Word library loaded."); }));
 $("openLevelsFolder").addEventListener("click", openLevelsFolder);
 $("saveLevel").addEventListener("click", saveLevelDirectly);
-$("swapLevels").addEventListener("click", swapLevelsDirectly);
+$("openLevelOrder").addEventListener("click", () => { $("levelOrderDialog").hidden = false; renderLevelOrderList(); });
+$("closeLevelOrder").addEventListener("click", () => { $("levelOrderDialog").hidden = true; });
+$("levelOrderDialog").addEventListener("click", event => { if (event.target.matches("[data-close-level-order]")) $("levelOrderDialog").hidden = true; });
 $("levelSelector").addEventListener("change", event => {
   const record = state.levelFiles.find(item => item.name === event.target.value);
   if (!record) return;
@@ -805,6 +816,17 @@ $("librarySearch").addEventListener("input", renderLibrary);
 controls.forEach(id => $(id).addEventListener("change", readInputs));
 
 document.addEventListener("click", event => {
+  const levelButton = event.target.closest("[data-level-file]");
+  if (levelButton) {
+    const record = state.levelFiles.find(item => item.name === levelButton.dataset.levelFile);
+    if (record && (!state.dirty || confirm("Discard unsaved changes and open the selected level?"))) loadLevelRecord(record);
+    return;
+  }
+  const moveButton = event.target.closest("[data-level-move]");
+  if (moveButton && !moveButton.disabled) {
+    moveLevelDirectly(+moveButton.dataset.levelMove, +moveButton.dataset.direction);
+    return;
+  }
   const add = event.target.closest("[data-add]"); if (add) addCategory(add.dataset.add);
   const remove = event.target.closest("[data-remove]"); if (remove) { state.level.categories.splice(+remove.dataset.remove, 1); state.level.orderedWords = []; markDirty(); render(); }
   const iconChoice = event.target.closest("[data-level-icon-category]");
@@ -818,6 +840,41 @@ document.addEventListener("click", event => {
       markDirty();
       render();
     }
+  }
+});
+
+document.addEventListener("dragstart", event => {
+  const row = event.target.closest("[data-level-drag]");
+  if (!row || !row.draggable) return;
+  state.dragIndex = state.levelFiles.findIndex(item => item.name === row.dataset.levelDrag);
+  row.classList.add("dragging");
+  event.dataTransfer.effectAllowed = "move";
+  event.dataTransfer.setData("text/plain", row.dataset.levelDrag);
+});
+document.addEventListener("dragover", event => {
+  const row = event.target.closest("[data-level-drag]");
+  if (!row || state.dragIndex < 0) return;
+  event.preventDefault();
+  document.querySelectorAll(".level-order-item.drag-over").forEach(item => item.classList.remove("drag-over"));
+  row.classList.add("drag-over");
+});
+document.addEventListener("dragend", event => {
+  const row = event.target.closest("[data-level-drag]");
+  if (row) row.classList.remove("dragging");
+  document.querySelectorAll(".level-order-item.drag-over").forEach(item => item.classList.remove("drag-over"));
+  state.dragIndex = -1;
+});
+document.addEventListener("drop", async event => {
+  const row = event.target.closest("[data-level-drag]");
+  if (!row || state.dragIndex < 0) return;
+  event.preventDefault();
+  const targetIndex = state.levelFiles.findIndex(item => item.name === row.dataset.levelDrag);
+  const direction = targetIndex > state.dragIndex ? 1 : -1;
+  const distance = Math.abs(targetIndex - state.dragIndex);
+  for (let step = 0; step < distance; step++) {
+    const currentIndex = state.levelFiles.findIndex(item => item.name === (event.dataTransfer.getData("text/plain") || ""));
+    if (currentIndex < 0) break;
+    await moveLevelDirectly(currentIndex, direction);
   }
 });
 

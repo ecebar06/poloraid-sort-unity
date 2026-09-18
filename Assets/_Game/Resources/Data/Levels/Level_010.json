@@ -1,15 +1,15 @@
 {
   "levelNumber": 10,
-  "moveCount": 48,
-  "expectedCategoryCount": 12,
-  "visibleRowCount": 6,
+  "moveCount": 31,
+  "expectedCategoryCount": 6,
+  "visibleRowCount": 4,
   "categories": [
     {
-      "id": "landforms",
-      "name": "Landforms",
+      "id": "reading_materials",
+      "name": "Reading Materials",
       "words": [
         {
-          "text": "Hill",
+          "text": "Magazine",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -17,7 +17,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Valley",
+          "text": "Comic",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -25,7 +25,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Mountain",
+          "text": "Newspaper",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -33,55 +33,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Canyon",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "can",
-          "syllablePartB": "yon"
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
-      "id": "mountains",
-      "name": "Mountains",
-      "words": [
-        {
-          "text": "Everest",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Alps",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Rockies",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Summit",
+          "text": "Novel",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -91,21 +43,21 @@
       ],
       "transformsOnComplete": true,
       "transformResult": {
-        "text": "Mountain",
+        "text": "Books",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
         "syllablePartB": ""
       },
-      "transformResultCategoryId": "landforms"
+      "transformResultCategoryId": "bookstore"
     },
     {
-      "id": "islands",
-      "name": "Islands",
+      "id": "family",
+      "name": "Family",
       "words": [
         {
-          "text": "Hawaii",
+          "text": "Mother",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -113,7 +65,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Cyprus",
+          "text": "Father",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -121,7 +73,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Iceland",
+          "text": "Sister",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -129,55 +81,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Bali",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Island",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "coastal_landforms"
-    },
-    {
-      "id": "coastal_landforms",
-      "name": "Coastal Landforms",
-      "words": [
-        {
-          "text": "Island",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Peninsula",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Bay",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Cape",
+          "text": "Brother",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -197,11 +101,11 @@
       "transformResultCategoryId": ""
     },
     {
-      "id": "south_america",
-      "name": "South America",
+      "id": "drinks",
+      "name": "Drinks",
       "words": [
         {
-          "text": "Brazil",
+          "text": "Water",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -209,7 +113,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Argentina",
+          "text": "Juice",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -217,7 +121,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Peru",
+          "text": "Milk",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -225,103 +129,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Colombia",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "South America",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "americas__south_america",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "americas"
-    },
-    {
-      "id": "americas",
-      "name": "Americas",
-      "words": [
-        {
-          "text": "South America",
-          "hasSprite": true,
-          "useIcon": true,
-          "spriteKey": "americas__south_america",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "North America",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Carribbean",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Central America",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "America",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "continents"
-    },
-    {
-      "id": "continents",
-      "name": "Continents",
-      "words": [
-        {
-          "text": "Asia",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Europe",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Africa",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "af",
-          "syllablePartB": "rica"
-        },
-        {
-          "text": "America",
+          "text": "Tea",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -339,54 +147,6 @@
         "syllablePartB": ""
       },
       "transformResultCategoryId": ""
-    },
-    {
-      "id": "hot_things",
-      "name": "Hot Things",
-      "words": [
-        {
-          "text": "Geyser",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Steam",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Volcano",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Furnace",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Hot",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "temperature"
     },
     {
       "id": "temperature",
@@ -437,11 +197,11 @@
       "transformResultCategoryId": ""
     },
     {
-      "id": "holidays",
-      "name": "Holidays",
+      "id": "days",
+      "name": "Days",
       "words": [
         {
-          "text": "Easter",
+          "text": "Monday",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -449,7 +209,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Halloween",
+          "text": "Tuesday",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -457,7 +217,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Christmas",
+          "text": "Friday",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -465,7 +225,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Ramadan",
+          "text": "Sunday",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -485,11 +245,11 @@
       "transformResultCategoryId": ""
     },
     {
-      "id": "mammals",
-      "name": "Mammals",
+      "id": "bookstore",
+      "name": "Bookstore",
       "words": [
         {
-          "text": "Rabbit",
+          "text": "Shelves",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -497,7 +257,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Monkey",
+          "text": "Cashier",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -505,7 +265,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Whale",
+          "text": "Books",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -513,7 +273,7 @@
           "syllablePartB": ""
         },
         {
-          "text": "Dolphin",
+          "text": "Magazines",
           "hasSprite": false,
           "useIcon": false,
           "spriteKey": "",
@@ -531,226 +291,13 @@
         "syllablePartB": ""
       },
       "transformResultCategoryId": ""
-    },
-    {
-      "id": "ice",
-      "name": "Ice",
-      "words": [
-        {
-          "text": "Glacier",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Igloo",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Icicle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Hockey",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Cold",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "temperature"
     }
   ],
   "orderedWords": [
     {
-      "categoryId": "ice",
+      "categoryId": "temperature",
       "word": {
-        "text": "Igloo",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "ice",
-      "word": {
-        "text": "Glacier",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "mountains",
-      "word": {
-        "text": "Alps",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "hot_things",
-      "word": {
-        "text": "Volcano",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "ice",
-      "word": {
-        "text": "Hockey",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "islands",
-      "word": {
-        "text": "Bali",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "landforms",
-      "word": {
-        "text": "Valley",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "ice",
-      "word": {
-        "text": "Icicle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "landforms",
-      "word": {
-        "text": "Hill",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "hot_things",
-      "word": {
-        "text": "Steam",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "hot_things",
-      "word": {
-        "text": "Geyser",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "islands",
-      "word": {
-        "text": "Cyprus",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "mountains",
-      "word": {
-        "text": "Everest",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "hot_things",
-      "word": {
-        "text": "Furnace",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "islands",
-      "word": {
-        "text": "Hawaii",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "mountains",
-      "word": {
-        "text": "Summit",
+        "text": "Cold",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -781,9 +328,9 @@
       }
     },
     {
-      "categoryId": "mountains",
+      "categoryId": "bookstore",
       "word": {
-        "text": "Rockies",
+        "text": "Magazines",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -792,9 +339,9 @@
       }
     },
     {
-      "categoryId": "islands",
+      "categoryId": "temperature",
       "word": {
-        "text": "Iceland",
+        "text": "Hot",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -803,20 +350,9 @@
       }
     },
     {
-      "categoryId": "landforms",
+      "categoryId": "family",
       "word": {
-        "text": "Canyon",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "can",
-        "syllablePartB": "yon"
-      }
-    },
-    {
-      "categoryId": "holidays",
-      "word": {
-        "text": "Easter",
+        "text": "Mother",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -825,9 +361,9 @@
       }
     },
     {
-      "categoryId": "coastal_landforms",
+      "categoryId": "family",
       "word": {
-        "text": "Cape",
+        "text": "Sister",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -836,9 +372,9 @@
       }
     },
     {
-      "categoryId": "holidays",
+      "categoryId": "family",
       "word": {
-        "text": "Christmas",
+        "text": "Brother",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -847,9 +383,9 @@
       }
     },
     {
-      "categoryId": "coastal_landforms",
+      "categoryId": "bookstore",
       "word": {
-        "text": "Bay",
+        "text": "Cashier",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -858,9 +394,9 @@
       }
     },
     {
-      "categoryId": "holidays",
+      "categoryId": "reading_materials",
       "word": {
-        "text": "Ramadan",
+        "text": "Novel",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -869,9 +405,9 @@
       }
     },
     {
-      "categoryId": "coastal_landforms",
+      "categoryId": "bookstore",
       "word": {
-        "text": "Peninsula",
+        "text": "Shelves",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -880,9 +416,9 @@
       }
     },
     {
-      "categoryId": "holidays",
+      "categoryId": "family",
       "word": {
-        "text": "Halloween",
+        "text": "Father",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -891,9 +427,9 @@
       }
     },
     {
-      "categoryId": "south_america",
+      "categoryId": "drinks",
       "word": {
-        "text": "Brazil",
+        "text": "Juice",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -902,9 +438,9 @@
       }
     },
     {
-      "categoryId": "south_america",
+      "categoryId": "drinks",
       "word": {
-        "text": "Argentina",
+        "text": "Water",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -913,9 +449,9 @@
       }
     },
     {
-      "categoryId": "south_america",
+      "categoryId": "reading_materials",
       "word": {
-        "text": "Peru",
+        "text": "Magazine",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -924,9 +460,9 @@
       }
     },
     {
-      "categoryId": "mammals",
+      "categoryId": "reading_materials",
       "word": {
-        "text": "Whale",
+        "text": "Newspaper",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -935,9 +471,9 @@
       }
     },
     {
-      "categoryId": "mammals",
+      "categoryId": "days",
       "word": {
-        "text": "Rabbit",
+        "text": "Monday",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -946,9 +482,9 @@
       }
     },
     {
-      "categoryId": "south_america",
+      "categoryId": "drinks",
       "word": {
-        "text": "Colombia",
+        "text": "Tea",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -957,9 +493,9 @@
       }
     },
     {
-      "categoryId": "mammals",
+      "categoryId": "reading_materials",
       "word": {
-        "text": "Monkey",
+        "text": "Comic",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -968,9 +504,9 @@
       }
     },
     {
-      "categoryId": "mammals",
+      "categoryId": "days",
       "word": {
-        "text": "Dolphin",
+        "text": "Sunday",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -979,9 +515,9 @@
       }
     },
     {
-      "categoryId": "americas",
+      "categoryId": "drinks",
       "word": {
-        "text": "North America",
+        "text": "Milk",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -990,9 +526,9 @@
       }
     },
     {
-      "categoryId": "continents",
+      "categoryId": "days",
       "word": {
-        "text": "Europe",
+        "text": "Friday",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
@@ -1001,47 +537,14 @@
       }
     },
     {
-      "categoryId": "americas",
+      "categoryId": "days",
       "word": {
-        "text": "Central America",
+        "text": "Tuesday",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
         "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "continents",
-      "word": {
-        "text": "Asia",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "americas",
-      "word": {
-        "text": "Carribbean",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "continents",
-      "word": {
-        "text": "Africa",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "af",
-        "syllablePartB": "rica"
       }
     }
   ]

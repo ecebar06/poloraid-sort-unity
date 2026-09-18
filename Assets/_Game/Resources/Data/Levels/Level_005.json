@@ -1,92 +1,44 @@
 {
   "levelNumber": 5,
-  "moveCount": 28,
-  "expectedCategoryCount": 7,
+  "moveCount": 22,
+  "expectedCategoryCount": 4,
   "visibleRowCount": 4,
   "categories": [
     {
-      "id": "flowers",
-      "name": "Flowers",
+      "id": "meals",
+      "name": "Meals",
       "words": [
         {
-          "text": "Rose",
+          "text": "Breakfast",
           "hasSprite": true,
-          "useIcon": true,
-          "spriteKey": "flowers__rose",
+          "spriteKey": "meals__breakfast",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         },
         {
-          "text": "Tulip",
+          "text": "Lunch",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
-          "text": "Daisy",
+          "text": "Dinner",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
-          "text": "Orchid",
+          "text": "Snack",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Flower",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "garden__flower",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "garden"
-    },
-    {
-      "id": "garden",
-      "name": "Garden",
-      "words": [
-        {
-          "text": "Flower",
-          "hasSprite": true,
-          "useIcon": true,
-          "spriteKey": "garden__flower",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Grass",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Leaf",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Seed",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         }
       ],
       "transformsOnComplete": false,
@@ -101,52 +53,100 @@
       "transformResultCategoryId": ""
     },
     {
-      "id": "music",
-      "name": "Music",
+      "id": "camping",
+      "name": "Camping",
       "words": [
         {
-          "text": "Song",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Drum",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Piano",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Guitar",
+          "text": "Tent",
           "hasSprite": true,
-          "useIcon": true,
-          "spriteKey": "music__guitar",
+          "spriteKey": "camping__tent",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
+        },
+        {
+          "text": "Fire",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
+        },
+        {
+          "text": "Map",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
+        },
+        {
+          "text": "Trail",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
         }
       ],
-      "transformsOnComplete": true,
+      "transformsOnComplete": false,
       "transformResult": {
-        "text": "Music",
+        "text": "",
         "hasSprite": false,
         "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
         "syllablePartB": ""
       },
-      "transformResultCategoryId": "festivals"
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "playground",
+      "name": "Playground",
+      "words": [
+        {
+          "text": "Slide",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
+        },
+        {
+          "text": "Swing",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
+        },
+        {
+          "text": "Sandbox",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
+        },
+        {
+          "text": "Seesaw",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
     },
     {
       "id": "festivals",
@@ -155,178 +155,34 @@
         {
           "text": "Music",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Parade",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Food",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         },
         {
           "text": "Lantern",
           "hasSprite": false,
-          "useIcon": false,
           "spriteKey": "",
           "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
-      "id": "headwear",
-      "name": "Headwear",
-      "words": [
-        {
-          "text": "Cap",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Beanie",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Helmet",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Crown",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": true,
-      "transformResult": {
-        "text": "Hat",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "clothes__hat",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": "clothes"
-    },
-    {
-      "id": "clothes",
-      "name": "Clothes",
-      "words": [
-        {
-          "text": "Shirt",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Pants",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Shoes",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Hat",
-          "hasSprite": true,
-          "useIcon": true,
-          "spriteKey": "clothes__hat",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        }
-      ],
-      "transformsOnComplete": false,
-      "transformResult": {
-        "text": "",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      },
-      "transformResultCategoryId": ""
-    },
-    {
-      "id": "numbers",
-      "name": "Numbers",
-      "words": [
-        {
-          "text": "One",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Two",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Three",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
-        },
-        {
-          "text": "Four",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
-          "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": false
         }
       ],
       "transformsOnComplete": false,
@@ -343,69 +199,80 @@
   ],
   "orderedWords": [
     {
-      "categoryId": "garden",
+      "categoryId": "meals",
       "word": {
-        "text": "Seed",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "text": "Breakfast",
+        "hasSprite": true,
+        "spriteKey": "meals__breakfast",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": true
       }
     },
     {
-      "categoryId": "flowers",
+      "categoryId": "camping",
       "word": {
-        "text": "Tulip",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "text": "Tent",
+        "hasSprite": true,
+        "spriteKey": "camping__tent",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": true
       }
     },
     {
-      "categoryId": "headwear",
+      "categoryId": "playground",
       "word": {
-        "text": "Cap",
+        "text": "Slide",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "music",
+      "categoryId": "festivals",
       "word": {
-        "text": "Piano",
+        "text": "Music",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "garden",
+      "categoryId": "meals",
       "word": {
-        "text": "Leaf",
+        "text": "Lunch",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "headwear",
+      "categoryId": "camping",
       "word": {
-        "text": "Helmet",
+        "text": "Fire",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "playground",
+      "word": {
+        "text": "Swing",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
@@ -413,120 +280,43 @@
       "word": {
         "text": "Parade",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "flowers",
+      "categoryId": "meals",
       "word": {
-        "text": "Rose",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "flowers__rose",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "music",
-      "word": {
-        "text": "Song",
+        "text": "Dinner",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "headwear",
+      "categoryId": "camping",
       "word": {
-        "text": "Crown",
+        "text": "Map",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "headwear",
+      "categoryId": "playground",
       "word": {
-        "text": "Beanie",
+        "text": "Sandbox",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "festivals",
-      "word": {
-        "text": "Lantern",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "flowers",
-      "word": {
-        "text": "Orchid",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "garden",
-      "word": {
-        "text": "Grass",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "music",
-      "word": {
-        "text": "Drum",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "flowers",
-      "word": {
-        "text": "Daisy",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "clothes",
-      "word": {
-        "text": "Shoes",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
@@ -534,87 +324,54 @@
       "word": {
         "text": "Food",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "music",
+      "categoryId": "meals",
       "word": {
-        "text": "Guitar",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "music__guitar",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "numbers",
-      "word": {
-        "text": "One",
+        "text": "Snack",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "numbers",
+      "categoryId": "camping",
       "word": {
-        "text": "Four",
+        "text": "Trail",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "clothes",
+      "categoryId": "playground",
       "word": {
-        "text": "Pants",
+        "text": "Seesaw",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     },
     {
-      "categoryId": "numbers",
+      "categoryId": "festivals",
       "word": {
-        "text": "Two",
+        "text": "Lantern",
         "hasSprite": false,
-        "useIcon": false,
         "spriteKey": "",
         "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "clothes",
-      "word": {
-        "text": "Shirt",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "numbers",
-      "word": {
-        "text": "Three",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
-        "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": false
       }
     }
   ]

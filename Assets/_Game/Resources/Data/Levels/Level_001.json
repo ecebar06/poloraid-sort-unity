@@ -1,8 +1,8 @@
 {
   "levelNumber": 1,
-  "moveCount": 8,
-  "expectedCategoryCount": 2,
-  "visibleRowCount": 2,
+  "moveCount": 22,
+  "expectedCategoryCount": 4,
+  "visibleRowCount": 4,
   "categories": [
     {
       "id": "colors",
@@ -11,34 +11,34 @@
         {
           "text": "Red",
           "hasSprite": true,
-          "useIcon": true,
           "spriteKey": "colors__red",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         },
         {
           "text": "Blue",
           "hasSprite": true,
-          "useIcon": true,
           "spriteKey": "colors__blue",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         },
         {
           "text": "Green",
           "hasSprite": true,
-          "useIcon": true,
           "spriteKey": "colors__green",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         },
         {
           "text": "Yellow",
           "hasSprite": true,
-          "useIcon": true,
           "spriteKey": "colors__yellow",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         }
       ],
       "transformsOnComplete": false,
@@ -59,34 +59,130 @@
         {
           "text": "Circle",
           "hasSprite": true,
-          "useIcon": true,
           "spriteKey": "shapes__circle",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         },
         {
           "text": "Square",
           "hasSprite": true,
-          "useIcon": true,
           "spriteKey": "shapes__square",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         },
         {
           "text": "Triangle",
           "hasSprite": true,
-          "useIcon": true,
           "spriteKey": "shapes__triangle",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
         },
         {
           "text": "Rectangle",
           "hasSprite": true,
-          "useIcon": true,
           "spriteKey": "shapes__rectangle",
           "syllablePartA": "",
-          "syllablePartB": ""
+          "syllablePartB": "",
+          "useIcon": true
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "rooms",
+      "name": "Rooms",
+      "words": [
+        {
+          "text": "Kitchen",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
+        },
+        {
+          "text": "Bedroom",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
+        },
+        {
+          "text": "Bathroom",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
+        },
+        {
+          "text": "Garage",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "ga",
+          "syllablePartB": "rage",
+          "useIcon": false
+        }
+      ],
+      "transformsOnComplete": false,
+      "transformResult": {
+        "text": "",
+        "hasSprite": false,
+        "useIcon": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": ""
+      },
+      "transformResultCategoryId": ""
+    },
+    {
+      "id": "furniture",
+      "name": "Furniture",
+      "words": [
+        {
+          "text": "Chair",
+          "hasSprite": true,
+          "spriteKey": "furniture__chair",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": true
+        },
+        {
+          "text": "Table",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
+        },
+        {
+          "text": "Sofa",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
+        },
+        {
+          "text": "Bed",
+          "hasSprite": false,
+          "spriteKey": "",
+          "syllablePartA": "",
+          "syllablePartB": "",
+          "useIcon": false
         }
       ],
       "transformsOnComplete": false,
@@ -103,80 +199,14 @@
   ],
   "orderedWords": [
     {
-      "categoryId": "shapes",
-      "word": {
-        "text": "Square",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "shapes__square",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "shapes",
-      "word": {
-        "text": "Triangle",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "shapes__triangle",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "colors",
-      "word": {
-        "text": "Yellow",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "colors__yellow",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "shapes",
-      "word": {
-        "text": "Rectangle",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "shapes__rectangle",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "colors",
-      "word": {
-        "text": "Green",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "colors__green",
-        "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
       "categoryId": "colors",
       "word": {
         "text": "Red",
         "hasSprite": true,
-        "useIcon": true,
         "spriteKey": "colors__red",
         "syllablePartA": "",
-        "syllablePartB": ""
-      }
-    },
-    {
-      "categoryId": "colors",
-      "word": {
-        "text": "Blue",
-        "hasSprite": true,
-        "useIcon": true,
-        "spriteKey": "colors__blue",
-        "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": true
       }
     },
     {
@@ -184,10 +214,164 @@
       "word": {
         "text": "Circle",
         "hasSprite": true,
-        "useIcon": true,
         "spriteKey": "shapes__circle",
         "syllablePartA": "",
-        "syllablePartB": ""
+        "syllablePartB": "",
+        "useIcon": true
+      }
+    },
+    {
+      "categoryId": "rooms",
+      "word": {
+        "text": "Kitchen",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "furniture",
+      "word": {
+        "text": "Chair",
+        "hasSprite": true,
+        "spriteKey": "furniture__chair",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": true
+      }
+    },
+    {
+      "categoryId": "colors",
+      "word": {
+        "text": "Blue",
+        "hasSprite": true,
+        "spriteKey": "colors__blue",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": true
+      }
+    },
+    {
+      "categoryId": "shapes",
+      "word": {
+        "text": "Square",
+        "hasSprite": true,
+        "spriteKey": "shapes__square",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": true
+      }
+    },
+    {
+      "categoryId": "rooms",
+      "word": {
+        "text": "Bedroom",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "furniture",
+      "word": {
+        "text": "Table",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "colors",
+      "word": {
+        "text": "Green",
+        "hasSprite": true,
+        "spriteKey": "colors__green",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": true
+      }
+    },
+    {
+      "categoryId": "shapes",
+      "word": {
+        "text": "Triangle",
+        "hasSprite": true,
+        "spriteKey": "shapes__triangle",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": true
+      }
+    },
+    {
+      "categoryId": "rooms",
+      "word": {
+        "text": "Bathroom",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "furniture",
+      "word": {
+        "text": "Sofa",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "colors",
+      "word": {
+        "text": "Yellow",
+        "hasSprite": true,
+        "spriteKey": "colors__yellow",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": true
+      }
+    },
+    {
+      "categoryId": "shapes",
+      "word": {
+        "text": "Rectangle",
+        "hasSprite": true,
+        "spriteKey": "shapes__rectangle",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": true
+      }
+    },
+    {
+      "categoryId": "rooms",
+      "word": {
+        "text": "Garage",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "ga",
+        "syllablePartB": "rage",
+        "useIcon": false
+      }
+    },
+    {
+      "categoryId": "furniture",
+      "word": {
+        "text": "Bed",
+        "hasSprite": false,
+        "spriteKey": "",
+        "syllablePartA": "",
+        "syllablePartB": "",
+        "useIcon": false
       }
     }
   ]

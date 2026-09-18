@@ -101,6 +101,13 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             magnetTextStyle.transform.parent.gameObject.SetActive(false);
         }
         PlayerSaveData save = SaveSystem.Load();
+        MagnetPopupUI popup = FindFirstObjectByType<MagnetPopupUI>(FindObjectsInactive.Include);
+        outOfMovesScreen = popup == null ? null : popup.TimeUpScreen;
+        if (popup != null)
+        {
+            Wire(popup.WatchAdButton, ContinueWithAd);
+            Wire(popup.SpendGoldButton, ContinueWithGold);
+        }
         WireWinScreenButtons();
         LoadLevel(save.currentLevelIndex);
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
@@ -260,6 +267,14 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         }
         if (!target.TryAccept(magnet))
         {
+            // Dropping onto a holder that already belongs to another
+            // category is still a spent move, even though the magnet is
+            // rejected and returned to the loose area.
+            if (!target.IsEmpty && target.CategoryId != magnet.CategoryId)
+            {
+                remainingMoves = Mathf.Max(0, remainingMoves - 1);
+                RefreshMoves();
+            }
             magnet.Reject();
             return;
         }
@@ -279,36 +294,14 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         gameEnded = true;
         if (outOfMovesScreen == null)
         {
-            Image overlay = CreateImage("CategoryOutOfMoves", canvas.transform);
-            outOfMovesScreen = overlay.gameObject;
-            Stretch(overlay.rectTransform, 0f);
-            overlay.color = new Color(0f, 0f, 0f, 0.78f);
-            Canvas popupCanvas = outOfMovesScreen.AddComponent<Canvas>();
-            popupCanvas.overrideSorting = true;
-            popupCanvas.sortingOrder = 2100;
-            outOfMovesScreen.AddComponent<GraphicRaycaster>();
-            TextMeshProUGUI title = CreateText("Title", overlay.transform);
-            title.rectTransform.sizeDelta = new Vector2(800f, 180f);
-            title.rectTransform.anchoredPosition = new Vector2(0f, 110f);
-            title.font = font;
-            title.text = "OUT OF MOVES";
-            title.color = Color.white;
-            title.fontSize = 64f;
-            title.alignment = TextAlignmentOptions.Center;
-            title.raycastTarget = false;
-            Image retry = CreateImage("Retry", overlay.transform);
-            retry.rectTransform.sizeDelta = new Vector2(440f, 140f);
-            retry.rectTransform.anchoredPosition = new Vector2(0f, -100f);
-            retry.color = new Color(0.15f, 0.72f, 0.48f);
-            retry.gameObject.AddComponent<Button>().onClick.AddListener(RestartCurrentLevel);
-            TextMeshProUGUI label = CreateText("Label", retry.transform);
-            Stretch(label.rectTransform, 0f);
-            label.font = font;
-            label.text = "RESTART";
-            label.fontSize = 48f;
-            label.color = Color.white;
-            label.alignment = TextAlignmentOptions.Center;
-            label.raycastTarget = false;
+            Debug.LogError("TimeUpScreen is missing from the authored MagnetPopupUI.", this);
+            return;
+        }
+        MagnetPopupUI popupScreen = FindFirstObjectByType<MagnetPopupUI>(FindObjectsInactive.Include);
+        if (popupScreen != null)
+        {
+            popupScreen.ShowTimeUp();
+            return;
         }
         outOfMovesScreen.SetActive(true);
     }
@@ -501,7 +494,9 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         {
             magnet.transform.DOKill();
             magnet.transform.DOMove(mergePoint, 0.3f).SetEase(Ease.InOutCubic);
-            magnet.transform.DOScale(0f, 0.3f).SetEase(Ease.InBack);
+            // Keep the four cards visible as a tight stack while the
+            // transformation result is revealed at the holder.
+            magnet.transform.DOScale(0.28f, 0.3f).SetEase(Ease.InBack);
         }
         yield return new WaitForSeconds(0.32f);
         Category target = currentLevel.categories.FirstOrDefault(category => category.id == source.transformResultCategoryId);
@@ -517,10 +512,13 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         rect.position = mergePoint;
         rect.localScale = Vector3.zero;
         result.BringToFront();
+        // Show the result at the merge point first. Only after it is visible
+        // do we release the holder and send the new magnet to its landing.
+        yield return rect.DOScale(1f, 0.24f).SetEase(Ease.OutBack).WaitForCompletion();
+        yield return new WaitForSeconds(0.28f);
         holder.ClearForReuse();
         // A transformation result should settle cleanly; a bounce makes it
         // look as if it is being rejected by the board.
-        yield return rect.DOScale(1f, 0.24f).SetEase(Ease.OutCubic).WaitForCompletion();
         yield return rect.DOAnchorPos(landing, 0.55f).SetEase(Ease.OutCubic).WaitForCompletion();
         reservedLandings.Remove(result);
         // Keep the newest result above older magnets, including other results
@@ -589,6 +587,35 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             doubleRewardButton.onClick.RemoveListener(DoubleRewardAndContinue);
             doubleRewardButton.onClick.AddListener(DoubleRewardAndContinue);
         }
+    }
+
+    private static void Wire(Button button, UnityEngine.Events.UnityAction action)
+    {
+        if (button == null) return;
+        button.onClick.RemoveListener(action);
+        button.onClick.AddListener(action);
+    }
+
+    private void ContinueWithAd()
+    {
+        ResumeAfterOutOfMoves(5);
+    }
+
+    private void ContinueWithGold()
+    {
+        if (!SaveSystem.TrySpendGold(900)) return;
+        ResumeAfterOutOfMoves(5);
+    }
+
+    private void ResumeAfterOutOfMoves(int extraMoves)
+    {
+        remainingMoves = Mathf.Max(1, extraMoves);
+        gameEnded = false;
+        if (outOfMovesScreen != null) outOfMovesScreen.SetActive(false);
+        bottomArea.gameObject.SetActive(true);
+        foreach (CategoryHolder holder in holders)
+            if (holder != null) holder.gameObject.SetActive(true);
+        RefreshMoves();
     }
 
     private void ContinueAfterWin()
