@@ -202,25 +202,25 @@
       "words": [
         {
           "text": "Violin",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "orchestra__violin",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Flute",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "orchestra__flute",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Trumpet",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "orchestra__trumpet",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -298,25 +298,25 @@
       "words": [
         {
           "text": "Drums",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bands__drums",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Guitar",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bands__guitar",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Bass",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bands__bass",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -512,9 +512,9 @@
       "categoryId": "orchestra",
       "word": {
         "text": "Violin",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "orchestra__violin",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -523,9 +523,9 @@
       "categoryId": "orchestra",
       "word": {
         "text": "Flute",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "orchestra__flute",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -589,9 +589,9 @@
       "categoryId": "orchestra",
       "word": {
         "text": "Trumpet",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "orchestra__trumpet",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -611,9 +611,9 @@
       "categoryId": "bands",
       "word": {
         "text": "Drums",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bands__drums",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -710,9 +710,9 @@
       "categoryId": "bands",
       "word": {
         "text": "Guitar",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bands__guitar",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -721,9 +721,9 @@
       "categoryId": "bands",
       "word": {
         "text": "Bass",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bands__bass",
         "syllablePartA": "",
         "syllablePartB": ""
       }

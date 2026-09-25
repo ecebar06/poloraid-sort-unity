@@ -58,33 +58,33 @@
       "words": [
         {
           "text": "North",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "compass_points__north",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "South",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "compass_points__south",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "East",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "compass_points__east",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "West",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "compass_points__west",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -314,17 +314,17 @@
         },
         {
           "text": "Tape",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "shipping_supplies__tape",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Box",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "shipping_supplies__box",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -346,9 +346,9 @@
       "words": [
         {
           "text": "Compass",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "hiking_gear__compass",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -442,9 +442,9 @@
       "words": [
         {
           "text": "Camera",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "phone_apps__camera",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -467,7 +467,7 @@
         {
           "text": "Calendar",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "phone_apps__calendar",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -699,9 +699,9 @@
       "categoryId": "phone_apps",
       "word": {
         "text": "Camera",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "phone_apps__camera",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -721,9 +721,9 @@
       "categoryId": "compass_points",
       "word": {
         "text": "South",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "compass_points__south",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -732,9 +732,9 @@
       "categoryId": "compass_points",
       "word": {
         "text": "North",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "compass_points__north",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -765,9 +765,9 @@
       "categoryId": "compass_points",
       "word": {
         "text": "West",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "compass_points__west",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -787,9 +787,9 @@
       "categoryId": "compass_points",
       "word": {
         "text": "East",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "compass_points__east",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -798,9 +798,9 @@
       "categoryId": "shipping_supplies",
       "word": {
         "text": "Tape",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "shipping_supplies__tape",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -809,9 +809,9 @@
       "categoryId": "shipping_supplies",
       "word": {
         "text": "Box",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "shipping_supplies__box",
         "syllablePartA": "",
         "syllablePartB": ""
       }

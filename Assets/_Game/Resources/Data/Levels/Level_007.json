@@ -18,17 +18,17 @@
         },
         {
           "text": "Bread",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "foods__bread",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Cheese",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "foods__cheese",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -106,33 +106,33 @@
       "words": [
         {
           "text": "Carrot",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "vegetables__carrot",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Potato",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "vegetables__potato",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Onion",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "vegetables__onion",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Tomato",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "vegetables__tomato",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -294,9 +294,9 @@
       "categoryId": "foods",
       "word": {
         "text": "Cheese",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "foods__cheese",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -305,9 +305,9 @@
       "categoryId": "vegetables",
       "word": {
         "text": "Carrot",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "vegetables__carrot",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -316,9 +316,9 @@
       "categoryId": "vegetables",
       "word": {
         "text": "Potato",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "vegetables__potato",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -327,9 +327,9 @@
       "categoryId": "vegetables",
       "word": {
         "text": "Tomato",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "vegetables__tomato",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -371,9 +371,9 @@
       "categoryId": "foods",
       "word": {
         "text": "Bread",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "foods__bread",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -415,9 +415,9 @@
       "categoryId": "vegetables",
       "word": {
         "text": "Onion",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "vegetables__onion",
         "syllablePartA": "",
         "syllablePartB": ""
       }

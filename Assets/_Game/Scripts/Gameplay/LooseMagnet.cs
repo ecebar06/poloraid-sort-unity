@@ -167,7 +167,7 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
         }
     }
 
-    public void LockIntoHolder(Vector2 localPosition, RectTransform holderContent)
+    public void LockIntoHolder(Vector2 localPosition, RectTransform holderContent, int stackIndex)
     {
         locked = true;
         canvasGroup.blocksRaycasts = false;
@@ -177,7 +177,10 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
         // a magnet belonging to an earlier holder. Give collected magnets an
         // explicit nested-canvas order above every holder background.
         magnetCanvas.overrideSorting = true;
-        magnetCanvas.sortingOrder = 100 + rect.GetSiblingIndex();
+        // Use the holder's insertion index, not the transient hierarchy index.
+        // This keeps the first accepted card visually first even when Unity
+        // reorders canvases during a drop animation.
+        magnetCanvas.sortingOrder = 100 + Mathf.Clamp(stackIndex, 0, 3);
         rect.DOKill();
         rect.localRotation = Quaternion.identity;
         rect.DOAnchorPos(localPosition, 0.24f).SetEase(Ease.OutCubic);
@@ -194,7 +197,8 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
         RectTransform labelRect = label.rectTransform;
         if (stacked)
         {
-            // In an accordion stack, expose each word in the upper strip.
+            // Older cards expose their word in the upper strip when a newer
+            // card is placed on top, preserving the original holder behavior.
             labelRect.anchorMin = new Vector2(0.06f, 0.56f);
             labelRect.anchorMax = new Vector2(0.94f, 0.94f);
             labelRect.offsetMin = Vector2.zero;
@@ -223,12 +227,26 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
         if (label != null && label.gameObject.activeSelf) label.color = Color.white;
     }
 
+    public void SetAssignedCategoryAppearance(Color color)
+    {
+        if (background == null) return;
+
+        color.a = 1f;
+        // Keep the card artwork and text readable while clearly carrying the
+        // same category color as the holder that claimed it.
+        Color target = Color.Lerp(background.color, color, 0.72f);
+        target.a = 1f;
+        background.DOKill();
+        background.DOColor(target, 0.18f).SetEase(Ease.OutCubic);
+    }
+
     public void Reject()
     {
         rect.DOKill();
         AnimateScale(1f, 0.24f, Ease.OutBack);
         rect.DOAnchorPos(dragStartPosition, 0.24f).SetEase(Ease.OutCubic);
         rect.DOShakeRotation(0.22f, new Vector3(0f, 0f, 12f), 10, 60f);
+        GameAudio.Play(GameAudioCue.Error);
         HapticFeedback.Play(HapticFeedback.Strength.Medium);
     }
 

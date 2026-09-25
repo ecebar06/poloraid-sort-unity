@@ -58,33 +58,33 @@
       "words": [
         {
           "text": "Oven",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "appliances__oven",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Fridge",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "appliances__fridge",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Mixer",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "appliances__mixer",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Toaster",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "appliances__toaster",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -106,17 +106,17 @@
       "words": [
         {
           "text": "Smartphone",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "smart_devices__smartphone",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Smartwatch",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "smart_devices__smartwatch",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -162,25 +162,25 @@
         },
         {
           "text": "Gift",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "celebrations__gift",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Candle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "celebrations__candle",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Balloon",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "celebrations__balloon",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -298,9 +298,9 @@
       "words": [
         {
           "text": "Menu",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "restaurant__menu",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -314,9 +314,9 @@
         },
         {
           "text": "Table",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "restaurant__table",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -357,9 +357,9 @@
       "categoryId": "celebrations",
       "word": {
         "text": "Gift",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "celebrations__gift",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -368,9 +368,9 @@
       "categoryId": "smart_devices",
       "word": {
         "text": "Smartphone",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "smart_devices__smartphone",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -390,9 +390,9 @@
       "categoryId": "smart_devices",
       "word": {
         "text": "Smartwatch",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "smart_devices__smartwatch",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -401,9 +401,9 @@
       "categoryId": "appliances",
       "word": {
         "text": "Mixer",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "appliances__mixer",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -412,9 +412,9 @@
       "categoryId": "appliances",
       "word": {
         "text": "Fridge",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "appliances__fridge",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -434,9 +434,9 @@
       "categoryId": "appliances",
       "word": {
         "text": "Oven",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "appliances__oven",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -478,9 +478,9 @@
       "categoryId": "celebrations",
       "word": {
         "text": "Candle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "celebrations__candle",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -544,9 +544,9 @@
       "categoryId": "appliances",
       "word": {
         "text": "Toaster",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "appliances__toaster",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -555,9 +555,9 @@
       "categoryId": "restaurant",
       "word": {
         "text": "Menu",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "restaurant__menu",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -577,9 +577,9 @@
       "categoryId": "restaurant",
       "word": {
         "text": "Table",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "restaurant__table",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -610,9 +610,9 @@
       "categoryId": "celebrations",
       "word": {
         "text": "Balloon",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "celebrations__balloon",
         "syllablePartA": "",
         "syllablePartB": ""
       }

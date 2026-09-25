@@ -162,27 +162,27 @@
         },
         {
           "text": "Table",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "furniture__table",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Sofa",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "furniture__sofa",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Bed",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "furniture__bed",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         }
       ],
       "transformsOnComplete": false,
@@ -279,11 +279,11 @@
       "categoryId": "furniture",
       "word": {
         "text": "Table",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "furniture__table",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -323,11 +323,11 @@
       "categoryId": "furniture",
       "word": {
         "text": "Sofa",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "furniture__sofa",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -367,11 +367,11 @@
       "categoryId": "furniture",
       "word": {
         "text": "Bed",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "furniture__bed",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     }
   ]

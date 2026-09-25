@@ -250,25 +250,25 @@
       "words": [
         {
           "text": "Puzzle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "games__puzzle",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Chess",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "games__chess",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Cards",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "games__cards",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -498,9 +498,9 @@
         },
         {
           "text": "Mirror",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "light__mirror",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -641,9 +641,9 @@
       "categoryId": "light",
       "word": {
         "text": "Mirror",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "light__mirror",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -916,9 +916,9 @@
       "categoryId": "games",
       "word": {
         "text": "Puzzle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "games__puzzle",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -58,9 +58,9 @@
       "words": [
         {
           "text": "Tree",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "forest_trail__tree",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -74,9 +74,9 @@
         },
         {
           "text": "Path",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "forest_trail__path",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -106,17 +106,17 @@
       "words": [
         {
           "text": "Sand",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "desert_nature__sand",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Cactus",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "desert_nature__cactus",
           "syllablePartA": "cac",
           "syllablePartB": "tus"
         },
@@ -131,7 +131,7 @@
         {
           "text": "Camel",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "desert_nature__camel",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -498,9 +498,9 @@
         },
         {
           "text": "Tacos",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "mexico__tacos",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -572,7 +572,7 @@
       "word": {
         "text": "Camel",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "desert_nature__camel",
         "syllablePartA": "",
         "syllablePartB": ""
@@ -593,9 +593,9 @@
       "categoryId": "desert_nature",
       "word": {
         "text": "Cactus",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "desert_nature__cactus",
         "syllablePartA": "cac",
         "syllablePartB": "tus"
       }
@@ -780,9 +780,9 @@
       "categoryId": "desert_nature",
       "word": {
         "text": "Sand",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "desert_nature__sand",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -813,9 +813,9 @@
       "categoryId": "mexico",
       "word": {
         "text": "Tacos",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "mexico__tacos",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -835,9 +835,9 @@
       "categoryId": "forest_trail",
       "word": {
         "text": "Tree",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "forest_trail__tree",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -857,9 +857,9 @@
       "categoryId": "forest_trail",
       "word": {
         "text": "Path",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "forest_trail__path",
         "syllablePartA": "",
         "syllablePartB": ""
       }

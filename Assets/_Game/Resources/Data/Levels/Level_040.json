@@ -154,17 +154,17 @@
       "words": [
         {
           "text": "Closet",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "home_storage__closet",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Cabinet",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "home_storage__cabinet",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -464,9 +464,9 @@
       "categoryId": "home_storage",
       "word": {
         "text": "Cabinet",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "home_storage__cabinet",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -618,9 +618,9 @@
       "categoryId": "home_storage",
       "word": {
         "text": "Closet",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "home_storage__closet",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -202,17 +202,17 @@
       "words": [
         {
           "text": "Coffee",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "cafe_drinks__coffee",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Tea",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "cafe_drinks__tea",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -754,9 +754,9 @@
       "categoryId": "cafe_drinks",
       "word": {
         "text": "Tea",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "cafe_drinks__tea",
         "syllablePartA": "",
         "syllablePartB": ""
       }

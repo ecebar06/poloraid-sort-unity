@@ -202,14 +202,14 @@ public static class CategoryMagnetBoardSceneSetup
     private static void AddHeaderBadges(CategoryHolder holder)
     {
         Color[] colors = { new Color(0.27f, 0.79f, 0.85f), new Color(1f, 0.79f, 0.29f),
-            new Color(0.69f, 0.48f, 0.87f), new Color(0.48f, 0.83f, 0.48f) };
+            new Color(0.96f, 0.42f, 0.22f), new Color(0.48f, 0.83f, 0.48f) };
         var title = holder.transform.Find("CategoryLabel") as RectTransform;
         var count = holder.transform.Find("Count") as RectTransform;
         if (title == null || count == null) return;
         bool firstSetup = holder.transform.Find("CategoryBadge") == null;
         var badge = Badge("CategoryBadge", holder.transform, colors[holder.transform.GetSiblingIndex() % 4]);
-        SetAnchors(badge.rectTransform, new Vector2(0.02f, 1.04f), new Vector2(0.98f, 1.23f));
-        SetAnchors(title, new Vector2(0.06f, 1.04f), new Vector2(0.94f, 1.23f));
+        SetAnchors(badge.rectTransform, new Vector2(0.02f, 1.04f), new Vector2(0.98f, 1.34f));
+        SetAnchors(title, new Vector2(0.06f, 1.04f), new Vector2(0.94f, 1.34f));
         var counter = Badge("CountBadge", holder.transform, new Color(0.28f, 0.24f, 0.19f));
         SetAnchors(counter.rectTransform, new Vector2(0.22f, 0.95f), new Vector2(0.78f, 1.065f));
         SetAnchors(count, new Vector2(0.23f, 0.95f), new Vector2(0.77f, 1.065f));
@@ -223,6 +223,9 @@ public static class CategoryMagnetBoardSceneSetup
             label.fontSize = label.fontSizeMax = 28f;
             label.fontSizeMin = 18f;
             label.enableAutoSizing = true;
+            label.enableWordWrapping = true;
+            label.overflowMode = TextOverflowModes.Overflow;
+            label.alignment = TextAlignmentOptions.Center;
         }
     }
 

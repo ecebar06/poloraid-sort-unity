@@ -58,27 +58,27 @@
       "words": [
         {
           "text": "Rain",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "weather__rain",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Snow",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "weather__snow",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Wind",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "weather__wind",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Fog",
@@ -213,11 +213,11 @@
       "categoryId": "weather",
       "word": {
         "text": "Rain",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "weather__rain",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -257,11 +257,11 @@
       "categoryId": "weather",
       "word": {
         "text": "Snow",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "weather__snow",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -301,11 +301,11 @@
       "categoryId": "weather",
       "word": {
         "text": "Wind",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "weather__wind",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {

@@ -58,17 +58,17 @@
       "words": [
         {
           "text": "Sand",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "beach_day__sand",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Umbrella",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "beach_day__umbrella",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -107,16 +107,16 @@
         {
           "text": "Giraffe",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "zoo_animals__giraffe",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Elephant",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "zoo_animals__elephant",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -486,9 +486,9 @@
       "categoryId": "beach_day",
       "word": {
         "text": "Sand",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "beach_day__sand",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -498,7 +498,7 @@
       "word": {
         "text": "Giraffe",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "zoo_animals__giraffe",
         "syllablePartA": "",
         "syllablePartB": ""
@@ -563,9 +563,9 @@
       "categoryId": "beach_day",
       "word": {
         "text": "Umbrella",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "beach_day__umbrella",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -629,9 +629,9 @@
       "categoryId": "zoo_animals",
       "word": {
         "text": "Elephant",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "zoo_animals__elephant",
         "syllablePartA": "",
         "syllablePartB": ""
       }

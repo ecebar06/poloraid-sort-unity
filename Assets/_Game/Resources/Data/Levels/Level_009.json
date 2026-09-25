@@ -10,33 +10,33 @@
       "words": [
         {
           "text": "Hand",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "body_parts__hand",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Foot",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "body_parts__foot",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Eye",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "body_parts__eye",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Nose",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "body_parts__nose",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -58,9 +58,9 @@
       "words": [
         {
           "text": "Cap",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "headwear__cap",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -82,9 +82,9 @@
         },
         {
           "text": "Crown",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "headwear__crown",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -170,9 +170,9 @@
         },
         {
           "text": "Wardrobe",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bedroom_furniture_set__wardrobe",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -202,25 +202,25 @@
       "words": [
         {
           "text": "Mouth",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "face_parts__mouth",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Ear",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "face_parts__ear",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Hair",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "face_parts__hair",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -250,9 +250,9 @@
       "categoryId": "headwear",
       "word": {
         "text": "Cap",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "headwear__cap",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -283,9 +283,9 @@
       "categoryId": "body_parts",
       "word": {
         "text": "Nose",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "body_parts__nose",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -294,9 +294,9 @@
       "categoryId": "bedroom_furniture_set",
       "word": {
         "text": "Wardrobe",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bedroom_furniture_set__wardrobe",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -305,9 +305,9 @@
       "categoryId": "face_parts",
       "word": {
         "text": "Ear",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "face_parts__ear",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -316,9 +316,9 @@
       "categoryId": "face_parts",
       "word": {
         "text": "Hair",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "face_parts__hair",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -327,9 +327,9 @@
       "categoryId": "headwear",
       "word": {
         "text": "Crown",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "headwear__crown",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -371,9 +371,9 @@
       "categoryId": "body_parts",
       "word": {
         "text": "Hand",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "body_parts__hand",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -382,9 +382,9 @@
       "categoryId": "body_parts",
       "word": {
         "text": "Foot",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "body_parts__foot",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -437,9 +437,9 @@
       "categoryId": "body_parts",
       "word": {
         "text": "Eye",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "body_parts__eye",
         "syllablePartA": "",
         "syllablePartB": ""
       }

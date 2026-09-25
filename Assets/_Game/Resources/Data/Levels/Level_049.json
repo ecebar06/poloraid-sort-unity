@@ -218,9 +218,9 @@
         },
         {
           "text": "Trophy",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "wimbledon__trophy",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -346,33 +346,33 @@
       "words": [
         {
           "text": "Cow",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "farm_animals__cow",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Pig",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "farm_animals__pig",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Horse",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "farm_animals__horse",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Sheep",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "farm_animals__sheep",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -806,9 +806,9 @@
       "categoryId": "wimbledon",
       "word": {
         "text": "Trophy",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "wimbledon__trophy",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -839,9 +839,9 @@
       "categoryId": "farm_animals",
       "word": {
         "text": "Cow",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "farm_animals__cow",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -850,9 +850,9 @@
       "categoryId": "farm_animals",
       "word": {
         "text": "Sheep",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "farm_animals__sheep",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -872,9 +872,9 @@
       "categoryId": "farm_animals",
       "word": {
         "text": "Pig",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "farm_animals__pig",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -883,9 +883,9 @@
       "categoryId": "farm_animals",
       "word": {
         "text": "Horse",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "farm_animals__horse",
         "syllablePartA": "",
         "syllablePartB": ""
       }

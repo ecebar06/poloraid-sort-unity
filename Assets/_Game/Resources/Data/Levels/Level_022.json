@@ -26,17 +26,17 @@
         },
         {
           "text": "Rain",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "storms__rain",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Wind",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "storms__wind",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -58,25 +58,25 @@
       "words": [
         {
           "text": "Goggles",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "swimming_gear__goggles",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Swim Cap",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "swimming_gear__swim_cap",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Towel",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "swimming_gear__towel",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -106,25 +106,25 @@
       "words": [
         {
           "text": "Pill",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "pharmacy_supplies__pill",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Syrup",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "pharmacy_supplies__syrup",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Thermometer",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "pharmacy_supplies__thermometer",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -405,9 +405,9 @@
       "categoryId": "swimming_gear",
       "word": {
         "text": "Towel",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "swimming_gear__towel",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -416,9 +416,9 @@
       "categoryId": "storms",
       "word": {
         "text": "Wind",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "storms__wind",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -482,9 +482,9 @@
       "categoryId": "swimming_gear",
       "word": {
         "text": "Goggles",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "swimming_gear__goggles",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -493,9 +493,9 @@
       "categoryId": "storms",
       "word": {
         "text": "Rain",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "storms__rain",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -559,9 +559,9 @@
       "categoryId": "swimming_gear",
       "word": {
         "text": "Swim Cap",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "swimming_gear__swim_cap",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -570,9 +570,9 @@
       "categoryId": "pharmacy_supplies",
       "word": {
         "text": "Thermometer",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "pharmacy_supplies__thermometer",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -603,9 +603,9 @@
       "categoryId": "pharmacy_supplies",
       "word": {
         "text": "Pill",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "pharmacy_supplies__pill",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -625,9 +625,9 @@
       "categoryId": "pharmacy_supplies",
       "word": {
         "text": "Syrup",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "pharmacy_supplies__syrup",
         "syllablePartA": "",
         "syllablePartB": ""
       }

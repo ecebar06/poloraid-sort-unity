@@ -10,17 +10,17 @@
       "words": [
         {
           "text": "Toaster",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "household_tech__toaster",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Blender",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "household_tech__blender",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -34,9 +34,9 @@
         },
         {
           "text": "Kettle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "household_tech__kettle",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -58,9 +58,9 @@
       "words": [
         {
           "text": "Laptop",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "office_devices__laptop",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -106,17 +106,17 @@
       "words": [
         {
           "text": "Camera",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "personal_electronics__camera",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Headphone",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "personal_electronics__headphone",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -130,9 +130,9 @@
         },
         {
           "text": "Tablet",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "personal_electronics__tablet",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -162,25 +162,25 @@
         },
         {
           "text": "Motorcycle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "small_ride_vehicles__motorcycle",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Scooter",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "small_ride_vehicles__scooter",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Skateboard",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "small_ride_vehicles__skateboard",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -405,9 +405,9 @@
       "categoryId": "small_ride_vehicles",
       "word": {
         "text": "Motorcycle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "small_ride_vehicles__motorcycle",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -427,9 +427,9 @@
       "categoryId": "household_tech",
       "word": {
         "text": "Kettle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "household_tech__kettle",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -438,9 +438,9 @@
       "categoryId": "personal_electronics",
       "word": {
         "text": "Camera",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "personal_electronics__camera",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -449,9 +449,9 @@
       "categoryId": "small_ride_vehicles",
       "word": {
         "text": "Scooter",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "small_ride_vehicles__scooter",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -460,9 +460,9 @@
       "categoryId": "personal_electronics",
       "word": {
         "text": "Tablet",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "personal_electronics__tablet",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -482,9 +482,9 @@
       "categoryId": "household_tech",
       "word": {
         "text": "Blender",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "household_tech__blender",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -493,9 +493,9 @@
       "categoryId": "household_tech",
       "word": {
         "text": "Toaster",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "household_tech__toaster",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -548,9 +548,9 @@
       "categoryId": "personal_electronics",
       "word": {
         "text": "Headphone",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "personal_electronics__headphone",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -592,9 +592,9 @@
       "categoryId": "small_ride_vehicles",
       "word": {
         "text": "Skateboard",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "small_ride_vehicles__skateboard",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -10,9 +10,9 @@
       "words": [
         {
           "text": "Dolphin",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "marine_biology__dolphin",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -34,9 +34,9 @@
         },
         {
           "text": "Sea Turtle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "marine_biology__sea_turtle",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -202,9 +202,9 @@
       "words": [
         {
           "text": "Rock",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "geology__rock",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -218,9 +218,9 @@
         },
         {
           "text": "Fossil",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "geology__fossil",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -250,32 +250,32 @@
       "words": [
         {
           "text": "Brownie",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "sweet_treats__brownie",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Pudding",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "sweet_treats__pudding",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Cupcake",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "sweet_treats__cupcake",
           "syllablePartA": "cup",
           "syllablePartB": "cake"
         },
         {
           "text": "Ice Cream",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "sweet_treats__ice_cream",
           "syllablePartA": "",
           "syllablePartB": ""
@@ -475,9 +475,9 @@
       "categoryId": "geology",
       "word": {
         "text": "Fossil",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "geology__fossil",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -541,9 +541,9 @@
       "categoryId": "geology",
       "word": {
         "text": "Rock",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "geology__rock",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -563,9 +563,9 @@
       "categoryId": "marine_biology",
       "word": {
         "text": "Dolphin",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "marine_biology__dolphin",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -618,9 +618,9 @@
       "categoryId": "marine_biology",
       "word": {
         "text": "Sea Turtle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "marine_biology__sea_turtle",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -629,9 +629,9 @@
       "categoryId": "sweet_treats",
       "word": {
         "text": "Pudding",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "sweet_treats__pudding",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -695,9 +695,9 @@
       "categoryId": "sweet_treats",
       "word": {
         "text": "Brownie",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "sweet_treats__brownie",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -717,9 +717,9 @@
       "categoryId": "sweet_treats",
       "word": {
         "text": "Cupcake",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "sweet_treats__cupcake",
         "syllablePartA": "cup",
         "syllablePartB": "cake"
       }
@@ -762,7 +762,7 @@
       "word": {
         "text": "Ice Cream",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "sweet_treats__ice_cream",
         "syllablePartA": "",
         "syllablePartB": ""

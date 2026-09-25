@@ -162,25 +162,25 @@
         },
         {
           "text": "Tulip",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "flowers__tulip",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Daisy",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "flowers__daisy",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Orchid",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "flowers__orchid",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -274,9 +274,9 @@
         },
         {
           "text": "Flower",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "plant_parts__flower",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -482,9 +482,9 @@
       "categoryId": "flowers",
       "word": {
         "text": "Tulip",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "flowers__tulip",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -504,9 +504,9 @@
       "categoryId": "flowers",
       "word": {
         "text": "Orchid",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "flowers__orchid",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -526,9 +526,9 @@
       "categoryId": "flowers",
       "word": {
         "text": "Daisy",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "flowers__daisy",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -10,17 +10,17 @@
       "words": [
         {
           "text": "Mango",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "tropical_fruits__mango",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Pineapple",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "tropical_fruits__pineapple",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -34,9 +34,9 @@
         },
         {
           "text": "Coconut",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "tropical_fruits__coconut",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -512,9 +512,9 @@
       "categoryId": "tropical_fruits",
       "word": {
         "text": "Pineapple",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "tropical_fruits__pineapple",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -600,9 +600,9 @@
       "categoryId": "tropical_fruits",
       "word": {
         "text": "Mango",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "tropical_fruits__mango",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -655,9 +655,9 @@
       "categoryId": "tropical_fruits",
       "word": {
         "text": "Coconut",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "tropical_fruits__coconut",
         "syllablePartA": "",
         "syllablePartB": ""
       }

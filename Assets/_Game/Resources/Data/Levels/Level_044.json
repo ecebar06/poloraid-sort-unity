@@ -106,9 +106,9 @@
       "words": [
         {
           "text": "Tree",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "holiday_symbols__tree",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -122,17 +122,17 @@
         },
         {
           "text": "Pumpkin",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "holiday_symbols__pumpkin",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Fireworks",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "holiday_symbols__fireworks",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -202,9 +202,9 @@
       "words": [
         {
           "text": "Cup",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "kitchen_measurements__cup",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -250,33 +250,33 @@
       "words": [
         {
           "text": "Sun",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "sky__sun",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Moon",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "sky__moon",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Cloud",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "sky__cloud",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Star",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "sky__star",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -402,9 +402,9 @@
         },
         {
           "text": "Ticket",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "arcade__ticket",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -556,9 +556,9 @@
       "categoryId": "holiday_symbols",
       "word": {
         "text": "Pumpkin",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "holiday_symbols__pumpkin",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -589,9 +589,9 @@
       "categoryId": "holiday_symbols",
       "word": {
         "text": "Tree",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "holiday_symbols__tree",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -611,9 +611,9 @@
       "categoryId": "holiday_symbols",
       "word": {
         "text": "Fireworks",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "holiday_symbols__fireworks",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -655,9 +655,9 @@
       "categoryId": "kitchen_measurements",
       "word": {
         "text": "Cup",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "kitchen_measurements__cup",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -688,9 +688,9 @@
       "categoryId": "sky",
       "word": {
         "text": "Sun",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "sky__sun",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -710,9 +710,9 @@
       "categoryId": "sky",
       "word": {
         "text": "Moon",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "sky__moon",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -732,9 +732,9 @@
       "categoryId": "sky",
       "word": {
         "text": "Cloud",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "sky__cloud",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -754,9 +754,9 @@
       "categoryId": "sky",
       "word": {
         "text": "Star",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "sky__star",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -765,9 +765,9 @@
       "categoryId": "arcade",
       "word": {
         "text": "Ticket",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "arcade__ticket",
         "syllablePartA": "",
         "syllablePartB": ""
       }

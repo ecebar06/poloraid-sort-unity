@@ -10,17 +10,17 @@
       "words": [
         {
           "text": "Coat",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "winter_clothes__coat",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Boots",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "winter_clothes__boots",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -58,33 +58,33 @@
       "words": [
         {
           "text": "Shorts",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "summer_clothes__shorts",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Sunglasses",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "summer_clothes__sunglasses",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Sandals",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "summer_clothes__sandals",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Swimsuit",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "summer_clothes__swimsuit",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -114,25 +114,25 @@
         },
         {
           "text": "Folder",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "office_equipment__folder",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Printer",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "office_equipment__printer",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Monitor",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "office_equipment__monitor",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -250,25 +250,25 @@
       "words": [
         {
           "text": "Snake",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "reptiles__snake",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Lizard",
           "hasSprite": true,
-          "useIcon": false,
+          "useIcon": true,
           "spriteKey": "reptiles__lizard",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Turtle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "reptiles__turtle",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -418,9 +418,9 @@
         },
         {
           "text": "Spider Web",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "animal_homes__spider_web",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -453,9 +453,9 @@
       "categoryId": "office_equipment",
       "word": {
         "text": "Folder",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "office_equipment__folder",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -464,9 +464,9 @@
       "categoryId": "summer_clothes",
       "word": {
         "text": "Swimsuit",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "summer_clothes__swimsuit",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -476,7 +476,7 @@
       "word": {
         "text": "Lizard",
         "hasSprite": true,
-        "useIcon": false,
+        "useIcon": true,
         "spriteKey": "reptiles__lizard",
         "syllablePartA": "",
         "syllablePartB": ""
@@ -486,9 +486,9 @@
       "categoryId": "reptiles",
       "word": {
         "text": "Turtle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "reptiles__turtle",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -508,9 +508,9 @@
       "categoryId": "summer_clothes",
       "word": {
         "text": "Sandals",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "summer_clothes__sandals",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -519,9 +519,9 @@
       "categoryId": "office_equipment",
       "word": {
         "text": "Monitor",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "office_equipment__monitor",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -530,9 +530,9 @@
       "categoryId": "winter_clothes",
       "word": {
         "text": "Boots",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "winter_clothes__boots",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -541,9 +541,9 @@
       "categoryId": "summer_clothes",
       "word": {
         "text": "Sunglasses",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "summer_clothes__sunglasses",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -552,9 +552,9 @@
       "categoryId": "office_equipment",
       "word": {
         "text": "Printer",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "office_equipment__printer",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -563,9 +563,9 @@
       "categoryId": "summer_clothes",
       "word": {
         "text": "Shorts",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "summer_clothes__shorts",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -574,9 +574,9 @@
       "categoryId": "winter_clothes",
       "word": {
         "text": "Coat",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "winter_clothes__coat",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -618,9 +618,9 @@
       "categoryId": "reptiles",
       "word": {
         "text": "Snake",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "reptiles__snake",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -728,9 +728,9 @@
       "categoryId": "animal_homes",
       "word": {
         "text": "Spider Web",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "animal_homes__spider_web",
         "syllablePartA": "",
         "syllablePartB": ""
       }

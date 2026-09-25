@@ -10,17 +10,17 @@
       "words": [
         {
           "text": "Toothpaste",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "hygiene_products__toothpaste",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Deodorant",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "hygiene_products__deodorant",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -58,25 +58,25 @@
       "words": [
         {
           "text": "Mirror",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "wall_decor__mirror",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Clock",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "wall_decor__clock",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Frame",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "wall_decor__frame",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -106,25 +106,25 @@
       "words": [
         {
           "text": "Sofa",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "living_room__sofa",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Table",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "living_room__table",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "TV",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "living_room__tv",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -442,9 +442,9 @@
       "words": [
         {
           "text": "Hammer",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "carpentry_tools__hammer",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -466,9 +466,9 @@
         },
         {
           "text": "Plane",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "carpentry_tools__plane",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -512,9 +512,9 @@
       "categoryId": "hygiene_products",
       "word": {
         "text": "Deodorant",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "hygiene_products__deodorant",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -534,9 +534,9 @@
       "categoryId": "living_room",
       "word": {
         "text": "TV",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "living_room__tv",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -545,9 +545,9 @@
       "categoryId": "hygiene_products",
       "word": {
         "text": "Toothpaste",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "hygiene_products__toothpaste",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -567,9 +567,9 @@
       "categoryId": "living_room",
       "word": {
         "text": "Sofa",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "living_room__sofa",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -578,9 +578,9 @@
       "categoryId": "wall_decor",
       "word": {
         "text": "Clock",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "wall_decor__clock",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -622,9 +622,9 @@
       "categoryId": "wall_decor",
       "word": {
         "text": "Mirror",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "wall_decor__mirror",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -644,9 +644,9 @@
       "categoryId": "living_room",
       "word": {
         "text": "Table",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "living_room__table",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -666,9 +666,9 @@
       "categoryId": "wall_decor",
       "word": {
         "text": "Frame",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "wall_decor__frame",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -809,9 +809,9 @@
       "categoryId": "carpentry_tools",
       "word": {
         "text": "Hammer",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "carpentry_tools__hammer",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -842,9 +842,9 @@
       "categoryId": "carpentry_tools",
       "word": {
         "text": "Plane",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "carpentry_tools__plane",
         "syllablePartA": "",
         "syllablePartB": ""
       }

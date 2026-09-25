@@ -10,9 +10,9 @@
       "words": [
         {
           "text": "Backpack",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "outdoor_gear__backpack",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -26,17 +26,17 @@
         },
         {
           "text": "Sleeping Bag",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "outdoor_gear__sleeping_bag",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Flashlight",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "outdoor_gear__flashlight",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -106,33 +106,33 @@
       "words": [
         {
           "text": "Box",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "containers__box",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Bag",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "containers__bag",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Jar",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "containers__jar",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Basket",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "containers__basket",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -322,9 +322,9 @@
         },
         {
           "text": "Lightning",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "severe_weather__lightning",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -346,9 +346,9 @@
       "categoryId": "outdoor_gear",
       "word": {
         "text": "Backpack",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "outdoor_gear__backpack",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -357,9 +357,9 @@
       "categoryId": "containers",
       "word": {
         "text": "Box",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "containers__box",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -412,9 +412,9 @@
       "categoryId": "outdoor_gear",
       "word": {
         "text": "Flashlight",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "outdoor_gear__flashlight",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -423,9 +423,9 @@
       "categoryId": "containers",
       "word": {
         "text": "Basket",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "containers__basket",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -445,9 +445,9 @@
       "categoryId": "containers",
       "word": {
         "text": "Bag",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "containers__bag",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -456,9 +456,9 @@
       "categoryId": "containers",
       "word": {
         "text": "Jar",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "containers__jar",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -478,9 +478,9 @@
       "categoryId": "outdoor_gear",
       "word": {
         "text": "Sleeping Bag",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "outdoor_gear__sleeping_bag",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -621,9 +621,9 @@
       "categoryId": "severe_weather",
       "word": {
         "text": "Lightning",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "severe_weather__lightning",
         "syllablePartA": "",
         "syllablePartB": ""
       }

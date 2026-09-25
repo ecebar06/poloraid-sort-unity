@@ -1,4 +1,5 @@
 using TMPro;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,13 +47,52 @@ public sealed class MagnetPopupUI : MonoBehaviour
 
     private void EnsurePopupCanvas()
     {
+        // MagnetPopupUI is authored under the portrait GameHUD. Detach it to
+        // the actual root canvas before sizing it; otherwise a ScreenSpace
+        // overlay can still inherit the HUD's narrow rect and leave the
+        // dimmer/background cut off on the sides.
+        Canvas parentCanvas = transform.parent != null
+            ? transform.parent.GetComponentInParent<Canvas>()
+            : null;
+        Canvas rootCanvas = parentCanvas != null ? parentCanvas.rootCanvas : null;
+        if (rootCanvas != null && rootCanvas.transform != transform.parent)
+            transform.SetParent(rootCanvas.transform, false);
+
         Canvas popupCanvas = GetComponent<Canvas>();
         if (popupCanvas == null) popupCanvas = gameObject.AddComponent<Canvas>();
+        // This is a separate overlay canvas. Its root and dimmer must follow
+        // the real screen bounds, not the authored phone-sized GameHUD rect.
+        popupCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
         popupCanvas.overrideSorting = true;
         popupCanvas.sortingOrder = 2000;
 
+        RectTransform root = transform as RectTransform;
+        if (root != null)
+        {
+            root.anchorMin = Vector2.zero;
+            root.anchorMax = Vector2.one;
+            root.anchoredPosition = Vector2.zero;
+            root.sizeDelta = Vector2.zero;
+            root.localScale = Vector3.one;
+        }
+
+        StretchToScreen(settingsScreen);
+        StretchToScreen(timeUpScreen);
+
         if (GetComponent<GraphicRaycaster>() == null)
             gameObject.AddComponent<GraphicRaycaster>();
+    }
+
+    private static void StretchToScreen(GameObject screen)
+    {
+        if (screen == null) return;
+        RectTransform rect = screen.transform as RectTransform;
+        if (rect == null) return;
+        rect.anchorMin = Vector2.zero;
+        rect.anchorMax = Vector2.one;
+        rect.anchoredPosition = Vector2.zero;
+        rect.sizeDelta = Vector2.zero;
+        rect.localScale = Vector3.one;
     }
 
     private void Start()
@@ -269,7 +309,7 @@ public sealed class MagnetPopupUI : MonoBehaviour
         gameObject.SetActive(true);
         transform.SetAsLastSibling();
         settingsScreen.SetActive(true);
-        SetPopupScreenVisible(settingsScreen, true);
+        AnimatePopupIn(settingsScreen, GameAudioCue.Settings);
         settingsScreen.transform.SetAsLastSibling();
         if (settingsGoldText != null)
             settingsGoldText.text = SaveSystem.Current.gold.ToString();
@@ -280,8 +320,7 @@ public sealed class MagnetPopupUI : MonoBehaviour
 
     public void HideSettings()
     {
-        SetPopupScreenVisible(settingsScreen, false);
-        settingsScreen.SetActive(false);
+        AnimatePopupOut(settingsScreen);
     }
 
     public void ShowTimeUp()
@@ -297,26 +336,76 @@ public sealed class MagnetPopupUI : MonoBehaviour
         gameObject.SetActive(true);
         transform.SetAsLastSibling();
         timeUpScreen.SetActive(true);
-        SetPopupScreenVisible(timeUpScreen, true);
+        GameAudio.Play(GameAudioCue.Lose);
+        HapticFeedback.Play(HapticFeedback.Strength.Medium);
+        AnimatePopupIn(timeUpScreen, GameAudioCue.PopupOpen);
         timeUpScreen.transform.SetAsLastSibling();
         Canvas.ForceUpdateCanvases();
         Debug.Log("TimeUp popup acildi.", this);
     }
 
-    private static void SetPopupScreenVisible(GameObject screen, bool visible)
+    public void HideTimeUp()
+    {
+        AnimatePopupOut(timeUpScreen);
+    }
+
+    private static void AnimatePopupIn(GameObject screen, GameAudioCue openCue)
     {
         if (screen == null) return;
+        CanvasGroup group = GetOrAddCanvasGroup(screen);
+        RectTransform panel = FindPanel(screen);
+        screen.transform.localScale = Vector3.one;
+        panel.localScale = Vector3.one * 0.86f;
+        group.alpha = 0f;
+        group.blocksRaycasts = false;
+        group.interactable = false;
+        screen.transform.SetAsLastSibling();
+        GameAudio.Play(openCue);
+        Sequence sequence = DOTween.Sequence().SetUpdate(true);
+        sequence.Append(group.DOFade(1f, 0.16f).SetEase(Ease.OutCubic));
+        sequence.Join(panel.DOScale(1f, 0.34f).SetEase(Ease.OutBack));
+        sequence.OnComplete(() =>
+        {
+            group.blocksRaycasts = true;
+            group.interactable = true;
+        });
+    }
+
+    private static void AnimatePopupOut(GameObject screen)
+    {
+        if (screen == null || !screen.activeSelf) return;
+        CanvasGroup group = GetOrAddCanvasGroup(screen);
+        RectTransform panel = FindPanel(screen);
+        group.blocksRaycasts = false;
+        group.interactable = false;
+        panel.DOKill();
+        group.DOKill();
+        Sequence sequence = DOTween.Sequence().SetUpdate(true);
+        sequence.Append(panel.DOScale(0.86f, 0.18f).SetEase(Ease.InBack));
+        sequence.Join(group.DOFade(0f, 0.14f).SetEase(Ease.InCubic));
+        sequence.OnComplete(() =>
+        {
+            panel.localScale = Vector3.one;
+            screen.SetActive(false);
+        });
+    }
+
+    private static RectTransform FindPanel(GameObject screen)
+    {
+        return screen.transform.Find("Panel") as RectTransform ?? screen.transform as RectTransform;
+    }
+
+    private static CanvasGroup GetOrAddCanvasGroup(GameObject screen)
+    {
         CanvasGroup group = screen.GetComponent<CanvasGroup>();
-        if (group == null) return;
-        group.alpha = visible ? 1f : 0f;
-        group.blocksRaycasts = visible;
+        return group != null ? group : screen.AddComponent<CanvasGroup>();
     }
 
     private void ToggleSound()
     {
         PlayerSaveData data = SaveSystem.Current;
         SaveSystem.SetAudioSettings(!data.soundEnabled, data.musicEnabled);
-        AudioListener.volume = SaveSystem.Current.soundEnabled ? 1f : 0f;
+        GameAudio.RefreshFromSettings();
         RefreshSettingsVisuals();
     }
 
@@ -324,6 +413,7 @@ public sealed class MagnetPopupUI : MonoBehaviour
     {
         PlayerSaveData data = SaveSystem.Current;
         SaveSystem.SetAudioSettings(data.soundEnabled, !data.musicEnabled);
+        GameAudio.RefreshFromSettings();
         RefreshSettingsVisuals();
     }
 

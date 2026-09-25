@@ -202,9 +202,9 @@
       "words": [
         {
           "text": "Popcorn",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "movie_theater__popcorn",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -721,9 +721,9 @@
       "categoryId": "movie_theater",
       "word": {
         "text": "Popcorn",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "movie_theater__popcorn",
         "syllablePartA": "",
         "syllablePartB": ""
       }

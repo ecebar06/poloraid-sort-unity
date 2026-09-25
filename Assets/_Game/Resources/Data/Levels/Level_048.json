@@ -170,17 +170,17 @@
         },
         {
           "text": "Wand",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "magic__wand",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Charms",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "magic__charms",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -619,9 +619,9 @@
       "categoryId": "magic",
       "word": {
         "text": "Charms",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "magic__charms",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -630,9 +630,9 @@
       "categoryId": "magic",
       "word": {
         "text": "Wand",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "magic__wand",
         "syllablePartA": "",
         "syllablePartB": ""
       }

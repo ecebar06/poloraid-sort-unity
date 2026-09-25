@@ -36,15 +36,15 @@ MonoBehaviour:
   - key: space__moon
     sprite: {fileID: 21300000, guid: b7eea81719c2fee5f23a0c218f81cbd5, type: 3}
   - key: smart_machines__robot
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: d9cb555a3ee147b4a358531a3e32083c, type: 3}
   - key: camping__tent
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: dcffc2e1d4a4473cbf5ae17207964b44, type: 3}
   - key: foods__pizza
     sprite: {fileID: 21300000, guid: 1f214b980e632f2283e1e905a7d9f78e, type: 3}
   - key: desserts__cake
     sprite: {fileID: 0}
   - key: sweet_treats__ice_cream
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 87e04ffc8bc84db1a861fe183c6a56b1, type: 3}
   - key: reptiles__lizard
     sprite: {fileID: 21300000, guid: 45a140b852e58237d654c48924bcc720, type: 3}
   - key: habitats__desert
@@ -52,11 +52,11 @@ MonoBehaviour:
   - key: flowers__rose
     sprite: {fileID: 21300000, guid: 29d84fb7f804e6ae99ccbc48817f08ee, type: 3}
   - key: electronics__phone
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: a0d575674f5446319e08927eb245203f, type: 3}
   - key: breakfast_foods__cereal
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: df74050551f84ea2a6654d49a138dfbb, type: 3}
   - key: breakfast_foods__egg
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 43ac9e291735417d899892431558aaac, type: 3}
   - key: small_ride_vehicles__bicycle
     sprite: {fileID: 0}
   - key: sense_organs__eye
@@ -76,7 +76,7 @@ MonoBehaviour:
   - key: celebration_traditions__wedding
     sprite: {fileID: 0}
   - key: weddings__ring
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 78e63aaf4741457dbc15d6511db03a08, type: 3}
   - key: water_transport__ship
     sprite: {fileID: 0}
   - key: board_games__chess
@@ -90,7 +90,169 @@ MonoBehaviour:
   - key: school_life__teacher
     sprite: {fileID: 0}
   - key: desert_nature__camel
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: a5f2ebb4e0954f9ab9b779a3fb6ae69a, type: 3}
+  - key: farm_animals__cow
+    sprite: {fileID: 21300000, guid: 2a868ebf28c54f23be791127659e0e61, type: 3}
+  - key: farm_animals__pig
+    sprite: {fileID: 21300000, guid: 2e9bb93c80dc47f8804b5a3212a4c97b, type: 3}
+  - key: farm_animals__horse
+    sprite: {fileID: 21300000, guid: 193800446026462cb5b21683d9cc53bf, type: 3}
+  - key: farm_animals__sheep
+    sprite: {fileID: 21300000, guid: 2563260f9de0453984adbf3121c460cd, type: 3}
+  - key: condiments__ketchup
+    sprite: {fileID: 21300000, guid: c82b28aa3ac74c37a4193e016eb2556c, type: 3}
+  - key: condiments__mayo
+    sprite: {fileID: 21300000, guid: 8a8e1ba20a9a4c2594f761321ab731bd, type: 3}
+  - key: breakfast_foods__toast
+    sprite: {fileID: 21300000, guid: cf3b7baf41cb44a0a3602758b1029ea6, type: 3}
+  - key: breakfast_foods__pancake
+    sprite: {fileID: 21300000, guid: fd21eb87968441f7900f51a4fb42ea8c, type: 3}
+  - key: foods__bread
+    sprite: {fileID: 21300000, guid: 23af089c8b254ed8815b1153e3a371af, type: 3}
+  - key: foods__cheese
+    sprite: {fileID: 21300000, guid: 038e294dce39443b8edb1b976de9bfa5, type: 3}
+  - key: vegetables__carrot
+    sprite: {fileID: 21300000, guid: f85bfd931d164afb9ab642f15bb56589, type: 3}
+  - key: vegetables__potato
+    sprite: {fileID: 21300000, guid: b15dcdef3a32425baa5aa341c5ad82d9, type: 3}
+  - key: vegetables__tomato
+    sprite: {fileID: 21300000, guid: 0aa0bd316dfd4f5d978621296669f847, type: 3}
+  - key: fruits__orange
+    sprite: {fileID: 21300000, guid: 67987fc522874b4aba354692353b7130, type: 3}
+  - key: fruits__grape
+    sprite: {fileID: 21300000, guid: e859dc12d1964757929d4933bc4dab12, type: 3}
+  - key: drinks__water
+    sprite: {fileID: 21300000, guid: 087e87e8e1434bd089c669144e721da4, type: 3}
+  - key: drinks__milk
+    sprite: {fileID: 21300000, guid: 12c073d9845b4ad3ad8768347014bdc0, type: 3}
+  - key: drinks__tea
+    sprite: {fileID: 21300000, guid: 2ef1ee7dcb8c436aa62d66a9565084a4, type: 3}
+  - key: cafe_drinks__tea
+    sprite: {fileID: 21300000, guid: 2ef1ee7dcb8c436aa62d66a9565084a4, type: 3}
+  - key: picnic_foods__sandwich
+    sprite: {fileID: 21300000, guid: c56a09fa82314bc09ec34f3c3aee36ad, type: 3}
+  - key: picnic_foods__pickle
+    sprite: {fileID: 21300000, guid: 65ba69bce2ca4793a17cb3100e685d0f, type: 3}
+  - key: snacks__chips
+    sprite: {fileID: 21300000, guid: 24de5306cdc04c6f8a317ea191291985, type: 3}
+  - key: snacks__popcorn
+    sprite: {fileID: 21300000, guid: 67e9428180334b2284d5306d8452fa38, type: 3}
+  - key: movie_theater__popcorn
+    sprite: {fileID: 21300000, guid: 67e9428180334b2284d5306d8452fa38, type: 3}
+  - key: sweet_treats__brownie
+    sprite: {fileID: 21300000, guid: 7e89912a6b944cbba4aa52c6193498ea, type: 3}
+  - key: sweet_treats__pudding
+    sprite: {fileID: 21300000, guid: c394560bbdda48048c5e64a069e9c29e, type: 3}
+  - key: sweet_treats__cupcake
+    sprite: {fileID: 21300000, guid: 5e4a2e9cabca4a1e9da3c85f232e1832, type: 3}
+  - key: dessert_treats__gelato
+    sprite: {fileID: 21300000, guid: f5fe704673d84a5395f3ef346671f380, type: 3}
+  - key: regional_foods__sushi
+    sprite: {fileID: 21300000, guid: ac3295cb3acf49a39d109d5207b1df27, type: 3}
+  - key: regional_foods__tacos
+    sprite: {fileID: 21300000, guid: 78848896fb274d3685377b40390f5d48, type: 3}
+  - key: mexico__tacos
+    sprite: {fileID: 21300000, guid: 78848896fb274d3685377b40390f5d48, type: 3}
+  - key: cafe_drinks__coffee
+    sprite: {fileID: 21300000, guid: b9db531c9ea84c89a90f3e5c77670898, type: 3}
+  - key: tropical_fruits__mango
+    sprite: {fileID: 21300000, guid: 3a21a40f99294d9c98dda21ef32c9559, type: 3}
+  - key: tropical_fruits__pineapple
+    sprite: {fileID: 21300000, guid: 14e16b1a33c746119680bb96bfd10d1e, type: 3}
+  - key: tropical_fruits__coconut
+    sprite: {fileID: 21300000, guid: e3d37b6957554f99988b4c4a203fab06, type: 3}
+  - key: furniture__table
+    sprite: {fileID: 21300000, guid: 93de4c6f02d84789a9018dfcff66aab3, type: 3}
+  - key: restaurant__table
+    sprite: {fileID: 21300000, guid: bd916bc8fdd9433a8215ee8b9a5eeeab, type: 3}
+  - key: living_room__table
+    sprite: {fileID: 21300000, guid: 3d84486d56f0427390a08f3685eac387, type: 3}
+  - key: furniture__sofa
+    sprite: {fileID: 21300000, guid: b18d30a6a1e84ed9beec3f65c840d952, type: 3}
+  - key: living_room__sofa
+    sprite: {fileID: 21300000, guid: 01c1ca733ba648e6a30db27d5816df81, type: 3}
+  - key: furniture__bed
+    sprite: {fileID: 21300000, guid: 6e8a911705d94de4a730df7712483527, type: 3}
+  - key: school_supplies__pencil
+    sprite: {fileID: 21300000, guid: 2da5ab6472b64ce5a7595d62b2893248, type: 3}
+  - key: school_supplies__ruler
+    sprite: {fileID: 21300000, guid: e1ed09946b174871a0f65f50c9c46fe6, type: 3}
+  - key: school_supplies__eraser
+    sprite: {fileID: 21300000, guid: 153fe51043e648fd8e87ab01baf20080, type: 3}
+  - key: toys__doll
+    sprite: {fileID: 21300000, guid: 4d3457971f7f4cf1bda44d9595042728, type: 3}
+  - key: toys__blocks
+    sprite: {fileID: 21300000, guid: 3d2835e4341b4b75858e32f839e49f3c, type: 3}
+  - key: toys__kite
+    sprite: {fileID: 21300000, guid: c9e01c6b41824e15846ce097d814f7fd, type: 3}
+  - key: clothes__shirt
+    sprite: {fileID: 21300000, guid: 560fff6a4e5947009e10996096d475d9, type: 3}
+  - key: clothes__pants
+    sprite: {fileID: 21300000, guid: 99ff34e3124146848fc972e1c7a0b0c9, type: 3}
+  - key: clothes__shoes
+    sprite: {fileID: 21300000, guid: 2a845deed42148b0988d4598f8b33ed5, type: 3}
+  - key: camping__fire
+    sprite: {fileID: 21300000, guid: 07bdb5dad723495e9b8a731a91620517, type: 3}
+  - key: camping__map
+    sprite: {fileID: 21300000, guid: 1122a9380f6d43caaee2a80412bdaa2d, type: 3}
+  - key: navigation_tools__map
+    sprite: {fileID: 21300000, guid: d3c2a7ca45704d5983f3adcfcd0c5a0f, type: 3}
+  - key: playground__slide
+    sprite: {fileID: 21300000, guid: 1cff5e38ecbf4c2fb6787a444ca80401, type: 3}
+  - key: playground__swing
+    sprite: {fileID: 21300000, guid: c1d03dde7f8943639d8552e7846b0da1, type: 3}
+  - key: playground__sandbox
+    sprite: {fileID: 21300000, guid: 0bbd9be90a41400cae95ac9063df1331, type: 3}
+  - key: body_parts__hand
+    sprite: {fileID: 21300000, guid: 168ff17b72534dfd91e9e05bc69464f1, type: 3}
+  - key: body_parts__foot
+    sprite: {fileID: 21300000, guid: 571b14eddf324ca9a7a45ada127992f4, type: 3}
+  - key: body_parts__eye
+    sprite: {fileID: 21300000, guid: 6646ed2d78ce493b88461812841cd40e, type: 3}
+  - key: body_parts__nose
+    sprite: {fileID: 21300000, guid: 415b94b14b0b4115a2b6b93d94bd1ae4, type: 3}
+  - key: headwear__cap
+    sprite: {fileID: 21300000, guid: ae5232ce2f16453ca32f345ea9726dc2, type: 3}
+  - key: headwear__crown
+    sprite: {fileID: 21300000, guid: 1c9ba9d66b744f0fb7c452e151832515, type: 3}
+  - key: bedroom_furniture_set__wardrobe
+    sprite: {fileID: 21300000, guid: 7adb0219d19a4d438d2142052bc09105, type: 3}
+  - key: face_parts__mouth
+    sprite: {fileID: 21300000, guid: 1562f6a8bbf94f9fb8303a662c621735, type: 3}
+  - key: face_parts__ear
+    sprite: {fileID: 21300000, guid: f47c4230883d4a7281cd4608944af73c, type: 3}
+  - key: face_parts__hair
+    sprite: {fileID: 21300000, guid: f0042c33a86e4af0b1acb2bf2ccfa99f, type: 3}
+  - key: music__drum
+    sprite: {fileID: 21300000, guid: ae58d2cf027146a5a57afd7812293336, type: 3}
+  - key: music__piano
+    sprite: {fileID: 21300000, guid: ff0ea125ea664d959708a0ba25a92cac, type: 3}
+  - key: bands__guitar
+    sprite: {fileID: 21300000, guid: 6902586f4b9022d40b89d84df68facc2, type: 3}
+  - key: art_materials__paint
+    sprite: {fileID: 21300000, guid: 9358cb42899a41448ee1df55ba616082, type: 3}
+  - key: art_materials__brush
+    sprite: {fileID: 21300000, guid: 3b7702492e9549d4904c9d0ebc806305, type: 3}
+  - key: art_materials__canvas
+    sprite: {fileID: 21300000, guid: 8b409cab47334640b901915795edd2a1, type: 3}
+  - key: art_materials__crayon
+    sprite: {fileID: 21300000, guid: 4684492285db42f180cd71778c03d53a, type: 3}
+  - key: dinner_table__spoon
+    sprite: {fileID: 21300000, guid: b5c75498db4546fa928058adafab4880, type: 3}
+  - key: dinner_table__fork
+    sprite: {fileID: 21300000, guid: e9084831770d416487f01bab264421a4, type: 3}
+  - key: dinner_table__plate
+    sprite: {fileID: 21300000, guid: 0f29eb8f30524a6b8daadb9e9e47f027, type: 3}
+  - key: dinner_table__napkin
+    sprite: {fileID: 21300000, guid: d6c7d113be3b4ba69f1cda0c5fd31dc0, type: 3}
+  - key: hand_tools__hammer
+    sprite: {fileID: 21300000, guid: f63c0732ab084ae89de50fb4d6d113b7, type: 3}
+  - key: carpentry_tools__hammer
+    sprite: {fileID: 21300000, guid: f63c0732ab084ae89de50fb4d6d113b7, type: 3}
+  - key: hand_tools__screwdriver
+    sprite: {fileID: 21300000, guid: 5379eed817cf470a9fd8e04d4ed48913, type: 3}
+  - key: outdoor_gear__backpack
+    sprite: {fileID: 21300000, guid: 77f93ac3b93042528f281fffe88a0a0a, type: 3}
   - key: americas__south_america
     sprite: {fileID: 21300000, guid: e38f7f551fc291d4287d052ec9731887, type: 3}
   - key: volcano_parts__crater
@@ -125,3 +287,435 @@ MonoBehaviour:
     sprite: {fileID: 0}
   - key: shapes__square
     sprite: {fileID: 0}
+  - key: pets__cat
+    sprite: {fileID: 21300000, guid: f4097842a4eb4882a743e9798f09c840, type: 3}
+  - key: pets__bird
+    sprite: {fileID: 21300000, guid: 139887f143e640f08767f91eb78777d0, type: 3}
+  - key: pets__fish
+    sprite: {fileID: 21300000, guid: ec50db264b5540be98107878bc7813ee, type: 3}
+  - key: birds__swan
+    sprite: {fileID: 21300000, guid: adda587d51a447039864082f5b9e89d0, type: 3}
+  - key: mammals__rabbit
+    sprite: {fileID: 21300000, guid: 48acd4edf770433583e09092cc092236, type: 3}
+  - key: mammals__monkey
+    sprite: {fileID: 21300000, guid: 64e0b2e7c68a40c89208b8055bf2c0cd, type: 3}
+  - key: mammals__whale
+    sprite: {fileID: 21300000, guid: 89518c335df8428faee08c45a8763636, type: 3}
+  - key: mammals__dolphin
+    sprite: {fileID: 21300000, guid: 29befe3584f14bb696f5340507297bbe, type: 3}
+  - key: zoo_animals__giraffe
+    sprite: {fileID: 21300000, guid: 82959277b7224525b0da9f61504c03a2, type: 3}
+  - key: zoo_animals__elephant
+    sprite: {fileID: 21300000, guid: ea908afd558a443e86a1b0064cbfd35c, type: 3}
+  - key: reptiles__snake
+    sprite: {fileID: 21300000, guid: ea3762c993eb4478adabcccbdfc92449, type: 3}
+  - key: reptiles__turtle
+    sprite: {fileID: 21300000, guid: f0366c2357b340458a7e40d371af4380, type: 3}
+  - key: marine_biology__dolphin
+    sprite: {fileID: 21300000, guid: deb02b97ff354758a88abc18cdd8cae1, type: 3}
+  - key: marine_biology__sea_turtle
+    sprite: {fileID: 21300000, guid: 35f78c9e5ea847c3a5bf5a13e449bc0b, type: 3}
+  - key: dolphins__orca
+    sprite: {fileID: 21300000, guid: 1b4d16c56b1b450895817e1461c901eb, type: 3}
+  - key: black_white__orca
+    sprite: {fileID: 21300000, guid: e8ce9455ae0d4c4a841ac974429422bb, type: 3}
+  - key: black_white__panda
+    sprite: {fileID: 21300000, guid: 6b1416f10b2048be980d068d75c843f7, type: 3}
+
+  - key: outdoor_gear__sleeping_bag
+    sprite: {fileID: 21300000, guid: 4447aede20c7429f88d6033fb06284a4, type: 3}
+  - key: outdoor_gear__flashlight
+    sprite: {fileID: 21300000, guid: 0d95691b76b947a285fe94f37608e22b, type: 3}
+  - key: containers__box
+    sprite: {fileID: 21300000, guid: 4b4f5430d6fd4d0a9ef4e67e8b489c74, type: 3}
+  - key: shipping_supplies__box
+    sprite: {fileID: 21300000, guid: 721bb728c0f0455f88eca1b043244adb, type: 3}
+  - key: containers__bag
+    sprite: {fileID: 21300000, guid: 86dc8c6b8c814ea0bf8f326672f51942, type: 3}
+  - key: containers__jar
+    sprite: {fileID: 21300000, guid: 2034add7be4d448f94183262e5071a54, type: 3}
+  - key: containers__basket
+    sprite: {fileID: 21300000, guid: 6c8eec7ff9374699b6960838182dc49a, type: 3}
+  - key: everyday_money__coin
+    sprite: {fileID: 21300000, guid: 5b9d89196aaa4ee1b4aa29dd4828603a, type: 3}
+  - key: everyday_money__cash
+    sprite: {fileID: 21300000, guid: 76b39f2091e845d390badf5f0784a514, type: 3}
+  - key: everyday_money__wallet
+    sprite: {fileID: 21300000, guid: 22b279ad26a1439aa152042f7fef3d5d, type: 3}
+  - key: time__clock
+    sprite: {fileID: 21300000, guid: a7dba85044b8485cbaf60d58614187ff, type: 3}
+  - key: wall_decor__clock
+    sprite: {fileID: 21300000, guid: 507f3ffdf08e45b388cbb522d53f954d, type: 3}
+  - key: banking__card
+    sprite: {fileID: 21300000, guid: 9e503a5cabb64685a70edb1ed59dd9ce, type: 3}
+  - key: appliances__oven
+    sprite: {fileID: 21300000, guid: b96f85449e52450e94824f072e69ec66, type: 3}
+  - key: appliances__fridge
+    sprite: {fileID: 21300000, guid: 6ba1f70403974a6cbb28e219edded731, type: 3}
+  - key: appliances__mixer
+    sprite: {fileID: 21300000, guid: 7beb430f36f5400d8040618ccfd4c5ae, type: 3}
+
+  - key: appliances__toaster
+    sprite: {fileID: 21300000, guid: ae08ed57856f4c7e9a33a712a1550efb, type: 3}
+  - key: household_tech__toaster
+    sprite: {fileID: 21300000, guid: 7f1d7cac9a5b4e428263d2074a54a447, type: 3}
+  - key: smart_devices__smartphone
+    sprite: {fileID: 21300000, guid: 8360a5ea27da4215870ccd1c310d9bef, type: 3}
+  - key: smart_devices__smartwatch
+    sprite: {fileID: 21300000, guid: 68be7a45d7e146a2bfeaa01c1b601f12, type: 3}
+  - key: celebrations__gift
+    sprite: {fileID: 21300000, guid: 4b7752a7e5174514956d88c67dccbc01, type: 3}
+  - key: celebrations__candle
+    sprite: {fileID: 21300000, guid: 93e196e4853f4057acededb479332271, type: 3}
+  - key: celebrations__balloon
+    sprite: {fileID: 21300000, guid: 0c6484fa7df84c419388de61ec8552d0, type: 3}
+  - key: restaurant__menu
+    sprite: {fileID: 21300000, guid: 52c0a3164ac34743b0c30a6c74304618, type: 3}
+  - key: web_apps__menu
+    sprite: {fileID: 21300000, guid: e381749036694f619c67789d7e52511f, type: 3}
+  - key: swimming_gear__goggles
+    sprite: {fileID: 21300000, guid: 0ec956950fb0437f89a3bb5d94ed460e, type: 3}
+  - key: swimming_gear__swim_cap
+    sprite: {fileID: 21300000, guid: 5cf0c5f7e82b4e83a4a3533165fff71c, type: 3}
+  - key: swimming_gear__towel
+    sprite: {fileID: 21300000, guid: 9c4fec6e0f8d4c9e961d6639fb54f1f2, type: 3}
+  - key: pharmacy_supplies__pill
+    sprite: {fileID: 21300000, guid: 4853dbffc1d441c88b09105cc396a19b, type: 3}
+  - key: pharmacy_supplies__syrup
+    sprite: {fileID: 21300000, guid: ef443b7a9a934ab1ad813127fb9cec04, type: 3}
+  - key: pharmacy_supplies__thermometer
+    sprite: {fileID: 21300000, guid: b723a007afa54f3f9f4ae5a765d11c6e, type: 3}
+  - key: weather_instruments__thermometer
+    sprite: {fileID: 21300000, guid: 39e9c7b405ea43e2aefe029b46a4643d, type: 3}
+  - key: medical_items__thermometer
+    sprite: {fileID: 21300000, guid: 581c23f6a9ce44ce85e727464e3f6a85, type: 3}
+  - key: bedtime__pillow
+    sprite: {fileID: 21300000, guid: 2fe0533f0a6e4fb489f5a4e856e52647, type: 3}
+  - key: bedtime__blanket
+    sprite: {fileID: 21300000, guid: 93c809a60edf46f8a251994955ac2d8b, type: 3}
+
+  - key: bedtime__pajamas
+    sprite: {fileID: 21300000, guid: 7aaf26f749d84ff6bd88e0cfdaa88999, type: 3}
+  - key: bathroom_supplies__soap
+    sprite: {fileID: 21300000, guid: 78609bcad6844ba181cc85581850fc22, type: 3}
+  - key: bathroom_supplies__toothbrush
+    sprite: {fileID: 21300000, guid: 55b70d975ee3439b86184cbc98b47c4e, type: 3}
+  - key: bathroom_supplies__shampoo
+    sprite: {fileID: 21300000, guid: 58585fd584af46ff9e101634424f0ef9, type: 3}
+  - key: bathroom_supplies__toilet
+    sprite: {fileID: 21300000, guid: 12816dfad2d0430bb09370abbe8f2e01, type: 3}
+  - key: cleaning_supplies__sponge
+    sprite: {fileID: 21300000, guid: 8ddd0ebbb23e4c24baa78693dc747e55, type: 3}
+  - key: cleaning_supplies__duster
+    sprite: {fileID: 21300000, guid: 27294d65ed08427ead32d41591fd211a, type: 3}
+  - key: party_elements__confetti
+    sprite: {fileID: 21300000, guid: be16c01f25ac4761964aea100db39db8, type: 3}
+  - key: winter_clothes__coat
+    sprite: {fileID: 21300000, guid: 5d7222ba19324ec19a56c8166395f945, type: 3}
+  - key: winter_clothes__boots
+    sprite: {fileID: 21300000, guid: 34c0f886539b4f1cb794231a192822a3, type: 3}
+  - key: footwear__boots
+    sprite: {fileID: 21300000, guid: 072edba5987e4ab48fcdbf6bd7d3363f, type: 3}
+  - key: summer_clothes__shorts
+    sprite: {fileID: 21300000, guid: 916e929dc43d4df5ace3e18556e64778, type: 3}
+  - key: summer_clothes__sunglasses
+    sprite: {fileID: 21300000, guid: c2f8c97179114c70b802b6d2e99c4b7d, type: 3}
+  - key: summer_clothes__sandals
+    sprite: {fileID: 21300000, guid: d5e0bd19a66e4c5d805a25feb5353244, type: 3}
+  - key: summer_clothes__swimsuit
+    sprite: {fileID: 21300000, guid: e05d011a0ffa41c8858db5f9bd06ce28, type: 3}
+  - key: office_equipment__folder
+    sprite: {fileID: 21300000, guid: 1b5b49325a56415f9facb42343078e16, type: 3}
+  - key: office_equipment__printer
+    sprite: {fileID: 21300000, guid: eb775d1cb716499995caa1603ed8e7c3, type: 3}
+  - key: office_equipment__monitor
+    sprite: {fileID: 21300000, guid: 51792c16019b4420a2cfd361d5cc6766, type: 3}
+
+  - key: household_tech__blender
+    sprite: {fileID: 21300000, guid: 9d13c00924674ffeb67605dfe2bda1e0, type: 3}
+  - key: household_tech__kettle
+    sprite: {fileID: 21300000, guid: 68f8f12689e3495f85d65b6e5281e25c, type: 3}
+  - key: office_devices__laptop
+    sprite: {fileID: 21300000, guid: 6112535547a643cd80e2d02a8b3edb15, type: 3}
+  - key: personal_electronics__camera
+    sprite: {fileID: 21300000, guid: 8bf6ae2a441b46bc979b5d6f217c4c32, type: 3}
+  - key: phone_apps__camera
+    sprite: {fileID: 21300000, guid: a07b339e71754f36b31489bc61716047, type: 3}
+  - key: electronics__camera
+    sprite: {fileID: 21300000, guid: bff29a75d8f441a4ba38d7369309aa03, type: 3}
+  - key: personal_electronics__headphone
+    sprite: {fileID: 21300000, guid: de187594e8374e66b0e32d02ba0fff6d, type: 3}
+  - key: personal_electronics__tablet
+    sprite: {fileID: 21300000, guid: d0323f4228a147589fe4d4d0fb38b945, type: 3}
+  - key: electronics__tablet
+    sprite: {fileID: 21300000, guid: 88c83e6773f5447189753d9994688599, type: 3}
+  - key: small_ride_vehicles__motorcycle
+    sprite: {fileID: 21300000, guid: 680f9f6de5be454092e5fb4d1ed10881, type: 3}
+  - key: road_vehicles__motorcycle
+    sprite: {fileID: 21300000, guid: b855c874bea74be69fa28fe9487125d2, type: 3}
+  - key: small_ride_vehicles__scooter
+    sprite: {fileID: 21300000, guid: cf6fef8181c54be9999fa8a3c945b2fd, type: 3}
+  - key: small_ride_vehicles__skateboard
+    sprite: {fileID: 21300000, guid: 09fa8278f17d417da3ac8ddd9ffa2fd9, type: 3}
+  - key: web_apps__button
+    sprite: {fileID: 21300000, guid: 726ebab37a9d4339aa815ca32ea54866, type: 3}
+  - key: craft_supplies__paintbrush
+    sprite: {fileID: 21300000, guid: d24e023fcf74451fb75915169cb7f2f3, type: 3}
+  - key: craft_supplies__glue
+    sprite: {fileID: 21300000, guid: 7038625b50bc4d1f9252c731ef767128, type: 3}
+  - key: craft_supplies__clay
+    sprite: {fileID: 21300000, guid: 6571e8df11554b3fb9b57bf26794f89f, type: 3}
+  - key: electric_powered__television
+    sprite: {fileID: 21300000, guid: 6ee14d6c40bf46faa992b00e88c82559, type: 3}
+  - key: electric_powered__bulb
+    sprite: {fileID: 21300000, guid: f51425c5b2124406b72e2b243c25fb68, type: 3}
+  - key: electric_powered__fan
+    sprite: {fileID: 21300000, guid: 69973d25e5a74872a37b135000e32344, type: 3}
+  - key: electric_powered__computer
+    sprite: {fileID: 21300000, guid: e2e2b6eab1bf4ac1b74cb5e723d9a1d0, type: 3}
+  - key: sewing_tools__sewing_needle
+    sprite: {fileID: 21300000, guid: 7bbe2f6fbbeb458fb45e50d9ebf03777, type: 3}
+
+  - key: space_missions__telescope
+    sprite: {fileID: 21300000, guid: 445e3c620eb744ecacb8e628ce7f6be8, type: 3}
+  - key: major_organs__heart
+    sprite: {fileID: 21300000, guid: 570d956fd78349fc900ace1d4a3341d2, type: 3}
+  - key: major_organs__lung
+    sprite: {fileID: 21300000, guid: 8c84fea0adf947639af43047297d8945, type: 3}
+  - key: major_organs__brain
+    sprite: {fileID: 21300000, guid: 1ac2b938d6c14f74b0d5cc5eb32268df, type: 3}
+  - key: major_organs__skeleton
+    sprite: {fileID: 21300000, guid: a2880dab83c042f8b972532b0de03b96, type: 3}
+  - key: garage_items__ladder
+    sprite: {fileID: 21300000, guid: e80affc4b0744ea0bbea3fad446afc5b, type: 3}
+  - key: garage_items__toolbox
+    sprite: {fileID: 21300000, guid: 521ddf81fe444db4a9282f7cab8701d4, type: 3}
+  - key: garage_items__tire
+    sprite: {fileID: 21300000, guid: 42fad7bec352458fa5c66684944eebdf, type: 3}
+  - key: spaceship__rocket
+    sprite: {fileID: 21300000, guid: 8cc0790679bd48d0a2466662b1eded08, type: 3}
+  - key: air_vehicles__rocket
+    sprite: {fileID: 21300000, guid: 4ed77f363239411dac827c31059e5ef3, type: 3}
+  - key: gym__treadmill
+    sprite: {fileID: 21300000, guid: c768aa8ac6ef4d9ea9a86a6db77136a6, type: 3}
+  - key: gym__dumbbell
+    sprite: {fileID: 21300000, guid: 8759dd976d944f61a4dad081ca1342e9, type: 3}
+  - key: footwear__sneakers
+    sprite: {fileID: 21300000, guid: ad7bccb857ec4a87a6a29e0c905341f9, type: 3}
+  - key: footwear__slippers
+    sprite: {fileID: 21300000, guid: b6cec77da6264341821ed53638b0c726, type: 3}
+  - key: pet_gear__food_bowl
+    sprite: {fileID: 21300000, guid: 91d847dd3e21496d8e1df385039a0bc9, type: 3}
+  - key: home_safety__lock
+    sprite: {fileID: 21300000, guid: 3ce43868fd1846219f72df7a77a84b09, type: 3}
+  - key: home_safety__detector
+    sprite: {fileID: 21300000, guid: f13e9a4d285d4c09b68b227ada00e267, type: 3}
+  - key: home_storage__closet
+    sprite: {fileID: 21300000, guid: 66e0b9727e9d4501b8f9425ba2fbab9d, type: 3}
+  - key: home_storage__cabinet
+    sprite: {fileID: 21300000, guid: 1efee9653d3642adafef5bd28c9be610, type: 3}
+  - key: hygiene_products__toothpaste
+    sprite: {fileID: 21300000, guid: 8c744fcf4b544e9baac19f3e2218c3a4, type: 3}
+
+  - key: hygiene_products__deodorant
+    sprite: {fileID: 21300000, guid: b02a6491aa5541da9c3ebe5c6ebd1533, type: 3}
+  - key: wall_decor__mirror
+    sprite: {fileID: 21300000, guid: 4c961e056453486ab27aeb4434b435be, type: 3}
+  - key: light__mirror
+    sprite: {fileID: 21300000, guid: 301b62f235714c6baa40f65447cda49b, type: 3}
+  - key: wall_decor__frame
+    sprite: {fileID: 21300000, guid: 4192d5c872824df6ab5e1bff2f52f5c2, type: 3}
+  - key: living_room__tv
+    sprite: {fileID: 21300000, guid: b2eacbef0cc446b0a184e5a467fc5c5f, type: 3}
+  - key: carpentry_tools__plane
+    sprite: {fileID: 21300000, guid: 0bbd8b1d3714477294fabf29888e2636, type: 3}
+  - key: shipping_supplies__tape
+    sprite: {fileID: 21300000, guid: a8eea6dc9cc940feb73f168f4cb2ff44, type: 3}
+  - key: hiking_gear__compass
+    sprite: {fileID: 21300000, guid: 60f14d1ea0904badb38f02e42078f74f, type: 3}
+  - key: navigation_tools__compass
+    sprite: {fileID: 21300000, guid: df357c9d65f7414bb3e932cb60a2ecc7, type: 3}
+  - key: holiday_symbols__tree
+    sprite: {fileID: 21300000, guid: fbd128ed82b24beaa6b5d14cda81a544, type: 3}
+  - key: forest_trail__tree
+    sprite: {fileID: 21300000, guid: 4e7df7e1e74b434d975172c75831007d, type: 3}
+  - key: holiday_symbols__pumpkin
+    sprite: {fileID: 21300000, guid: 3ab218042cef4c98b37058d49cbee850, type: 3}
+  - key: holiday_symbols__fireworks
+    sprite: {fileID: 21300000, guid: e4138d9979494d718f90d9dcda5a7037, type: 3}
+  - key: kitchen_measurements__cup
+    sprite: {fileID: 21300000, guid: aff85321850f4a6fad30dc94d00a83a2, type: 3}
+  - key: arcade__ticket
+    sprite: {fileID: 21300000, guid: f996fbbe7edf4d60937f370d1c297619, type: 3}
+  - key: trains__ticket
+    sprite: {fileID: 21300000, guid: f3d8e413732741e5a1caf2bcc9fe1f19, type: 3}
+  - key: trains__track
+    sprite: {fileID: 21300000, guid: aa4aff0308ed4ba798147b363b2e8d25, type: 3}
+  - key: bicycles__chain
+    sprite: {fileID: 21300000, guid: c61b48cc9c624493950823c8b813d273, type: 3}
+  - key: bicycles__wheel
+    sprite: {fileID: 21300000, guid: fb742d73354c4f5eb517ad47fc392462, type: 3}
+  - key: bicycles__helmet
+    sprite: {fileID: 21300000, guid: d03beaf630a14b6799eb8ee8b0d66f28, type: 3}
+  - key: games__puzzle
+    sprite: {fileID: 21300000, guid: 5dc450a109874fc3880da7ce0a46266e, type: 3}
+  - key: games__chess
+    sprite: {fileID: 21300000, guid: e2ac3aa8462445cfb526dce36a59637c, type: 3}
+
+  - key: games__cards
+    sprite: {fileID: 21300000, guid: 1039559cb7d6441ebb7bb7a078dab620, type: 3}
+  - key: magic__wand
+    sprite: {fileID: 21300000, guid: 38d4784025074164bb7926a7fe055a78, type: 3}
+  - key: magic__charms
+    sprite: {fileID: 21300000, guid: 28317b00b7b549d4a5b20f7540c4b072, type: 3}
+  - key: gift_wrap__wrapping_paper
+    sprite: {fileID: 21300000, guid: e5b1c30c18ea4b9ea49576d035ad2aa8, type: 3}
+  - key: public_transport__bus
+    sprite: {fileID: 21300000, guid: c13c3c151ad946dc9254280bf8e10fa5, type: 3}
+  - key: vehicles__bus
+    sprite: {fileID: 21300000, guid: e4bd3f5cf8c04f8fbdee6b7216a32a77, type: 3}
+  - key: public_transport__subway
+    sprite: {fileID: 21300000, guid: 55deb507ab0e448e9132ace9bf4fb1b2, type: 3}
+  - key: rail_vehicles__subway
+    sprite: {fileID: 21300000, guid: 06ffbd162276473d8bc0c7c50246be89, type: 3}
+  - key: public_transport__tram
+    sprite: {fileID: 21300000, guid: 5de48c39342f430b8a110c60a4fff866, type: 3}
+  - key: rail_vehicles__tram
+    sprite: {fileID: 21300000, guid: 2c7873b6118c4796aff3ef93c0241b63, type: 3}
+  - key: public_transport__ferry
+    sprite: {fileID: 21300000, guid: 736a35746bb047a597e90b5735aed169, type: 3}
+  - key: water_vehicles__ferry
+    sprite: {fileID: 21300000, guid: 9de67f32619b4c9da295cac07cfd0476, type: 3}
+  - key: vehicles__train
+    sprite: {fileID: 21300000, guid: cfe775621fac48b98d37dade757a7d02, type: 3}
+  - key: rail_vehicles__train
+    sprite: {fileID: 21300000, guid: b127cefd3b2c42629b4394a711825aa3, type: 3}
+  - key: electronics__radio
+    sprite: {fileID: 21300000, guid: 8e41a1fbc974438c855ec17b7861a033, type: 3}
+  - key: car_types__taxi
+    sprite: {fileID: 21300000, guid: 234a09c5d9624959a6396602b1670a94, type: 3}
+  - key: car_types__van
+    sprite: {fileID: 21300000, guid: b637f2e0ff9c471bad8a5f3fae77c87b, type: 3}
+  - key: car_types__truck
+    sprite: {fileID: 21300000, guid: c017a6970ec44b32a1230a44cc98cef0, type: 3}
+  - key: watercraft__boat
+    sprite: {fileID: 21300000, guid: 0b07994757324842b80fbafc59a7d6a6, type: 3}
+  - key: watercraft__canoe
+    sprite: {fileID: 21300000, guid: b6a35623dbb940db94b8d4680f808328, type: 3}
+  - key: emergency_vehicles__ambulance
+    sprite: {fileID: 21300000, guid: 495b726d9f744bbdbbe47e8d0a429573, type: 3}
+  - key: emergency_vehicles__fire_truck
+    sprite: {fileID: 21300000, guid: d7756e90d60541acb397a0495f092608, type: 3}
+  - key: emergency_vehicles__police_car
+    sprite: {fileID: 21300000, guid: aa4c93fa71da4a4f9c36a22615d9bea4, type: 3}
+  - key: road_vehicles__bike
+    sprite: {fileID: 21300000, guid: b2ed5c0406bc405ba821767f6a80caff, type: 3}
+
+  - key: future_tech__hoverboard
+    sprite: {fileID: 21300000, guid: f812b493c06042f9ae712054219c9e42, type: 3}
+  - key: travel__suitcase
+    sprite: {fileID: 21300000, guid: e64849fe8c744eea8dcfa351466568a9, type: 3}
+  - key: medical_items__bandage
+    sprite: {fileID: 21300000, guid: 761446761504432397e368374f1e972e, type: 3}
+  - key: medical_items__medicine
+    sprite: {fileID: 21300000, guid: 0be93947fbc94a15b2f08d6902d825d2, type: 3}
+  - key: medical_items__ice_pack
+    sprite: {fileID: 21300000, guid: 598aaf65729d418aba25d21ff1eadfcd, type: 3}
+  - key: air_vehicles__helicopter
+    sprite: {fileID: 21300000, guid: cb40456e71de4095a456071588d5c5b5, type: 3}
+  - key: air_vehicles__drone
+    sprite: {fileID: 21300000, guid: edcd3d7e49fc4e5bbcb1921b3b87b2c1, type: 3}
+  - key: farming_machines__tractor
+    sprite: {fileID: 21300000, guid: 1959f5e4c537471a8c4c6844c5475a1d, type: 3}
+  - key: gaming__controller
+    sprite: {fileID: 21300000, guid: a0f04294284a4267b8d95b89d1b8fc7c, type: 3}
+  - key: orchestra__violin
+    sprite: {fileID: 21300000, guid: 4a9e8e2aa54e4788bb69090a0c4d81c5, type: 3}
+  - key: orchestra__flute
+    sprite: {fileID: 21300000, guid: f950280c62d74b8fbf8bc01c8544d0a4, type: 3}
+  - key: orchestra__trumpet
+    sprite: {fileID: 21300000, guid: acc58be04bfe484796d5334ba5b36c20, type: 3}
+  - key: bands__drums
+    sprite: {fileID: 21300000, guid: 511c6372da1747838ceda68f2731fa3a, type: 3}
+  - key: bands__bass
+    sprite: {fileID: 21300000, guid: 722e2fa6dd03460da1aecf844e1b0b49, type: 3}
+  - key: street_furniture__mailbox
+    sprite: {fileID: 21300000, guid: b6b6040004d8419abe61e764a1bf62ac, type: 3}
+  - key: street_furniture__bus_stop
+    sprite: {fileID: 21300000, guid: cb05379273dd44e491ec542e5d96c205, type: 3}
+  - key: water_vehicles__submarine
+    sprite: {fileID: 21300000, guid: 44af45a5f1f24251ae383828378e135c, type: 3}
+  - key: wimbledon__trophy
+    sprite: {fileID: 21300000, guid: 5eba1c3275804a9e91a9ab315db5bf2d, type: 3}
+  - key: weather__rain
+    sprite: {fileID: 21300000, guid: 777afd67d4a94cf1b85039c1260f6625, type: 3}
+  - key: storms__rain
+    sprite: {fileID: 21300000, guid: fac185a683dd41c9998076a2c3ae4709, type: 3}
+  - key: weather__snow
+    sprite: {fileID: 21300000, guid: 16d4ffda2b204fcf84aba19c5a084433, type: 3}
+  - key: weather__wind
+    sprite: {fileID: 21300000, guid: f801e0af6cdb4e9886d0130b27812c9f, type: 3}
+  - key: storms__wind
+    sprite: {fileID: 21300000, guid: 85a210136aaa4225a318eccb7cd1a20e, type: 3}
+  - key: vegetables__onion
+    sprite: {fileID: 21300000, guid: 137cca9128654ea0b76889b9f2adb96f, type: 3}
+  - key: plant_parts__flower
+    sprite: {fileID: 21300000, guid: a0b239c15a344d6f85d542f637433bc1, type: 3}
+  - key: ocean__wave
+    sprite: {fileID: 21300000, guid: 8821638d3ebf454c9f90cfd46215ba9a, type: 3}
+  - key: space__stars
+    sprite: {fileID: 21300000, guid: f917917326414287a677891f6f7089cb, type: 3}
+  - key: space__comets
+    sprite: {fileID: 21300000, guid: 9ef9ed8f5d2e475fb1d345c6ce9804e6, type: 3}
+  - key: space__planet
+    sprite: {fileID: 21300000, guid: beed551fda80464b83b811b911a8f87f, type: 3}
+  - key: severe_weather__lightning
+    sprite: {fileID: 21300000, guid: b7b11e173db348fea43bd968a183e451, type: 3}
+  - key: flowers__tulip
+    sprite: {fileID: 21300000, guid: b3c00a42b694485a8ed1474bd248c3d0, type: 3}
+  - key: flowers__daisy
+    sprite: {fileID: 21300000, guid: ea942448f5bf4bdb9c03ff7310ddf18b, type: 3}
+  - key: flowers__orchid
+    sprite: {fileID: 21300000, guid: 59e3a430e60a40c4aff97345be725eb2, type: 3}
+  - key: science__atom
+    sprite: {fileID: 21300000, guid: 6de17060ff074bda9f932dba12d4786a, type: 3}
+  - key: science__cell
+    sprite: {fileID: 21300000, guid: 8a33de8cb483474492283b0745e4d00f, type: 3}
+  - key: electricity__battery
+    sprite: {fileID: 21300000, guid: 1b0432860ce24da8bec4087653c67943, type: 3}
+  - key: beach_day__sand
+    sprite: {fileID: 21300000, guid: d30435c9a20542ee90a40be971b39172, type: 3}
+  - key: beach_day__umbrella
+    sprite: {fileID: 21300000, guid: d35d8cde2da94ad1a537a236c2537195, type: 3}
+  - key: animal_homes__spider_web
+    sprite: {fileID: 21300000, guid: b381e4c6cdf24c2589b87c3b26819647, type: 3}
+  - key: geology__rock
+    sprite: {fileID: 21300000, guid: f705832c4e294bfa85a5158a662ff1bb, type: 3}
+  - key: geology__fossil
+    sprite: {fileID: 21300000, guid: 4cd25af655ea46bd93ba45cb91db56ed, type: 3}
+  - key: compass_points__north
+    sprite: {fileID: 21300000, guid: 9149c1adaa7b4b259914fe5f6084b7fe, type: 3}
+  - key: compass_points__south
+    sprite: {fileID: 21300000, guid: f4b18c5a6b9649d9ad0342c2b59f0952, type: 3}
+  - key: compass_points__east
+    sprite: {fileID: 21300000, guid: e8b206ae03ee409fb5b226486387b2fb, type: 3}
+  - key: compass_points__west
+    sprite: {fileID: 21300000, guid: 94809f38fefe4750a27090ac46f2aba3, type: 3}
+  - key: sky__sun
+    sprite: {fileID: 21300000, guid: e6378ffc4e424616871a8b94d81c0b2b, type: 3}
+  - key: sky__cloud
+    sprite: {fileID: 21300000, guid: bac181097d1f415c8b14ffd88685ac47, type: 3}
+  - key: sky__star
+    sprite: {fileID: 21300000, guid: 34f8bdfd9a404ab889cf77413d328614, type: 3}
+  - key: desert_nature__cactus
+    sprite: {fileID: 21300000, guid: 8d691147268c4a3893c7edd803f801b9, type: 3}
+  - key: natural_habitats__forest
+    sprite: {fileID: 21300000, guid: 19377adaa37e48d4bffa90a7d81e80cf, type: 3}
+  - key: natural_habitats__desert
+    sprite: {fileID: 21300000, guid: 356214031cb94c039b9f2d998148f1f2, type: 3}
+  - key: forest_trail__path
+    sprite: {fileID: 21300000, guid: 5b3115bffcfb451b9a6f7e471dc46607, type: 3}
+  - key: sky__moon
+    sprite: {fileID: 21300000, guid: b56932ccd9e344efb5d2329dc06bf06b, type: 3}
+  - key: desert_nature__sand
+    sprite: {fileID: 21300000, guid: 5f01f68daf444cb7bbf375670c780397, type: 3}

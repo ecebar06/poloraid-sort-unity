@@ -18,9 +18,9 @@
         },
         {
           "text": "Suitcase",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "travel__suitcase",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -202,33 +202,33 @@
       "words": [
         {
           "text": "Bandage",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "medical_items__bandage",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Medicine",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "medical_items__medicine",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Thermometer",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "medical_items__thermometer",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Ice Pack",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "medical_items__ice_pack",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -401,9 +401,9 @@
       "categoryId": "medical_items",
       "word": {
         "text": "Bandage",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "medical_items__bandage",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -445,9 +445,9 @@
       "categoryId": "medical_items",
       "word": {
         "text": "Medicine",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "medical_items__medicine",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -489,9 +489,9 @@
       "categoryId": "medical_items",
       "word": {
         "text": "Ice Pack",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "medical_items__ice_pack",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -511,9 +511,9 @@
       "categoryId": "travel",
       "word": {
         "text": "Suitcase",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "travel__suitcase",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -588,9 +588,9 @@
       "categoryId": "medical_items",
       "word": {
         "text": "Thermometer",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "medical_items__thermometer",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -10,17 +10,17 @@
       "words": [
         {
           "text": "Coin",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "everyday_money__coin",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Cash",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "everyday_money__cash",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -34,9 +34,9 @@
         },
         {
           "text": "Wallet",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "everyday_money__wallet",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -58,9 +58,9 @@
       "words": [
         {
           "text": "Clock",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "time__clock",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -178,9 +178,9 @@
         },
         {
           "text": "Swan",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "birds__swan",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -202,33 +202,33 @@
       "words": [
         {
           "text": "Rabbit",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "mammals__rabbit",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Monkey",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "mammals__monkey",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Whale",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "mammals__whale",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Dolphin",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "mammals__dolphin",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -274,9 +274,9 @@
         },
         {
           "text": "Card",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "banking__card",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -438,9 +438,9 @@
       "categoryId": "time",
       "word": {
         "text": "Clock",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "time__clock",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -449,9 +449,9 @@
       "categoryId": "birds",
       "word": {
         "text": "Swan",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "birds__swan",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -460,9 +460,9 @@
       "categoryId": "everyday_money",
       "word": {
         "text": "Coin",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "everyday_money__coin",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -471,9 +471,9 @@
       "categoryId": "mammals",
       "word": {
         "text": "Rabbit",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "mammals__rabbit",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -504,9 +504,9 @@
       "categoryId": "mammals",
       "word": {
         "text": "Dolphin",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "mammals__dolphin",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -526,9 +526,9 @@
       "categoryId": "mammals",
       "word": {
         "text": "Monkey",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "mammals__monkey",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -537,9 +537,9 @@
       "categoryId": "mammals",
       "word": {
         "text": "Whale",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "mammals__whale",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -548,9 +548,9 @@
       "categoryId": "everyday_money",
       "word": {
         "text": "Cash",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "everyday_money__cash",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -592,9 +592,9 @@
       "categoryId": "everyday_money",
       "word": {
         "text": "Wallet",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "everyday_money__wallet",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -636,9 +636,9 @@
       "categoryId": "banking",
       "word": {
         "text": "Card",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "banking__card",
         "syllablePartA": "",
         "syllablePartB": ""
       }

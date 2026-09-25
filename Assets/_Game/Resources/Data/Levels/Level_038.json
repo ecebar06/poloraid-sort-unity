@@ -58,17 +58,17 @@
       "words": [
         {
           "text": "Forest",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "natural_habitats__forest",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Desert",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "natural_habitats__desert",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -258,17 +258,17 @@
         },
         {
           "text": "Treadmill",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "gym__treadmill",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Dumbbell",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "gym__dumbbell",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -298,17 +298,17 @@
       "words": [
         {
           "text": "Sneakers",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "footwear__sneakers",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Boots",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "footwear__boots",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -322,9 +322,9 @@
         },
         {
           "text": "Slippers",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "footwear__slippers",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -362,9 +362,9 @@
         },
         {
           "text": "Food Bowl",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "pet_gear__food_bowl",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -394,17 +394,17 @@
       "words": [
         {
           "text": "Lock",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "home_safety__lock",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Detector",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "home_safety__detector",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -530,9 +530,9 @@
       "categoryId": "gym",
       "word": {
         "text": "Dumbbell",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "gym__dumbbell",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -541,9 +541,9 @@
       "categoryId": "gym",
       "word": {
         "text": "Treadmill",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "gym__treadmill",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -662,9 +662,9 @@
       "categoryId": "footwear",
       "word": {
         "text": "Sneakers",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "footwear__sneakers",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -684,9 +684,9 @@
       "categoryId": "footwear",
       "word": {
         "text": "Boots",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "footwear__boots",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -695,9 +695,9 @@
       "categoryId": "footwear",
       "word": {
         "text": "Slippers",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "footwear__slippers",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -728,9 +728,9 @@
       "categoryId": "pet_gear",
       "word": {
         "text": "Food Bowl",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "pet_gear__food_bowl",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -750,9 +750,9 @@
       "categoryId": "home_safety",
       "word": {
         "text": "Lock",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "home_safety__lock",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -761,9 +761,9 @@
       "categoryId": "home_safety",
       "word": {
         "text": "Detector",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "home_safety__detector",
         "syllablePartA": "",
         "syllablePartB": ""
       }

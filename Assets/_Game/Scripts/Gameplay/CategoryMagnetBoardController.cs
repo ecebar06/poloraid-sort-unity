@@ -33,6 +33,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     private LevelData currentLevel;
     private int pendingTransformations;
     private int creditedCategories;
+    private bool isRefilling;
     private Tween progressTween;
     private readonly List<RectTransform> completionEffects = new List<RectTransform>();
     private List<LevelWordEntry> mixedStock;
@@ -53,7 +54,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
 
     public Canvas Canvas => canvas;
     public RectTransform BottomArea => bottomArea;
-    public bool IsInputLocked => gameEnded || remainingMoves <= 0 || pendingTransformations > 0 ||
+    public bool IsInputLocked => gameEnded || remainingMoves <= 0 || pendingTransformations > 0 || isRefilling ||
         (MagnetPopupUI.Instance != null && MagnetPopupUI.Instance.SettingsScreen != null &&
          MagnetPopupUI.Instance.SettingsScreen.activeInHierarchy);
 
@@ -133,6 +134,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         bottomArea.gameObject.SetActive(true);
         foreach (var holder in holders) holder.gameObject.SetActive(true);
         pendingTransformations = 0;
+        isRefilling = false;
         currentLevel = level;
         stockCursor = 0;
         looseSlots.Clear();
@@ -164,12 +166,12 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             Debug.LogError(error.Message);
             return;
         }
-        RefillStock();
+        RefillStock(false);
     }
 
-    private void RefillStock()
+    private void RefillStock(bool sequential)
     {
-        if (gameEnded) return;
+        if (gameEnded || isRefilling) return;
         if (pendingTransformations > 0) return;
         LevelData level = currentLevel;
         // Consume a fixed mixed queue: 4 replacement words for a final, 3 plus
@@ -179,19 +181,43 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         int targetCursor = Mathf.Min(mixedStock.Count, 16 + completedCategories.Count * 4 - outputs);
         List<LevelWordEntry> entries = mixedStock.Skip(stockCursor).Take(targetCursor - stockCursor).ToList();
         stockCursor = targetCursor;
+        if (entries.Count == 0) return;
+        if (!sequential)
+        {
+            foreach (LevelWordEntry entry in entries)
+                SpawnRefillEntry(entry);
+            return;
+        }
+        isRefilling = true;
+        StartCoroutine(SpawnRefillEntries(entries));
+    }
+
+    private IEnumerator SpawnRefillEntries(List<LevelWordEntry> entries)
+    {
         for (int i = 0; i < entries.Count; i++)
         {
-            LevelWordEntry entry = entries[i];
-            Category category = level.categories.FirstOrDefault(item => item.id == entry.categoryId);
-            Sprite sprite = null;
-            if (entry.word.useIcon && iconLibrary != null)
-                iconLibrary.TryGetIcon(entry.word.spriteKey, out sprite);
-            LooseMagnet magnet = CreateMagnet(entry.word.text, entry.categoryId,
-                category == null ? entry.categoryId : category.name, sprite);
-            PlaceInFreeSlot(magnet);
-            magnet.RectTransform().localScale = Vector3.one * 1.18f;
-            magnet.RectTransform().DOScale(1f, 0.28f).SetEase(Ease.OutCubic);
+            SpawnRefillEntry(entries[i]);
+
+            // Reveal replacement magnets one at a time so a completed
+            // category feels like a deliberate refill instead of a single
+            // frame spawning an entire new row.
+            if (i < entries.Count - 1)
+                yield return new WaitForSecondsRealtime(0.25f);
         }
+        isRefilling = false;
+    }
+
+    private void SpawnRefillEntry(LevelWordEntry entry)
+    {
+        Category category = currentLevel.categories.FirstOrDefault(item => item.id == entry.categoryId);
+        Sprite sprite = null;
+        if (entry.word.useIcon && iconLibrary != null)
+            iconLibrary.TryGetIcon(entry.word.spriteKey, out sprite);
+        LooseMagnet magnet = CreateMagnet(entry.word.text, entry.categoryId,
+            category == null ? entry.categoryId : category.name, sprite);
+        PlaceInFreeSlot(magnet);
+        magnet.RectTransform().localScale = Vector3.one * 1.18f;
+        magnet.RectTransform().DOScale(1f, 0.28f).SetEase(Ease.OutCubic);
     }
 
     private Vector2 SlotPosition(int slot)
@@ -261,26 +287,31 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         {
             // Pointer can be outside while the dragged card still covers a holder.
             // Reject that overlap as well, rather than leaving a fake collected card.
-            if (OverlapsHolder(magnet)) magnet.Reject();
+            if (OverlapsHolder(magnet))
+            {
+                SpendMove();
+                magnet.Reject();
+            }
             else magnet.ReturnInsideBottomArea();
             return;
         }
         if (!target.TryAccept(magnet))
         {
-            // Dropping onto a holder that already belongs to another
-            // category is still a spent move, even though the magnet is
-            // rejected and returned to the loose area.
-            if (!target.IsEmpty && target.CategoryId != magnet.CategoryId)
-            {
-                remainingMoves = Mathf.Max(0, remainingMoves - 1);
-                RefreshMoves();
-            }
+            // Every invalid holder drop is a spent move, including a full
+            // holder, a completed category or a category already assigned to
+            // another holder.
+            SpendMove();
             magnet.Reject();
             return;
         }
 
-        remainingMoves = Mathf.Max(0, remainingMoves - 1);
+        SpendMove();
         looseSlots.Remove(magnet);
+    }
+
+    private void SpendMove()
+    {
+        remainingMoves = Mathf.Max(0, remainingMoves - 1);
         RefreshMoves();
     }
 
@@ -354,7 +385,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         // Keep terminal holders filled and badge-colored through the finish.
         // Transformations above still recycle, since their output is required.
         if (!keepFinalHolder) holder.ClearForReuse();
-        RefillStock();
+        RefillStock(true);
     }
 
     public void RestartCurrentLevel()
@@ -465,7 +496,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         HapticFeedback.Play(HapticFeedback.Strength.Success);
         holder.ClearForReuse();
         pendingTransformations--;
-        RefillStock();
+        RefillStock(true);
         if (pendingTransformations == 0 && completedCategories.Count >= totalCategories)
             StartCoroutine(CompleteLevel());
     }
@@ -524,9 +555,10 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         // Keep the newest result above older magnets, including other results
         // that may have finished falling while this animation was running.
         result.BringToFront();
+        GameAudio.Play(GameAudioCue.Transformation);
         HapticFeedback.Play(HapticFeedback.Strength.Success);
         pendingTransformations--;
-        RefillStock();
+        RefillStock(true);
         if (pendingTransformations == 0 && completedCategories.Count >= totalCategories)
             StartCoroutine(CompleteLevel());
     }
@@ -565,6 +597,8 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
                 winScreen.AddComponent<GraphicRaycaster>();
             winScreen.SetActive(true);
             winScreen.transform.SetAsLastSibling();
+            GameAudio.Play(GameAudioCue.Win);
+            AnimateWinScreenIn();
             // Nested magnet canvases must not remain visible over result UI.
             bottomArea.gameObject.SetActive(false);
             foreach (var holder in holders) holder.gameObject.SetActive(false);
@@ -611,7 +645,8 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     {
         remainingMoves = Mathf.Max(1, extraMoves);
         gameEnded = false;
-        if (outOfMovesScreen != null) outOfMovesScreen.SetActive(false);
+        if (MagnetPopupUI.Instance != null) MagnetPopupUI.Instance.HideTimeUp();
+        else if (outOfMovesScreen != null) outOfMovesScreen.SetActive(false);
         bottomArea.gameObject.SetActive(true);
         foreach (CategoryHolder holder in holders)
             if (holder != null) holder.gameObject.SetActive(true);
@@ -622,6 +657,41 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     {
         if (winScreen != null) winScreen.SetActive(false);
         LoadLevel(Mathf.Min(activeLevelIndex + 1, database.levels.Count - 1));
+    }
+
+    private void AnimateWinScreenIn()
+    {
+        if (winScreen == null) return;
+        CanvasGroup group = winScreen.GetComponent<CanvasGroup>();
+        if (group == null) group = winScreen.AddComponent<CanvasGroup>();
+        // The win screen has a full-screen dimmer on its root and two separate
+        // popup visuals below it: the rounded Background card and the Content
+        // (header, rewards and continue button). Animate both so the complete
+        // popup enters together instead of only the inner content scaling.
+        Transform background = winScreen.transform.Find("Background");
+        Transform content = winScreen.transform.Find("Content") ?? winScreen.transform.Find("Panel");
+        RectTransform backgroundRect = background as RectTransform;
+        RectTransform contentRect = content as RectTransform;
+        group.DOKill();
+        backgroundRect?.DOKill();
+        contentRect?.DOKill();
+        group.alpha = 0f;
+        group.blocksRaycasts = false;
+        group.interactable = false;
+        if (backgroundRect != null) backgroundRect.localScale = Vector3.one * 0.86f;
+        if (contentRect != null && contentRect.parent != backgroundRect)
+            contentRect.localScale = Vector3.one * 0.86f;
+        Sequence sequence = DOTween.Sequence().SetUpdate(true);
+        sequence.Append(group.DOFade(1f, 0.16f).SetEase(Ease.OutCubic));
+        if (backgroundRect != null)
+            sequence.Join(backgroundRect.DOScale(1f, 0.34f).SetEase(Ease.OutBack));
+        if (contentRect != null && contentRect.parent != backgroundRect)
+            sequence.Join(contentRect.DOScale(1f, 0.34f).SetEase(Ease.OutBack));
+        sequence.OnComplete(() =>
+        {
+            group.blocksRaycasts = true;
+            group.interactable = true;
+        });
     }
 
     private void DoubleRewardAndContinue()
@@ -649,19 +719,19 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         // A shared size also prevents square icon assets from crowding nearby magnets.
         // Slightly wider magnets improve label readability without making the
         // 16-magnet board feel crowded.
-        rect.sizeDelta = new Vector2(223f, 150f);
+        rect.sizeDelta = new Vector2(245f, 165f);
         float fit = Mathf.Min(1f, bottomArea.rect.width / 4f / 280f,
             Mathf.Min(280f, bottomArea.rect.height / 4f) / 280f);
         rect.sizeDelta *= fit;
         Image background = root.GetComponent<Image>();
         background.sprite = magnetSprite;
         background.type = Image.Type.Sliced;
-
         Image icon = CreateImage("Icon", rect);
         // Generated icons contain some transparent breathing room themselves;
-        // use a small UI inset so the actual artwork stays legible while still
-        // remaining completely inside the magnet.
+        // keep a safe inner gutter so tall and wide sprites (such as the
+        // apple and banana) remain entirely inside the magnet.
         Stretch(icon.rectTransform, 4f);
+        icon.rectTransform.localScale = Vector3.one;
         icon.preserveAspect = true;
         TextMeshProUGUI label = CreateText("Label", rect);
         Stretch(label.rectTransform, 6f);

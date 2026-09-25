@@ -106,9 +106,9 @@
       "words": [
         {
           "text": "Track",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "trains__track",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -122,9 +122,9 @@
         },
         {
           "text": "Ticket",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "trains__ticket",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -210,25 +210,25 @@
         },
         {
           "text": "Chain",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bicycles__chain",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Wheel",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bicycles__wheel",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Helmet",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bicycles__helmet",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -394,25 +394,25 @@
       "words": [
         {
           "text": "Train",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "rail_vehicles__train",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Tram",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "rail_vehicles__tram",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Subway",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "rail_vehicles__subway",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -458,17 +458,17 @@
         },
         {
           "text": "Submarine",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "water_vehicles__submarine",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Ferry",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "water_vehicles__ferry",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -604,9 +604,9 @@
       "categoryId": "water_vehicles",
       "word": {
         "text": "Ferry",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "water_vehicles__ferry",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -615,9 +615,9 @@
       "categoryId": "rail_vehicles",
       "word": {
         "text": "Subway",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "rail_vehicles__subway",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -626,9 +626,9 @@
       "categoryId": "trains",
       "word": {
         "text": "Track",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "trains__track",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -648,9 +648,9 @@
       "categoryId": "rail_vehicles",
       "word": {
         "text": "Tram",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "rail_vehicles__tram",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -659,9 +659,9 @@
       "categoryId": "water_vehicles",
       "word": {
         "text": "Submarine",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "water_vehicles__submarine",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -692,9 +692,9 @@
       "categoryId": "trains",
       "word": {
         "text": "Ticket",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "trains__ticket",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -758,9 +758,9 @@
       "categoryId": "bicycles",
       "word": {
         "text": "Wheel",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bicycles__wheel",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -769,9 +769,9 @@
       "categoryId": "bicycles",
       "word": {
         "text": "Helmet",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bicycles__helmet",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -813,9 +813,9 @@
       "categoryId": "bicycles",
       "word": {
         "text": "Chain",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bicycles__chain",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -58,9 +58,9 @@
       "words": [
         {
           "text": "Tractor",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "farming_machines__tractor",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -162,9 +162,9 @@
         },
         {
           "text": "Controller",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "gaming__controller",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -394,9 +394,9 @@
       "words": [
         {
           "text": "Sushi",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "regional_foods__sushi",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -410,9 +410,9 @@
         },
         {
           "text": "Tacos",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "regional_foods__tacos",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -442,9 +442,9 @@
       "categoryId": "gaming",
       "word": {
         "text": "Controller",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "gaming__controller",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -574,9 +574,9 @@
       "categoryId": "farm_machines",
       "word": {
         "text": "Tractor",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "farming_machines__tractor",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -761,9 +761,9 @@
       "categoryId": "regional_foods",
       "word": {
         "text": "Sushi",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "regional_foods__sushi",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -783,9 +783,9 @@
       "categoryId": "regional_foods",
       "word": {
         "text": "Tacos",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "regional_foods__tacos",
         "syllablePartA": "",
         "syllablePartB": ""
       }

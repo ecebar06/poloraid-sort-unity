@@ -34,9 +34,9 @@
         },
         {
           "text": "Orca",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "dolphins__orca",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -66,17 +66,17 @@
         },
         {
           "text": "Panda",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "black_white__panda",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Orca",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "black_white__orca",
           "syllablePartA": "",
           "syllablePartB": ""
         },

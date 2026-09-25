@@ -130,9 +130,9 @@
         },
         {
           "text": "Gelato",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "dessert_treats__gelato",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -250,33 +250,33 @@
       "words": [
         {
           "text": "North",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "compass_points__north",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "South",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "compass_points__south",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "East",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "compass_points__east",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "West",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "compass_points__west",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -346,17 +346,17 @@
       "words": [
         {
           "text": "Helicopter",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "air_vehicles__helicopter",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Drone",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "air_vehicles__drone",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -370,9 +370,9 @@
         },
         {
           "text": "Rocket",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "air_vehicles__rocket",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -460,9 +460,9 @@
       "categoryId": "compass_points",
       "word": {
         "text": "West",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "compass_points__west",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -493,9 +493,9 @@
       "categoryId": "compass_points",
       "word": {
         "text": "South",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "compass_points__south",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -537,9 +537,9 @@
       "categoryId": "dessert_treats",
       "word": {
         "text": "Gelato",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "dessert_treats__gelato",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -548,9 +548,9 @@
       "categoryId": "compass_points",
       "word": {
         "text": "East",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "compass_points__east",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -570,9 +570,9 @@
       "categoryId": "compass_points",
       "word": {
         "text": "North",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "compass_points__north",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -658,9 +658,9 @@
       "categoryId": "air_vehicles",
       "word": {
         "text": "Helicopter",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "air_vehicles__helicopter",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -669,9 +669,9 @@
       "categoryId": "air_vehicles",
       "word": {
         "text": "Drone",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "air_vehicles__drone",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -691,9 +691,9 @@
       "categoryId": "air_vehicles",
       "word": {
         "text": "Rocket",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "air_vehicles__rocket",
         "syllablePartA": "",
         "syllablePartB": ""
       }

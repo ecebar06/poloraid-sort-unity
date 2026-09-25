@@ -10,25 +10,25 @@
       "words": [
         {
           "text": "Pillow",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bedtime__pillow",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Blanket",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bedtime__blanket",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Pajamas",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bedtime__pajamas",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -58,17 +58,17 @@
       "words": [
         {
           "text": "Chips",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "snacks__chips",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Popcorn",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "snacks__popcorn",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -154,33 +154,33 @@
       "words": [
         {
           "text": "Soap",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bathroom_supplies__soap",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Toothbrush",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bathroom_supplies__toothbrush",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Shampoo",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bathroom_supplies__shampoo",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Toilet",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "bathroom_supplies__toilet",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -218,17 +218,17 @@
         },
         {
           "text": "Sponge",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "cleaning_supplies__sponge",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Duster",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "cleaning_supplies__duster",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -306,9 +306,9 @@
         },
         {
           "text": "Confetti",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "party_elements__confetti",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -464,9 +464,9 @@
       "categoryId": "snacks",
       "word": {
         "text": "Chips",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "snacks__chips",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -475,9 +475,9 @@
       "categoryId": "bathroom_supplies",
       "word": {
         "text": "Shampoo",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bathroom_supplies__shampoo",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -486,9 +486,9 @@
       "categoryId": "bedtime",
       "word": {
         "text": "Pillow",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bedtime__pillow",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -497,9 +497,9 @@
       "categoryId": "bathroom_supplies",
       "word": {
         "text": "Toilet",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bathroom_supplies__toilet",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -530,9 +530,9 @@
       "categoryId": "bedtime",
       "word": {
         "text": "Blanket",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bedtime__blanket",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -541,9 +541,9 @@
       "categoryId": "bathroom_supplies",
       "word": {
         "text": "Toothbrush",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bathroom_supplies__toothbrush",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -574,9 +574,9 @@
       "categoryId": "snacks",
       "word": {
         "text": "Popcorn",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "snacks__popcorn",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -596,9 +596,9 @@
       "categoryId": "bedtime",
       "word": {
         "text": "Pajamas",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bedtime__pajamas",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -607,9 +607,9 @@
       "categoryId": "bathroom_supplies",
       "word": {
         "text": "Soap",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "bathroom_supplies__soap",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -629,9 +629,9 @@
       "categoryId": "cleaning_supplies",
       "word": {
         "text": "Duster",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "cleaning_supplies__duster",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -673,9 +673,9 @@
       "categoryId": "cleaning_supplies",
       "word": {
         "text": "Sponge",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "cleaning_supplies__sponge",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -717,9 +717,9 @@
       "categoryId": "party_elements",
       "word": {
         "text": "Confetti",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "party_elements__confetti",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -10,17 +10,17 @@
       "words": [
         {
           "text": "Atom",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "science__atom",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Cell",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "science__cell",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -58,9 +58,9 @@
       "words": [
         {
           "text": "Battery",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "electricity__battery",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -346,9 +346,9 @@
       "words": [
         {
           "text": "Sandwich",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "picnic_foods__sandwich",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -370,9 +370,9 @@
         },
         {
           "text": "Pickle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "picnic_foods__pickle",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -449,9 +449,9 @@
       "categoryId": "science",
       "word": {
         "text": "Atom",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "science__atom",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -460,9 +460,9 @@
       "categoryId": "science",
       "word": {
         "text": "Cell",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "science__cell",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -482,9 +482,9 @@
       "categoryId": "electricity",
       "word": {
         "text": "Battery",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "electricity__battery",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -658,9 +658,9 @@
       "categoryId": "picnic_foods",
       "word": {
         "text": "Pickle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "picnic_foods__pickle",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -713,9 +713,9 @@
       "categoryId": "picnic_foods",
       "word": {
         "text": "Sandwich",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "picnic_foods__sandwich",
         "syllablePartA": "",
         "syllablePartB": ""
       }

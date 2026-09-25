@@ -18,19 +18,19 @@
         },
         {
           "text": "Bus",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "vehicles__bus",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Train",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "vehicles__train",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Ship",
@@ -66,27 +66,27 @@
         },
         {
           "text": "Tablet",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "electronics__tablet",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Camera",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "electronics__camera",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Radio",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "electronics__radio",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         }
       ],
       "transformsOnComplete": false,
@@ -114,11 +114,11 @@
         },
         {
           "text": "Toast",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "breakfast_foods__toast",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Egg",
@@ -130,11 +130,11 @@
         },
         {
           "text": "Pancake",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "breakfast_foods__pancake",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         }
       ],
       "transformsOnComplete": false,
@@ -246,33 +246,33 @@
       "categoryId": "vehicles",
       "word": {
         "text": "Bus",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "vehicles__bus",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
       "categoryId": "electronics",
       "word": {
         "text": "Tablet",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "electronics__tablet",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
       "categoryId": "breakfast_foods",
       "word": {
         "text": "Toast",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "breakfast_foods__toast",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -290,22 +290,22 @@
       "categoryId": "vehicles",
       "word": {
         "text": "Train",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "vehicles__train",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
       "categoryId": "electronics",
       "word": {
         "text": "Camera",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "electronics__camera",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -345,22 +345,22 @@
       "categoryId": "electronics",
       "word": {
         "text": "Radio",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "electronics__radio",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
       "categoryId": "breakfast_foods",
       "word": {
         "text": "Pancake",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "breakfast_foods__pancake",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {

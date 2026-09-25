@@ -18,25 +18,25 @@
         },
         {
           "text": "Taxi",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "car_types__taxi",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Van",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "car_types__van",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Truck",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "car_types__truck",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -58,9 +58,9 @@
       "words": [
         {
           "text": "Boat",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "watercraft__boat",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -82,9 +82,9 @@
         },
         {
           "text": "Canoe",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "watercraft__canoe",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -154,25 +154,25 @@
       "words": [
         {
           "text": "Ambulance",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "emergency_vehicles__ambulance",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Fire Truck",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "emergency_vehicles__fire_truck",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Police Car",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "emergency_vehicles__police_car",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -266,17 +266,17 @@
         },
         {
           "text": "Bike",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "road_vehicles__bike",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Motorcycle",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "road_vehicles__motorcycle",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -298,9 +298,9 @@
       "categoryId": "emergency_vehicles",
       "word": {
         "text": "Police Car",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "emergency_vehicles__police_car",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -386,9 +386,9 @@
       "categoryId": "watercraft",
       "word": {
         "text": "Boat",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "watercraft__boat",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -397,9 +397,9 @@
       "categoryId": "watercraft",
       "word": {
         "text": "Canoe",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "watercraft__canoe",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -419,9 +419,9 @@
       "categoryId": "car_types",
       "word": {
         "text": "Van",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "car_types__van",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -463,9 +463,9 @@
       "categoryId": "road_vehicles",
       "word": {
         "text": "Bike",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "road_vehicles__bike",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -474,9 +474,9 @@
       "categoryId": "emergency_vehicles",
       "word": {
         "text": "Fire Truck",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "emergency_vehicles__fire_truck",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -485,9 +485,9 @@
       "categoryId": "car_types",
       "word": {
         "text": "Taxi",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "car_types__taxi",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -496,9 +496,9 @@
       "categoryId": "road_vehicles",
       "word": {
         "text": "Motorcycle",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "road_vehicles__motorcycle",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -529,9 +529,9 @@
       "categoryId": "emergency_vehicles",
       "word": {
         "text": "Ambulance",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "emergency_vehicles__ambulance",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -540,9 +540,9 @@
       "categoryId": "car_types",
       "word": {
         "text": "Truck",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "car_types__truck",
         "syllablePartA": "",
         "syllablePartB": ""
       }

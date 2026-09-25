@@ -74,17 +74,17 @@
         },
         {
           "text": "Orange",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "fruits__orange",
           "syllablePartA": "Or",
           "syllablePartB": "ange"
         },
         {
           "text": "Grape",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "fruits__grape",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -283,9 +283,9 @@
       "categoryId": "fruits",
       "word": {
         "text": "Grape",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "fruits__grape",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -437,9 +437,9 @@
       "categoryId": "fruits",
       "word": {
         "text": "Orange",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "fruits__orange",
         "syllablePartA": "Or",
         "syllablePartB": "ange"
       }

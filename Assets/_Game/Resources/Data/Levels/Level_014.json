@@ -106,9 +106,9 @@
       "words": [
         {
           "text": "Hoverboard",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "future_tech__hoverboard",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -401,9 +401,9 @@
       "categoryId": "future_tech",
       "word": {
         "text": "Hoverboard",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "future_tech__hoverboard",
         "syllablePartA": "",
         "syllablePartB": ""
       }

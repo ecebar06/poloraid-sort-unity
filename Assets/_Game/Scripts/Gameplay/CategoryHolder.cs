@@ -17,7 +17,9 @@ public sealed class CategoryHolder : MonoBehaviour
     private Image holderBackground;
     private Image completionTint;
     private Color normalBackgroundColor = Color.white;
+    private Color assignedBackgroundColor = Color.white;
     private bool backgroundColorCached;
+    private bool hasAssignedBackgroundColor;
     public string CategoryId { get; private set; }
     public bool IsEmpty => string.IsNullOrEmpty(CategoryId);
     public bool IsFull => collected.Count >= 4;
@@ -29,6 +31,7 @@ public sealed class CategoryHolder : MonoBehaviour
         foreach (LooseMagnet magnet in collected)
             if (magnet != null) Destroy(magnet.gameObject);
         ApplyReadableCountStyle();
+        ApplyReadableCategoryStyle();
         holderBackground = GetComponent<Image>();
         if (holderBackground != null && !backgroundColorCached)
         {
@@ -77,6 +80,40 @@ public sealed class CategoryHolder : MonoBehaviour
         countLabel.SetAllDirty();
     }
 
+    private void ApplyReadableCategoryStyle()
+    {
+        if (categoryLabel == null) return;
+        // Typography is intentionally left untouched here. The CategoryLabel
+        // values from the authored Scene Inspector must remain editable by the
+        // designer instead of being overwritten whenever a level loads.
+
+        RectTransform categoryRect = categoryLabel.rectTransform;
+        categoryRect.anchorMin = new Vector2(0.06f, 1.04f);
+        categoryRect.anchorMax = new Vector2(0.94f, 1.34f);
+        categoryRect.offsetMin = categoryRect.offsetMax = Vector2.zero;
+        Transform categoryBadge = transform.Find("CategoryBadge");
+        RectTransform categoryBadgeRect = categoryBadge as RectTransform;
+        if (categoryBadgeRect != null)
+        {
+            categoryBadgeRect.anchorMin = new Vector2(0.02f, 1.04f);
+            categoryBadgeRect.anchorMax = new Vector2(0.98f, 1.34f);
+            categoryBadgeRect.offsetMin = categoryBadgeRect.offsetMax = Vector2.zero;
+        }
+
+        RectTransform countRect = countLabel.rectTransform;
+        countRect.anchorMin = new Vector2(0.23f, 0.95f);
+        countRect.anchorMax = new Vector2(0.77f, 1.065f);
+        countRect.offsetMin = countRect.offsetMax = Vector2.zero;
+        Transform countBadge = transform.Find("CountBadge");
+        RectTransform countBadgeRect = countBadge as RectTransform;
+        if (countBadgeRect != null)
+        {
+            countBadgeRect.anchorMin = new Vector2(0.22f, 0.95f);
+            countBadgeRect.anchorMax = new Vector2(0.78f, 1.065f);
+            countBadgeRect.offsetMin = countBadgeRect.offsetMax = Vector2.zero;
+        }
+    }
+
     public bool TryAccept(LooseMagnet magnet)
     {
         if (!CanAccept(magnet)) return false;
@@ -87,11 +124,16 @@ public sealed class CategoryHolder : MonoBehaviour
             categoryLabel.gameObject.SetActive(true);
             Transform badge = transform.Find("CategoryBadge");
             if (badge != null) badge.gameObject.SetActive(true);
+            ApplyAssignedCategoryColor();
         }
 
+        // Every card in the claimed holder should carry the same category
+        // tint, not only the first card that assigned the holder.
+        magnet.SetAssignedCategoryAppearance(GetCategoryBadgeColor());
         collected.Add(magnet);
         LayoutCollectedMagnets();
         UpdateCount();
+        GameAudio.Play(GameAudioCue.MagnetPlace);
         HapticFeedback.Play(HapticFeedback.Strength.Light);
         if (IsFull) StartCoroutine(CompleteAfterSnap());
         return true;
@@ -106,9 +148,32 @@ public sealed class CategoryHolder : MonoBehaviour
         holderBackground.DOKill();
         // Use a strong, unambiguous target color while dragging. Keeping a
         // small amount of the original gray preserves the holder artwork.
-        Color target = !value ? normalBackgroundColor : Color.Lerp(normalBackgroundColor,
+        Color baseColor = hasAssignedBackgroundColor ? assignedBackgroundColor : normalBackgroundColor;
+        Color target = !value ? baseColor : Color.Lerp(baseColor,
             valid ? new Color(0.10f, 1f, 0.24f, 1f) : new Color(1f, 0.08f, 0.12f, 1f), 0.72f);
         holderBackground.DOColor(target, 0.10f).SetEase(Ease.OutCubic);
+    }
+
+    private void ApplyAssignedCategoryColor()
+    {
+        if (holderBackground == null) return;
+
+        Color badgeColor = GetCategoryBadgeColor();
+        // Keep the holder artwork readable while making the category color
+        // clearly visible as soon as its first card claims the holder.
+        // Use a stronger pastel tint so the holder does not wash back into
+        // gray while still retaining the original artwork and contrast.
+        assignedBackgroundColor = Color.Lerp(normalBackgroundColor, badgeColor, 0.78f);
+        assignedBackgroundColor.a = normalBackgroundColor.a;
+        hasAssignedBackgroundColor = true;
+        holderBackground.DOKill();
+        holderBackground.DOColor(assignedBackgroundColor, 0.18f).SetEase(Ease.OutCubic);
+    }
+
+    private Color GetCategoryBadgeColor()
+    {
+        Image categoryBadge = transform.Find("CategoryBadge")?.GetComponent<Image>();
+        return categoryBadge != null ? categoryBadge.color : normalBackgroundColor;
     }
 
     private IEnumerator CompleteAfterSnap()
@@ -133,6 +198,7 @@ public sealed class CategoryHolder : MonoBehaviour
         }
         transform.DOKill();
         transform.DOPunchScale(Vector3.one * 0.08f, 0.35f, 6, 0.5f);
+        GameAudio.Play(GameAudioCue.CategoryComplete);
         HapticFeedback.Play(HapticFeedback.Strength.Success);
         // Hold the completed state long enough to read it before recycling.
         yield return new WaitForSeconds(1.1f);
@@ -151,6 +217,8 @@ public sealed class CategoryHolder : MonoBehaviour
     {
         CategoryId = string.Empty;
         collected.Clear();
+        hasAssignedBackgroundColor = false;
+        assignedBackgroundColor = normalBackgroundColor;
         if (holderBackground != null)
         {
             holderBackground.DOKill();
@@ -209,9 +277,9 @@ public sealed class CategoryHolder : MonoBehaviour
     private Vector2 GetSlotPosition(int index)
     {
         Rect rect = content.rect;
-        // First card stays at the top. Later cards stack beneath it without
-        // moving cards that are already in the holder.
-        float step = Mathf.Min(rect.height * 0.14f, 60f);
+        // Preserve the original accordion behavior while giving each card a
+        // little more vertical breathing room in the holder.
+        float step = Mathf.Clamp(rect.height * 0.18f, 48f, 74f);
         return new Vector2(rect.center.x, rect.yMax - rect.height * 0.24f - index * step);
     }
 
@@ -227,6 +295,6 @@ public sealed class CategoryHolder : MonoBehaviour
         }
         if (newest != null) newest.SetHolderStackMode(false);
         if (newest != null)
-            newest.LockIntoHolder(GetSlotPosition(collected.Count - 1), content);
+            newest.LockIntoHolder(GetSlotPosition(collected.Count - 1), content, collected.Count - 1);
     }
 }

@@ -346,9 +346,9 @@
       "words": [
         {
           "text": "Wrapping Paper",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "gift_wrap__wrapping_paper",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -394,17 +394,17 @@
       "words": [
         {
           "text": "Compass",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "navigation_tools__compass",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Map",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "navigation_tools__map",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -784,9 +784,9 @@
       "categoryId": "gift_wrap",
       "word": {
         "text": "Wrapping Paper",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "gift_wrap__wrapping_paper",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -861,9 +861,9 @@
       "categoryId": "navigation_tools",
       "word": {
         "text": "Compass",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "navigation_tools__compass",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -872,9 +872,9 @@
       "categoryId": "navigation_tools",
       "word": {
         "text": "Map",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "navigation_tools__map",
         "syllablePartA": "",
         "syllablePartB": ""
       }

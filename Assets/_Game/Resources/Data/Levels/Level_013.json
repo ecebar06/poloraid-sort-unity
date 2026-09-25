@@ -58,9 +58,9 @@
       "words": [
         {
           "text": "Wave",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "ocean__wave",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -106,9 +106,9 @@
       "words": [
         {
           "text": "Stars",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "space__stars",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -122,17 +122,17 @@
         },
         {
           "text": "Comets",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "space__comets",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Planet",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "space__planet",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -555,9 +555,9 @@
       "categoryId": "ocean",
       "word": {
         "text": "Wave",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "ocean__wave",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -588,9 +588,9 @@
       "categoryId": "space",
       "word": {
         "text": "Comets",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "space__comets",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -621,9 +621,9 @@
       "categoryId": "space",
       "word": {
         "text": "Stars",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "space__stars",
         "syllablePartA": "",
         "syllablePartB": ""
       }

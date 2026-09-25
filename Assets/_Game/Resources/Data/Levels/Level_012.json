@@ -66,17 +66,17 @@
         },
         {
           "text": "Drum",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "music__drum",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Piano",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "music__piano",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -106,33 +106,33 @@
       "words": [
         {
           "text": "Paint",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "art_materials__paint",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Brush",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "art_materials__brush",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Canvas",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "art_materials__canvas",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Crayon",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "art_materials__crayon",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -154,33 +154,33 @@
       "words": [
         {
           "text": "Spoon",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "dinner_table__spoon",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Fork",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "dinner_table__fork",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Plate",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "dinner_table__plate",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Napkin",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "dinner_table__napkin",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -202,9 +202,9 @@
       "words": [
         {
           "text": "Hammer",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "hand_tools__hammer",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -218,9 +218,9 @@
         },
         {
           "text": "Screwdriver",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "hand_tools__screwdriver",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -298,9 +298,9 @@
       "categoryId": "dinner_table",
       "word": {
         "text": "Napkin",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "dinner_table__napkin",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -309,9 +309,9 @@
       "categoryId": "music",
       "word": {
         "text": "Piano",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "music__piano",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -331,9 +331,9 @@
       "categoryId": "hand_tools",
       "word": {
         "text": "Hammer",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "hand_tools__hammer",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -342,9 +342,9 @@
       "categoryId": "art_materials",
       "word": {
         "text": "Crayon",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "art_materials__crayon",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -364,9 +364,9 @@
       "categoryId": "dinner_table",
       "word": {
         "text": "Spoon",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "dinner_table__spoon",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -375,9 +375,9 @@
       "categoryId": "hand_tools",
       "word": {
         "text": "Screwdriver",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "hand_tools__screwdriver",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -397,9 +397,9 @@
       "categoryId": "dinner_table",
       "word": {
         "text": "Fork",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "dinner_table__fork",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -419,9 +419,9 @@
       "categoryId": "art_materials",
       "word": {
         "text": "Brush",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "art_materials__brush",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -441,9 +441,9 @@
       "categoryId": "music",
       "word": {
         "text": "Drum",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "music__drum",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -452,9 +452,9 @@
       "categoryId": "art_materials",
       "word": {
         "text": "Canvas",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "art_materials__canvas",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -518,9 +518,9 @@
       "categoryId": "dinner_table",
       "word": {
         "text": "Plate",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "dinner_table__plate",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -540,9 +540,9 @@
       "categoryId": "art_materials",
       "word": {
         "text": "Paint",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "art_materials__paint",
         "syllablePartA": "",
         "syllablePartB": ""
       }

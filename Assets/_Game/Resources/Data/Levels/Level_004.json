@@ -10,27 +10,27 @@
       "words": [
         {
           "text": "Shirt",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "clothes__shirt",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Pants",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "clothes__pants",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Shoes",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "clothes__shoes",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Hat",
@@ -106,35 +106,35 @@
       "words": [
         {
           "text": "Bus",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "public_transport__bus",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Subway",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "public_transport__subway",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Tram",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "public_transport__tram",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Ferry",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "public_transport__ferry",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         }
       ],
       "transformsOnComplete": false,
@@ -202,11 +202,11 @@
       "categoryId": "clothes",
       "word": {
         "text": "Shirt",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "clothes__shirt",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -224,11 +224,11 @@
       "categoryId": "public_transport",
       "word": {
         "text": "Bus",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "public_transport__bus",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -246,11 +246,11 @@
       "categoryId": "clothes",
       "word": {
         "text": "Pants",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "clothes__pants",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -268,11 +268,11 @@
       "categoryId": "public_transport",
       "word": {
         "text": "Subway",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "public_transport__subway",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -290,11 +290,11 @@
       "categoryId": "clothes",
       "word": {
         "text": "Shoes",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "clothes__shoes",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -312,11 +312,11 @@
       "categoryId": "public_transport",
       "word": {
         "text": "Tram",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "public_transport__tram",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -356,11 +356,11 @@
       "categoryId": "public_transport",
       "word": {
         "text": "Ferry",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "public_transport__ferry",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {

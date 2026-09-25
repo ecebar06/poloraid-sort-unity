@@ -10,11 +10,11 @@
       "words": [
         {
           "text": "Cat",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "pets__cat",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Dog",
@@ -26,19 +26,19 @@
         },
         {
           "text": "Bird",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "pets__bird",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Fish",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "pets__fish",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         }
       ],
       "transformsOnComplete": false,
@@ -58,11 +58,11 @@
       "words": [
         {
           "text": "Pencil",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "school_supplies__pencil",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Book",
@@ -74,19 +74,19 @@
         },
         {
           "text": "Ruler",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "school_supplies__ruler",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Eraser",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "school_supplies__eraser",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         }
       ],
       "transformsOnComplete": false,
@@ -114,27 +114,27 @@
         },
         {
           "text": "Doll",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "toys__doll",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Blocks",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "toys__blocks",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Kite",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "toys__kite",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         }
       ],
       "transformsOnComplete": false,
@@ -154,11 +154,11 @@
       "words": [
         {
           "text": "Ketchup",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "condiments__ketchup",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Mustard",
@@ -170,11 +170,11 @@
         },
         {
           "text": "Mayo",
-          "hasSprite": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "spriteKey": "condiments__mayo",
           "syllablePartA": "",
           "syllablePartB": "",
-          "useIcon": false
+          "useIcon": true
         },
         {
           "text": "Relish",
@@ -202,22 +202,22 @@
       "categoryId": "pets",
       "word": {
         "text": "Cat",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "pets__cat",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
       "categoryId": "school_supplies",
       "word": {
         "text": "Pencil",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "school_supplies__pencil",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -235,11 +235,11 @@
       "categoryId": "condiments",
       "word": {
         "text": "Ketchup",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "condiments__ketchup",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -268,11 +268,11 @@
       "categoryId": "toys",
       "word": {
         "text": "Doll",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "toys__doll",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
@@ -290,77 +290,77 @@
       "categoryId": "pets",
       "word": {
         "text": "Bird",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "pets__bird",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
       "categoryId": "school_supplies",
       "word": {
         "text": "Ruler",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "school_supplies__ruler",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
       "categoryId": "toys",
       "word": {
         "text": "Blocks",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "toys__blocks",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
       "categoryId": "condiments",
       "word": {
         "text": "Mayo",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "condiments__mayo",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
       "categoryId": "pets",
       "word": {
         "text": "Fish",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "pets__fish",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
       "categoryId": "school_supplies",
       "word": {
         "text": "Eraser",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "school_supplies__eraser",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {
       "categoryId": "toys",
       "word": {
         "text": "Kite",
-        "hasSprite": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "spriteKey": "toys__kite",
         "syllablePartA": "",
         "syllablePartB": "",
-        "useIcon": false
+        "useIcon": true
       }
     },
     {

@@ -106,9 +106,9 @@
       "words": [
         {
           "text": "Water",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "drinks__water",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -122,17 +122,17 @@
         },
         {
           "text": "Milk",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "drinks__milk",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Tea",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "drinks__tea",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -441,9 +441,9 @@
       "categoryId": "drinks",
       "word": {
         "text": "Water",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "drinks__water",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -485,9 +485,9 @@
       "categoryId": "drinks",
       "word": {
         "text": "Tea",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "drinks__tea",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -518,9 +518,9 @@
       "categoryId": "drinks",
       "word": {
         "text": "Milk",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "drinks__milk",
         "syllablePartA": "",
         "syllablePartB": ""
       }

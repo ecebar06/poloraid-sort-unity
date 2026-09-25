@@ -266,17 +266,17 @@
         },
         {
           "text": "Mailbox",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "street_furniture__mailbox",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Bus Stop",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "street_furniture__bus_stop",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -346,33 +346,33 @@
       "words": [
         {
           "text": "Sun",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "sky__sun",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Moon",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "sky__moon",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Cloud",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "sky__cloud",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Star",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "sky__star",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -508,9 +508,9 @@
       "categoryId": "street_furniture",
       "word": {
         "text": "Bus Stop",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "street_furniture__bus_stop",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -607,9 +607,9 @@
       "categoryId": "street_furniture",
       "word": {
         "text": "Mailbox",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "street_furniture__mailbox",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -706,9 +706,9 @@
       "categoryId": "sky",
       "word": {
         "text": "Moon",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "sky__moon",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -717,9 +717,9 @@
       "categoryId": "sky",
       "word": {
         "text": "Sun",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "sky__sun",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -750,9 +750,9 @@
       "categoryId": "sky",
       "word": {
         "text": "Star",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "sky__star",
         "syllablePartA": "",
         "syllablePartB": ""
       }

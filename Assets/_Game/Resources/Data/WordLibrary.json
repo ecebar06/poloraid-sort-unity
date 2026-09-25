@@ -107,15 +107,15 @@
                 },
                 {
                     "text": "Orange",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "fruits__orange",
                     "syllablePartA": "Or",
                     "syllablePartB": "ange"
                 },
                 {
                     "text": "Grape",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "fruits__grape",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -136,29 +136,29 @@
             "words": [
                 {
                     "text": "Carrot",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "vegetables__carrot",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Potato",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "vegetables__potato",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Onion",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "vegetables__onion",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Tomato",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "vegetables__tomato",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -179,8 +179,8 @@
             "words": [
                 {
                     "text": "Cat",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "pets__cat",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -193,15 +193,15 @@
                 },
                 {
                     "text": "Bird",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "pets__bird",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Fish",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "pets__fish",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -265,29 +265,29 @@
             "words": [
                 {
                     "text": "Cow",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "farm_animals__cow",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Pig",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "farm_animals__pig",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Horse",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "farm_animals__horse",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Sheep",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "farm_animals__sheep",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -351,29 +351,29 @@
             "words": [
                 {
                     "text": "Hand",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "body_parts__hand",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Foot",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "body_parts__foot",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Eye",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "body_parts__eye",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Nose",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "body_parts__nose",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -394,22 +394,22 @@
             "words": [
                 {
                     "text": "Shirt",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "clothes__shirt",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Pants",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "clothes__pants",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Shoes",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "clothes__shoes",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -437,8 +437,8 @@
             "words": [
                 {
                     "text": "Cap",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "headwear__cap",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -458,8 +458,8 @@
                 },
                 {
                     "text": "Crown",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "headwear__crown",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -487,22 +487,22 @@
                 },
                 {
                     "text": "Doll",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "toys__doll",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Blocks",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "toys__blocks",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Kite",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "toys__kite",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -616,22 +616,22 @@
                 },
                 {
                     "text": "Table",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "furniture__table",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Sofa",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "furniture__sofa",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Bed",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "furniture__bed",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -666,8 +666,8 @@
                 },
                 {
                     "text": "Wardrobe",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bedroom_furniture_set__wardrobe",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -738,8 +738,8 @@
             "words": [
                 {
                     "text": "Pencil",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "school_supplies__pencil",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -752,15 +752,15 @@
                 },
                 {
                     "text": "Ruler",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "school_supplies__ruler",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Eraser",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "school_supplies__eraser",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -867,8 +867,8 @@
             "words": [
                 {
                     "text": "Water",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "drinks__water",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -881,15 +881,15 @@
                 },
                 {
                     "text": "Milk",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "drinks__milk",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Tea",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "drinks__tea",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -910,22 +910,22 @@
             "words": [
                 {
                     "text": "Rain",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "weather__rain",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Snow",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "weather__snow",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Wind",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "weather__wind",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1082,29 +1082,29 @@
             "words": [
                 {
                     "text": "Bus",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "public_transport__bus",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Subway",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "public_transport__subway",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Tram",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "public_transport__tram",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Ferry",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "public_transport__ferry",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -1132,22 +1132,22 @@
                 },
                 {
                     "text": "Taxi",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "car_types__taxi",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Van",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "car_types__van",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Truck",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "car_types__truck",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -1175,15 +1175,15 @@
                 },
                 {
                     "text": "Bus",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "vehicles__bus",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Train",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "vehicles__train",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1211,8 +1211,8 @@
             "words": [
                 {
                     "text": "Boat",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "watercraft__boat",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1232,8 +1232,8 @@
                 },
                 {
                     "text": "Canoe",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "watercraft__canoe",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -1297,22 +1297,22 @@
             "words": [
                 {
                     "text": "Ambulance",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "emergency_vehicles__ambulance",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Fire Truck",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "emergency_vehicles__fire_truck",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Police Car",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "emergency_vehicles__police_car",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1383,22 +1383,22 @@
             "words": [
                 {
                     "text": "Slide",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "playground__slide",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Swing",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "playground__swing",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Sandbox",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "playground__sandbox",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1476,15 +1476,15 @@
                 },
                 {
                     "text": "Drum",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "music__drum",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Piano",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "music__piano",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1555,29 +1555,29 @@
             "words": [
                 {
                     "text": "Paint",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "art_materials__paint",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Brush",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "art_materials__brush",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Canvas",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "art_materials__canvas",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Crayon",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "art_materials__crayon",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -1598,29 +1598,29 @@
             "words": [
                 {
                     "text": "Spoon",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "dinner_table__spoon",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Fork",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "dinner_table__fork",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Plate",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "dinner_table__plate",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Napkin",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "dinner_table__napkin",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -1641,8 +1641,8 @@
             "words": [
                 {
                     "text": "Hammer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "hand_tools__hammer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1655,8 +1655,8 @@
                 },
                 {
                     "text": "Screwdriver",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "hand_tools__screwdriver",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1813,8 +1813,8 @@
             "words": [
                 {
                     "text": "Wave",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "ocean__wave",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1856,8 +1856,8 @@
             "words": [
                 {
                     "text": "Stars",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "space__stars",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1870,15 +1870,15 @@
                 },
                 {
                     "text": "Comets",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "space__comets",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Planet",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "space__planet",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -2200,8 +2200,8 @@
             "words": [
                 {
                     "text": "Hoverboard",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "future_tech__hoverboard",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2336,15 +2336,15 @@
                 },
                 {
                     "text": "Fire",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "camping__fire",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Map",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "camping__map",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2372,8 +2372,8 @@
             "words": [
                 {
                     "text": "Backpack",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "outdoor_gear__backpack",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2386,15 +2386,15 @@
                 },
                 {
                     "text": "Sleeping Bag",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "outdoor_gear__sleeping_bag",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Flashlight",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "outdoor_gear__flashlight",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -2422,15 +2422,15 @@
                 },
                 {
                     "text": "Bread",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "foods__bread",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Cheese",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "foods__cheese",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2544,22 +2544,22 @@
             "words": [
                 {
                     "text": "Brownie",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "sweet_treats__brownie",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Pudding",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "sweet_treats__pudding",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Cupcake",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "sweet_treats__cupcake",
                     "syllablePartA": "cup",
                     "syllablePartB": "cake"
                 },
@@ -2587,8 +2587,8 @@
             "words": [
                 {
                     "text": "Ketchup",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "condiments__ketchup",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2601,8 +2601,8 @@
                 },
                 {
                     "text": "Mayo",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "condiments__mayo",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2673,29 +2673,29 @@
             "words": [
                 {
                     "text": "Box",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "containers__box",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Bag",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "containers__bag",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Jar",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "containers__jar",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Basket",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "containers__basket",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -2716,15 +2716,15 @@
             "words": [
                 {
                     "text": "Coin",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "everyday_money__coin",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Cash",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "everyday_money__cash",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2737,8 +2737,8 @@
                 },
                 {
                     "text": "Wallet",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "everyday_money__wallet",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -2759,8 +2759,8 @@
             "words": [
                 {
                     "text": "Clock",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "time__clock",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2866,8 +2866,8 @@
                 },
                 {
                     "text": "Swan",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "birds__swan",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -2888,8 +2888,8 @@
             "words": [
                 {
                     "text": "Snake",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "reptiles__snake",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2902,8 +2902,8 @@
                 },
                 {
                     "text": "Turtle",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "reptiles__turtle",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2974,29 +2974,29 @@
             "words": [
                 {
                     "text": "Rabbit",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "mammals__rabbit",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Monkey",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "mammals__monkey",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Whale",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "mammals__whale",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Dolphin",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "mammals__dolphin",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -3239,22 +3239,22 @@
                 },
                 {
                     "text": "Tulip",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "flowers__tulip",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Daisy",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "flowers__daisy",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Orchid",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "flowers__orchid",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -3361,29 +3361,29 @@
             "words": [
                 {
                     "text": "Oven",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "appliances__oven",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Fridge",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "appliances__fridge",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Mixer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "appliances__mixer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Toaster",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "appliances__toaster",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -3411,22 +3411,22 @@
                 },
                 {
                     "text": "Tablet",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "electronics__tablet",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Camera",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "electronics__camera",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Radio",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "electronics__radio",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -3447,15 +3447,15 @@
             "words": [
                 {
                     "text": "Smartphone",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "smart_devices__smartphone",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Smartwatch",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "smart_devices__smartwatch",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -3490,22 +3490,22 @@
             "words": [
                 {
                     "text": "Puzzle",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "games__puzzle",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Chess",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "games__chess",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Cards",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "games__cards",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -3540,22 +3540,22 @@
                 },
                 {
                     "text": "Gift",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "celebrations__gift",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Candle",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "celebrations__candle",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Balloon",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "celebrations__balloon",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -3626,8 +3626,8 @@
                 },
                 {
                     "text": "Suitcase",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "travel__suitcase",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -3791,29 +3791,29 @@
             "words": [
                 {
                     "text": "Bandage",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "medical_items__bandage",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Medicine",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "medical_items__medicine",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Thermometer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "medical_items__thermometer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Ice Pack",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "medical_items__ice_pack",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -4221,15 +4221,15 @@
             "words": [
                 {
                     "text": "Atom",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "science__atom",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Cell",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "science__cell",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -4271,8 +4271,8 @@
                 },
                 {
                     "text": "Mirror",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "light__mirror",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -4350,8 +4350,8 @@
             "words": [
                 {
                     "text": "Battery",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "electricity__battery",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -4500,8 +4500,8 @@
                 },
                 {
                     "text": "Lightning",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "severe_weather__lightning",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -4522,22 +4522,22 @@
             "words": [
                 {
                     "text": "Goggles",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "swimming_gear__goggles",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Swim Cap",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "swimming_gear__swim_cap",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Towel",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "swimming_gear__towel",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -4608,22 +4608,22 @@
             "words": [
                 {
                     "text": "Pill",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "pharmacy_supplies__pill",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Syrup",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "pharmacy_supplies__syrup",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Thermometer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "pharmacy_supplies__thermometer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5038,22 +5038,22 @@
             "words": [
                 {
                     "text": "Mouth",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "face_parts__mouth",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Ear",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "face_parts__ear",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Hair",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "face_parts__hair",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5124,22 +5124,22 @@
             "words": [
                 {
                     "text": "Pillow",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bedtime__pillow",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Blanket",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bedtime__blanket",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Pajamas",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bedtime__pajamas",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5174,8 +5174,8 @@
                 },
                 {
                     "text": "Toast",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "breakfast_foods__toast",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5188,8 +5188,8 @@
                 },
                 {
                     "text": "Pancake",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "breakfast_foods__pancake",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -5210,15 +5210,15 @@
             "words": [
                 {
                     "text": "Chips",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "snacks__chips",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Popcorn",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "snacks__popcorn",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5339,29 +5339,29 @@
             "words": [
                 {
                     "text": "Soap",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bathroom_supplies__soap",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Toothbrush",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bathroom_supplies__toothbrush",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Shampoo",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bathroom_supplies__shampoo",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Toilet",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bathroom_supplies__toilet",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -5439,15 +5439,15 @@
                 },
                 {
                     "text": "Sponge",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "cleaning_supplies__sponge",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Duster",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "cleaning_supplies__duster",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -5511,15 +5511,15 @@
             "words": [
                 {
                     "text": "Sand",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "beach_day__sand",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Umbrella",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "beach_day__umbrella",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5683,8 +5683,8 @@
             "words": [
                 {
                     "text": "Sandwich",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "picnic_foods__sandwich",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5704,8 +5704,8 @@
                 },
                 {
                     "text": "Pickle",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "picnic_foods__pickle",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -5733,8 +5733,8 @@
                 },
                 {
                     "text": "Elephant",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "zoo_animals__elephant",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5898,15 +5898,15 @@
             "words": [
                 {
                     "text": "Coat",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "winter_clothes__coat",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Boots",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "winter_clothes__boots",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5941,29 +5941,29 @@
             "words": [
                 {
                     "text": "Shorts",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "summer_clothes__shorts",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Sunglasses",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "summer_clothes__sunglasses",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Sandals",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "summer_clothes__sandals",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Swimsuit",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "summer_clothes__swimsuit",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -5984,22 +5984,22 @@
             "words": [
                 {
                     "text": "Violin",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "orchestra__violin",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Flute",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "orchestra__flute",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Trumpet",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "orchestra__trumpet",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -6034,22 +6034,22 @@
                 },
                 {
                     "text": "Folder",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "office_equipment__folder",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Printer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "office_equipment__printer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Monitor",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "office_equipment__monitor",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -6113,8 +6113,8 @@
             "words": [
                 {
                     "text": "Compass",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "hiking_gear__compass",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -6650,8 +6650,8 @@
                 },
                 {
                     "text": "Gelato",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "dessert_treats__gelato",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -6715,15 +6715,15 @@
             "words": [
                 {
                     "text": "Coffee",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "cafe_drinks__coffee",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Tea",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "cafe_drinks__tea",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -6844,8 +6844,8 @@
             "words": [
                 {
                     "text": "Laptop",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "office_devices__laptop",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -6887,15 +6887,15 @@
             "words": [
                 {
                     "text": "Camera",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "personal_electronics__camera",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Headphone",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "personal_electronics__headphone",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -6908,8 +6908,8 @@
                 },
                 {
                     "text": "Tablet",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "personal_electronics__tablet",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -6937,22 +6937,22 @@
                 },
                 {
                     "text": "Motorcycle",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "small_ride_vehicles__motorcycle",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Scooter",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "small_ride_vehicles__scooter",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Skateboard",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "small_ride_vehicles__skateboard",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -6973,22 +6973,22 @@
             "words": [
                 {
                     "text": "Train",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "rail_vehicles__train",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Tram",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "rail_vehicles__tram",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Subway",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "rail_vehicles__subway",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -7016,15 +7016,15 @@
             "words": [
                 {
                     "text": "Helicopter",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "air_vehicles__helicopter",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Drone",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "air_vehicles__drone",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -7037,8 +7037,8 @@
                 },
                 {
                     "text": "Rocket",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "air_vehicles__rocket",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -7073,15 +7073,15 @@
                 },
                 {
                     "text": "Submarine",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "water_vehicles__submarine",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Ferry",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "water_vehicles__ferry",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -7145,8 +7145,8 @@
             "words": [
                 {
                     "text": "Tractor",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "farming_machines__tractor",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -7532,22 +7532,22 @@
             "words": [
                 {
                     "text": "Paintbrush",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "craft_supplies__paintbrush",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Glue",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "craft_supplies__glue",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Clay",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "craft_supplies__clay",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -7768,8 +7768,8 @@
                 },
                 {
                     "text": "Spider Web",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "animal_homes__spider_web",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -7919,8 +7919,8 @@
             "words": [
                 {
                     "text": "Thermometer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "weather_instruments__thermometer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -7962,8 +7962,8 @@
             "words": [
                 {
                     "text": "Telescope",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "space_missions__telescope",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -8134,29 +8134,29 @@
             "words": [
                 {
                     "text": "Heart",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "major_organs__heart",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Lung",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "major_organs__lung",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Brain",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "major_organs__brain",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Skeleton",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "major_organs__skeleton",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -8951,8 +8951,8 @@
             "words": [
                 {
                     "text": "Button",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "web_apps__button",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -8965,8 +8965,8 @@
                 },
                 {
                     "text": "Menu",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "web_apps__menu",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -9295,15 +9295,15 @@
             "words": [
                 {
                     "text": "Compass",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "navigation_tools__compass",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Map",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "navigation_tools__map",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -9510,15 +9510,15 @@
             "words": [
                 {
                     "text": "Mango",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "tropical_fruits__mango",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Pineapple",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "tropical_fruits__pineapple",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -9531,8 +9531,8 @@
                 },
                 {
                     "text": "Coconut",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "tropical_fruits__coconut",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -10305,8 +10305,8 @@
                 },
                 {
                     "text": "Orca",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "dolphins__orca",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -10327,8 +10327,8 @@
             "words": [
                 {
                     "text": "Dolphin",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "marine_biology__dolphin",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -10348,8 +10348,8 @@
                 },
                 {
                     "text": "Sea Turtle",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "marine_biology__sea_turtle",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -10886,15 +10886,15 @@
             "words": [
                 {
                     "text": "Forest",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "natural_habitats__forest",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Desert",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "natural_habitats__desert",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -11502,15 +11502,15 @@
                 },
                 {
                     "text": "Rain",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "storms__rain",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Wind",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "storms__wind",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -11660,22 +11660,22 @@
             "words": [
                 {
                     "text": "Drums",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bands__drums",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Guitar",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bands__guitar",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Bass",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bands__bass",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -12563,8 +12563,8 @@
             "words": [
                 {
                     "text": "Rock",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "geology__rock",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -12577,8 +12577,8 @@
                 },
                 {
                     "text": "Fossil",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "geology__fossil",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -15315,15 +15315,15 @@
             "words": [
                 {
                     "text": "Closet",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "home_storage__closet",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Cabinet",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "home_storage__cabinet",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -16605,15 +16605,15 @@
             "words": [
                 {
                     "text": "Sneakers",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "footwear__sneakers",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Boots",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "footwear__boots",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -16626,8 +16626,8 @@
                 },
                 {
                     "text": "Slippers",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "footwear__slippers",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -16992,8 +16992,8 @@
             "words": [
                 {
                     "text": "Camera",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "phone_apps__camera",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -17293,15 +17293,15 @@
             "words": [
                 {
                     "text": "Toothpaste",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "hygiene_products__toothpaste",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Deodorant",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "hygiene_products__deodorant",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -17336,8 +17336,8 @@
             "words": [
                 {
                     "text": "Mirror",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "wall_decor__mirror",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -17350,8 +17350,8 @@
                 },
                 {
                     "text": "Frame",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "wall_decor__frame",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -17379,22 +17379,22 @@
             "words": [
                 {
                     "text": "Sofa",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "living_room__sofa",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Table",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "living_room__table",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "TV",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "living_room__tv",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -18110,29 +18110,29 @@
             "words": [
                 {
                     "text": "North",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "compass_points__north",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "South",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "compass_points__south",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "East",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "compass_points__east",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "West",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "compass_points__west",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -18475,8 +18475,8 @@
                 },
                 {
                     "text": "Card",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "banking__card",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -18511,8 +18511,8 @@
                 },
                 {
                     "text": "Tape",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "shipping_supplies__tape",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -18626,8 +18626,8 @@
             "words": [
                 {
                     "text": "Tree",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "holiday_symbols__tree",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -18640,15 +18640,15 @@
                 },
                 {
                     "text": "Pumpkin",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "holiday_symbols__pumpkin",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Fireworks",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "holiday_symbols__fireworks",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -18712,8 +18712,8 @@
             "words": [
                 {
                     "text": "Cup",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "kitchen_measurements__cup",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -18755,29 +18755,29 @@
             "words": [
                 {
                     "text": "Sun",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "sky__sun",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Moon",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "sky__moon",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Cloud",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "sky__cloud",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Star",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "sky__star",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -19629,15 +19629,15 @@
                 },
                 {
                     "text": "Mailbox",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "street_furniture__mailbox",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Bus Stop",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "street_furniture__bus_stop",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -20905,8 +20905,8 @@
             "words": [
                 {
                     "text": "Track",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "trains__track",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -20919,8 +20919,8 @@
                 },
                 {
                     "text": "Ticket",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "trains__ticket",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -21084,22 +21084,22 @@
                 },
                 {
                     "text": "Chain",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bicycles__chain",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Wheel",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bicycles__wheel",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Helmet",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "bicycles__helmet",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -21421,8 +21421,8 @@
             "words": [
                 {
                     "text": "Tree",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "forest_trail__tree",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -21435,8 +21435,8 @@
                 },
                 {
                     "text": "Path",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "forest_trail__path",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -21464,15 +21464,15 @@
             "words": [
                 {
                     "text": "Sand",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "desert_nature__sand",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Cactus",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "desert_nature__cactus",
                     "syllablePartA": "cac",
                     "syllablePartB": "tus"
                 },
@@ -31655,8 +31655,8 @@
             "words": [
                 {
                     "text": "Sewing Needle",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "sewing_tools__sewing_needle",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -32056,8 +32056,8 @@
                 },
                 {
                     "text": "Food Bowl",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "pet_gear__food_bowl",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -33074,8 +33074,8 @@
             "words": [
                 {
                     "text": "Wrapping Paper",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "gift_wrap__wrapping_paper",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -35181,22 +35181,22 @@
             "words": [
                 {
                     "text": "Ladder",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "garage_items__ladder",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Toolbox",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "garage_items__toolbox",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Tire",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "garage_items__tire",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -52682,8 +52682,8 @@
             "words": [
                 {
                     "text": "Sushi",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "regional_foods__sushi",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -52696,8 +52696,8 @@
                 },
                 {
                     "text": "Tacos",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "regional_foods__tacos",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -54036,8 +54036,8 @@
                 },
                 {
                     "text": "Flower",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "plant_parts__flower",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -63217,15 +63217,15 @@
             "words": [
                 {
                     "text": "Lock",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "home_safety__lock",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Detector",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "home_safety__detector",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -65539,15 +65539,15 @@
             "words": [
                 {
                     "text": "Toaster",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "household_tech__toaster",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Blender",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "household_tech__blender",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -65560,8 +65560,8 @@
                 },
                 {
                     "text": "Kettle",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "household_tech__kettle",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -71430,29 +71430,29 @@
             "words": [
                 {
                     "text": "Television",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "electric_powered__television",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Bulb",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "electric_powered__bulb",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Fan",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "electric_powered__fan",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Computer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "electric_powered__computer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -80675,8 +80675,8 @@
             "words": [
                 {
                     "text": "Popcorn",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "movie_theater__popcorn",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -81879,8 +81879,8 @@
             "words": [
                 {
                     "text": "Menu",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "restaurant__menu",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -81893,8 +81893,8 @@
                 },
                 {
                     "text": "Table",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "restaurant__table",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -82359,15 +82359,15 @@
                 },
                 {
                     "text": "Panda",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "black_white__panda",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Orca",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "black_white__orca",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -82839,8 +82839,8 @@
                 },
                 {
                     "text": "Trophy",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "wimbledon__trophy",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -85627,15 +85627,15 @@
                 },
                 {
                     "text": "Treadmill",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "gym__treadmill",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Dumbbell",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "gym__dumbbell",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -90135,8 +90135,8 @@
             "words": [
                 {
                     "text": "Rocket",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "spaceship__rocket",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -90787,8 +90787,8 @@
                 },
                 {
                     "text": "Confetti",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "party_elements__confetti",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -90873,8 +90873,8 @@
                 },
                 {
                     "text": "Tacos",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "mexico__tacos",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -92901,15 +92901,15 @@
                 },
                 {
                     "text": "Wand",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "magic__wand",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Charms",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "magic__charms",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -93460,15 +93460,15 @@
                 },
                 {
                     "text": "Bike",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "road_vehicles__bike",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Motorcycle",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "road_vehicles__motorcycle",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -95259,8 +95259,8 @@
                 },
                 {
                     "text": "Controller",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "gaming__controller",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -101960,8 +101960,8 @@
             "words": [
                 {
                     "text": "Hammer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "carpentry_tools__hammer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -101981,8 +101981,8 @@
                 },
                 {
                     "text": "Plane",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "carpentry_tools__plane",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -104117,8 +104117,8 @@
                 },
                 {
                     "text": "Ticket",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "arcade__ticket",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
