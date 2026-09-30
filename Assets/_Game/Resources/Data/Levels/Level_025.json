@@ -82,9 +82,9 @@
         },
         {
           "text": "Surfboard",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__surfboard",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -170,9 +170,9 @@
         },
         {
           "text": "Lemonade",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__lemonade",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -298,17 +298,17 @@
       "words": [
         {
           "text": "Stamp",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__stamp",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Envelope",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__envelope",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -322,9 +322,9 @@
         },
         {
           "text": "Postcard",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__postcard",
           "syllablePartA": "post",
           "syllablePartB": "card"
         }
@@ -541,9 +541,9 @@
       "categoryId": "cold_drinks",
       "word": {
         "text": "Lemonade",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__lemonade",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -574,9 +574,9 @@
       "categoryId": "beach_day",
       "word": {
         "text": "Surfboard",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__surfboard",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -651,9 +651,9 @@
       "categoryId": "mail",
       "word": {
         "text": "Envelope",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__envelope",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -662,9 +662,9 @@
       "categoryId": "mail",
       "word": {
         "text": "Stamp",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__stamp",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -717,9 +717,9 @@
       "categoryId": "mail",
       "word": {
         "text": "Postcard",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__postcard",
         "syllablePartA": "post",
         "syllablePartB": "card"
       }

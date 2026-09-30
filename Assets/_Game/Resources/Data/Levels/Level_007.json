@@ -58,9 +58,9 @@
       "words": [
         {
           "text": "Pasta",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__pasta",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -404,9 +404,9 @@
       "categoryId": "italian_foods",
       "word": {
         "text": "Pasta",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__pasta",
         "syllablePartA": "",
         "syllablePartB": ""
       }

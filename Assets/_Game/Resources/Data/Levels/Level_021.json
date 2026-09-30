@@ -66,9 +66,9 @@
         },
         {
           "text": "Circuit",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__circuit",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -354,17 +354,17 @@
         },
         {
           "text": "Lemonade",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__lemonade",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Melon",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__melon",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -515,9 +515,9 @@
       "categoryId": "electricity",
       "word": {
         "text": "Circuit",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__circuit",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -691,9 +691,9 @@
       "categoryId": "picnic_foods",
       "word": {
         "text": "Lemonade",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__lemonade",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -702,9 +702,9 @@
       "categoryId": "picnic_foods",
       "word": {
         "text": "Melon",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__melon",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -202,9 +202,9 @@
       "words": [
         {
           "text": "Jacket",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__jacket",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -218,17 +218,17 @@
         },
         {
           "text": "Scarf",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__scarf",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Gloves",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__gloves",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -405,9 +405,9 @@
       "categoryId": "outerwear",
       "word": {
         "text": "Jacket",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__jacket",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -416,9 +416,9 @@
       "categoryId": "outerwear",
       "word": {
         "text": "Scarf",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__scarf",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -614,9 +614,9 @@
       "categoryId": "outerwear",
       "word": {
         "text": "Gloves",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__gloves",
         "syllablePartA": "",
         "syllablePartB": ""
       }

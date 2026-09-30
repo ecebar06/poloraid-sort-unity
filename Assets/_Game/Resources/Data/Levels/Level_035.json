@@ -114,9 +114,9 @@
         },
         {
           "text": "Bakery",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__bakery",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -218,9 +218,9 @@
         },
         {
           "text": "Lemonade",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__lemonade",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -611,9 +611,9 @@
       "categoryId": "food_shops",
       "word": {
         "text": "Bakery",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__bakery",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -732,9 +732,9 @@
       "categoryId": "cafe_drinks",
       "word": {
         "text": "Lemonade",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__lemonade",
         "syllablePartA": "",
         "syllablePartB": ""
       }

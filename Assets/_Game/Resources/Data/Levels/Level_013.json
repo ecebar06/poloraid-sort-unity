@@ -306,9 +306,9 @@
         },
         {
           "text": "Cake",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__cake",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -577,9 +577,9 @@
       "categoryId": "parties",
       "word": {
         "text": "Cake",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__cake",
         "syllablePartA": "",
         "syllablePartB": ""
       }

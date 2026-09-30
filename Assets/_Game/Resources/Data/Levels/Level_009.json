@@ -66,9 +66,9 @@
         },
         {
           "text": "Beanie",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__beanie",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -272,9 +272,9 @@
       "categoryId": "headwear",
       "word": {
         "text": "Beanie",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__beanie",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -74,9 +74,9 @@
         },
         {
           "text": "Key",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__key",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -284,9 +284,9 @@
       "transformsOnComplete": true,
       "transformResult": {
         "text": "Market",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__market",
         "syllablePartA": "",
         "syllablePartB": ""
       },
@@ -490,9 +490,9 @@
       "words": [
         {
           "text": "Market",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__market",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -879,9 +879,9 @@
       "categoryId": "hotel_stays",
       "word": {
         "text": "Key",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__key",
         "syllablePartA": "",
         "syllablePartB": ""
       }

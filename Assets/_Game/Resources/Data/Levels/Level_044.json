@@ -218,9 +218,9 @@
         },
         {
           "text": "Tablespoon",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__tablespoon",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -633,9 +633,9 @@
       "categoryId": "kitchen_measurements",
       "word": {
         "text": "Tablespoon",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__tablespoon",
         "syllablePartA": "",
         "syllablePartB": ""
       }

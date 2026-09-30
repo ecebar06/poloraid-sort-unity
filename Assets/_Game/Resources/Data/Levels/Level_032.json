@@ -18,9 +18,9 @@
         },
         {
           "text": "Barometer",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__barometer",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -66,9 +66,9 @@
         },
         {
           "text": "Satellite",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__satellite",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -250,9 +250,9 @@
       "words": [
         {
           "text": "Nail",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__nail",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -402,9 +402,9 @@
         },
         {
           "text": "Astronaut",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__astronaut",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -475,9 +475,9 @@
       "categoryId": "space_missions",
       "word": {
         "text": "Satellite",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__satellite",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -497,9 +497,9 @@
       "categoryId": "spaceship",
       "word": {
         "text": "Astronaut",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__astronaut",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -706,9 +706,9 @@
       "categoryId": "weather_instruments",
       "word": {
         "text": "Barometer",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__barometer",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -750,9 +750,9 @@
       "categoryId": "hardware_and_tools",
       "word": {
         "text": "Nail",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__nail",
         "syllablePartA": "",
         "syllablePartB": ""
       }

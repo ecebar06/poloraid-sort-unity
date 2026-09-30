@@ -444,8 +444,8 @@
                 },
                 {
                     "text": "Beanie",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__beanie",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -795,8 +795,8 @@
                 },
                 {
                     "text": "Newspaper",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__newspaper",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1218,8 +1218,8 @@
                 },
                 {
                     "text": "Raft",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__raft",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -1254,29 +1254,29 @@
             "words": [
                 {
                     "text": "Flour",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__flour",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Sugar",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__sugar",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Oil",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__oil",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Pasta",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pasta",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -1340,29 +1340,29 @@
             "words": [
                 {
                     "text": "Park",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__park",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Store",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__store",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Library",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__library",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Bank",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bank",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -2257,15 +2257,15 @@
                 },
                 {
                     "text": "School",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__school",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Store",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__store",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -2293,8 +2293,8 @@
                 },
                 {
                     "text": "Mop",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__mop",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2458,8 +2458,8 @@
             "words": [
                 {
                     "text": "Pasta",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pasta",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2502,7 +2502,7 @@
                 {
                     "text": "Cake",
                     "hasSprite": true,
-                    "spriteKey": "desserts__cake",
+                    "spriteKey": "generated__cake",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -2730,8 +2730,8 @@
                 },
                 {
                     "text": "Banknote",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__banknote",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -3275,8 +3275,8 @@
             "words": [
                 {
                     "text": "Jacket",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__jacket",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -3289,15 +3289,15 @@
                 },
                 {
                     "text": "Scarf",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__scarf",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Gloves",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__gloves",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -3511,8 +3511,8 @@
                 },
                 {
                     "text": "Dice",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__dice",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -3619,8 +3619,8 @@
             "words": [
                 {
                     "text": "Luggage",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__luggage",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -4357,8 +4357,8 @@
                 },
                 {
                     "text": "Circuit",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__circuit",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -4579,8 +4579,8 @@
                 },
                 {
                     "text": "School",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__school",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5009,8 +5009,8 @@
                 },
                 {
                     "text": "Crescent",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__crescent",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5145,8 +5145,8 @@
                 },
                 {
                     "text": "Nightlight",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__nightlight",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -5224,8 +5224,8 @@
                 },
                 {
                     "text": "Pretzel",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pretzel",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5475,8 +5475,8 @@
                 },
                 {
                     "text": "Fountain",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__fountain",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5532,8 +5532,8 @@
                 },
                 {
                     "text": "Surfboard",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__surfboard",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -5597,8 +5597,8 @@
             "words": [
                 {
                     "text": "Nail",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__nail",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5690,15 +5690,15 @@
                 },
                 {
                     "text": "Lemonade",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__lemonade",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Melon",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__melon",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -5912,15 +5912,15 @@
                 },
                 {
                     "text": "Mittens",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__mittens",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Beanie",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__beanie",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -6027,8 +6027,8 @@
             "words": [
                 {
                     "text": "Stapler",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__stapler",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -6242,15 +6242,15 @@
             "words": [
                 {
                     "text": "Stamp",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__stamp",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Envelope",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__envelope",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -6263,8 +6263,8 @@
                 },
                 {
                     "text": "Postcard",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__postcard",
                     "syllablePartA": "post",
                     "syllablePartB": "card"
                 }
@@ -6636,8 +6636,8 @@
                 },
                 {
                     "text": "Cheesecake",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__cheesecake",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -6729,8 +6729,8 @@
                 },
                 {
                     "text": "Lemonade",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__lemonade",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -6758,8 +6758,8 @@
             "words": [
                 {
                     "text": "Flour",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__flour",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -7188,29 +7188,29 @@
             "words": [
                 {
                     "text": "Hospital",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__hospital",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Museum",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__museum",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Library",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__library",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Theater",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__theater",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -7231,8 +7231,8 @@
             "words": [
                 {
                     "text": "Airport",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__airport",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -7281,8 +7281,8 @@
                 },
                 {
                     "text": "Library",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__library",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -7338,8 +7338,8 @@
                 },
                 {
                     "text": "Fountain",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__fountain",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -7453,8 +7453,8 @@
                 },
                 {
                     "text": "Mop",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__mop",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -7761,8 +7761,8 @@
                 },
                 {
                     "text": "Bee Hive",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bee_hive",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -7926,8 +7926,8 @@
                 },
                 {
                     "text": "Barometer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__barometer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -7969,8 +7969,8 @@
                 },
                 {
                     "text": "Satellite",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__satellite",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -8786,8 +8786,8 @@
                 },
                 {
                     "text": "Sculpture",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__sculpture",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -9144,8 +9144,8 @@
                 },
                 {
                     "text": "Pharmacy",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pharmacy",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -9345,8 +9345,8 @@
                 },
                 {
                     "text": "Bakery",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bakery",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -11681,8 +11681,8 @@
                 },
                 {
                     "text": "Keyboard",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__keyboard",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -12613,8 +12613,8 @@
                 },
                 {
                     "text": "Sculpture",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__sculpture",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -12914,8 +12914,8 @@
                 },
                 {
                     "text": "Airport",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__airport",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -13294,8 +13294,8 @@
             "words": [
                 {
                     "text": "Cake",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__cake",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -13616,8 +13616,8 @@
                 },
                 {
                     "text": "Store",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__store",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -13831,8 +13831,8 @@
                 },
                 {
                     "text": "Melon",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__melon",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -14068,8 +14068,8 @@
             "words": [
                 {
                     "text": "Pasta",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pasta",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -14154,8 +14154,8 @@
             "words": [
                 {
                     "text": "Pretzel",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pretzel",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -14369,8 +14369,8 @@
             "words": [
                 {
                     "text": "Cake",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__cake",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -14555,8 +14555,8 @@
                 },
                 {
                     "text": "Lemonade",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__lemonade",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -15229,29 +15229,29 @@
             "words": [
                 {
                     "text": "Bakery",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bakery",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Pharmacy",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pharmacy",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Bookstore",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bookstore",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Market",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__market",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -15358,8 +15358,8 @@
             "words": [
                 {
                     "text": "Park",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__park",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -15444,8 +15444,8 @@
             "words": [
                 {
                     "text": "Pyramid",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pyramid",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -15458,8 +15458,8 @@
                 },
                 {
                     "text": "Eiffel Tower",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__eiffel_tower",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -15487,8 +15487,8 @@
             "words": [
                 {
                     "text": "Crosswalk",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__crosswalk",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -15501,8 +15501,8 @@
                 },
                 {
                     "text": "Traffic Light",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__traffic_light",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -15623,15 +15623,15 @@
                 },
                 {
                     "text": "Crosswalk",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__crosswalk",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Traffic Light",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__traffic_light",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -16318,8 +16318,8 @@
                 },
                 {
                     "text": "Clubs",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__clubs",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -16483,8 +16483,8 @@
                 },
                 {
                     "text": "Dress",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__dress",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -16497,8 +16497,8 @@
                 },
                 {
                     "text": "Blazer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__blazer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -16533,8 +16533,8 @@
                 },
                 {
                     "text": "Jacket",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__jacket",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -16655,22 +16655,22 @@
                 },
                 {
                     "text": "Scarf",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__scarf",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Gloves",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__gloves",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Mittens",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__mittens",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -16884,8 +16884,8 @@
                 },
                 {
                     "text": "Envelope",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__envelope",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -16970,8 +16970,8 @@
                 },
                 {
                     "text": "Keyboard",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__keyboard",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -18411,8 +18411,8 @@
             "words": [
                 {
                     "text": "Store",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__store",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -18547,8 +18547,8 @@
                 },
                 {
                     "text": "Cake",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__cake",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -18726,8 +18726,8 @@
                 },
                 {
                     "text": "Tablespoon",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__tablespoon",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -19464,8 +19464,8 @@
                 },
                 {
                     "text": "Mittens",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__mittens",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -19622,8 +19622,8 @@
                 },
                 {
                     "text": "Streetlight",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__streetlight",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -19715,8 +19715,8 @@
                 },
                 {
                     "text": "Alarm",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__alarm",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -20489,8 +20489,8 @@
                 },
                 {
                     "text": "Library",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__library",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -20876,8 +20876,8 @@
                 },
                 {
                     "text": "Key",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__key",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -21012,8 +21012,8 @@
                 },
                 {
                     "text": "Airport",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__airport",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -21170,8 +21170,8 @@
                 },
                 {
                     "text": "Cake",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__cake",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -21299,8 +21299,8 @@
                 },
                 {
                     "text": "Cage",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__cage",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -35331,8 +35331,8 @@
                 },
                 {
                     "text": "Bishop",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bishop",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -36693,22 +36693,22 @@
                 },
                 {
                     "text": "Hospital",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__hospital",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Airport",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__airport",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Museum",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__museum",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -38929,8 +38929,8 @@
                 },
                 {
                     "text": "Pyramid",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pyramid",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -40663,8 +40663,8 @@
                 },
                 {
                     "text": "Newspaper",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__newspaper",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -42419,8 +42419,8 @@
                 },
                 {
                     "text": "Banknote",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__banknote",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -43107,8 +43107,8 @@
                 },
                 {
                     "text": "Key",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__key",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -43415,8 +43415,8 @@
                 },
                 {
                     "text": "Jacket",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__jacket",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -44813,8 +44813,8 @@
             "words": [
                 {
                     "text": "Stamp",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__stamp",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -45049,8 +45049,8 @@
                 },
                 {
                     "text": "Bakery",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bakery",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -45737,8 +45737,8 @@
                 },
                 {
                     "text": "Crosswalk",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__crosswalk",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -47830,8 +47830,8 @@
                 },
                 {
                     "text": "Sculpture",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__sculpture",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -49292,8 +49292,8 @@
                 },
                 {
                     "text": "Pyramid",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pyramid",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -50618,15 +50618,15 @@
             "words": [
                 {
                     "text": "Stamp",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__stamp",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Envelope",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__envelope",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -50926,8 +50926,8 @@
                 },
                 {
                     "text": "Raft",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__raft",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -51542,8 +51542,8 @@
                 },
                 {
                     "text": "Satellite",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__satellite",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -53033,8 +53033,8 @@
                 },
                 {
                     "text": "Gloves",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__gloves",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -54581,8 +54581,8 @@
                 },
                 {
                     "text": "Barometer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__barometer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -55778,8 +55778,8 @@
             "words": [
                 {
                     "text": "Pasta",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pasta",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -55821,15 +55821,15 @@
             "words": [
                 {
                     "text": "Flour",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__flour",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Sugar",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__sugar",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -56129,8 +56129,8 @@
                 },
                 {
                     "text": "Nail",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__nail",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -56774,8 +56774,8 @@
                 },
                 {
                     "text": "Scarf",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__scarf",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -57125,15 +57125,15 @@
                 },
                 {
                     "text": "Bakery",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bakery",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Pharmacy",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pharmacy",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -58250,8 +58250,8 @@
                 },
                 {
                     "text": "Key",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__key",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -58587,8 +58587,8 @@
                 },
                 {
                     "text": "Keyboard",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__keyboard",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -59483,8 +59483,8 @@
                 },
                 {
                     "text": "Crosswalk",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__crosswalk",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -59562,8 +59562,8 @@
             "words": [
                 {
                     "text": "Alarm",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__alarm",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -61970,8 +61970,8 @@
             "words": [
                 {
                     "text": "Newspaper",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__newspaper",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -62493,22 +62493,22 @@
                 },
                 {
                     "text": "Library",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__library",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Park",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__park",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Museum",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__museum",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -62966,8 +62966,8 @@
                 },
                 {
                     "text": "Beanie",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__beanie",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -63088,8 +63088,8 @@
             "words": [
                 {
                     "text": "Hospital",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__hospital",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -64822,8 +64822,8 @@
                 },
                 {
                     "text": "Dice",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__dice",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -65453,8 +65453,8 @@
             "words": [
                 {
                     "text": "Blazer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__blazer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -79148,8 +79148,8 @@
                 },
                 {
                     "text": "Hospital",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__hospital",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -80481,8 +80481,8 @@
                 },
                 {
                     "text": "Stapler",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__stapler",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -80567,8 +80567,8 @@
                 },
                 {
                     "text": "Key",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__key",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -81148,8 +81148,8 @@
             "words": [
                 {
                     "text": "Gloves",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__gloves",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -81492,8 +81492,8 @@
             "words": [
                 {
                     "text": "Market",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__market",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -84050,8 +84050,8 @@
                 },
                 {
                     "text": "Satellite",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__satellite",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -84853,8 +84853,8 @@
                 },
                 {
                     "text": "Bank",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bank",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -85498,8 +85498,8 @@
                 },
                 {
                     "text": "Oil",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__oil",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -86709,8 +86709,8 @@
                 },
                 {
                     "text": "Oil",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__oil",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -87146,8 +87146,8 @@
                 },
                 {
                     "text": "Satellite",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__satellite",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -87512,8 +87512,8 @@
             "words": [
                 {
                     "text": "Pasta",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pasta",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -88515,8 +88515,8 @@
                 },
                 {
                     "text": "Theater",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__theater",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -88630,8 +88630,8 @@
             "words": [
                 {
                     "text": "Raft",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__raft",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -88723,8 +88723,8 @@
                 },
                 {
                     "text": "Eiffel Tower",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__eiffel_tower",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -89189,8 +89189,8 @@
             "words": [
                 {
                     "text": "Cage",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__cage",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -89447,8 +89447,8 @@
             "words": [
                 {
                     "text": "Bookstore",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bookstore",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -90142,8 +90142,8 @@
                 },
                 {
                     "text": "Astronaut",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__astronaut",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -91640,8 +91640,8 @@
             "words": [
                 {
                     "text": "Bishop",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bishop",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -92263,8 +92263,8 @@
                 },
                 {
                     "text": "Bishop",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__bishop",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -92779,8 +92779,8 @@
                 },
                 {
                     "text": "Newspaper",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__newspaper",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 }
@@ -92801,8 +92801,8 @@
             "words": [
                 {
                     "text": "Pyramid",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pyramid",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -93109,8 +93109,8 @@
                 },
                 {
                     "text": "Circuit",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__circuit",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -93539,8 +93539,8 @@
                 },
                 {
                     "text": "Flour",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__flour",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -94098,8 +94098,8 @@
                 },
                 {
                     "text": "Oil",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__oil",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -94478,8 +94478,8 @@
             "words": [
                 {
                     "text": "Newspaper",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__newspaper",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -94614,8 +94614,8 @@
                 },
                 {
                     "text": "Pasta",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__pasta",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -94700,15 +94700,15 @@
                 },
                 {
                     "text": "Coffin",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__coffin",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Garlic",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__garlic",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -95209,8 +95209,8 @@
             "words": [
                 {
                     "text": "Sugar",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__sugar",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -97330,8 +97330,8 @@
                 },
                 {
                     "text": "Fountain",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__fountain",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -98577,8 +98577,8 @@
                 },
                 {
                     "text": "Postcard",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__postcard",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -99172,15 +99172,15 @@
                 },
                 {
                     "text": "Stamp",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__stamp",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Envelope",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__envelope",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -99423,8 +99423,8 @@
             "words": [
                 {
                     "text": "Barometer",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__barometer",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -100075,8 +100075,8 @@
                 },
                 {
                     "text": "Alarm",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__alarm",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -100369,8 +100369,8 @@
             "words": [
                 {
                     "text": "Crosswalk",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__crosswalk",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -100412,22 +100412,22 @@
             "words": [
                 {
                     "text": "Scarf",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__scarf",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Gloves",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__gloves",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
                 {
                     "text": "Beanie",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__beanie",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -101573,8 +101573,8 @@
             "words": [
                 {
                     "text": "Stamp",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__stamp",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -102139,8 +102139,8 @@
                 },
                 {
                     "text": "Oil",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__oil",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -102777,8 +102777,8 @@
             "words": [
                 {
                     "text": "Oil",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__oil",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -102906,8 +102906,8 @@
             "words": [
                 {
                     "text": "Fountain",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__fountain",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -103207,8 +103207,8 @@
             "words": [
                 {
                     "text": "Garlic",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__garlic",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },
@@ -103909,8 +103909,8 @@
                 },
                 {
                     "text": "Dress",
-                    "hasSprite": false,
-                    "spriteKey": "",
+                    "hasSprite": true,
+                    "spriteKey": "generated__dress",
                     "syllablePartA": "",
                     "syllablePartB": ""
                 },

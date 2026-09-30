@@ -50,6 +50,11 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
     private TextMeshProUGUI testLevelLabel;
     private Button testPrevious, testNext;
+    private TextMeshProUGUI testTimerLabel;
+    private TextMeshProUGUI testResultTimeLabel;
+    private bool testTimerRunning;
+    private float testTimerStartedAt;
+    private float testTimerElapsed;
 #endif
 
     public Canvas Canvas => canvas;
@@ -110,9 +115,21 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             Wire(popup.SpendGoldButton, ContinueWithGold);
         }
         WireWinScreenButtons();
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        EnsureTestTimerUi();
+#endif
         LoadLevel(save.currentLevelIndex);
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
         CreateTestNavigator();
+#endif
+    }
+
+    private void Update()
+    {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        if (!testTimerRunning) return;
+        testTimerElapsed = Mathf.Max(0f, Time.realtimeSinceStartup - testTimerStartedAt);
+        RefreshTestTimerLabel();
 #endif
     }
 
@@ -136,6 +153,13 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         pendingTransformations = 0;
         isRefilling = false;
         currentLevel = level;
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        EnsureTestTimerUi();
+        testTimerStartedAt = Time.realtimeSinceStartup;
+        testTimerElapsed = 0f;
+        testTimerRunning = true;
+        RefreshTestTimerLabel();
+#endif
         stockCursor = 0;
         looseSlots.Clear();
         reservedLandings.Clear();
@@ -575,6 +599,9 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     private IEnumerator CompleteLevel()
     {
         gameEnded = true;
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        StopTestTimer();
+#endif
         yield return new WaitForSeconds(0.55f);
         int next = Mathf.Min(activeLevelIndex + 1, database.levels.Count - 1);
         SaveSystem.CompleteLevel(activeLevelIndex, next);
@@ -595,6 +622,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             resultCanvas.sortingOrder = 1000;
             if (winScreen.GetComponent<GraphicRaycaster>() == null)
                 winScreen.AddComponent<GraphicRaycaster>();
+            RefreshTestTimerLabel();
             winScreen.SetActive(true);
             winScreen.transform.SetAsLastSibling();
             GameAudio.Play(GameAudioCue.Win);
@@ -804,6 +832,82 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     }
 
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
+    private void EnsureTestTimerUi()
+    {
+        Transform hud = transform.parent == null ? null : transform.parent.Find("FridgeTopHud");
+        if (hud != null && testTimerLabel == null)
+        {
+            Transform existing = hud.Find("TestLevelTimer/Value");
+            testTimerLabel = existing == null ? null : existing.GetComponent<TextMeshProUGUI>();
+            if (testTimerLabel == null)
+            {
+                Image timerBackground = CreateImage("TestLevelTimer", hud);
+                timerBackground.color = new Color(0.08f, 0.10f, 0.22f, 0.90f);
+                RectTransform backgroundRect = timerBackground.rectTransform;
+                backgroundRect.anchorMin = new Vector2(0.02f, 0.765f);
+                backgroundRect.anchorMax = new Vector2(0.22f, 0.805f);
+                backgroundRect.offsetMin = Vector2.zero;
+                backgroundRect.offsetMax = Vector2.zero;
+
+                testTimerLabel = CreateText("Value", timerBackground.transform);
+                testTimerLabel.font = font;
+                testTimerLabel.fontSize = 22f;
+                testTimerLabel.color = Color.white;
+                testTimerLabel.alignment = TextAlignmentOptions.Center;
+                testTimerLabel.raycastTarget = false;
+                Stretch(testTimerLabel.rectTransform, 4f);
+            }
+        }
+
+        if (winScreen == null || testResultTimeLabel != null) return;
+        Transform panel = winScreen.transform.Find("Panel") ?? winScreen.transform.Find("Content");
+        if (panel == null) panel = winScreen.transform;
+        testResultTimeLabel = panel.Find("TestLevelTime")?.GetComponent<TextMeshProUGUI>();
+        if (testResultTimeLabel == null)
+        {
+            testResultTimeLabel = CreateText("TestLevelTime", panel);
+            testResultTimeLabel.font = Resources.Load<TMP_FontAsset>("Fonts/Fredoka-Bold SDF") ?? font;
+            testResultTimeLabel.fontSize = 35f;
+            testResultTimeLabel.fontStyle = FontStyles.Bold;
+            testResultTimeLabel.color = new Color(0.12f, 0.10f, 0.30f, 1f);
+            testResultTimeLabel.alignment = TextAlignmentOptions.Center;
+            testResultTimeLabel.enableAutoSizing = false;
+            testResultTimeLabel.extraPadding = true;
+            testResultTimeLabel.outlineWidth = 0.18f;
+            testResultTimeLabel.outlineColor = new Color(1f, 1f, 1f, 0.95f);
+            testResultTimeLabel.raycastTarget = false;
+            RectTransform resultRect = testResultTimeLabel.rectTransform;
+            resultRect.anchorMin = new Vector2(0.18f, 0.32f);
+            resultRect.anchorMax = new Vector2(0.82f, 0.39f);
+            resultRect.offsetMin = Vector2.zero;
+            resultRect.offsetMax = Vector2.zero;
+        }
+    }
+
+    private void StopTestTimer()
+    {
+        if (!testTimerRunning) return;
+        testTimerElapsed = Mathf.Max(0f, Time.realtimeSinceStartup - testTimerStartedAt);
+        testTimerRunning = false;
+        RefreshTestTimerLabel();
+    }
+
+    private void RefreshTestTimerLabel()
+    {
+        string formatted = FormatTestTime(testTimerElapsed);
+        if (testTimerLabel != null) testTimerLabel.text = $"TIME  {formatted}";
+        if (testResultTimeLabel != null) testResultTimeLabel.text = $"TIME  {formatted}";
+    }
+
+    private static string FormatTestTime(float seconds)
+    {
+        int wholeSeconds = Mathf.FloorToInt(Mathf.Max(0f, seconds));
+        int minutes = wholeSeconds / 60;
+        int remainingSeconds = wholeSeconds % 60;
+        int hundredths = Mathf.Clamp(Mathf.FloorToInt((seconds - wholeSeconds) * 100f), 0, 99);
+        return $"{minutes:00}:{remainingSeconds:00}.{hundredths:00}";
+    }
+
     private void CreateTestNavigator()
     {
         Image panel = CreateImage("CategoryTestLevelNavigator", transform);

@@ -719,3 +719,131 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: b56932ccd9e344efb5d2329dc06bf06b, type: 3}
   - key: desert_nature__sand
     sprite: {fileID: 21300000, guid: 5f01f68daf444cb7bbf375670c780397, type: 3}
+  - key: generated__school
+    sprite: {fileID: 21300000, guid: 582ea80b54bd42268d5c67e6081fe432, type: 3}
+  - key: generated__park
+    sprite: {fileID: 21300000, guid: 26be7687f2394bf988eb8ee7720d6a69, type: 3}
+  - key: generated__store
+    sprite: {fileID: 21300000, guid: f384e3038da34099a48b7e9d5755fd8a, type: 3}
+  - key: generated__library
+    sprite: {fileID: 21300000, guid: 0b04df134a6f447f9c7e81b5bd6736be, type: 3}
+  - key: generated__bank
+    sprite: {fileID: 21300000, guid: 77763428c4fd4787887c2d8b5fd063ba, type: 3}
+  - key: generated__hospital
+    sprite: {fileID: 21300000, guid: 52e09eca83ae493e80420f64e870f2f1, type: 3}
+  - key: generated__airport
+    sprite: {fileID: 21300000, guid: af9785b3ea874a9d96cf1e33ed21497e, type: 3}
+  - key: generated__museum
+    sprite: {fileID: 21300000, guid: 96084e4c61d34a8d8803ebc889b1a486, type: 3}
+  - key: generated__theater
+    sprite: {fileID: 21300000, guid: 72801d59e4cf4d03bca1938c9db17bcf, type: 3}
+  - key: generated__bakery
+    sprite: {fileID: 21300000, guid: 12393900da004369b5d671dea29010ce, type: 3}
+  - key: generated__bookstore
+    sprite: {fileID: 21300000, guid: b75888e3d5f14ec5a892b99a98209f97, type: 3}
+  - key: generated__market
+    sprite: {fileID: 21300000, guid: 5a59f981cbce4063be8cfc63006ec481, type: 3}
+  - key: generated__pharmacy
+    sprite: {fileID: 21300000, guid: adb5a7900603488b929fa0bffad13bcf, type: 3}
+  - key: generated__crescent
+    sprite: {fileID: 21300000, guid: 42b02ac7cf41495c8c81dcad3c5059c0, type: 3}
+  - key: generated__crosswalk
+    sprite: {fileID: 21300000, guid: 5d90ec5a1b00411791624fdb1d618093, type: 3}
+  - key: generated__dice
+    sprite: {fileID: 21300000, guid: 205c11ba8bb041e9a9eb733a4fbfc734, type: 3}
+  - key: generated__dress
+    sprite: {fileID: 21300000, guid: dc99186a79ad41d7b3380fb9e6152d2e, type: 3}
+  - key: generated__eiffel_tower
+    sprite: {fileID: 21300000, guid: f38749c7ae844062876add64e0bb3297, type: 3}
+  - key: generated__envelope
+    sprite: {fileID: 21300000, guid: 9081c2139d4e4473af90b880d073c2d7, type: 3}
+  - key: generated__fountain
+    sprite: {fileID: 21300000, guid: 16720a1a5eeb41fca023ea4e3c79ea79, type: 3}
+  - key: generated__garlic
+    sprite: {fileID: 21300000, guid: eb90c0fffad34af29892ba16cf7b3747, type: 3}
+  - key: generated__gloves
+    sprite: {fileID: 21300000, guid: 859ece2e8f8842d2b4583d2ade74cd79, type: 3}
+  - key: generated__jacket
+    sprite: {fileID: 21300000, guid: b0388bcfb8a1484ea128e84aabcfdfe7, type: 3}
+  - key: generated__key
+    sprite: {fileID: 21300000, guid: 437b5da407ae415da375dbc7b24b9041, type: 3}
+  - key: generated__luggage
+    sprite: {fileID: 21300000, guid: a827a06950f9478ead785d63451d537f, type: 3}
+  - key: generated__mittens
+    sprite: {fileID: 21300000, guid: cfb1bbd8528146df8a1f4e301fa25ee3, type: 3}
+  - key: generated__mop
+    sprite: {fileID: 21300000, guid: da3fc782798140d0b70aee09529b280f, type: 3}
+  - key: generated__nail
+    sprite: {fileID: 21300000, guid: 871d15fa1d254491958aedbd27242bf7, type: 3}
+  - key: generated__nightlight
+    sprite: {fileID: 21300000, guid: 88943b57c89045e9b3ff1bf019162e4b, type: 3}
+  - key: generated__newspaper
+    sprite: {fileID: 21300000, guid: 8dc8d729959445c4b6d50635ee089b42, type: 3}
+  - key: generated__postcard
+    sprite: {fileID: 21300000, guid: 7fa92aa41480451b9afe322cf638c5d5, type: 3}
+  - key: generated__pyramid
+    sprite: {fileID: 21300000, guid: 78feafc7831043bc82853941ac8c90d6, type: 3}
+  - key: generated__scarf
+    sprite: {fileID: 21300000, guid: 863ba7daad5c47518d846752d9f36482, type: 3}
+  - key: generated__stamp
+    sprite: {fileID: 21300000, guid: 10d67a6e28ce4ebaaba41ad7e5da9bfe, type: 3}
+  - key: generated__streetlight
+    sprite: {fileID: 21300000, guid: dc5393b39ebb47b587311c0540140239, type: 3}
+  - key: generated__surfboard
+    sprite: {fileID: 21300000, guid: d487a04214884019ae7290bcf8613b19, type: 3}
+  - key: generated__tablespoon
+    sprite: {fileID: 21300000, guid: f1f250b51ce54ccdb106c113fe2ff736, type: 3}
+  - key: generated__traffic_light
+    sprite: {fileID: 21300000, guid: eede873438514fe98fefff4ca74b84de, type: 3}
+  - key: generated__pasta
+    sprite: {fileID: 21300000, guid: 30b21ffcae2e45b1b22851b98eab1e3b, type: 3}
+  - key: generated__flour
+    sprite: {fileID: 21300000, guid: f619af064b6b484e9dcdf44e2380ac02, type: 3}
+  - key: generated__sugar
+    sprite: {fileID: 21300000, guid: 2ef5591909d546cd9df4d5817e5d496a, type: 3}
+  - key: generated__oil
+    sprite: {fileID: 21300000, guid: d52bb988ae9f415d9915d0efbb95f841, type: 3}
+  - key: generated__lemonade
+    sprite: {fileID: 21300000, guid: 1b12c3395ceb4ef8bb8d788a0597a169, type: 3}
+  - key: generated__melon
+    sprite: {fileID: 21300000, guid: b7ad5e32f3e247d4b34e0f24763dd96f, type: 3}
+  - key: generated__cheesecake
+    sprite: {fileID: 21300000, guid: 50857c2040ca4af1b908c26424345f51, type: 3}
+  - key: generated__pretzel
+    sprite: {fileID: 21300000, guid: da88c747521546e8953b20f1da246677, type: 3}
+  - key: generated__stapler
+    sprite: {fileID: 21300000, guid: bab290fe1402483f942112d10b47c3a8, type: 3}
+  - key: generated__raft
+    sprite: {fileID: 21300000, guid: 2cf9d138609b4b47aa2a8a345493b5e7, type: 3}
+  - key: generated__keyboard
+    sprite: {fileID: 21300000, guid: 66bda54568864ebeb76ab82e22e12ee9, type: 3}
+  - key: generated__satellite
+    sprite: {fileID: 21300000, guid: 7e184cb3f8054488905bcbe44c4019d2, type: 3}
+  - key: generated__astronaut
+    sprite: {fileID: 21300000, guid: 6d5c16135cef4b7ca86accd69d82d886, type: 3}
+  - key: generated__sculpture
+    sprite: {fileID: 21300000, guid: 4ad8f5bb92b64d989c09abb4ed810738, type: 3}
+  - key: generated__alarm
+    sprite: {fileID: 21300000, guid: a513ae6d8bff4edd8509fbf976d285e3, type: 3}
+  - key: generated__banknote
+    sprite: {fileID: 21300000, guid: 68a5ddef61524c23975fea04ad69989c, type: 3}
+  - key: generated__barometer
+    sprite: {fileID: 21300000, guid: 48457b9ac47348f49a294377e0c5bd2a, type: 3}
+  - key: generated__beanie
+    sprite: {fileID: 21300000, guid: 97c7cde6e64e4cdeaacc3c2208927a7f, type: 3}
+  - key: generated__bee_hive
+    sprite: {fileID: 21300000, guid: d53d80688ac54542b136ff44366a6c5e, type: 3}
+  - key: generated__bishop
+    sprite: {fileID: 21300000, guid: 3729c109d90f4fbd9743628556524010, type: 3}
+  - key: generated__blazer
+    sprite: {fileID: 21300000, guid: da460d197dc541609a1e82ac8072aa85, type: 3}
+  - key: generated__cage
+    sprite: {fileID: 21300000, guid: ef08923abb104bfea9432240b97a7dc3, type: 3}
+  - key: generated__cake
+    sprite: {fileID: 21300000, guid: 1f79aed36fef4007ad82d4210d1dc172, type: 3}
+  - key: generated__clubs
+    sprite: {fileID: 21300000, guid: 1432e1b8278747bd8c04d3232b40293e, type: 3}
+  - key: generated__coffin
+    sprite: {fileID: 21300000, guid: 784ba23be719423a8be1bbde7615bce5, type: 3}
+  - key: generated__circuit
+    sprite: {fileID: 21300000, guid: dbef92ac2aad4379b9c56666e8cc1da4, type: 3}

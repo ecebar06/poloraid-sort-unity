@@ -10,33 +10,33 @@
       "words": [
         {
           "text": "Hospital",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__hospital",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Museum",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__museum",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Library",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__library",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Theater",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__theater",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -130,9 +130,9 @@
         },
         {
           "text": "Fountain",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__fountain",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -306,17 +306,17 @@
         },
         {
           "text": "Coffin",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__coffin",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Garlic",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__garlic",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -508,9 +508,9 @@
       "categoryId": "city_buildings",
       "word": {
         "text": "Theater",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__theater",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -541,9 +541,9 @@
       "categoryId": "city_buildings",
       "word": {
         "text": "Hospital",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__hospital",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -596,9 +596,9 @@
       "categoryId": "park_landmarks",
       "word": {
         "text": "Fountain",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__fountain",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -618,9 +618,9 @@
       "categoryId": "city_buildings",
       "word": {
         "text": "Museum",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__museum",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -629,9 +629,9 @@
       "categoryId": "vampire",
       "word": {
         "text": "Coffin",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__coffin",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -662,9 +662,9 @@
       "categoryId": "city_buildings",
       "word": {
         "text": "Library",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__library",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -673,9 +673,9 @@
       "categoryId": "vampire",
       "word": {
         "text": "Garlic",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__garlic",
         "syllablePartA": "",
         "syllablePartB": ""
       }

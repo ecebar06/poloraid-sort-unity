@@ -26,9 +26,9 @@
         },
         {
           "text": "Banknote",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__banknote",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -482,9 +482,9 @@
       "categoryId": "everyday_money",
       "word": {
         "text": "Banknote",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__banknote",
         "syllablePartA": "",
         "syllablePartB": ""
       }

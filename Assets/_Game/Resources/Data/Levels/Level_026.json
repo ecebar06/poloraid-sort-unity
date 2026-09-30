@@ -26,17 +26,17 @@
         },
         {
           "text": "Mittens",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__mittens",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Beanie",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__beanie",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -106,9 +106,9 @@
       "words": [
         {
           "text": "Stapler",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__stapler",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -410,9 +410,9 @@
         },
         {
           "text": "Bee Hive",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__bee_hive",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -442,9 +442,9 @@
       "categoryId": "winter_clothes",
       "word": {
         "text": "Mittens",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__mittens",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -497,9 +497,9 @@
       "categoryId": "office_equipment",
       "word": {
         "text": "Stapler",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__stapler",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -596,9 +596,9 @@
       "categoryId": "winter_clothes",
       "word": {
         "text": "Beanie",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__beanie",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -772,9 +772,9 @@
       "categoryId": "animal_homes",
       "word": {
         "text": "Bee Hive",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__bee_hive",
         "syllablePartA": "",
         "syllablePartB": ""
       }

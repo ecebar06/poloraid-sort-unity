@@ -10,9 +10,9 @@
       "words": [
         {
           "text": "Luggage",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__luggage",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -236,9 +236,9 @@
       "transformsOnComplete": true,
       "transformResult": {
         "text": "Hospital",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__hospital",
         "syllablePartA": "",
         "syllablePartB": ""
       },
@@ -306,25 +306,25 @@
         },
         {
           "text": "Hospital",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__hospital",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Airport",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__airport",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Museum",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__museum",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -478,9 +478,9 @@
       "categoryId": "travel",
       "word": {
         "text": "Luggage",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__luggage",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -577,9 +577,9 @@
       "categoryId": "map_symbols",
       "word": {
         "text": "Airport",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__airport",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -610,9 +610,9 @@
       "categoryId": "map_symbols",
       "word": {
         "text": "Museum",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__museum",
         "syllablePartA": "",
         "syllablePartB": ""
       }

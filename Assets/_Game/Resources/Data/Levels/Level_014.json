@@ -170,17 +170,17 @@
         },
         {
           "text": "School",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__school",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Store",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__store",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -210,9 +210,9 @@
         },
         {
           "text": "Mop",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__mop",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -445,9 +445,9 @@
       "categoryId": "buildings",
       "word": {
         "text": "School",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__school",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -456,9 +456,9 @@
       "categoryId": "household_chores",
       "word": {
         "text": "Mop",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__mop",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -599,9 +599,9 @@
       "categoryId": "buildings",
       "word": {
         "text": "Store",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__store",
         "syllablePartA": "",
         "syllablePartB": ""
       }

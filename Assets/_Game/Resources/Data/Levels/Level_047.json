@@ -274,9 +274,9 @@
         },
         {
           "text": "Dice",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__dice",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -314,9 +314,9 @@
         },
         {
           "text": "Clubs",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__clubs",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -370,9 +370,9 @@
         },
         {
           "text": "Bishop",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__bishop",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -729,9 +729,9 @@
       "categoryId": "chess_pieces",
       "word": {
         "text": "Bishop",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__bishop",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -751,9 +751,9 @@
       "categoryId": "card_suits",
       "word": {
         "text": "Clubs",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__clubs",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -817,9 +817,9 @@
       "categoryId": "games",
       "word": {
         "text": "Dice",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__dice",
         "syllablePartA": "",
         "syllablePartB": ""
       }

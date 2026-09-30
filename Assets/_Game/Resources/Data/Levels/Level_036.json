@@ -202,9 +202,9 @@
       "words": [
         {
           "text": "Alarm",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__alarm",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -258,9 +258,9 @@
         },
         {
           "text": "Streetlight",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__streetlight",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -475,9 +475,9 @@
       "categoryId": "street_furniture",
       "word": {
         "text": "Streetlight",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__streetlight",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -772,9 +772,9 @@
       "categoryId": "fire_safety",
       "word": {
         "text": "Alarm",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__alarm",
         "syllablePartA": "",
         "syllablePartB": ""
       }

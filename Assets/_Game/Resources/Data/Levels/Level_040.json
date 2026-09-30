@@ -202,9 +202,9 @@
       "words": [
         {
           "text": "Pyramid",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__pyramid",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -218,9 +218,9 @@
         },
         {
           "text": "Eiffel Tower",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__eiffel_tower",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -250,9 +250,9 @@
       "words": [
         {
           "text": "Crosswalk",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__crosswalk",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -266,9 +266,9 @@
         },
         {
           "text": "Traffic Light",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__traffic_light",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -486,9 +486,9 @@
       "categoryId": "street_traffic",
       "word": {
         "text": "Crosswalk",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__crosswalk",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -497,9 +497,9 @@
       "categoryId": "famous_landmarks",
       "word": {
         "text": "Pyramid",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__pyramid",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -607,9 +607,9 @@
       "categoryId": "famous_landmarks",
       "word": {
         "text": "Eiffel Tower",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__eiffel_tower",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -640,9 +640,9 @@
       "categoryId": "street_traffic",
       "word": {
         "text": "Traffic Light",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__traffic_light",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -44,9 +44,9 @@
       "transformsOnComplete": true,
       "transformResult": {
         "text": "Library",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__library",
         "syllablePartA": "",
         "syllablePartB": ""
       },
@@ -210,9 +210,9 @@
         },
         {
           "text": "Library",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__library",
           "syllablePartA": "",
           "syllablePartB": ""
         },

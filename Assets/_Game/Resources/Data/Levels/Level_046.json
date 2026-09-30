@@ -18,9 +18,9 @@
         },
         {
           "text": "Cage",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__cage",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -934,9 +934,9 @@
       "categoryId": "zoo_visits",
       "word": {
         "text": "Cage",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__cage",
         "syllablePartA": "",
         "syllablePartB": ""
       }

@@ -26,9 +26,9 @@
         },
         {
           "text": "Newspaper",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__newspaper",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -463,9 +463,9 @@
       "categoryId": "reading_materials",
       "word": {
         "text": "Newspaper",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__newspaper",
         "syllablePartA": "",
         "syllablePartB": ""
       }

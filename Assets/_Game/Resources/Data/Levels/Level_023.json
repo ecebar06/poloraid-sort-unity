@@ -44,9 +44,9 @@
       "transformsOnComplete": true,
       "transformResult": {
         "text": "Market",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__market",
         "syllablePartA": "",
         "syllablePartB": ""
       },
@@ -170,9 +170,9 @@
         },
         {
           "text": "Crescent",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__crescent",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -298,33 +298,33 @@
       "words": [
         {
           "text": "Bakery",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__bakery",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Pharmacy",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__pharmacy",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Bookstore",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__bookstore",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Market",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__market",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -380,9 +380,9 @@
       "transformsOnComplete": true,
       "transformResult": {
         "text": "Bookstore",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__bookstore",
         "syllablePartA": "",
         "syllablePartB": ""
       },
@@ -526,9 +526,9 @@
       "categoryId": "moon_phases",
       "word": {
         "text": "Crescent",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__crescent",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -669,9 +669,9 @@
       "categoryId": "shops",
       "word": {
         "text": "Bakery",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__bakery",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -702,9 +702,9 @@
       "categoryId": "shops",
       "word": {
         "text": "Pharmacy",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__pharmacy",
         "syllablePartA": "",
         "syllablePartB": ""
       }

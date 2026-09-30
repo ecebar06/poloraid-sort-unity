@@ -34,9 +34,9 @@
         },
         {
           "text": "Nightlight",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__nightlight",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -74,9 +74,9 @@
         },
         {
           "text": "Pretzel",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__pretzel",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -442,9 +442,9 @@
       "categoryId": "snacks",
       "word": {
         "text": "Pretzel",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__pretzel",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -552,9 +552,9 @@
       "categoryId": "bedtime",
       "word": {
         "text": "Nightlight",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__nightlight",
         "syllablePartA": "",
         "syllablePartB": ""
       }

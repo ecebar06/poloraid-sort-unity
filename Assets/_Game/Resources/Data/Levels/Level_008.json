@@ -114,9 +114,9 @@
         },
         {
           "text": "Dress",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__dress",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -130,9 +130,9 @@
         },
         {
           "text": "Blazer",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__blazer",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -272,9 +272,9 @@
       "categoryId": "formal_clothes",
       "word": {
         "text": "Blazer",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__blazer",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -294,9 +294,9 @@
       "categoryId": "formal_clothes",
       "word": {
         "text": "Dress",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__dress",
         "syllablePartA": "",
         "syllablePartB": ""
       }

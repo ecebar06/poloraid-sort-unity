@@ -322,9 +322,9 @@
         },
         {
           "text": "Keyboard",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__keyboard",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -450,9 +450,9 @@
         },
         {
           "text": "Sculpture",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__sculpture",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -677,9 +677,9 @@
       "categoryId": "bands",
       "word": {
         "text": "Keyboard",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__keyboard",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -798,9 +798,9 @@
       "categoryId": "art_forms",
       "word": {
         "text": "Sculpture",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__sculpture",
         "syllablePartA": "",
         "syllablePartB": ""
       }

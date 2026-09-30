@@ -140,9 +140,9 @@
       "transformsOnComplete": true,
       "transformResult": {
         "text": "Pharmacy",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__pharmacy",
         "syllablePartA": "",
         "syllablePartB": ""
       },
@@ -322,9 +322,9 @@
         },
         {
           "text": "Pharmacy",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__pharmacy",
           "syllablePartA": "",
           "syllablePartB": ""
         }

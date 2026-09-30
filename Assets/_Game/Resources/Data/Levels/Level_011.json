@@ -66,9 +66,9 @@
         },
         {
           "text": "Raft",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__raft",
           "syllablePartA": "",
           "syllablePartB": ""
         },
@@ -106,33 +106,33 @@
       "words": [
         {
           "text": "Flour",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__flour",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Sugar",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__sugar",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Oil",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__oil",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Pasta",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__pasta",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -202,33 +202,33 @@
       "words": [
         {
           "text": "Park",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__park",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Store",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__store",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Library",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__library",
           "syllablePartA": "",
           "syllablePartB": ""
         },
         {
           "text": "Bank",
-          "hasSprite": false,
-          "useIcon": false,
-          "spriteKey": "",
+          "hasSprite": true,
+          "useIcon": true,
+          "spriteKey": "generated__bank",
           "syllablePartA": "",
           "syllablePartB": ""
         }
@@ -309,9 +309,9 @@
       "categoryId": "city_locations",
       "word": {
         "text": "Library",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__library",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -320,9 +320,9 @@
       "categoryId": "pantry_staples",
       "word": {
         "text": "Sugar",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__sugar",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -331,9 +331,9 @@
       "categoryId": "watercraft",
       "word": {
         "text": "Raft",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__raft",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -342,9 +342,9 @@
       "categoryId": "pantry_staples",
       "word": {
         "text": "Flour",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__flour",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -364,9 +364,9 @@
       "categoryId": "pantry_staples",
       "word": {
         "text": "Oil",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__oil",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -408,9 +408,9 @@
       "categoryId": "city_locations",
       "word": {
         "text": "Park",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__park",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -430,9 +430,9 @@
       "categoryId": "city_locations",
       "word": {
         "text": "Store",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__store",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -441,9 +441,9 @@
       "categoryId": "city_locations",
       "word": {
         "text": "Bank",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__bank",
         "syllablePartA": "",
         "syllablePartB": ""
       }
@@ -452,9 +452,9 @@
       "categoryId": "pantry_staples",
       "word": {
         "text": "Pasta",
-        "hasSprite": false,
-        "useIcon": false,
-        "spriteKey": "",
+        "hasSprite": true,
+        "useIcon": true,
+        "spriteKey": "generated__pasta",
         "syllablePartA": "",
         "syllablePartB": ""
       }
