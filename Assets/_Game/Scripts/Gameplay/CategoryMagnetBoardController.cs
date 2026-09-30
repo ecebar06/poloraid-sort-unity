@@ -491,7 +491,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         if (sourceTitle != null) title.fontSharedMaterial = sourceTitle.fontSharedMaterial;
         title.color = sourceTitle != null ? sourceTitle.color : Color.black;
         title.fontStyle = sourceTitle != null ? sourceTitle.fontStyle : FontStyles.Bold;
-        title.text = category != null ? category.name : holder.CategoryId;
+        title.text = CategoryText.ToLowerEnglish(category != null ? category.name : holder.CategoryId);
         title.alignment = TextAlignmentOptions.Center;
         title.enableAutoSizing = true;
         title.fontSizeMin = 18f;

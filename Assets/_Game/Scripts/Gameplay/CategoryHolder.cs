@@ -120,7 +120,7 @@ public sealed class CategoryHolder : MonoBehaviour
         if (IsEmpty)
         {
             CategoryId = magnet.CategoryId;
-            categoryLabel.text = magnet.CategoryName.ToUpperInvariant();
+            categoryLabel.text = CategoryText.ToLowerEnglish(magnet.CategoryName);
             categoryLabel.gameObject.SetActive(true);
             Transform badge = transform.Find("CategoryBadge");
             if (badge != null) badge.gameObject.SetActive(true);

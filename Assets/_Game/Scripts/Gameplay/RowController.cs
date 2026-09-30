@@ -209,7 +209,9 @@ public class RowController : MonoBehaviour
     {
         if (categoryCard == null || categoryLabel == null || categoryCanvasGroup == null) return;
 
-        categoryLabel.text = string.IsNullOrWhiteSpace(categoryName) ? "category" : categoryName.ToLowerInvariant();
+        categoryLabel.text = string.IsNullOrWhiteSpace(categoryName)
+            ? "category"
+            : CategoryText.ToLowerEnglish(categoryName);
         categoryLabel.fontSize = 26f;
         categoryLabel.enableAutoSizing = false;
         categoryLabel.fontStyle = FontStyles.Normal;
@@ -242,4 +244,5 @@ public class RowController : MonoBehaviour
         categoryCanvasGroup.DOFade(1f, 0.18f);
         cardRect.DOScale(1f, 0.24f).SetEase(Ease.OutBack);
     }
+
 }
