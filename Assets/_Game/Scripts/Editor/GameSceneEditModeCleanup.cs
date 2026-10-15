@@ -51,14 +51,18 @@ public static class GameSceneEditModeCleanup
 
             if (canvas != null)
             {
+                bool polaroidTheme = canvas.transform.Find("PolaroidThemeSceneLayoutV2") != null;
                 RectTransform gameHud = canvas.transform.Find("GameHUD") as RectTransform;
                 if (gameHud != null)
                 {
-                    controller.ApplyEditorPreviewSafeArea();
+                    if (!polaroidTheme) controller.ApplyEditorPreviewSafeArea();
 
                     Transform fridgeHud = gameHud.Find("FridgeTopHud");
-                    if (fridgeHud != null) fridgeHud.gameObject.SetActive(true);
+                    if (fridgeHud != null) fridgeHud.gameObject.SetActive(!polaroidTheme);
                 }
+
+                Transform polaroidHud = canvas.transform.Find("PolaroidTopHud");
+                if (polaroidHud != null) polaroidHud.gameObject.SetActive(polaroidTheme);
 
                 DestroyChild(canvas.transform, "ResultOverlay");
             }

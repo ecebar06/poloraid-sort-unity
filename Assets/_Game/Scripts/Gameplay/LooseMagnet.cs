@@ -167,10 +167,27 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
         }
     }
 
+    public void LockIntoHolder(RectTransform targetSlot, int stackIndex)
+    {
+        Vector2 targetSize = targetSlot.rect.size;
+        LockIntoHolder(Vector2.zero, targetSlot, stackIndex, targetSize);
+    }
+
     public void LockIntoHolder(Vector2 localPosition, RectTransform holderContent, int stackIndex)
+    {
+        LockIntoHolder(localPosition, holderContent, stackIndex, rect.sizeDelta);
+    }
+
+    private void LockIntoHolder(Vector2 localPosition, RectTransform holderContent, int stackIndex,
+        Vector2 targetSize)
     {
         locked = true;
         canvasGroup.blocksRaycasts = false;
+        // Preserve the exact on-screen drop position while changing parents.
+        // Reparenting with worldPositionStays=false made the card jump into the
+        // slot coordinate system before the snap animation even started.
+        Vector3 worldPosition = rect.position;
+        Quaternion worldRotation = rect.rotation;
         rect.SetParent(holderContent, true);
         rect.SetAsLastSibling();
         // Holders are siblings, so a later holder could otherwise render over
@@ -182,13 +199,17 @@ public sealed class LooseMagnet : MonoBehaviour, IPointerDownHandler, IPointerUp
         // reorders canvases during a drop animation.
         magnetCanvas.sortingOrder = 100 + Mathf.Clamp(stackIndex, 0, 3);
         rect.DOKill();
-        rect.localRotation = Quaternion.identity;
-        rect.DOAnchorPos(localPosition, 0.24f).SetEase(Ease.OutCubic);
-        // Fill the holder's usable width while preserving a small inner gutter.
-        // This is calculated per holder, so it remains correct at every Canvas scale.
-        float usableWidth = Mathf.Max(0f, holderContent.rect.width - 20f);
-        float targetScale = rect.rect.width > 0f ? usableWidth / rect.rect.width : 0.72f;
-        AnimateScale(Mathf.Clamp(targetScale, 0.68f, 1f), 0.24f, Ease.OutBack);
+        rect.anchorMin = rect.anchorMax = new Vector2(0.5f, 0.5f);
+        rect.pivot = new Vector2(0.5f, 0.5f);
+        rect.position = worldPosition;
+        rect.rotation = worldRotation;
+        rect.DOAnchorPos(localPosition, 0.28f).SetEase(Ease.OutCubic);
+        rect.DOLocalRotate(Vector3.zero, 0.28f).SetEase(Ease.OutCubic);
+        // The loose Scene-authored card keeps its table size until accepted.
+        // Inside a holder, the editable Slot RectTransform is the source of
+        // truth for both the final position and final size.
+        rect.DOSizeDelta(targetSize, 0.28f).SetEase(Ease.OutCubic);
+        AnimateScale(1f, 0.28f, Ease.OutCubic);
     }
 
     public void SetHolderStackMode(bool stacked)

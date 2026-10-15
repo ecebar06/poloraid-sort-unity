@@ -23,12 +23,13 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     private int activeLevelIndex;
     private int totalCategories;
     private int remainingMoves;
-    private readonly HashSet<string> retainedFinalCategories = new HashSet<string>();
     private GameObject outOfMovesScreen;
     private bool gameEnded;
     private bool rewardDoubled;
     private Canvas canvas;
     private Sprite magnetSprite;
+    private Image.Type magnetImageType = Image.Type.Sliced;
+    private Vector2 magnetSceneSize = new Vector2(245f, 165f);
     private TMP_FontAsset font;
     private LevelData currentLevel;
     private int pendingTransformations;
@@ -46,6 +47,8 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         ? currentLevel.categories.Count * 4 : MagnetDealPlan.Capacity;
     private Image categoryProgress;
     private RectTransform categoryKnob;
+    private RectTransform categoryProgressTarget;
+    private RectTransform printerRect;
     private TextMeshProUGUI categoryProgressText;
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
     private TextMeshProUGUI testLevelLabel;
@@ -55,6 +58,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     private bool testTimerRunning;
     private float testTimerStartedAt;
     private float testTimerElapsed;
+    private float testTimerNextRefreshAt;
 #endif
 
     public Canvas Canvas => canvas;
@@ -77,35 +81,79 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
 
     private void Awake()
     {
+        printerRect = transform.Find("PolaroidPrinter") as RectTransform;
+
         if (legacyTableController != null)
         {
             legacyTableController.enabled = false;
             if (legacyTableController.wordContainer != null)
                 legacyTableController.wordContainer.gameObject.SetActive(false);
         }
+
+        // The Polaroid scene is artist-authored. Legacy fridge objects are
+        // kept only as inactive migration data and must never cover it in Play Mode.
+        Canvas sceneCanvas = GetComponentInParent<Canvas>();
+        if (sceneCanvas != null && sceneCanvas.transform.Find("PolaroidThemeSceneLayoutV2") != null)
+        {
+            SetSceneChildActive(sceneCanvas.transform, "GameHUD/FridgeTopHud", false);
+            SetSceneChildActive(sceneCanvas.transform, "background", false);
+            SetSceneChildActive(sceneCanvas.transform, "PolaroidThemeBackground", true);
+            SetSceneChildActive(sceneCanvas.transform, "PolaroidTopHud", true);
+        }
     }
 
     private void Start()
     {
         canvas = GetComponentInParent<Canvas>();
-        Transform hud = transform.parent.Find("FridgeTopHud");
+        Transform hud = canvas == null ? null : canvas.transform.Find("PolaroidTopHud");
+        if (hud == null) hud = transform.parent.Find("FridgeTopHud");
         if (hud != null)
         {
-            levelLabel = hud.Find("LevelLabel")?.GetComponent<TextMeshProUGUI>() ?? levelLabel;
-            moveLabel = hud.Find("MovesMagnet/MoveCount")?.GetComponent<TextMeshProUGUI>() ?? moveLabel;
-            categoryProgress = hud.Find("ProgressCard/ProgressTrack/Fill")?.GetComponent<Image>();
-            categoryKnob = hud.Find("ProgressCard/ProgressTrack/Knob") as RectTransform;
-            categoryProgressText = hud.Find("ProgressCard/ProgressTrack/Knob/Value")?.GetComponent<TextMeshProUGUI>();
+            RectTransform progressTrack = hud.Find("ProgressTrack") as RectTransform ??
+                                          hud.Find("ProgressCard/ProgressTrack") as RectTransform;
+            levelLabel = hud.Find("LevelCard/LevelLabel")?.GetComponent<TextMeshProUGUI>() ??
+                         hud.Find("LevelLabel")?.GetComponent<TextMeshProUGUI>() ?? levelLabel;
+            moveLabel = hud.Find("MovesCard/MoveCount")?.GetComponent<TextMeshProUGUI>() ??
+                        hud.Find("MovesMagnet/MoveCount")?.GetComponent<TextMeshProUGUI>() ?? moveLabel;
+            categoryProgress = hud.Find("ProgressTrack/Fill")?.GetComponent<Image>() ??
+                               hud.Find("ProgressCard/ProgressTrack/Fill")?.GetComponent<Image>();
+            categoryKnob = hud.Find("ProgressTrack/Knob") as RectTransform ??
+                           hud.Find("ProgressCard/ProgressTrack/Knob") as RectTransform;
+            categoryProgressText = hud.Find("ProgressTrack/Progress")?.GetComponent<TextMeshProUGUI>() ??
+                                   hud.Find("ProgressCard/ProgressTrack/Knob/Value")?.GetComponent<TextMeshProUGUI>();
+            // The new Polaroid HUD has no Knob object. Keep a separate, always
+            // valid flight target so completion labels actually travel to the
+            // visible progress track instead of shrinking in place.
+            categoryProgressTarget = categoryKnob != null ? categoryKnob : progressTrack;
+            if (categoryProgressTarget == null && categoryProgress != null)
+                categoryProgressTarget = categoryProgress.rectTransform;
         }
         database = LevelDatabase.LoadFromResources();
         iconLibrary = Resources.Load<WordIconLibrary>("Data/MainWordIconLibrary");
-        magnetSprite = Resources.Load<Sprite>("Art/Fridge/Magnets/magnet_word");
         font = Resources.Load<TMP_FontAsset>("Fonts/Fredoka-Variable SDF");
         if (magnetTextStyle != null)
         {
             if (magnetTextStyle.font != null) font = magnetTextStyle.font;
+            Transform template = magnetTextStyle.transform.parent;
+            if (template is RectTransform templateRect)
+            {
+                Vector2 authoredSize = templateRect.sizeDelta;
+                if (authoredSize.x > 0f && authoredSize.y > 0f)
+                    magnetSceneSize = authoredSize;
+            }
+            Image templateBackground = template.Find("Paper")?.GetComponent<Image>() ??
+                                       template.GetComponent<Image>();
+            if (templateBackground != null && templateBackground.sprite != null)
+            {
+                // Scene-authored card art is the source of truth. Do not replace
+                // it with the legacy fridge magnet when Play Mode starts.
+                magnetSprite = templateBackground.sprite;
+                magnetImageType = templateBackground.type;
+            }
             magnetTextStyle.transform.parent.gameObject.SetActive(false);
         }
+        if (magnetSprite == null)
+            magnetSprite = Resources.Load<Sprite>("Art/Fridge/Magnets/magnet_word");
         PlayerSaveData save = SaveSystem.Load();
         MagnetPopupUI popup = FindFirstObjectByType<MagnetPopupUI>(FindObjectsInactive.Include);
         outOfMovesScreen = popup == null ? null : popup.TimeUpScreen;
@@ -124,11 +172,22 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
 #endif
     }
 
+    private static void SetSceneChildActive(Transform root, string path, bool active)
+    {
+        Transform child = root.Find(path);
+        if (child != null) child.gameObject.SetActive(active);
+    }
+
     private void Update()
     {
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
         if (!testTimerRunning) return;
-        testTimerElapsed = Mathf.Max(0f, Time.realtimeSinceStartup - testTimerStartedAt);
+        float now = Time.realtimeSinceStartup;
+        if (now < testTimerNextRefreshAt) return;
+        // The timer is for human-readable test feedback; refreshing its TMP
+        // mesh every frame creates avoidable allocations and canvas rebuilds.
+        testTimerNextRefreshAt = now + 0.05f;
+        testTimerElapsed = Mathf.Max(0f, now - testTimerStartedAt);
         RefreshTestTimerLabel();
 #endif
     }
@@ -156,6 +215,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
         EnsureTestTimerUi();
         testTimerStartedAt = Time.realtimeSinceStartup;
+        testTimerNextRefreshAt = testTimerStartedAt;
         testTimerElapsed = 0f;
         testTimerRunning = true;
         RefreshTestTimerLabel();
@@ -165,7 +225,6 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         reservedLandings.Clear();
         ClearLooseMagnets();
         completedCategories.Clear();
-        retainedFinalCategories.Clear();
         totalCategories = level.categories.Count;
         remainingMoves = level.moveCount;
         gameEnded = false;
@@ -209,7 +268,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         if (!sequential)
         {
             foreach (LevelWordEntry entry in entries)
-                SpawnRefillEntry(entry);
+                SpawnRefillEntry(entry, false);
             return;
         }
         isRefilling = true;
@@ -220,18 +279,20 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     {
         for (int i = 0; i < entries.Count; i++)
         {
-            SpawnRefillEntry(entries[i]);
+            SpawnRefillEntry(entries[i], true);
 
             // Reveal replacement magnets one at a time so a completed
             // category feels like a deliberate refill instead of a single
             // frame spawning an entire new row.
             if (i < entries.Count - 1)
-                yield return new WaitForSecondsRealtime(0.25f);
+                yield return new WaitForSecondsRealtime(0.90f);
         }
+        // Keep input locked until the final printed card reaches the table.
+        yield return new WaitForSecondsRealtime(0.68f);
         isRefilling = false;
     }
 
-    private void SpawnRefillEntry(LevelWordEntry entry)
+    private void SpawnRefillEntry(LevelWordEntry entry, bool animateFromPrinter)
     {
         Category category = currentLevel.categories.FirstOrDefault(item => item.id == entry.categoryId);
         Sprite sprite = null;
@@ -240,31 +301,91 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         LooseMagnet magnet = CreateMagnet(entry.word.text, entry.categoryId,
             category == null ? entry.categoryId : category.name, sprite);
         PlaceInFreeSlot(magnet);
-        magnet.RectTransform().localScale = Vector3.one * 1.18f;
-        magnet.RectTransform().DOScale(1f, 0.28f).SetEase(Ease.OutCubic);
+        magnet.RectTransform().localEulerAngles = new Vector3(0f, 0f, Random.Range(-7f, 7f));
+        if (animateFromPrinter) AnimatePrintedMagnet(magnet);
+        else
+        {
+            magnet.RectTransform().localScale = Vector3.one * 1.18f;
+            magnet.RectTransform().DOScale(1f, 0.28f).SetEase(Ease.OutCubic);
+        }
     }
 
-    private Vector2 SlotPosition(int slot)
+    private void AnimatePrintedMagnet(LooseMagnet magnet)
     {
-        Rect area = bottomArea.rect;
-        float cellWidth = area.width / 4f;
-        float cellHeight = Mathf.Min(280f, area.height / 4f);
-        return new Vector2(area.xMin + cellWidth * (slot % 4 + 0.5f),
-            area.yMax - cellHeight * (slot / 4 + 0.5f));
+        RectTransform rect = magnet.RectTransform();
+        Vector2 landing = rect.anchoredPosition;
+        Vector3 landingRotation = rect.localEulerAngles;
+        Rect printerBounds = printerRect != null
+            ? GetVisiblePrinterBounds(0f)
+            : new Rect(landing.x, landing.y, 0f, 0f);
+        Vector2 mouth = new Vector2(printerBounds.center.x,
+            printerBounds.yMin - rect.rect.height * 0.08f);
+        Vector2 ejected = mouth + Vector2.down * Mathf.Min(72f, rect.rect.height * 0.30f);
+
+        CanvasGroup group = magnet.GetComponent<CanvasGroup>();
+        if (group != null) group.blocksRaycasts = false;
+        rect.DOKill();
+        rect.SetAsLastSibling();
+        rect.anchoredPosition = mouth;
+        rect.localRotation = Quaternion.identity;
+        rect.localScale = Vector3.one * 0.22f;
+
+        float jumpPower = Mathf.Clamp(Vector2.Distance(ejected, landing) * 0.16f, 42f, 105f);
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(rect.DOAnchorPos(ejected, 0.18f).SetEase(Ease.OutQuad));
+        sequence.Join(rect.DOScale(0.72f, 0.18f).SetEase(Ease.OutCubic));
+        sequence.Append(rect.DOJumpAnchorPos(landing, jumpPower, 1, 0.48f).SetEase(Ease.InOutQuad));
+        sequence.Join(rect.DOScale(1f, 0.38f).SetEase(Ease.OutBack));
+        sequence.Join(rect.DORotate(landingRotation, 0.44f).SetEase(Ease.OutCubic));
+        sequence.OnComplete(() =>
+        {
+            if (group != null) group.blocksRaycasts = true;
+        });
     }
 
     private void PlaceInFreeSlot(LooseMagnet magnet)
     {
+        int placedCount = looseSlots.Count;
         var free = Enumerable.Range(0, SlotCount).Where(i => !looseSlots.ContainsValue(i)).ToList();
         int slot = free[Random.Range(0, free.Count)];
         looseSlots.Add(magnet, slot);
         var size = magnet.RectTransform().rect.size;
+        Rect bounds = GetLooseCenterBounds(size);
+
+        // Always occupy the two narrow tabletop pockets beside the printer.
+        // A generic farthest-point search tends to prefer the much larger
+        // lower area and can leave these valid pockets empty forever.
+        if (placedCount < 2 && TryGetPrinterSidePosition(placedCount == 0, size, bounds, out Vector2 sidePosition))
+        {
+            magnet.RectTransform().anchoredPosition = sidePosition;
+            return;
+        }
+
         var candidates = new List<Vector2>();
-        for (int i = 0; i < 400; i++)
-            candidates.Add(ClampToBottomArea(new Vector2(Random.Range(bottomArea.rect.xMin, bottomArea.rect.xMax),
-                Random.Range(bottomArea.rect.yMin, bottomArea.rect.yMax)), size));
-        // Grid locations are only a last resort, never the preferred layout.
-        candidates.AddRange(Enumerable.Range(0, SlotCount).Select(SlotPosition).OrderBy(_ => Random.value));
+
+        // Search the entire visible tabletop, not a handful of fixed rows.
+        // A dense regular sample guarantees that narrow areas beside the
+        // printer are represented; random samples keep the result organic.
+        const int columns = 12;
+        const int rows = 16;
+        for (int row = 0; row < rows; row++)
+        {
+            for (int column = 0; column < columns; column++)
+            {
+                Vector2 candidate = new Vector2(
+                    Mathf.Lerp(bounds.xMin, bounds.xMax, column / (float)(columns - 1)),
+                    Mathf.Lerp(bounds.yMin, bounds.yMax, row / (float)(rows - 1)));
+                if (!OverlapsPrinter(candidate, size)) candidates.Add(candidate);
+            }
+        }
+        for (int i = 0; i < 300; i++)
+        {
+            Vector2 candidate = new Vector2(Random.Range(bounds.xMin, bounds.xMax),
+                Random.Range(bounds.yMin, bounds.yMax));
+            if (!OverlapsPrinter(candidate, size)) candidates.Add(candidate);
+        }
+        if (candidates.Count == 0) candidates.Add(bounds.center);
+
         // Placement consults actual positions, not old grid slots: free drags may overlap.
         float Clearance(Vector2 p) => looseSlots.Keys.Where(m => m != magnet && m != null)
             .Select(m => {
@@ -273,9 +394,114 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
                 return Mathf.Max(Mathf.Abs(delta.x) - half.x, Mathf.Abs(delta.y) - half.y);
             }).DefaultIfEmpty(float.MaxValue).Min();
         Vector2 best = candidates.OrderByDescending(Clearance).First();
-        foreach (Vector2 candidate in candidates)
-            if (Clearance(candidate) >= 0f) { best = candidate; break; }
         magnet.RectTransform().anchoredPosition = best;
+    }
+
+    private Vector2 ClampToLooseSpawnArea(Vector2 position, Vector2 size)
+    {
+        Rect bounds = GetLooseCenterBounds(size);
+        return new Vector2(Mathf.Clamp(position.x, bounds.xMin, bounds.xMax),
+            Mathf.Clamp(position.y, bounds.yMin, bounds.yMax));
+    }
+
+    private Rect GetLooseCenterBounds(Vector2 size)
+    {
+        Rect area = bottomArea.rect;
+        Vector2 half = size * 0.5f;
+        // Use the full visible table width and height. Only points whose card
+        // rectangle actually intersects the printer are excluded separately.
+        var canvasCorners = new Vector3[4];
+        ((RectTransform)canvas.rootCanvas.transform).GetWorldCorners(canvasCorners);
+        float canvasLeft = canvasCorners.Select(corner => bottomArea.InverseTransformPoint(corner).x).Min();
+        float canvasRight = canvasCorners.Select(corner => bottomArea.InverseTransformPoint(corner).x).Max();
+        float canvasBottom = canvasCorners.Select(corner => bottomArea.InverseTransformPoint(corner).y).Min();
+        float canvasTop = canvasCorners.Select(corner => bottomArea.InverseTransformPoint(corner).y).Max();
+        float sideMargin = 4f;
+        float minX = canvasLeft + half.x + sideMargin;
+        float maxX = canvasRight - half.x - sideMargin;
+        float minY = canvasBottom + half.y + (canvasTop - canvasBottom) * 0.025f;
+
+        // The loose-card surface starts immediately below the holders, not at
+        // BottomMagnetArea's old upper anchor. This exposes the large tabletop
+        // area beside and above the printer; printer overlap is rejected by
+        // OverlapsPrinter for each individual candidate.
+        float holderBottom = float.MaxValue;
+        foreach (CategoryHolder holder in holders)
+        {
+            if (holder == null) continue;
+            var holderCorners = new Vector3[4];
+            ((RectTransform)holder.transform).GetWorldCorners(holderCorners);
+            holderBottom = Mathf.Min(holderBottom,
+                holderCorners.Min(corner => bottomArea.InverseTransformPoint(corner).y));
+        }
+        float tableTop = holderBottom < float.MaxValue ? holderBottom : area.yMax;
+        float maxY = tableTop - half.y - 12f;
+        if (maxX < minX) minX = maxX = area.center.x;
+        if (maxY < minY)
+        {
+            float middle = (minY + maxY) * 0.5f;
+            minY = maxY = middle;
+        }
+        return Rect.MinMaxRect(minX, minY, maxX, maxY);
+    }
+
+    private bool OverlapsPrinter(Vector2 center, Vector2 size)
+    {
+        if (printerRect == null || !printerRect.gameObject.activeInHierarchy) return false;
+        Rect printerBounds = GetVisiblePrinterBounds(4f);
+        Rect cardBounds = new Rect(center - size * 0.5f, size);
+        return cardBounds.Overlaps(printerBounds);
+    }
+
+    private bool TryGetPrinterSidePosition(bool leftSide, Vector2 size, Rect tableBounds, out Vector2 position)
+    {
+        position = default;
+        if (printerRect == null || !printerRect.gameObject.activeInHierarchy) return false;
+        Rect printerBounds = GetVisiblePrinterBounds(4f);
+        float x = leftSide ? tableBounds.xMin : tableBounds.xMax;
+        float y = Mathf.Clamp(printerBounds.center.y, tableBounds.yMin, tableBounds.yMax);
+        Vector2 candidate = new Vector2(x, y);
+        if (OverlapsPrinter(candidate, size)) return false;
+        position = candidate;
+        return true;
+    }
+
+    private Rect GetVisiblePrinterBounds(float gap)
+    {
+        var corners = new Vector3[4];
+        printerRect.GetWorldCorners(corners);
+        var local = corners.Select(corner => (Vector2)bottomArea.InverseTransformPoint(corner)).ToArray();
+        float left = local.Min(p => p.x);
+        float right = local.Max(p => p.x);
+        float bottom = local.Min(p => p.y);
+        float top = local.Max(p => p.y);
+
+        // Image.preserveAspect draws inside the RectTransform. Use that visible
+        // sprite rectangle instead of treating its transparent letterbox as
+        // part of the printer collision area.
+        Image printerImage = printerRect.GetComponent<Image>();
+        if (printerImage != null && printerImage.preserveAspect && printerImage.sprite != null)
+        {
+            float width = right - left;
+            float height = top - bottom;
+            float spriteAspect = printerImage.sprite.rect.width / printerImage.sprite.rect.height;
+            float rectAspect = width / height;
+            if (spriteAspect > rectAspect)
+            {
+                float visibleHeight = width / spriteAspect;
+                float centerY = (bottom + top) * 0.5f;
+                bottom = centerY - visibleHeight * 0.5f;
+                top = centerY + visibleHeight * 0.5f;
+            }
+            else
+            {
+                float visibleWidth = height * spriteAspect;
+                float centerX = (left + right) * 0.5f;
+                left = centerX - visibleWidth * 0.5f;
+                right = centerX + visibleWidth * 0.5f;
+            }
+        }
+        return Rect.MinMaxRect(left - gap, bottom - gap, right + gap, top + gap);
     }
 
     public Vector2 GetLooseLanding(LooseMagnet magnet)
@@ -304,19 +530,12 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
     public void EndMagnetDrag(Vector2 screenPosition, LooseMagnet magnet)
     {
         UpdateHoveredHolder(screenPosition, magnet);
-        CategoryHolder target = hoveredHolder;
+        CategoryHolder target = hoveredHolder ?? FindOverlappingHolder(magnet);
         if (hoveredHolder != null) hoveredHolder.SetHighlighted(false, true);
         hoveredHolder = null;
         if (target == null)
         {
-            // Pointer can be outside while the dragged card still covers a holder.
-            // Reject that overlap as well, rather than leaving a fake collected card.
-            if (OverlapsHolder(magnet))
-            {
-                SpendMove();
-                magnet.Reject();
-            }
-            else magnet.ReturnInsideBottomArea();
+            magnet.ReturnInsideBottomArea();
             return;
         }
         if (!target.TryAccept(magnet))
@@ -361,7 +580,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         outOfMovesScreen.SetActive(true);
     }
 
-    private bool OverlapsHolder(LooseMagnet magnet)
+    private CategoryHolder FindOverlappingHolder(LooseMagnet magnet)
     {
         Rect LocalBounds(RectTransform rect)
         {
@@ -372,21 +591,33 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
                 points.Max(p => p.x), points.Max(p => p.y));
         }
         Rect magnetBounds = LocalBounds(magnet.RectTransform());
-        return holders.Any(h => h != null && h.gameObject.activeInHierarchy &&
-            magnetBounds.Overlaps(LocalBounds((RectTransform)h.transform)));
+        CategoryHolder best = null;
+        float bestArea = 0f;
+        foreach (CategoryHolder holder in holders)
+        {
+            if (holder == null || !holder.gameObject.activeInHierarchy) continue;
+            Rect holderBounds = LocalBounds((RectTransform)holder.transform);
+            float overlapWidth = Mathf.Max(0f,
+                Mathf.Min(magnetBounds.xMax, holderBounds.xMax) - Mathf.Max(magnetBounds.xMin, holderBounds.xMin));
+            float overlapHeight = Mathf.Max(0f,
+                Mathf.Min(magnetBounds.yMax, holderBounds.yMax) - Mathf.Max(magnetBounds.yMin, holderBounds.yMin));
+            float overlapArea = overlapWidth * overlapHeight;
+            if (overlapArea <= bestArea) continue;
+            bestArea = overlapArea;
+            best = holder;
+        }
+        float requiredArea = magnetBounds.width * magnetBounds.height * 0.10f;
+        return bestArea >= requiredArea ? best : null;
     }
 
     public void OnHolderCompleted(CategoryHolder holder, string categoryId, LooseMagnet[] magnets)
     {
         if (!completedCategories.Add(categoryId)) return;
         Category source = currentLevel.categories.FirstOrDefault(category => category.id == categoryId);
-        // Conservatively reserve a holder for every unfinished category,
-        // including transformation stages. Never retain while stock remains.
-        bool keepFinalHolder = mixedStock != null && stockCursor >= mixedStock.Count &&
-            totalCategories - completedCategories.Count <= holders.Length - retainedFinalCategories.Count - 1;
         bool transforms = source != null && source.transformsOnComplete && source.transformResult != null;
-        if (!transforms && keepFinalHolder) retainedFinalCategories.Add(categoryId);
-        if (!transforms && !keepFinalHolder)
+        // Every terminal category follows the same readable finish: show its
+        // name at the holder, fly that badge to the progress bar, then credit it.
+        if (!transforms)
         {
             pendingTransformations++;
             StartCoroutine(FlyFinalToProgress(holder, magnets, source));
@@ -405,10 +636,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             StartCoroutine(CompleteLevel());
             return;
         }
-        // This completion was one of the last four categories (including itself).
-        // Keep terminal holders filled and badge-colored through the finish.
-        // Transformations above still recycle, since their output is required.
-        if (!keepFinalHolder) holder.ClearForReuse();
+        holder.ClearForReuse();
         RefillStock(true);
     }
 
@@ -486,10 +714,13 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         effectCanvas.sortingOrder = 900;
         TextMeshProUGUI title = CreateText("CategoryName", rect);
         Stretch(title.rectTransform, 8f);
-        TextMeshProUGUI sourceTitle = holder.transform.Find("CategoryLabel")?.GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI sourceTitle = holder.transform.Find("CategoryBadge/CategoryLabel")?.GetComponent<TextMeshProUGUI>() ??
+                                      holder.transform.Find("CategoryLabel")?.GetComponent<TextMeshProUGUI>();
         title.font = sourceTitle != null ? sourceTitle.font : font;
         if (sourceTitle != null) title.fontSharedMaterial = sourceTitle.fontSharedMaterial;
-        title.color = sourceTitle != null ? sourceTitle.color : Color.black;
+        // Do not inherit the Scene label's former black tint: the flying title
+        // needs strong contrast over the coloured completion badge.
+        title.color = Color.white;
         title.fontStyle = sourceTitle != null ? sourceTitle.fontStyle : FontStyles.Bold;
         title.text = CategoryText.ToLowerEnglish(category != null ? category.name : holder.CategoryId);
         title.alignment = TextAlignmentOptions.Center;
@@ -501,21 +732,30 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         yield return rect.DOScale(1f, 0.22f).SetEase(Ease.OutBack).WaitForCompletion();
         yield return new WaitForSeconds(0.35f);
         Vector3 start = rect.position;
-        rect.DOScale(0.18f, 0.55f).SetEase(Ease.InCubic);
-        yield return DOVirtual.Float(0f, 1f, 0.55f, t => {
-            Vector3 target = categoryKnob != null ? categoryKnob.position : start;
-            rect.position = Vector3.Lerp(start, target, t);
-        }).SetEase(Ease.InOutCubic).SetTarget(rect).WaitForCompletion();
+        Vector3 target = categoryProgressTarget != null ? categoryProgressTarget.position : start;
+        float arcHeight = Mathf.Max(70f, Vector3.Distance(start, target) * 0.12f);
+        Vector3 control = (start + target) * 0.5f + Vector3.up * arcHeight;
+        Sequence flight = DOTween.Sequence().SetTarget(rect);
+        flight.Join(DOVirtual.Float(0f, 1f, 0.68f, t =>
+        {
+            // Quadratic Bezier path makes the destination unmistakable while
+            // keeping the label readable through most of the flight.
+            float inverse = 1f - t;
+            rect.position = inverse * inverse * start + 2f * inverse * t * control + t * t * target;
+        }).SetEase(Ease.InOutCubic));
+        flight.Insert(0.34f, rect.DOScale(0.30f, 0.34f).SetEase(Ease.InCubic));
+        yield return flight.WaitForCompletion();
         completionEffects.Remove(rect);
         rect.DOKill();
         Destroy(badge.gameObject);
         creditedCategories++;
         RefreshCategoryProgress(true);
-        if (categoryKnob != null)
+        RectTransform progressImpact = categoryKnob != null ? categoryKnob : categoryProgressTarget;
+        if (progressImpact != null)
         {
-            categoryKnob.DOKill();
-            categoryKnob.localScale = Vector3.one;
-            categoryKnob.DOPunchScale(Vector3.one * 0.2f, 0.3f, 4, 0.5f);
+            progressImpact.DOKill();
+            progressImpact.localScale = Vector3.one;
+            progressImpact.DOPunchScale(Vector3.one * 0.12f, 0.3f, 4, 0.5f);
         }
         HapticFeedback.Play(HapticFeedback.Strength.Success);
         holder.ClearForReuse();
@@ -622,7 +862,9 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             resultCanvas.sortingOrder = 1000;
             if (winScreen.GetComponent<GraphicRaycaster>() == null)
                 winScreen.AddComponent<GraphicRaycaster>();
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
             RefreshTestTimerLabel();
+#endif
             winScreen.SetActive(true);
             winScreen.transform.SetAsLastSibling();
             GameAudio.Play(GameAudioCue.Win);
@@ -743,26 +985,34 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             typeof(Image), typeof(CanvasGroup), typeof(LooseMagnet));
         RectTransform rect = root.GetComponent<RectTransform>();
         rect.SetParent(bottomArea, false);
-        // Icons belong inside the same readable magnet footprint as text.
-        // A shared size also prevents square icon assets from crowding nearby magnets.
-        // Slightly wider magnets improve label readability without making the
-        // 16-magnet board feel crowded.
-        rect.sizeDelta = new Vector2(245f, 165f);
-        float fit = Mathf.Min(1f, bottomArea.rect.width / 4f / 280f,
-            Mathf.Min(280f, bottomArea.rect.height / 4f) / 280f);
-        rect.sizeDelta *= fit;
+        // The Scene-authored MagnetStyleTemplate is the single source of truth
+        // for card width and height. Changing its RectTransform in Game.unity
+        // now changes every runtime magnet without another code edit.
+        rect.sizeDelta = magnetSceneSize;
         Image background = root.GetComponent<Image>();
         background.sprite = magnetSprite;
-        background.type = Image.Type.Sliced;
-        Image icon = CreateImage("Icon", rect);
-        // Generated icons contain some transparent breathing room themselves;
-        // keep a safe inner gutter so tall and wide sprites (such as the
-        // apple and banana) remain entirely inside the magnet.
-        Stretch(icon.rectTransform, 4f);
+        background.type = magnetImageType;
+
+        GameObject viewportObject = new GameObject("IconViewport", typeof(RectTransform), typeof(RectMask2D));
+        RectTransform viewport = viewportObject.GetComponent<RectTransform>();
+        viewport.SetParent(rect, false);
+        // The polaroid sprite has transparent pixels around its visible paper.
+        // Keep icons inside the actual pink paper and clip unusually tall or
+        // wide source art so it can never protrude beyond that safe region.
+        viewport.anchorMin = new Vector2(0.10f, 0.12f);
+        viewport.anchorMax = new Vector2(0.90f, 0.88f);
+        viewport.offsetMin = Vector2.zero;
+        viewport.offsetMax = Vector2.zero;
+
+        Image icon = CreateImage("Icon", viewport);
+        Stretch(icon.rectTransform, 0f);
         icon.rectTransform.localScale = Vector3.one;
         icon.preserveAspect = true;
         TextMeshProUGUI label = CreateText("Label", rect);
-        Stretch(label.rectTransform, 6f);
+        label.rectTransform.anchorMin = new Vector2(0.08f, 0.12f);
+        label.rectTransform.anchorMax = new Vector2(0.92f, 0.88f);
+        label.rectTransform.offsetMin = Vector2.zero;
+        label.rectTransform.offsetMax = Vector2.zero;
         ApplyMagnetTextStyle(label);
         label.raycastTarget = false;
 
@@ -794,6 +1044,14 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         label.wordSpacing = magnetTextStyle.wordSpacing;
         label.lineSpacing = magnetTextStyle.lineSpacing;
         label.extraPadding = magnetTextStyle.extraPadding;
+        // Long words must stay on one line inside the visible pink paper.
+        // Preserve the Scene-authored size as the maximum and shrink only
+        // when the preferred width would otherwise overflow the card.
+        label.enableAutoSizing = true;
+        label.fontSizeMax = Mathf.Max(magnetTextStyle.fontSize, magnetTextStyle.fontSizeMax);
+        label.fontSizeMin = Mathf.Min(label.fontSizeMax, 10f);
+        label.enableWordWrapping = false;
+        label.overflowMode = TextOverflowModes.Ellipsis;
     }
 
     private Vector2 GetScatteredPosition(int index, int count)
@@ -894,18 +1152,17 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
 
     private void RefreshTestTimerLabel()
     {
-        string formatted = FormatTestTime(testTimerElapsed);
-        if (testTimerLabel != null) testTimerLabel.text = $"TIME  {formatted}";
-        if (testResultTimeLabel != null) testResultTimeLabel.text = $"TIME  {formatted}";
-    }
-
-    private static string FormatTestTime(float seconds)
-    {
-        int wholeSeconds = Mathf.FloorToInt(Mathf.Max(0f, seconds));
+        int wholeSeconds = Mathf.FloorToInt(Mathf.Max(0f, testTimerElapsed));
         int minutes = wholeSeconds / 60;
         int remainingSeconds = wholeSeconds % 60;
-        int hundredths = Mathf.Clamp(Mathf.FloorToInt((seconds - wholeSeconds) * 100f), 0, 99);
-        return $"{minutes:00}:{remainingSeconds:00}.{hundredths:00}";
+        int hundredths = Mathf.Clamp(Mathf.FloorToInt((testTimerElapsed - wholeSeconds) * 100f), 0, 99);
+        const string format = "TIME  {0:00}:{1:00}.{2:00}";
+        if (testTimerLabel != null)
+            testTimerLabel.SetText(format, (float)minutes, (float)remainingSeconds, (float)hundredths);
+        // The result label is hidden during play. Updating it only when the
+        // timer stops avoids rebuilding another TMP mesh on every tick.
+        if (!testTimerRunning && testResultTimeLabel != null)
+            testResultTimeLabel.SetText(format, (float)minutes, (float)remainingSeconds, (float)hundredths);
     }
 
     private void CreateTestNavigator()

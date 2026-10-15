@@ -41,6 +41,8 @@ public static class GameSceneAssetsSetup
         Canvas canvas = gameScene.GetRootGameObjects()
             .SelectMany(root => root.GetComponentsInChildren<Canvas>(true))
             .FirstOrDefault();
+        bool polaroidTheme = canvas != null &&
+                             canvas.transform.Find("PolaroidThemeSceneLayoutV2") != null;
 
         bool changed = false;
         foreach (TableController duplicate in controllers.Where(item => item != controller))
@@ -60,17 +62,17 @@ public static class GameSceneAssetsSetup
 
         if (existingHud is RectTransform existingHudRect)
         {
-            if (controller != null)
+            if (controller != null && !polaroidTheme)
                 changed = controller.ApplyEditorPreviewSafeArea() || changed;
 
             Transform fridgeHud = existingHudRect.Find("FridgeTopHud");
-            if (fridgeHud != null && !fridgeHud.gameObject.activeSelf)
+            if (fridgeHud != null && fridgeHud.gameObject.activeSelf == polaroidTheme)
             {
-                fridgeHud.gameObject.SetActive(true);
+                fridgeHud.gameObject.SetActive(!polaroidTheme);
                 changed = true;
             }
 
-            existingHudRect.SetAsLastSibling();
+            if (!polaroidTheme) existingHudRect.SetAsLastSibling();
         }
 
         if (controller != null && canvas != null && existingHud == null)
@@ -84,7 +86,8 @@ public static class GameSceneAssetsSetup
         // The fridge chrome is static scene content. Bake it once so artists
         // can move and style it directly in Game.unity instead of waiting for
         // TableController.Start to generate it in Play Mode.
-        if (controller != null && canvas != null && !controller.HasBakedStaticGameSceneAssets())
+        if (controller != null && canvas != null && !polaroidTheme &&
+            !controller.HasBakedStaticGameSceneAssets())
         {
             controller.BakeStaticGameSceneAssets();
             EditorUtility.SetDirty(controller);

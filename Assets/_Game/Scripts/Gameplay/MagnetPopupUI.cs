@@ -16,6 +16,13 @@ public sealed class MagnetPopupUI : MonoBehaviour
     [SerializeField] private Button spendGoldButton;
     [SerializeField] private TextMeshProUGUI explanationText;
     [SerializeField] private TextMeshProUGUI goldPriceText;
+    [Header("Polaroid Settings Toggle Art")]
+    [SerializeField] private Sprite settingsSoundOn;
+    [SerializeField] private Sprite settingsSoundOff;
+    [SerializeField] private Sprite settingsMusicOn;
+    [SerializeField] private Sprite settingsMusicOff;
+    [SerializeField] private Sprite settingsHapticOn;
+    [SerializeField] private Sprite settingsHapticOff;
     private TextMeshProUGUI settingsGoldText;
 
     public GameObject SettingsScreen => settingsScreen;
@@ -118,10 +125,12 @@ public sealed class MagnetPopupUI : MonoBehaviour
         if (settingsScreen == null) return;
         Transform panel = settingsScreen.transform.Find("Panel");
         Button close = panel?.Find("CloseButton")?.GetComponent<Button>();
+        Button continueButton = panel?.Find("ContinueButton")?.GetComponent<Button>();
         Button sound = panel?.Find("Options/SoundGroup/Background")?.GetComponent<Button>();
         Button music = panel?.Find("Options/MusicGroup/Background")?.GetComponent<Button>();
         Button haptic = panel?.Find("Options/HapticGroup/Background")?.GetComponent<Button>();
         Wire(close, HideSettings);
+        Wire(continueButton, HideSettings);
         Wire(sound, ToggleSound);
         Wire(music, ToggleMusic);
         Wire(haptic, ToggleHaptic);
@@ -427,14 +436,22 @@ public sealed class MagnetPopupUI : MonoBehaviour
     private void RefreshSettingsVisuals()
     {
         PlayerSaveData data = SaveSystem.Current;
-        SetToggleVisual(soundBackground, data.soundEnabled);
-        SetToggleVisual(musicBackground, data.musicEnabled);
-        SetToggleVisual(hapticBackground, HapticFeedback.Enabled);
+        SetToggleVisual(soundBackground, data.soundEnabled, settingsSoundOn, settingsSoundOff);
+        SetToggleVisual(musicBackground, data.musicEnabled, settingsMusicOn, settingsMusicOff);
+        SetToggleVisual(hapticBackground, HapticFeedback.Enabled, settingsHapticOn, settingsHapticOff);
     }
 
-    private static void SetToggleVisual(Image image, bool enabled)
+    private static void SetToggleVisual(Image image, bool enabled, Sprite enabledSprite, Sprite disabledSprite)
     {
         if (image == null) return;
+        if (enabledSprite != null && disabledSprite != null)
+        {
+            image.sprite = enabled ? enabledSprite : disabledSprite;
+            image.color = Color.white;
+            image.type = Image.Type.Simple;
+            image.preserveAspect = true;
+            return;
+        }
         image.sprite = Load(enabled ? "button_purple_framed" : "button_purple_framed_dark");
         image.color = enabled ? Color.white : new Color(0.68f, 0.68f, 0.72f, 1f);
     }

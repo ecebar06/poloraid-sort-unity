@@ -20,6 +20,7 @@ public sealed class CategoryHolder : MonoBehaviour
     private Color assignedBackgroundColor = Color.white;
     private bool backgroundColorCached;
     private bool hasAssignedBackgroundColor;
+    private bool completionPending;
     public string CategoryId { get; private set; }
     public bool IsEmpty => string.IsNullOrEmpty(CategoryId);
     public bool IsFull => collected.Count >= 4;
@@ -28,8 +29,8 @@ public sealed class CategoryHolder : MonoBehaviour
     {
         owner = controller;
         StopAllCoroutines();
-        foreach (LooseMagnet magnet in collected)
-            if (magnet != null) Destroy(magnet.gameObject);
+        DestroyAllMagnetChildren();
+        collected.Clear();
         ApplyReadableCountStyle();
         ApplyReadableCategoryStyle();
         holderBackground = GetComponent<Image>();
@@ -38,13 +39,15 @@ public sealed class CategoryHolder : MonoBehaviour
             normalBackgroundColor = holderBackground.color;
             backgroundColorCached = true;
         }
+        // Slot 1-4 are authored in the Scene. Runtime must not rewrite their
+        // anchors, positions or sizes; placed cards follow those RectTransforms.
         EnsureCompletionTint();
         ResetHolder();
     }
 
     public bool CanAccept(LooseMagnet magnet)
     {
-        if (magnet == null || IsFull) return false;
+        if (magnet == null || IsFull || completionPending) return false;
         if (owner != null && !owner.CanPlayCategory(magnet.CategoryId)) return false;
         if (!IsEmpty) return CategoryId == magnet.CategoryId;
 
@@ -83,35 +86,9 @@ public sealed class CategoryHolder : MonoBehaviour
     private void ApplyReadableCategoryStyle()
     {
         if (categoryLabel == null) return;
-        // Typography is intentionally left untouched here. The CategoryLabel
-        // values from the authored Scene Inspector must remain editable by the
-        // designer instead of being overwritten whenever a level loads.
-
-        RectTransform categoryRect = categoryLabel.rectTransform;
-        categoryRect.anchorMin = new Vector2(0.06f, 1.04f);
-        categoryRect.anchorMax = new Vector2(0.94f, 1.34f);
-        categoryRect.offsetMin = categoryRect.offsetMax = Vector2.zero;
-        Transform categoryBadge = transform.Find("CategoryBadge");
-        RectTransform categoryBadgeRect = categoryBadge as RectTransform;
-        if (categoryBadgeRect != null)
-        {
-            categoryBadgeRect.anchorMin = new Vector2(0.02f, 1.04f);
-            categoryBadgeRect.anchorMax = new Vector2(0.98f, 1.34f);
-            categoryBadgeRect.offsetMin = categoryBadgeRect.offsetMax = Vector2.zero;
-        }
-
-        RectTransform countRect = countLabel.rectTransform;
-        countRect.anchorMin = new Vector2(0.23f, 0.95f);
-        countRect.anchorMax = new Vector2(0.77f, 1.065f);
-        countRect.offsetMin = countRect.offsetMax = Vector2.zero;
-        Transform countBadge = transform.Find("CountBadge");
-        RectTransform countBadgeRect = countBadge as RectTransform;
-        if (countBadgeRect != null)
-        {
-            countBadgeRect.anchorMin = new Vector2(0.22f, 0.95f);
-            countBadgeRect.anchorMax = new Vector2(0.78f, 1.065f);
-            countBadgeRect.offsetMin = countBadgeRect.offsetMax = Vector2.zero;
-        }
+        // Position and size belong to the Scene-authored ribbon. Runtime only
+        // supplies the category text and its readable colour.
+        categoryLabel.color = Color.white;
     }
 
     public bool TryAccept(LooseMagnet magnet)
@@ -120,8 +97,15 @@ public sealed class CategoryHolder : MonoBehaviour
         if (IsEmpty)
         {
             CategoryId = magnet.CategoryId;
-            categoryLabel.text = CategoryText.ToLowerEnglish(magnet.CategoryName);
-            categoryLabel.gameObject.SetActive(true);
+            // The Polaroid holder art does not require a category label.
+            // Some Scene holders intentionally leave this reference empty;
+            // accepting a card must still continue and snap it into its slot.
+            if (categoryLabel != null)
+            {
+                categoryLabel.text = CategoryText.ToLowerEnglish(magnet.CategoryName);
+                categoryLabel.color = Color.white;
+                categoryLabel.gameObject.SetActive(true);
+            }
             Transform badge = transform.Find("CategoryBadge");
             if (badge != null) badge.gameObject.SetActive(true);
             ApplyAssignedCategoryColor();
@@ -135,7 +119,14 @@ public sealed class CategoryHolder : MonoBehaviour
         UpdateCount();
         GameAudio.Play(GameAudioCue.MagnetPlace);
         HapticFeedback.Play(HapticFeedback.Strength.Light);
-        if (IsFull) StartCoroutine(CompleteAfterSnap());
+        if (IsFull && !completionPending)
+        {
+            // Lock this holder immediately. The celebration coroutine waits
+            // before recycling it, and accepting another magnet during that
+            // window can leave a visual orphan when the holder is cleared.
+            completionPending = true;
+            StartCoroutine(CompleteAfterSnap());
+        }
         return true;
     }
 
@@ -207,15 +198,22 @@ public sealed class CategoryHolder : MonoBehaviour
 
     public void ClearForReuse()
     {
-        foreach (LooseMagnet magnet in collected)
-            if (magnet != null) Destroy(magnet.gameObject);
+        DestroyAllMagnetChildren();
         collected.Clear();
         ResetHolder();
+    }
+
+    private void DestroyAllMagnetChildren()
+    {
+        if (content == null) return;
+        foreach (LooseMagnet magnet in content.GetComponentsInChildren<LooseMagnet>(true))
+            if (magnet != null) Destroy(magnet.gameObject);
     }
 
     private void ResetHolder()
     {
         CategoryId = string.Empty;
+        completionPending = false;
         collected.Clear();
         hasAssignedBackgroundColor = false;
         assignedBackgroundColor = normalBackgroundColor;
@@ -274,27 +272,54 @@ public sealed class CategoryHolder : MonoBehaviour
         completionTint.DOFade(1f, 0.22f).SetEase(Ease.OutCubic);
     }
 
-    private Vector2 GetSlotPosition(int index)
+    private RectTransform GetSlot(int index)
     {
-        Rect rect = content.rect;
-        // Preserve the original accordion behavior while giving each card a
-        // little more vertical breathing room in the holder.
-        float step = Mathf.Clamp(rect.height * 0.18f, 48f, 74f);
-        return new Vector2(rect.center.x, rect.yMax - rect.height * 0.24f - index * step);
+        if (content == null) return null;
+        Transform slot = content.Find($"Slot {index + 1}");
+        return slot as RectTransform;
+    }
+
+    private void EnsurePolaroidSlotLayout()
+    {
+        if (content == null || holderBackground == null || holderBackground.sprite == null ||
+            !holderBackground.sprite.name.Contains("4x1_polaroid")) return;
+
+        // Exact centres of the four cream openings in the supplied holder art.
+        // Keep these as real RectTransforms so designers can still inspect and
+        // fine-tune them in Scene view after the V6 installer persists them.
+        float[] centers = { 0.875f, 0.625f, 0.375f, 0.125f };
+        for (int index = 0; index < centers.Length; index++)
+        {
+            RectTransform slot = GetSlot(index);
+            if (slot == null) continue;
+            float center = centers[index];
+            slot.anchorMin = new Vector2(0.04f, center - 0.115f);
+            slot.anchorMax = new Vector2(0.96f, center + 0.115f);
+            slot.offsetMin = Vector2.zero;
+            slot.offsetMax = Vector2.zero;
+            slot.pivot = new Vector2(0.5f, 0.5f);
+        }
     }
 
     private void LayoutCollectedMagnets()
     {
-        LooseMagnet newest = collected[collected.Count - 1];
-        // Only cards covered by a newer card move their labels upward. The
-        // newest/front card always keeps its word centred.
-        for (int index = 0; index < collected.Count - 1; index++)
+        int index = collected.Count - 1;
+        LooseMagnet newest = collected[index];
+        if (newest == null) return;
+        newest.SetHolderStackMode(false);
+
+        RectTransform slot = GetSlot(index);
+        if (slot != null)
+            newest.LockIntoHolder(slot, index);
+        else
         {
-            LooseMagnet existing = collected[index];
-            if (existing != null) existing.SetHolderStackMode(true);
+            // Backward-compatible fallback for scenes that have not yet been
+            // upgraded with editable Slot 1-4 RectTransforms.
+            Rect rect = content.rect;
+            float[] slotCenters = { 0.875f, 0.625f, 0.375f, 0.125f };
+            float normalizedY = slotCenters[Mathf.Clamp(index, 0, slotCenters.Length - 1)];
+            Vector2 position = new Vector2(rect.center.x, Mathf.Lerp(rect.yMin, rect.yMax, normalizedY));
+            newest.LockIntoHolder(position, content, index);
         }
-        if (newest != null) newest.SetHolderStackMode(false);
-        if (newest != null)
-            newest.LockIntoHolder(GetSlotPosition(collected.Count - 1), content, collected.Count - 1);
     }
 }
