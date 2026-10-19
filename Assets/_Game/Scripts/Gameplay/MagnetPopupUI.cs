@@ -14,6 +14,7 @@ public sealed class MagnetPopupUI : MonoBehaviour
     [SerializeField] private Button restartButton;
     [SerializeField] private Button watchAdButton;
     [SerializeField] private Button spendGoldButton;
+    [SerializeField] private Button tryAgainButton;
     [SerializeField] private TextMeshProUGUI explanationText;
     [SerializeField] private TextMeshProUGUI goldPriceText;
     [Header("Polaroid Settings Toggle Art")]
@@ -30,6 +31,7 @@ public sealed class MagnetPopupUI : MonoBehaviour
     public Button RestartButton => restartButton;
     public Button WatchAdButton => watchAdButton;
     public Button SpendGoldButton => spendGoldButton;
+    public Button TryAgainButton => tryAgainButton;
     public TextMeshProUGUI ExplanationText => explanationText;
     public TextMeshProUGUI GoldPriceText => goldPriceText;
 
@@ -158,11 +160,13 @@ public sealed class MagnetPopupUI : MonoBehaviour
         if (settingsScreen == null)
             settingsScreen = transform.Find("SettingsScreen")?.gameObject;
         if (timeUpScreen == null)
-            timeUpScreen = transform.Find("TimeUpScreen")?.gameObject;
+            timeUpScreen = transform.Find("TimeUpScreen")?.gameObject ??
+                           transform.Find("LoseScreen")?.gameObject;
         if (settingsScreen != null)
         {
             Transform panel = settingsScreen.transform.Find("Panel");
-            settingsGoldText = panel?.Find("GoldDisplay/GoldText")?.GetComponent<TextMeshProUGUI>();
+            settingsGoldText = settingsScreen.transform.Find("GoldDisplay/GoldText")?.GetComponent<TextMeshProUGUI>() ??
+                               panel?.Find("GoldDisplay/GoldText")?.GetComponent<TextMeshProUGUI>();
             soundBackground = panel?.Find("Options/SoundGroup/Background")?.GetComponent<Image>();
             musicBackground = panel?.Find("Options/MusicGroup/Background")?.GetComponent<Image>();
             hapticBackground = panel?.Find("Options/HapticGroup/Background")?.GetComponent<Image>();
@@ -171,15 +175,23 @@ public sealed class MagnetPopupUI : MonoBehaviour
         }
         if (timeUpScreen != null)
         {
-            Transform panel = timeUpScreen.transform.Find("Panel");
+            Transform panel = timeUpScreen.transform.Find("Panel") ??
+                              timeUpScreen.transform.Find("Content");
             if (watchAdButton == null)
-                watchAdButton = panel?.Find("WatchAdGroup/Background")?.GetComponent<Button>();
+                watchAdButton = panel?.Find("WatchAdGroup/Background")?.GetComponent<Button>() ??
+                                panel?.Find("WatchAdButton")?.GetComponent<Button>();
             if (spendGoldButton == null)
-                spendGoldButton = panel?.Find("GoldGroup/Background")?.GetComponent<Button>();
+                spendGoldButton = panel?.Find("GoldGroup/Background")?.GetComponent<Button>() ??
+                                  panel?.Find("GoldMovesButton")?.GetComponent<Button>();
+            if (tryAgainButton == null)
+                tryAgainButton = panel?.Find("TryAgainGroup/Background")?.GetComponent<Button>() ??
+                                 panel?.Find("TryAgainButton")?.GetComponent<Button>();
             if (explanationText == null)
-                explanationText = panel?.Find("Explanation")?.GetComponent<TextMeshProUGUI>();
+                explanationText = panel?.Find("Explanation")?.GetComponent<TextMeshProUGUI>() ??
+                                  panel?.Find("Subtitle")?.GetComponent<TextMeshProUGUI>();
             if (goldPriceText == null)
-                goldPriceText = panel?.Find("GoldGroup/Price")?.GetComponent<TextMeshProUGUI>();
+                goldPriceText = panel?.Find("GoldGroup/Price")?.GetComponent<TextMeshProUGUI>() ??
+                                panel?.Find("GoldMovesButton/Price")?.GetComponent<TextMeshProUGUI>();
         }
     }
 
@@ -317,13 +329,22 @@ public sealed class MagnetPopupUI : MonoBehaviour
         }
         gameObject.SetActive(true);
         transform.SetAsLastSibling();
-        settingsScreen.SetActive(true);
-        AnimatePopupIn(settingsScreen, GameAudioCue.Settings);
+
+        // Prepare every saved value while the popup is still invisible. If we
+        // activate it first, the Scene-authored (all-off) sprites can be drawn
+        // for a frame before the saved settings replace them.
+        CanvasGroup settingsGroup = GetOrAddCanvasGroup(settingsScreen);
+        settingsGroup.alpha = 0f;
+        settingsGroup.blocksRaycasts = false;
+        settingsGroup.interactable = false;
         settingsScreen.transform.SetAsLastSibling();
         if (settingsGoldText != null)
             settingsGoldText.text = SaveSystem.Current.gold.ToString();
         RefreshSettingsVisuals();
+
+        settingsScreen.SetActive(true);
         Canvas.ForceUpdateCanvases();
+        AnimateSettingsPopupIn(settingsScreen);
         Debug.Log("Settings popup acildi.", this);
     }
 
@@ -345,12 +366,32 @@ public sealed class MagnetPopupUI : MonoBehaviour
         gameObject.SetActive(true);
         transform.SetAsLastSibling();
         timeUpScreen.SetActive(true);
+        if (explanationText != null)
+            explanationText.text = "A few more moves?";
         GameAudio.Play(GameAudioCue.Lose);
         HapticFeedback.Play(HapticFeedback.Strength.Medium);
         AnimatePopupIn(timeUpScreen, GameAudioCue.PopupOpen);
         timeUpScreen.transform.SetAsLastSibling();
+        Transform goldValue = timeUpScreen.transform.Find("Gold/Value");
+        if (goldValue != null && goldValue.TryGetComponent(out TextMeshProUGUI balance))
+            balance.text = SaveSystem.Current.gold.ToString("N0");
+        CategoryMagnetBoardController board = FindFirstObjectByType<CategoryMagnetBoardController>();
+        if (board != null)
+            board.BindOutOfMovesButtons(this);
+        if (spendGoldButton != null)
+            spendGoldButton.interactable = true;
         Canvas.ForceUpdateCanvases();
         Debug.Log("TimeUp popup acildi.", this);
+    }
+
+    public void ShowNotEnoughGold()
+    {
+        if (explanationText == null) return;
+        explanationText.text = "Not enough coins";
+        explanationText.transform.DOKill();
+        explanationText.transform.localScale = Vector3.one;
+        explanationText.transform.DOPunchScale(Vector3.one * 0.12f, 0.28f, 6, 0.45f)
+            .SetUpdate(true);
     }
 
     public void HideTimeUp()
@@ -374,6 +415,31 @@ public sealed class MagnetPopupUI : MonoBehaviour
         sequence.Append(group.DOFade(1f, 0.16f).SetEase(Ease.OutCubic));
         sequence.Join(panel.DOScale(1f, 0.34f).SetEase(Ease.OutBack));
         sequence.OnComplete(() =>
+        {
+            group.blocksRaycasts = true;
+            group.interactable = true;
+        });
+    }
+
+    private static void AnimateSettingsPopupIn(GameObject screen)
+    {
+        if (screen == null) return;
+        CanvasGroup group = GetOrAddCanvasGroup(screen);
+        RectTransform panel = FindPanel(screen);
+        panel.DOKill();
+        group.DOKill();
+        screen.transform.localScale = Vector3.one;
+        panel.localScale = Vector3.one * 0.86f;
+
+        // The saved toggle sprites must be visible at full colour from the
+        // first rendered frame. Fading the entire screen made every green ON
+        // toggle briefly resemble its muted OFF state.
+        group.alpha = 1f;
+        group.blocksRaycasts = false;
+        group.interactable = false;
+        screen.transform.SetAsLastSibling();
+        GameAudio.Play(GameAudioCue.Settings);
+        panel.DOScale(1f, 0.34f).SetEase(Ease.OutBack).SetUpdate(true).OnComplete(() =>
         {
             group.blocksRaycasts = true;
             group.interactable = true;
@@ -439,11 +505,45 @@ public sealed class MagnetPopupUI : MonoBehaviour
         SetToggleVisual(soundBackground, data.soundEnabled, settingsSoundOn, settingsSoundOff);
         SetToggleVisual(musicBackground, data.musicEnabled, settingsMusicOn, settingsMusicOff);
         SetToggleVisual(hapticBackground, HapticFeedback.Enabled, settingsHapticOn, settingsHapticOff);
+        StabilizeSettingsActionButtons();
+    }
+
+    private void StabilizeSettingsActionButtons()
+    {
+        if (settingsScreen == null) return;
+        Transform panel = settingsScreen.transform.Find("Panel");
+        StabilizeButtonVisual(panel?.Find("ContinueButton")?.GetComponent<Button>());
+        StabilizeButtonVisual(panel?.Find("RestartGroup/Background")?.GetComponent<Button>());
+    }
+
+    private static void StabilizeButtonVisual(Button button)
+    {
+        if (button == null) return;
+        Image image = button.targetGraphic as Image ?? button.GetComponent<Image>();
+        if (image == null) return;
+
+        // These buttons already use their authored normal sprite. Disabling
+        // Selectable's delayed state transition prevents the colour/sprite
+        // from being replaced for a moment when the popup becomes active.
+        button.transition = Selectable.Transition.None;
+        button.targetGraphic = image;
+        image.color = Color.white;
+        image.enabled = true;
+        image.SetAllDirty();
     }
 
     private static void SetToggleVisual(Image image, bool enabled, Sprite enabledSprite, Sprite disabledSprite)
     {
         if (image == null) return;
+        Button button = image.GetComponent<Button>();
+        if (button != null)
+        {
+            // The Image itself represents the saved toggle value. A SpriteSwap
+            // transition can restore the Scene sprite on enable/selection and
+            // overwrite that value a frame later.
+            button.transition = Selectable.Transition.None;
+            button.targetGraphic = image;
+        }
         if (enabledSprite != null && disabledSprite != null)
         {
             image.sprite = enabled ? enabledSprite : disabledSprite;

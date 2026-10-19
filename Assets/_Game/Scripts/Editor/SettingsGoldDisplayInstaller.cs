@@ -9,52 +9,60 @@ using UnityEngine.UI;
 [InitializeOnLoad]
 internal static class SettingsGoldDisplayInstaller
 {
-    private const string CoinPath = "Assets/_Game/Resources/Art/UI/Popups/golds_1.png";
+    private const string PanelPath = "Assets/_Game/Art/CozyStationery/shared/panels/gold-balance-panel.png";
+    private const string CoinPath = "Assets/_Game/Art/CozyStationery/shared/icons/icon-coin.png";
 
     static SettingsGoldDisplayInstaller() => EditorApplication.delayCall += Install;
+
+    [MenuItem("Tools/Word Game/Refresh Settings Gold Display")]
+    private static void ApplyFromMenu() => Install();
 
     private static void Install()
     {
         if (EditorApplication.isPlayingOrWillChangePlaymode) return;
         MagnetPopupUI popup = Object.FindFirstObjectByType<MagnetPopupUI>(FindObjectsInactive.Include);
         if (popup == null || popup.SettingsScreen == null) return;
-        Transform panel = popup.SettingsScreen.transform.Find("Panel");
-        if (panel == null || panel.Find("GoldDisplay") != null) return;
 
-        GameObject display = new GameObject("GoldDisplay", typeof(RectTransform));
-        Undo.RegisterCreatedObjectUndo(display, "Add settings gold display");
+        Transform screen = popup.SettingsScreen.transform;
+        Transform panel = screen.Find("Panel");
+        if (panel == null) return;
+        Transform existing = screen.Find("GoldDisplay") ?? panel.Find("GoldDisplay");
+        GameObject display = existing == null ? new GameObject("GoldDisplay", typeof(RectTransform)) : existing.gameObject;
         RectTransform displayRect = display.GetComponent<RectTransform>();
-        displayRect.SetParent(panel, false);
-        displayRect.anchorMin = new Vector2(0.055f, 0.83f);
-        displayRect.anchorMax = new Vector2(0.31f, 0.96f);
-        displayRect.offsetMin = Vector2.zero;
-        displayRect.offsetMax = Vector2.zero;
+        displayRect.SetParent(screen, false);
+        displayRect.anchorMin = displayRect.anchorMax = new Vector2(0f, 1f);
+        displayRect.pivot = new Vector2(0f, 1f);
+        displayRect.anchoredPosition = new Vector2(23f, -28f);
+        displayRect.sizeDelta = new Vector2(474.3857f, 233.836f);
+        displayRect.localScale = Vector3.one;
 
-        GameObject coinObject = new GameObject("GoldIcon", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
-        RectTransform coinRect = coinObject.GetComponent<RectTransform>();
-        coinRect.SetParent(displayRect, false);
-        coinRect.anchorMin = new Vector2(0f, 0.1f);
-        coinRect.anchorMax = new Vector2(0.32f, 0.9f);
-        coinRect.offsetMin = coinRect.offsetMax = Vector2.zero;
-        Image coin = coinObject.GetComponent<Image>();
+        Image background = display.GetComponent<Image>();
+        if (background == null) background = display.AddComponent<Image>();
+        background.sprite = AssetDatabase.LoadAssetAtPath<Sprite>(PanelPath);
+        background.type = Image.Type.Sliced;
+        background.color = Color.white;
+        background.raycastTarget = false;
+
+        RectTransform coinRect = ChildRect(displayRect, "GoldIcon");
+        Place(coinRect, new Vector2(-93.8768f, 3.2512f), new Vector2(128.2464f, 109.4978f));
+        Image coin = coinRect.GetComponent<Image>();
+        if (coin == null) coin = coinRect.gameObject.AddComponent<Image>();
         coin.sprite = AssetDatabase.LoadAssetAtPath<Sprite>(CoinPath);
         coin.preserveAspect = true;
         coin.raycastTarget = false;
 
-        GameObject textObject = new GameObject("GoldText", typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI));
-        RectTransform textRect = textObject.GetComponent<RectTransform>();
-        textRect.SetParent(displayRect, false);
-        textRect.anchorMin = new Vector2(0.29f, 0f);
-        textRect.anchorMax = Vector2.one;
-        textRect.offsetMin = textRect.offsetMax = Vector2.zero;
-        TextMeshProUGUI text = textObject.GetComponent<TextMeshProUGUI>();
-        text.text = SaveSystem.Current.gold.ToString();
-        text.fontSize = 36f;
+        RectTransform textRect = ChildRect(displayRect, "GoldText");
+        Place(textRect, new Vector2(55.246f, 3.2513f), new Vector2(170f, 72f));
+        TextMeshProUGUI text = textRect.GetComponent<TextMeshProUGUI>();
+        if (text == null) text = textRect.gameObject.AddComponent<TextMeshProUGUI>();
+        text.text = SaveSystem.Current.gold.ToString("N0");
+        text.fontSize = 60f;
         text.enableAutoSizing = true;
-        text.fontSizeMin = 16f;
-        text.fontSizeMax = 36f;
-        text.alignment = TextAlignmentOptions.MidlineLeft;
-        text.color = Color.white;
+        text.fontSizeMin = 28f;
+        text.fontSizeMax = 90f;
+        text.alignment = TextAlignmentOptions.Center;
+        text.color = new Color32(218, 112, 214, 255);
+        text.fontStyle = FontStyles.Bold;
         text.raycastTarget = false;
 
         TextMeshProUGUI source = panel.Find("HeaderGroup/Title")?.GetComponent<TextMeshProUGUI>();
@@ -62,13 +70,33 @@ internal static class SettingsGoldDisplayInstaller
         {
             text.font = source.font;
             text.fontSharedMaterial = source.fontSharedMaterial;
-            text.fontStyle = source.fontStyle;
         }
 
+        display.SetActive(true);
         EditorUtility.SetDirty(display);
         EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
-        Selection.activeGameObject = display;
-        Debug.Log("Settings GoldDisplay eklendi. Ctrl+S ile sahneyi kaydet.", display);
+        EditorSceneManager.SaveScene(SceneManager.GetActiveScene());
+        Debug.Log("Settings gold display refreshed without changing the popup layout.", display);
+    }
+
+    private static RectTransform ChildRect(RectTransform parent, string name)
+    {
+        Transform existing = parent.Find(name);
+        if (existing != null) return existing as RectTransform;
+        GameObject child = new GameObject(name, typeof(RectTransform), typeof(CanvasRenderer));
+        RectTransform rect = child.GetComponent<RectTransform>();
+        rect.SetParent(parent, false);
+        return rect;
+    }
+
+    private static void Place(RectTransform rect, Vector2 position, Vector2 size)
+    {
+        rect.anchorMin = rect.anchorMax = new Vector2(0.5f, 0.5f);
+        rect.pivot = new Vector2(0.5f, 0.5f);
+        rect.anchoredPosition = position;
+        rect.sizeDelta = size;
+        rect.localRotation = Quaternion.identity;
+        rect.localScale = Vector3.one;
     }
 }
 #endif

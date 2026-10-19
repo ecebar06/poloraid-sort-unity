@@ -157,11 +157,7 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         PlayerSaveData save = SaveSystem.Load();
         MagnetPopupUI popup = FindFirstObjectByType<MagnetPopupUI>(FindObjectsInactive.Include);
         outOfMovesScreen = popup == null ? null : popup.TimeUpScreen;
-        if (popup != null)
-        {
-            Wire(popup.WatchAdButton, ContinueWithAd);
-            Wire(popup.SpendGoldButton, ContinueWithGold);
-        }
+        BindOutOfMovesButtons(popup);
         WireWinScreenButtons();
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
         EnsureTestTimerUi();
@@ -543,11 +539,13 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             // Every invalid holder drop is a spent move, including a full
             // holder, a completed category or a category already assigned to
             // another holder.
+            target.ShowDropFeedback(false);
             SpendMove();
             magnet.Reject();
             return;
         }
 
+        target.ShowDropFeedback(true);
         SpendMove();
         looseSlots.Remove(magnet);
     }
@@ -619,8 +617,14 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         // name at the holder, fly that badge to the progress bar, then credit it.
         if (!transforms)
         {
+            bool levelHasTransformations = currentLevel.categories.Any(category =>
+                category.transformsOnComplete && category.transformResult != null);
+            int visibleHolderCount = holders.Count(holderItem => holderItem != null && holderItem.gameObject.activeSelf);
+            bool isOneOfFinalVisibleCategories =
+                completedCategories.Count > totalCategories - Mathf.Max(1, visibleHolderCount);
+            bool keepCompletedWords = !levelHasTransformations && isOneOfFinalVisibleCategories;
             pendingTransformations++;
-            StartCoroutine(FlyFinalToProgress(holder, magnets, source));
+            StartCoroutine(FlyFinalToProgress(holder, magnets, source, keepCompletedWords));
             return;
         }
         creditedCategories++;
@@ -688,23 +692,32 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         return Mathf.Lerp(inset, 1f - inset, ratio);
     }
 
-    private IEnumerator FlyFinalToProgress(CategoryHolder holder, LooseMagnet[] magnets, Category category)
+    private IEnumerator FlyFinalToProgress(CategoryHolder holder, LooseMagnet[] magnets, Category category,
+        bool keepCompletedWords)
     {
         Vector3 center = holder.transform.position;
-        foreach (var magnet in magnets)
+        if (!keepCompletedWords)
         {
-            magnet.transform.DOKill();
-            magnet.transform.DOMove(center, 0.3f).SetEase(Ease.InOutCubic);
-            magnet.transform.DOScale(0f, 0.3f).SetEase(Ease.InBack);
+            foreach (var magnet in magnets)
+            {
+                magnet.transform.DOKill();
+                magnet.transform.DOMove(center, 0.3f).SetEase(Ease.InOutCubic);
+                magnet.transform.DOScale(0f, 0.3f).SetEase(Ease.InBack);
+            }
+            yield return new WaitForSeconds(0.32f);
         }
-        yield return new WaitForSeconds(0.32f);
 
         Image badge = CreateImage("CompletedCategoryFlight", transform);
         RectTransform rect = badge.rectTransform;
         completionEffects.Add(rect);
-        rect.sizeDelta = new Vector2(280f, 95f);
-        rect.position = center;
         Image sourceBadge = holder.transform.Find("CategoryBadge")?.GetComponent<Image>();
+        // Match the Scene-authored ribbon instead of creating an oversized
+        // fixed badge during the merge/completion animation.
+        RectTransform sourceBadgeRect = sourceBadge != null ? sourceBadge.rectTransform : null;
+        rect.sizeDelta = sourceBadgeRect != null && sourceBadgeRect.rect.size.sqrMagnitude > 0f
+            ? sourceBadgeRect.rect.size
+            : new Vector2(280f, 95f);
+        rect.position = center;
         badge.sprite = sourceBadge != null ? sourceBadge.sprite : magnetSprite;
         badge.color = sourceBadge != null ? sourceBadge.color : Color.white;
         badge.type = Image.Type.Sliced;
@@ -713,7 +726,13 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         effectCanvas.overrideSorting = true;
         effectCanvas.sortingOrder = 900;
         TextMeshProUGUI title = CreateText("CategoryName", rect);
-        Stretch(title.rectTransform, 8f);
+        // Ribbon tails are decorative and not safe text space. Keep the name
+        // inside the wide centre section, including long category names.
+        RectTransform titleRect = title.rectTransform;
+        titleRect.anchorMin = Vector2.zero;
+        titleRect.anchorMax = Vector2.one;
+        titleRect.offsetMin = new Vector2(42f, 8f);
+        titleRect.offsetMax = new Vector2(-42f, -8f);
         TextMeshProUGUI sourceTitle = holder.transform.Find("CategoryBadge/CategoryLabel")?.GetComponent<TextMeshProUGUI>() ??
                                       holder.transform.Find("CategoryLabel")?.GetComponent<TextMeshProUGUI>();
         title.font = sourceTitle != null ? sourceTitle.font : font;
@@ -725,8 +744,10 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         title.text = CategoryText.ToLowerEnglish(category != null ? category.name : holder.CategoryId);
         title.alignment = TextAlignmentOptions.Center;
         title.enableAutoSizing = true;
-        title.fontSizeMin = 18f;
+        title.fontSizeMin = 10f;
         title.fontSizeMax = 40f;
+        title.enableWordWrapping = false;
+        title.overflowMode = TextOverflowModes.Ellipsis;
         title.raycastTarget = false;
         rect.localScale = Vector3.zero;
         yield return rect.DOScale(1f, 0.22f).SetEase(Ease.OutBack).WaitForCompletion();
@@ -758,9 +779,11 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             progressImpact.DOPunchScale(Vector3.one * 0.12f, 0.3f, 4, 0.5f);
         }
         HapticFeedback.Play(HapticFeedback.Strength.Success);
-        holder.ClearForReuse();
+        if (!keepCompletedWords)
+            holder.ClearForReuse();
         pendingTransformations--;
-        RefillStock(true);
+        if (!keepCompletedWords)
+            RefillStock(true);
         if (pendingTransformations == 0 && completedCategories.Count >= totalCategories)
             StartCoroutine(CompleteLevel());
     }
@@ -847,15 +870,23 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         SaveSystem.CompleteLevel(activeLevelIndex, next);
         if (winScreen != null)
         {
-            TextMeshProUGUI[] resultLabels = winScreen.GetComponentsInChildren<TextMeshProUGUI>(true);
-            foreach (TextMeshProUGUI label in resultLabels)
-            {
-                if (label != null && label.name == "Title")
-                {
-                    label.text = $"LEVEL {currentLevel.levelNumber}";
-                    break;
-                }
-            }
+            // WinScreen is authored below MagnetPopupUI, whose root starts
+            // inactive. If Settings/TimeUp was never opened during the level,
+            // activating only the child leaves the win popup invisible while
+            // the board is hidden.
+            MagnetPopupUI popup = winScreen.GetComponentInParent<MagnetPopupUI>(true);
+            if (popup != null && !popup.gameObject.activeSelf)
+                popup.gameObject.SetActive(true);
+
+            Transform resultContent = winScreen.transform.Find("Content") ?? winScreen.transform.Find("Panel");
+            TextMeshProUGUI title = resultContent?.Find("Title")?.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI level = resultContent?.Find("LevelText")?.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI reward = resultContent?.Find("Reward/Value")?.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI balance = FindWinGoldBalance();
+            if (title != null) title.text = "Well sorted!";
+            if (level != null) level.text = $"Level {currentLevel.levelNumber} complete";
+            if (reward != null) reward.text = $"+{SaveSystem.LevelCompletionGold} coins";
+            if (balance != null) balance.text = SaveSystem.Current.gold.ToString("N0");
             Canvas resultCanvas = winScreen.GetComponent<Canvas>();
             if (resultCanvas == null) resultCanvas = winScreen.AddComponent<Canvas>();
             resultCanvas.overrideSorting = true;
@@ -893,11 +924,40 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
         }
     }
 
+    private TextMeshProUGUI FindWinGoldBalance()
+    {
+        if (winScreen == null) return null;
+
+        TextMeshProUGUI balance = winScreen.transform.Find("Gold/Value")?.GetComponent<TextMeshProUGUI>() ??
+                                  winScreen.transform.Find("Gold (1)/Value")?.GetComponent<TextMeshProUGUI>() ??
+                                  winScreen.transform.Find("Content/Gold/Value")?.GetComponent<TextMeshProUGUI>() ??
+                                  winScreen.transform.Find("Panel/Gold/Value")?.GetComponent<TextMeshProUGUI>();
+        if (balance != null) return balance;
+
+        foreach (TextMeshProUGUI label in winScreen.GetComponentsInChildren<TextMeshProUGUI>(true))
+        {
+            Transform parent = label.transform.parent;
+            if (label.name == "Value" && parent != null && parent.name.StartsWith("Gold"))
+                return label;
+        }
+
+        return null;
+    }
+
     private static void Wire(Button button, UnityEngine.Events.UnityAction action)
     {
         if (button == null) return;
         button.onClick.RemoveListener(action);
         button.onClick.AddListener(action);
+    }
+
+    public void BindOutOfMovesButtons(MagnetPopupUI popup)
+    {
+        if (popup == null) return;
+        outOfMovesScreen = popup.TimeUpScreen;
+        Wire(popup.WatchAdButton, ContinueWithAd);
+        Wire(popup.SpendGoldButton, ContinueWithGold);
+        Wire(popup.TryAgainButton, RestartCurrentLevel);
     }
 
     private void ContinueWithAd()
@@ -907,7 +967,14 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
 
     private void ContinueWithGold()
     {
-        if (!SaveSystem.TrySpendGold(900)) return;
+        if (!SaveSystem.TrySpendGold(900))
+        {
+            if (MagnetPopupUI.Instance != null)
+                MagnetPopupUI.Instance.ShowNotEnoughGold();
+            GameAudio.Play(GameAudioCue.Error);
+            HapticFeedback.Play(HapticFeedback.Strength.Light);
+            return;
+        }
         ResumeAfterOutOfMoves(5);
     }
 
@@ -972,9 +1039,9 @@ public sealed class CategoryMagnetBoardController : MonoBehaviour
             SaveSystem.AddGold(40);
             Transform content = winScreen.transform.Find("Content") ?? winScreen.transform.Find("Panel");
             TextMeshProUGUI reward = content?.Find("Reward/Value")?.GetComponent<TextMeshProUGUI>();
-            TextMeshProUGUI balance = content?.Find("Gold/Value")?.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI balance = FindWinGoldBalance();
             if (reward != null) reward.text = "+80 GOLD";
-            if (balance != null) balance.text = SaveSystem.Current.gold.ToString();
+            if (balance != null) balance.text = SaveSystem.Current.gold.ToString("N0");
         }
         ContinueAfterWin();
     }

@@ -14,8 +14,8 @@ using UnityEngine.UI;
 internal static class PolaroidCategoryRibbonInstaller
 {
     private const string ScenePath = "Assets/_Game/Scenes/Game.unity";
-    private const string RibbonPath = "Assets/_Game/Art/PolaroidTheme/UI/category_ribbon.png";
-    private const string MarkerName = "PolaroidCategoryRibbonLayoutV1";
+    private const string RibbonPath = "Assets/_Game/Art/PolaroidTheme/UI/category_ribbon_v2.png";
+    private const string MarkerName = "PolaroidCategoryRibbonEditablePlaceholderV6";
 
     private static readonly Color32[] RibbonColors =
     {
@@ -96,8 +96,10 @@ internal static class PolaroidCategoryRibbonInstaller
         RectTransform badge = badgeObject.GetComponent<RectTransform>();
         badge.anchorMin = badge.anchorMax = new Vector2(0.5f, 1f);
         badge.pivot = new Vector2(0.5f, 0.5f);
-        badge.anchoredPosition = new Vector2(0f, -8f);
-        badge.sizeDelta = new Vector2(286f, 96f);
+        // Match the holder width: compact folded corners stay inside their own
+        // column instead of overlapping the neighbouring ribbon.
+        badge.anchoredPosition = new Vector2(0f, 20f);
+        badge.sizeDelta = new Vector2(238f, 68f);
         badge.localRotation = Quaternion.identity;
         badge.localScale = Vector3.one;
         badge.SetAsLastSibling();
@@ -110,14 +112,25 @@ internal static class PolaroidCategoryRibbonInstaller
         image.color = color;
         image.raycastTarget = false;
 
+        // Placed cards use nested override-sorting canvases. Sibling order is
+        // therefore insufficient: give the ribbon its own higher canvas so it
+        // always renders in front of the first card.
+        Canvas ribbonCanvas = badgeObject.GetComponent<Canvas>();
+        if (ribbonCanvas == null) ribbonCanvas = badgeObject.AddComponent<Canvas>();
+        ribbonCanvas.overrideSorting = true;
+        ribbonCanvas.sortingOrder = 500;
+
         TextMeshProUGUI label = EnsureLabel(badge);
+        // Keep an editable placeholder visible in Scene view. At runtime,
+        // CategoryHolder replaces it with the actual category name as soon as
+        // the first card claims this holder.
         label.text = "Category";
         label.color = Color.white;
         label.fontStyle = FontStyles.Bold;
-        label.fontSize = 42f;
+        label.fontSize = 38f;
         label.enableAutoSizing = true;
-        label.fontSizeMin = 18f;
-        label.fontSizeMax = 42f;
+        label.fontSizeMin = 10f;
+        label.fontSizeMax = 38f;
         label.alignment = TextAlignmentOptions.Center;
         label.enableWordWrapping = false;
         label.overflowMode = TextOverflowModes.Ellipsis;
@@ -125,8 +138,8 @@ internal static class PolaroidCategoryRibbonInstaller
         TMP_FontAsset font = Resources.Load<TMP_FontAsset>("Fonts/Fredoka-Variable SDF");
         if (font != null) label.font = font;
         RectTransform labelRect = label.rectTransform;
-        labelRect.anchorMin = new Vector2(0.13f, 0.20f);
-        labelRect.anchorMax = new Vector2(0.87f, 0.83f);
+        labelRect.anchorMin = new Vector2(0.14f, 0.23f);
+        labelRect.anchorMax = new Vector2(0.86f, 0.82f);
         labelRect.offsetMin = labelRect.offsetMax = Vector2.zero;
         labelRect.localRotation = Quaternion.identity;
         labelRect.localScale = Vector3.one;
@@ -136,6 +149,7 @@ internal static class PolaroidCategoryRibbonInstaller
         if (property != null) property.objectReferenceValue = label;
         serialized.ApplyModifiedPropertiesWithoutUndo();
         EditorUtility.SetDirty(holder);
+        badgeObject.SetActive(true);
     }
 
     private static TextMeshProUGUI EnsureLabel(RectTransform badge)

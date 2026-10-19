@@ -9,7 +9,7 @@ public class SaveSystem : MonoBehaviour
     private const string BackupFileName = "player_save.backup.json";
     private const string TempFileName = "player_save.tmp";
     private const int StartingGold = 500;
-    private const int LevelCompletionGold = 40;
+    public const int LevelCompletionGold = 40;
     private static SaveSystem instance;
 
     [Header("Player Save Data")]

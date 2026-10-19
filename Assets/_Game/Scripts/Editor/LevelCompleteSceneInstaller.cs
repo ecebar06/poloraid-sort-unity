@@ -28,6 +28,7 @@ public static class LevelCompleteSceneInstaller
         RemovePopupCanvasGroups();
         Transform panel = FindPanel();
         if (panel == null) return;
+        if (panel.parent.Find("CozyResultsLayoutV1") != null) return;
         Transform existingLayout = panel.parent.Find("Content/LevelCompleteLayout") ?? panel.Find("LevelCompleteLayout");
         if (existingLayout != null && existingLayout.Find("RewardCoins") != null)
         {

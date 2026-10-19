@@ -15,11 +15,8 @@ public sealed class CategoryHolder : MonoBehaviour
     private readonly List<LooseMagnet> collected = new List<LooseMagnet>(4);
     private CategoryMagnetBoardController owner;
     private Image holderBackground;
-    private Image completionTint;
     private Color normalBackgroundColor = Color.white;
-    private Color assignedBackgroundColor = Color.white;
     private bool backgroundColorCached;
-    private bool hasAssignedBackgroundColor;
     private bool completionPending;
     public string CategoryId { get; private set; }
     public bool IsEmpty => string.IsNullOrEmpty(CategoryId);
@@ -31,6 +28,7 @@ public sealed class CategoryHolder : MonoBehaviour
         StopAllCoroutines();
         DestroyAllMagnetChildren();
         collected.Clear();
+        ResolveLocalCategoryLabel();
         ApplyReadableCountStyle();
         ApplyReadableCategoryStyle();
         holderBackground = GetComponent<Image>();
@@ -41,7 +39,6 @@ public sealed class CategoryHolder : MonoBehaviour
         }
         // Slot 1-4 are authored in the Scene. Runtime must not rewrite their
         // anchors, positions or sizes; placed cards follow those RectTransforms.
-        EnsureCompletionTint();
         ResetHolder();
     }
 
@@ -91,29 +88,39 @@ public sealed class CategoryHolder : MonoBehaviour
         categoryLabel.color = Color.white;
     }
 
+    private void ResolveLocalCategoryLabel()
+    {
+        // Always use this holder's own label. This also repairs missing or
+        // accidentally cross-wired Inspector references on holders 2-4 while
+        // leaving every Scene-authored ribbon transform untouched.
+        Transform localLabel = transform.Find("CategoryBadge/CategoryLabel");
+        if (localLabel != null)
+            categoryLabel = localLabel.GetComponent<TextMeshProUGUI>();
+    }
+
     public bool TryAccept(LooseMagnet magnet)
     {
         if (!CanAccept(magnet)) return false;
         if (IsEmpty)
         {
+            ResolveLocalCategoryLabel();
             CategoryId = magnet.CategoryId;
             // The Polaroid holder art does not require a category label.
             // Some Scene holders intentionally leave this reference empty;
             // accepting a card must still continue and snap it into its slot.
             if (categoryLabel != null)
             {
-                categoryLabel.text = CategoryText.ToLowerEnglish(magnet.CategoryName);
+                string displayName = string.IsNullOrWhiteSpace(magnet.CategoryName)
+                    ? magnet.CategoryId
+                    : magnet.CategoryName;
+                categoryLabel.text = CategoryText.ToLowerEnglish(displayName);
                 categoryLabel.color = Color.white;
                 categoryLabel.gameObject.SetActive(true);
             }
             Transform badge = transform.Find("CategoryBadge");
             if (badge != null) badge.gameObject.SetActive(true);
-            ApplyAssignedCategoryColor();
         }
 
-        // Every card in the claimed holder should carry the same category
-        // tint, not only the first card that assigned the holder.
-        magnet.SetAssignedCategoryAppearance(GetCategoryBadgeColor());
         collected.Add(magnet);
         LayoutCollectedMagnets();
         UpdateCount();
@@ -132,39 +139,27 @@ public sealed class CategoryHolder : MonoBehaviour
 
     public void SetHighlighted(bool value, bool valid)
     {
-        // Highlight the holder image itself. The former overlay could extend
-        // beyond the art's rounded outline and looked like a detached glow.
+        // Dragging over a holder must stay visually neutral. Feedback is shown
+        // only after the player releases the card.
         if (highlight != null) highlight.gameObject.SetActive(false);
         if (holderBackground == null) return;
         holderBackground.DOKill();
-        // Use a strong, unambiguous target color while dragging. Keeping a
-        // small amount of the original gray preserves the holder artwork.
-        Color baseColor = hasAssignedBackgroundColor ? assignedBackgroundColor : normalBackgroundColor;
-        Color target = !value ? baseColor : Color.Lerp(baseColor,
-            valid ? new Color(0.10f, 1f, 0.24f, 1f) : new Color(1f, 0.08f, 0.12f, 1f), 0.72f);
-        holderBackground.DOColor(target, 0.10f).SetEase(Ease.OutCubic);
+        holderBackground.color = normalBackgroundColor;
     }
 
-    private void ApplyAssignedCategoryColor()
+    public void ShowDropFeedback(bool valid)
     {
+        if (highlight != null) highlight.gameObject.SetActive(false);
         if (holderBackground == null) return;
 
-        Color badgeColor = GetCategoryBadgeColor();
-        // Keep the holder artwork readable while making the category color
-        // clearly visible as soon as its first card claims the holder.
-        // Use a stronger pastel tint so the holder does not wash back into
-        // gray while still retaining the original artwork and contrast.
-        assignedBackgroundColor = Color.Lerp(normalBackgroundColor, badgeColor, 0.78f);
-        assignedBackgroundColor.a = normalBackgroundColor.a;
-        hasAssignedBackgroundColor = true;
         holderBackground.DOKill();
-        holderBackground.DOColor(assignedBackgroundColor, 0.18f).SetEase(Ease.OutCubic);
-    }
-
-    private Color GetCategoryBadgeColor()
-    {
-        Image categoryBadge = transform.Find("CategoryBadge")?.GetComponent<Image>();
-        return categoryBadge != null ? categoryBadge.color : normalBackgroundColor;
+        Color feedbackColor = Color.Lerp(normalBackgroundColor,
+            valid ? new Color(0.10f, 1f, 0.24f, 1f) : new Color(1f, 0.08f, 0.12f, 1f), 0.72f);
+        DOTween.Sequence()
+            .SetTarget(holderBackground)
+            .Append(holderBackground.DOColor(feedbackColor, 0.10f).SetEase(Ease.OutCubic))
+            .AppendInterval(0.16f)
+            .Append(holderBackground.DOColor(normalBackgroundColor, 0.18f).SetEase(Ease.OutCubic));
     }
 
     private IEnumerator CompleteAfterSnap()
@@ -175,17 +170,6 @@ public sealed class CategoryHolder : MonoBehaviour
         {
             categoryLabel.transform.DOKill();
             categoryLabel.transform.DOPunchScale(Vector3.one * 0.2f, 0.45f, 4, 0.5f);
-        }
-        if (holderBackground != null && !owner.CategoryTransforms(CategoryId))
-        {
-            holderBackground.DOKill();
-            Image categoryBadge = transform.Find("CategoryBadge")?.GetComponent<Image>();
-            Color completedColor = categoryBadge != null ? categoryBadge.color : normalBackgroundColor;
-            completedColor.a = 1f;
-            holderBackground.DOColor(completedColor, 0.22f);
-            ShowCompletionTint(completedColor);
-            foreach (LooseMagnet magnet in collected)
-                if (magnet != null) magnet.SetCompletedAppearance(completedColor);
         }
         transform.DOKill();
         transform.DOPunchScale(Vector3.one * 0.08f, 0.35f, 6, 0.5f);
@@ -215,17 +199,10 @@ public sealed class CategoryHolder : MonoBehaviour
         CategoryId = string.Empty;
         completionPending = false;
         collected.Clear();
-        hasAssignedBackgroundColor = false;
-        assignedBackgroundColor = normalBackgroundColor;
         if (holderBackground != null)
         {
             holderBackground.DOKill();
             holderBackground.color = normalBackgroundColor;
-        }
-        if (completionTint != null)
-        {
-            completionTint.DOKill();
-            completionTint.gameObject.SetActive(false);
         }
         if (categoryLabel != null) categoryLabel.gameObject.SetActive(false);
         Transform badge = transform.Find("CategoryBadge");
@@ -237,39 +214,6 @@ public sealed class CategoryHolder : MonoBehaviour
     private void UpdateCount()
     {
         if (countLabel != null) countLabel.text = $"{collected.Count}/4";
-    }
-
-    private void EnsureCompletionTint()
-    {
-        if (completionTint != null || holderBackground == null) return;
-        Transform existing = transform.Find("CompletedHolderTint");
-        if (existing != null) completionTint = existing.GetComponent<Image>();
-        else
-        {
-            GameObject tint = new GameObject("CompletedHolderTint", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
-            tint.transform.SetParent(transform, false);
-            completionTint = tint.GetComponent<Image>();
-            RectTransform rect = completionTint.rectTransform;
-            rect.anchorMin = Vector2.zero;
-            rect.anchorMax = Vector2.one;
-            rect.offsetMin = rect.offsetMax = Vector2.zero;
-            completionTint.sprite = holderBackground.sprite;
-            completionTint.type = holderBackground.type;
-            completionTint.raycastTarget = false;
-            // Render after the gray holder image but before Content/magnets.
-            completionTint.transform.SetAsFirstSibling();
-        }
-        completionTint.gameObject.SetActive(false);
-    }
-
-    private void ShowCompletionTint(Color color)
-    {
-        EnsureCompletionTint();
-        if (completionTint == null) return;
-        color.a = 0f;
-        completionTint.color = color;
-        completionTint.gameObject.SetActive(true);
-        completionTint.DOFade(1f, 0.22f).SetEase(Ease.OutCubic);
     }
 
     private RectTransform GetSlot(int index)

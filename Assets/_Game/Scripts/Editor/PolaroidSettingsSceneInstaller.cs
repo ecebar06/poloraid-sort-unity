@@ -46,8 +46,24 @@ internal static class PolaroidSettingsSceneInstaller
         if (opened) scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Additive);
 
         Transform screen = Find(scene, "SettingsScreen");
-        if (screen == null || (!force && FindWithin(screen, MarkerName) != null))
+        if (screen == null)
         {
+            if (opened) EditorSceneManager.CloseScene(scene, true);
+            return;
+        }
+
+        // Persist the popup canvas in the Scene as well as creating it at
+        // runtime. Category ribbons use their own sorting canvases, so without
+        // this the ribbons can appear above the settings dimmer in Scene view.
+        // This changes no popup or ribbon RectTransform values.
+        bool sortingChanged = EnsurePopupSorting(screen.parent);
+        if (!force && FindWithin(screen, MarkerName) != null)
+        {
+            if (sortingChanged)
+            {
+                EditorSceneManager.MarkSceneDirty(scene);
+                EditorSceneManager.SaveScene(scene);
+            }
             if (opened) EditorSceneManager.CloseScene(scene, true);
             return;
         }
@@ -66,6 +82,35 @@ internal static class PolaroidSettingsSceneInstaller
         EditorSceneManager.SaveScene(scene);
         if (opened) EditorSceneManager.CloseScene(scene, true);
         Debug.Log("Polaroid settings screen layout applied. Scene RectTransforms remain editable.");
+    }
+
+    private static bool EnsurePopupSorting(Transform popupRoot)
+    {
+        if (popupRoot == null) return false;
+        bool changed = false;
+        Canvas canvas = popupRoot.GetComponent<Canvas>();
+        if (canvas == null)
+        {
+            canvas = popupRoot.gameObject.AddComponent<Canvas>();
+            changed = true;
+        }
+        if (!canvas.overrideSorting)
+        {
+            canvas.overrideSorting = true;
+            changed = true;
+        }
+        if (canvas.sortingOrder != 2000)
+        {
+            canvas.sortingOrder = 2000;
+            changed = true;
+        }
+        if (popupRoot.GetComponent<GraphicRaycaster>() == null)
+        {
+            popupRoot.gameObject.AddComponent<GraphicRaycaster>();
+            changed = true;
+        }
+        if (changed) EditorUtility.SetDirty(popupRoot.gameObject);
+        return changed;
     }
 
     private static void ConfigureScreen(Transform screen)

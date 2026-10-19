@@ -96,7 +96,7 @@ public static class SplashSceneSetup
         GameObject backgroundObject = CreateUI("Pastel Background", canvas.transform);
         RawImage background = backgroundObject.AddComponent<RawImage>();
         Texture2D splashArt = AssetDatabase.LoadAssetAtPath<Texture2D>(
-            "Assets/_Game/Textures/Branding/WordSort-Splash-v1.png");
+            "Assets/_Game/Art/PolaroidTheme/splash/splash_background.png");
         background.texture = splashArt != null ? splashArt : Resources.Load<Texture2D>("Textures/PastelBackground");
         background.color = background.texture == null ? new Color(0.67f, 0.55f, 1f) : Color.white;
         Stretch(background.rectTransform);
@@ -116,12 +116,19 @@ public static class SplashSceneSetup
         content.alpha = 1f;
         Stretch(contentObject.GetComponent<RectTransform>());
 
-        Image card = CreateImage("Logo Card", content.transform, new Color(0.34f, 0.20f, 0.66f, 0.96f));
+        Image card = CreateImage("Logo Card", content.transform, Color.white);
         RectTransform logoCard = card.rectTransform;
-        logoCard.anchorMin = logoCard.anchorMax = new Vector2(0.5f, 0.56f);
-        logoCard.sizeDelta = new Vector2(730f, 520f);
-        logoCard.anchoredPosition = Vector2.zero;
-        if (splashArt != null) card.gameObject.SetActive(false);
+        logoCard.anchorMin = logoCard.anchorMax = new Vector2(0.5f, 0.5f);
+        logoCard.sizeDelta = new Vector2(940f, 471f);
+        logoCard.anchoredPosition = new Vector2(0f, 350f);
+        Sprite titleArt = AssetDatabase.LoadAssetAtPath<Sprite>(
+            "Assets/_Game/Art/PolaroidTheme/splash/title.png");
+        if (titleArt != null)
+        {
+            card.sprite = titleArt;
+            card.type = Image.Type.Simple;
+            card.preserveAspect = true;
+        }
 
         Text title = CreateText("Title", card.transform, "WORD GAME", font, 108, FontStyle.Bold, Color.white);
         title.alignment = TextAnchor.MiddleCenter;
@@ -137,6 +144,11 @@ public static class SplashSceneSetup
         studio.rectTransform.anchorMax = new Vector2(1f, 0.31f);
         studio.rectTransform.offsetMin = new Vector2(20f, 0f);
         studio.rectTransform.offsetMax = new Vector2(-20f, 0f);
+        if (titleArt != null)
+        {
+            title.gameObject.SetActive(false);
+            studio.gameObject.SetActive(false);
+        }
 
         Image loadingTrack = CreateImage("Loading Bar", content.transform, new Color(1f, 1f, 1f, 0.36f));
         RectTransform trackRect = loadingTrack.rectTransform;

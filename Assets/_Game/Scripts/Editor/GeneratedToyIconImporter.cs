@@ -6,6 +6,18 @@ using UnityEngine;
 public class GeneratedToyIconImporter : AssetPostprocessor
 {
     const string Folder = "Assets/_Game/Resources/Icons/Generated/";
+    const string LibraryPath = "Assets/_Game/Resources/Data/MainWordIconLibrary.asset";
+
+    [InitializeOnLoadMethod]
+    static void ScheduleMissingIconLink()
+    {
+        EditorApplication.delayCall += () =>
+        {
+            if (!EditorApplication.isPlayingOrWillChangePlaymode)
+                LinkGeneratedIcons(false);
+        };
+    }
+
     void OnPreprocessTexture()
     {
         if (!assetPath.StartsWith(Folder)) return;
@@ -21,23 +33,35 @@ public class GeneratedToyIconImporter : AssetPostprocessor
     }
 
     [MenuItem("Tools/Word Game/Link Generated Toy Icons")]
-    static void Link()
+    static void Link() => LinkGeneratedIcons(true);
+
+    static void LinkGeneratedIcons(bool alwaysLog)
     {
-        const string path = "Assets/_Game/Resources/Data/MainWordIconLibrary.asset";
-        var library = AssetDatabase.LoadAssetAtPath<WordIconLibrary>(path);
+        var library = AssetDatabase.LoadAssetAtPath<WordIconLibrary>(LibraryPath);
         if (library == null || !Directory.Exists(Folder)) return;
-        Undo.RecordObject(library, "Link generated toy icons");
+
         int linked = 0;
         foreach (var file in Directory.GetFiles(Folder, "*.png"))
         {
             var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(file.Replace('\\', '/'));
             if (sprite == null) continue;
-            library.SetIcon(Path.GetFileNameWithoutExtension(file), sprite);
+
+            string key = Path.GetFileNameWithoutExtension(file);
+            if (library.TryGetIcon(key, out Sprite current) && current == sprite) continue;
+            if (linked == 0) Undo.RecordObject(library, "Link generated toy icons");
+            library.SetIcon(key, sprite);
             linked++;
         }
+
+        if (linked == 0)
+        {
+            if (alwaysLog) Debug.Log("All generated toy icons are already linked.");
+            return;
+        }
+
         EditorUtility.SetDirty(library);
         AssetDatabase.SaveAssets();
-        Debug.Log($"Linked {linked} generated toy icons.");
+        Debug.Log($"Linked {linked} missing generated toy icons.");
     }
 }
 #endif
